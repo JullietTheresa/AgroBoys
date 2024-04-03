@@ -1,0 +1,17 @@
+.listbox-title {
+  height: 20px;
+  position: relative;
+  width: 95px;
+}
+
+.listbox-title .text-wrapper {
+  color: #333333;
+  font-family: "Montserrat", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: -1px;
+}

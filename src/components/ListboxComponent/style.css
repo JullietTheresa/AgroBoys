@@ -1,0 +1,340 @@
+.listbox-component {
+  position: relative;
+  width: 308px;
+}
+
+.listbox-component .class {
+  height: 28px !important;
+  left: 14px !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 280px !important;
+}
+
+.listbox-component .class-2 {
+  left: 14px !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 280px !important;
+}
+
+.listbox-component .overlap-group {
+  left: 0;
+  position: absolute;
+  width: 308px;
+}
+
+.listbox-component .listbox-main {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 14px #0000001a;
+  left: 14px;
+  position: absolute;
+  top: 0;
+  width: 280px;
+}
+
+.listbox-component .chevron {
+  left: 247px;
+  position: absolute;
+  width: 11px;
+}
+
+.listbox-component .class-3 {
+  opacity: 0 !important;
+}
+
+.listbox-component .class-4 {
+  height: 28px !important;
+  left: 16px !important;
+  position: absolute !important;
+  top: 28px !important;
+}
+
+.listbox-component .class-5 {
+  left: 16px !important;
+  position: absolute !important;
+  top: 20px !important;
+}
+
+.listbox-component .clip-list {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 308px;
+}
+
+.listbox-component .class-6 {
+  height: 1px !important;
+  left: 14px !important;
+  opacity: 0 !important;
+  top: 68px !important;
+}
+
+.listbox-component .class-7 {
+  background-color: #ffffff !important;
+  gap: unset !important;
+  height: 224px !important;
+  justify-content: space-between !important;
+  left: 14px !important;
+  top: 68px !important;
+}
+
+.listbox-component .class-8 {
+  box-shadow: unset !important;
+  left: 14px !important;
+  top: -80px !important;
+}
+
+.listbox-component .class-9 {
+  box-shadow: unset !important;
+  left: 14px !important;
+  top: -124px !important;
+}
+
+.listbox-component .class-10 {
+  box-shadow: unset !important;
+  left: 14px !important;
+  top: -36px !important;
+}
+
+.listbox-component .class-11 {
+  align-self: stretch !important;
+  margin-top: -111.5px !important;
+  width: 100% !important;
+}
+
+.listbox-component .class-12 {
+  align-self: stretch !important;
+  background-color: unset !important;
+  width: 100% !important;
+}
+
+.listbox-component .class-13 {
+  align-self: stretch !important;
+  margin-top: -66.5px !important;
+  width: 100% !important;
+}
+
+.listbox-component .class-14 {
+  align-self: stretch !important;
+  width: 100% !important;
+}
+
+.listbox-component .class-15 {
+  align-self: stretch !important;
+  margin-top: -21.5px !important;
+  width: 100% !important;
+}
+
+.listbox-component .OBJECTS {
+  position: absolute;
+}
+
+.listbox-component.property-1-variant-8 {
+  height: 289px;
+}
+
+.listbox-component.property-1-variant-4 {
+  height: 289px;
+}
+
+.listbox-component.property-1-variant-2 {
+  height: 398px;
+}
+
+.listbox-component.property-1-variant-5 {
+  height: 289px;
+}
+
+.listbox-component.property-1-variant-6 {
+  height: 289px;
+}
+
+.listbox-component.property-1-variant-7 {
+  height: 289px;
+}
+
+.listbox-component.property-1-default {
+  height: 289px;
+}
+
+.listbox-component.property-1-variant-8 .overlap-group {
+  height: 69px;
+  top: 28px;
+}
+
+.listbox-component.property-1-variant-4 .overlap-group {
+  height: 69px;
+  top: 28px;
+}
+
+.listbox-component.property-1-variant-2 .overlap-group {
+  height: 359px;
+  top: 39px;
+}
+
+.listbox-component.property-1-variant-5 .overlap-group {
+  height: 69px;
+  top: 28px;
+}
+
+.listbox-component.property-1-variant-6 .overlap-group {
+  height: 60px;
+  top: 28px;
+}
+
+.listbox-component.property-1-variant-7 .overlap-group {
+  height: 60px;
+  top: 28px;
+}
+
+.listbox-component.property-1-default .overlap-group {
+  height: 261px;
+  top: 28px;
+}
+
+.listbox-component.property-1-variant-8 .listbox-main {
+  height: 60px;
+}
+
+.listbox-component.property-1-variant-4 .listbox-main {
+  height: 60px;
+}
+
+.listbox-component.property-1-variant-2 .listbox-main {
+  height: 83px;
+}
+
+.listbox-component.property-1-variant-5 .listbox-main {
+  height: 60px;
+}
+
+.listbox-component.property-1-variant-6 .listbox-main {
+  height: 60px;
+}
+
+.listbox-component.property-1-variant-7 .listbox-main {
+  height: 60px;
+}
+
+.listbox-component.property-1-default .listbox-main {
+  height: 60px;
+}
+
+.listbox-component.property-1-variant-8 .chevron {
+  height: 6px;
+  top: 27px;
+}
+
+.listbox-component.property-1-variant-4 .chevron {
+  height: 6px;
+  top: 27px;
+}
+
+.listbox-component.property-1-variant-2 .chevron {
+  height: 8px;
+  top: 38px;
+}
+
+.listbox-component.property-1-variant-5 .chevron {
+  height: 6px;
+  top: 27px;
+}
+
+.listbox-component.property-1-variant-6 .chevron {
+  height: 6px;
+  top: 27px;
+}
+
+.listbox-component.property-1-variant-7 .chevron {
+  height: 6px;
+  top: 27px;
+}
+
+.listbox-component.property-1-default .chevron {
+  height: 6px;
+  top: 27px;
+}
+
+.listbox-component.property-1-variant-8 .clip-list {
+  height: 69px;
+  overflow: hidden;
+}
+
+.listbox-component.property-1-variant-4 .clip-list {
+  height: 69px;
+  overflow: hidden;
+}
+
+.listbox-component.property-1-variant-2 .clip-list {
+  height: 359px;
+}
+
+.listbox-component.property-1-variant-5 .clip-list {
+  height: 69px;
+  overflow: hidden;
+}
+
+.listbox-component.property-1-variant-6 .clip-list {
+  height: 55px;
+  overflow: hidden;
+}
+
+.listbox-component.property-1-variant-7 .clip-list {
+  height: 55px;
+  overflow: hidden;
+}
+
+.listbox-component.property-1-default .clip-list {
+  height: 261px;
+}
+
+.listbox-component.property-1-variant-8 .OBJECTS {
+  height: 284px;
+  left: 462px;
+  top: -1px;
+  width: 399px;
+}
+
+.listbox-component.property-1-variant-4 .OBJECTS {
+  height: 262px;
+  left: 819px;
+  top: 93px;
+  width: 231px;
+}
+
+.listbox-component.property-1-variant-2 .OBJECTS {
+  height: 262px;
+  left: 819px;
+  top: 93px;
+  width: 231px;
+}
+
+.listbox-component.property-1-variant-5 .OBJECTS {
+  height: 260px;
+  left: 637px;
+  top: 187px;
+  width: 222px;
+}
+
+.listbox-component.property-1-variant-6 .OBJECTS {
+  height: 176px;
+  left: 756px;
+  top: 291px;
+  width: 335px;
+}
+
+.listbox-component.property-1-variant-7 .OBJECTS {
+  height: 191px;
+  left: 694px;
+  top: 421px;
+  width: 136px;
+}
+
+.listbox-component.property-1-default .OBJECTS {
+  height: 262px;
+  left: 819px;
+  top: 93px;
+  width: 231px;
+}
