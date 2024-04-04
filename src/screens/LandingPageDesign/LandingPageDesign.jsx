@@ -225,6 +225,7 @@ export const LandingPageDesign = () => {
             <div className="navbar">
               <div className="text-wrapper-27">AgroBoys</div>
               <div className="text-wrapper-28">Home</div>
+              <a className = "text-wrapper-28" href="src/screens/Login/index.js">Teste</a>
               <div className="text-wrapper-28">Produtos</div>
               <div className="text-wrapper-28">Login</div>
               <div className="text-wrapper-28">SignUp</div>
