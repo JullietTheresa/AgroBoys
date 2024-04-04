@@ -7,6 +7,7 @@ import { LoginPage } from "./screens/Login";
 const app = document.getElementById("app");
 const root = ReactDOMClient.createRoot(app);
 
-root.render(<LandingPageDesign />);
 root.render(<LoginPage />);
+root.render(<LandingPageDesign />);
+
 
