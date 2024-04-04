@@ -227,7 +227,7 @@ export const LandingPageDesign = () => {
               <div className="text-wrapper-28">Home</div>
               <a className = "text-wrapper-28" href="src/screens/Login/index.js">Teste</a>
               <div className="text-wrapper-28">Produtos</div>
-              <div className="text-wrapper-28">Login</div>
+              <a className="text-wrapper-28" href="/screens/Itu/index.jsx">Login</a>
               <div className="text-wrapper-28">SignUp</div>
             </div>
           </div>
