@@ -8,7 +8,7 @@ export const LoginPage = () => {
         <div className="headder">
           <div className="overlap-group">
             <div className="text-wrapper">AgroBoys</div>
-            <div className="text-wrapper-2">Home</div>
+            <a className="text-wrapper-2" exact href="/">Home</a>
             <div className="text-wrapper-3">Products</div>
             <div className="text-wrapper-4">Contact</div>
             <div className="text-wrapper-5">Login</div>
