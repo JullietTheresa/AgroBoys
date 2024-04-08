@@ -1,6 +1,6 @@
 import React from "react";
-import { ListboxComponent } from "../../components/ListboxComponent";
-import "./style.css";
+import { ListboxComponent } from "./components/ListboxComponent";
+import "./styleLandingPageDesign.css";
 
 export const LandingPageDesign = () => {
   return (
@@ -225,9 +225,8 @@ export const LandingPageDesign = () => {
             <div className="navbar">
               <div className="text-wrapper-27">AgroBoys</div>
               <div className="text-wrapper-28">Home</div>
-              <a className = "text-wrapper-28" href="src/screens/Login/index.js">Teste</a>
               <div className="text-wrapper-28">Produtos</div>
-              <a className="text-wrapper-28" href="/screens/Itu/index.jsx">Login</a>
+              <a className="text-wrapper-28" exact href="/Login">Login</a>
               <div className="text-wrapper-28">SignUp</div>
             </div>
           </div>
@@ -236,3 +235,5 @@ export const LandingPageDesign = () => {
     </div>
   );
 };
+
+export default LandingPageDesign

@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./styleLogin.css";
 
 export const LoginPage = () => {
   return (
@@ -68,3 +68,5 @@ export const LoginPage = () => {
     </div>
   );
 };
+
+export default LoginPage
