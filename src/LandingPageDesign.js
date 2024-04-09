@@ -228,7 +228,7 @@ export const LandingPageDesign = () => {
                 <div className="navbar-buttons">
                 <div className="text-wrapper-28">Home</div>
                 <a className="text-wrapper-28" exact href="/Login">Login</a>
-                <div className="text-wrapper-28">SignUp</div>
+                <a className="text-wrapper-28" exact href="/SignUp">SignUp</a>
                </div>
             </div>
           </div>

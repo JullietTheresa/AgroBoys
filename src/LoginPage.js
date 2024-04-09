@@ -12,7 +12,7 @@ export const LoginPage = () => {
               <div className="text-wrapper">AgroBoys</div>
               <a className="text-wrapper-2" exact href="/">Home</a>
               <div className="text-wrapper-5">Login</div>
-              <div className="text-wrapper-6">SignUp</div>
+              <a className="text-wrapper-6" exact href="/SignUp">SignUp</a>
             </div>
           </div>
         </div>
