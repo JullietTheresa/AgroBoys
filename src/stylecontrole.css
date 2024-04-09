@@ -1,0 +1,762 @@
+.tasks {
+    background-color: #eef2f7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .tasks .div {
+    background-color: #eef2f7;
+    height: 1059px;
+    overflow: hidden;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .tasks .overlap {
+    background-color: #fafafa;
+    border-radius: 12px;
+    height: 478px;
+    left: 315px;
+    position: absolute;
+    top: 156px;
+    width: 335px;
+  }
+  
+  .tasks .text-wrapper {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 38px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 25px;
+    width: 173px;
+  }
+  
+  .tasks .group {
+    height: 170px;
+    left: 31px;
+    position: absolute;
+    top: 79px;
+    width: 274px;
+  }
+  
+  .tasks .overlap-group {
+    background-color: #009bcc;
+    border-radius: 17px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 170px;
+    position: relative;
+    width: 268px;
+  }
+  
+  .tasks .text-wrapper-2 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 11px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 12px;
+  }
+  
+  .tasks .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    left: 11px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 56px;
+  }
+  
+  .tasks .label-label-label {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    left: 11px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 94px;
+  }
+  
+  .tasks .span {
+    font-weight: 700;
+  }
+  
+  .tasks .text-wrapper-4 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  
+  .tasks .overlap-wrapper {
+    height: 170px;
+    left: 31px;
+    position: absolute;
+    top: 279px;
+    width: 274px;
+  }
+  
+  .tasks .overlap-2 {
+    background-color: #ff3a3a;
+    border-radius: 17px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 170px;
+    position: relative;
+    width: 268px;
+  }
+  
+  .tasks .text-wrapper-5 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 21px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 12px;
+  }
+  
+  .tasks .text-wrapper-6 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    left: 21px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 56px;
+  }
+  
+  .tasks .p {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 400;
+    left: 21px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 94px;
+  }
+  
+  .tasks .overlap-3 {
+    background-color: #fafafa;
+    border-radius: 12px;
+    height: 478px;
+    left: 695px;
+    position: absolute;
+    top: 152px;
+    width: 335px;
+  }
+  
+  .tasks .text-wrapper-7 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 41px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 25px;
+    width: 173px;
+  }
+  
+  .tasks .overlap-group-wrapper {
+    height: 170px;
+    left: 34px;
+    position: absolute;
+    top: 79px;
+    width: 274px;
+  }
+  
+  .tasks .overlap-4 {
+    background-color: #ffc600;
+    border-radius: 17px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 170px;
+    position: relative;
+    width: 268px;
+  }
+  
+  .tasks .overlap-5 {
+    background-color: #fafafa;
+    border-radius: 12px;
+    height: 478px;
+    left: 1076px;
+    position: absolute;
+    top: 152px;
+    width: 335px;
+  }
+  
+  .tasks .text-wrapper-8 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 46px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 25px;
+    width: 173px;
+  }
+  
+  .tasks .overlap-6 {
+    background-color: #609b00;
+    border-radius: 17px;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 170px;
+    position: relative;
+    width: 268px;
+  }
+  
+  .tasks .overlap-7 {
+    height: 726px;
+    left: -4px;
+    position: absolute;
+    top: 0;
+    width: 294px;
+  }
+  
+  .tasks .rectangle {
+    background-color: #ffffff;
+    height: 676px;
+    left: 4px;
+    position: absolute;
+    top: 0;
+    width: 235px;
+  }
+  
+  .tasks .rectangle-2 {
+    background-color: #ffffff;
+    height: 726px;
+    left: 4px;
+    position: absolute;
+    top: 0;
+    width: 290px;
+  }
+  
+  .tasks .rectangle-3 {
+    background-color: #ffffff;
+    height: 641px;
+    left: 0;
+    position: absolute;
+    top: 85px;
+    width: 267px;
+  }
+  
+  .tasks .text-wrapper-9 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 57px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 515px;
+    width: 92px;
+  }
+  
+  .tasks .house {
+    height: 41px;
+    left: 17px;
+    position: absolute;
+    top: 465px;
+    width: 24px;
+  }
+  
+  .tasks .text-wrapper-10 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 60px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 369px;
+    width: 164px;
+  }
+  
+  .tasks .text-wrapper-11 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 35px;
+    font-weight: 700;
+    left: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 10px;
+  }
+  
+  .tasks .group-2 {
+    height: 54px;
+    left: 17px;
+    position: absolute;
+    top: 411px;
+    width: 255px;
+  }
+  
+  .tasks .text-wrapper-12 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 5px;
+    width: 210px;
+  }
+  
+  .tasks .img {
+    height: 41px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 24px;
+  }
+  
+  .tasks .house-2 {
+    height: 41px;
+    left: 17px;
+    position: absolute;
+    top: 315px;
+    width: 24px;
+  }
+  
+  .tasks .rectangle-4 {
+    background-color: #518200;
+    border-radius: 10px;
+    height: 50px;
+    left: 37px;
+    position: absolute;
+    top: 149px;
+    width: 170px;
+  }
+  
+  .tasks .group-3 {
+    height: 54px;
+    left: 17px;
+    position: absolute;
+    top: 265px;
+    width: 236px;
+  }
+  
+  .tasks .text-wrapper-13 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 5px;
+    width: 191px;
+  }
+  
+  .tasks .group-4 {
+    height: 282px;
+    left: 17px;
+    position: absolute;
+    top: 217px;
+    width: 226px;
+  }
+  
+  .tasks .text-wrapper-14 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 4px;
+    width: 144px;
+  }
+  
+  .tasks .text-wrapper-15 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 252px;
+    width: 179px;
+  }
+  
+  .tasks .div-wrapper {
+    height: 33px;
+    left: 76px;
+    position: absolute;
+    top: 158px;
+    width: 94px;
+  }
+  
+  .tasks .text-wrapper-16 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 92px;
+  }
+  
+  .tasks .text-wrapper-17 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 60px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 321px;
+    width: 164px;
+  }
+  
+  .tasks .house-3 {
+    height: 41px;
+    left: 17px;
+    position: absolute;
+    top: 363px;
+    width: 24px;
+  }
+  
+  .tasks .house-4 {
+    height: 41px;
+    left: 17px;
+    position: absolute;
+    top: 511px;
+    width: 24px;
+  }
+  
+  .tasks .overlap-8 {
+    height: 333px;
+    left: 0;
+    position: absolute;
+    top: 726px;
+    width: 1440px;
+  }
+  
+  .tasks .rectangle-5 {
+    background-color: #609b00;
+    height: 304px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1440px;
+  }
+  
+  .tasks .rectangle-6 {
+    background-color: #000000;
+    height: 72px;
+    left: 0;
+    position: absolute;
+    top: 260px;
+    width: 1440px;
+  }
+  
+  .tasks .text-wrapper-18 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 50px;
+    width: 188px;
+  }
+  
+  .tasks .text-wrapper-19 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 86px;
+    width: 175px;
+  }
+  
+  .tasks .text-wrapper-20 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 122px;
+    width: 188px;
+  }
+  
+  .tasks .text-wrapper-21 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 158px;
+    width: 198px;
+  }
+  
+  .tasks .text-wrapper-22 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    left: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 8px;
+    white-space: nowrap;
+    width: 232px;
+  }
+  
+  .tasks .text-wrapper-23 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    left: 866px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 8px;
+    white-space: nowrap;
+    width: 232px;
+  }
+  
+  .tasks .text-wrapper-24 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 300;
+    left: 53px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 64px;
+    width: 627px;
+  }
+  
+  .tasks .envelope {
+    height: 20px;
+    left: 926px;
+    position: absolute;
+    top: 92px;
+    width: 20px;
+  }
+  
+  .tasks .hand-with-smartphone {
+    height: 20px;
+    left: 926px;
+    position: absolute;
+    top: 125px;
+    width: 20px;
+  }
+  
+  .tasks .internet {
+    height: 20px;
+    left: 926px;
+    position: absolute;
+    top: 161px;
+    width: 20px;
+  }
+  
+  .tasks .copyright {
+    height: 82px;
+    left: 675px;
+    position: absolute;
+    top: 251px;
+    width: 90px;
+  }
+  
+  .tasks .copyright-2 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 457px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 274px;
+    width: 548px;
+  }
+  
+  .tasks .text-wrapper-25 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  
+  .tasks .place-marker {
+    height: 20px;
+    left: 925px;
+    position: absolute;
+    top: 53px;
+    width: 20px;
+  }
+  
+  .tasks .overlap-9 {
+    height: 39px;
+    left: 1219px;
+    position: absolute;
+    top: 87px;
+    width: 199px;
+  }
+  
+  .tasks .rectangle-7 {
+    background-color: #609b00;
+    border-radius: 10px;
+    height: 39px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 192px;
+  }
+  
+  .tasks .text-wrapper-26 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    left: 39px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 6px;
+    width: 160px;
+  }
+  
+  .tasks .text-wrapper-27 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 700;
+    left: 315px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 85px;
+    width: 173px;
+  }
+  
+  .tasks .overlap-10 {
+    background-color: #518200;
+    height: 70px;
+    left: 290px;
+    position: absolute;
+    top: 0;
+    width: 1150px;
+  }
+  
+  .tasks .overlap-11 {
+    height: 50px;
+    left: 884px;
+    position: absolute;
+    top: 8px;
+    width: 46px;
+  }
+  
+  .tasks .ellipse {
+    background-color: #ffffff;
+    border-radius: 23px;
+    height: 46px;
+    left: 0;
+    position: absolute;
+    top: 4px;
+    width: 46px;
+  }
+  
+  .tasks .text-wrapper-28 {
+    color: #7da240;
+    font-family: "Poppins", Helvetica;
+    font-size: 35px;
+    font-weight: 700;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 28px;
+  }
+  
+  .tasks .usuario-gmail-com {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 500;
+    left: 939px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 16px;
+  }
+  
+  .tasks .text-wrapper-29 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+  
+  .tasks .text-wrapper-30 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    left: 939px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 39px;
+  }
+  

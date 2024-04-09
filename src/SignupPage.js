@@ -15,8 +15,8 @@ export const SignupPage = () => {
             <div className="text-wrapper-2">CPF</div>
           </div>
           <div className="overlap-3">
-            <div className="rectangle-2" />
-            <div className="text-wrapper-3">Inscreva-se</div>
+            <a className="rectangle-2" href="/controle" />
+            <a className="text-wrapper-3" href="/controle">Inscreva-se</a>
           </div>
           <div className="overlap-4">
             <div className="rectangle" />

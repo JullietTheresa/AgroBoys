@@ -68,7 +68,7 @@ export const LandingPageDesign = () => {
           </div>
           <div className="overlap-2">
             <div className="rectangle-3" />
-            <div className="text-wrapper-23">Proximo</div>
+            <a className="text-wrapper-23" exact href="/controle">Proximo</a>
           </div>
         </div>
         <div className="seleao-de-plantas">

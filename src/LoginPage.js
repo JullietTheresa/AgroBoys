@@ -52,8 +52,8 @@ export const LoginPage = () => {
               <div className="text-wrapper-15">Senha</div>
             </div>
             <div className="overlap-4">
-              <div className="rectangle-4" />
-              <div className="text-wrapper-16">Login</div>
+              <a className="rectangle-4" href="/controle" />
+              <a className="text-wrapper-16" href="/controle">Login</a>
             </div>
             <p className="n-o-tem-uma-conta">
               <span className="text-wrapper-17">Não tem uma conta? </span>
