@@ -28,7 +28,7 @@ export const SignupPage = () => {
           </div>
           <p className="j-usu-rio-login">
             <span className="span">Já é usuário? </span>
-            <span className="text-wrapper-4">Login</span>
+            <a className="text-wrapper-4" exact href="/Login">Login</a>
           </p>
           <div className="text-wrapper-5">Inscreva-se</div>
           <img className="male-user" alt="Male user" src="https://c.animaapp.com/SLqVIjJw/img/male-user@2x.png" />

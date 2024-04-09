@@ -57,8 +57,8 @@ export const LoginPage = () => {
             </div>
             <p className="n-o-tem-uma-conta">
               <span className="text-wrapper-17">Não tem uma conta? </span>
-              <a href="https://htmledit.squarefree.com/signup.html" rel="noopener noreferrer" target="_blank">
-                <span className="text-wrapper-18">Inscreva-se! </span>
+              <a className="text-wrapper-18" href="/SignUp">
+                Inscreva-se!
               </a>
             </p>
             <p className="text-wrapper-19">Faça login na sua conta</p>
