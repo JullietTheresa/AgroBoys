@@ -21,6 +21,46 @@
     top: 0;
     width: 1452px;
   }
+
+  /* teste */
+  .login-page-design .header {
+    background-color: transparent;
+    height: 564px;
+    left: -16px;
+    position: absolute;
+    top: 0;
+    width: 1482px;
+  }
+
+  .login-page-design .navbar-wrapper {
+    background-color: #518200;
+    border: 1px solid;
+    border-color: #000000;
+    height: 128px;
+    left: 16px;
+    position: absolute;
+    top: 0;
+    width: 1445px;
+  }
+  
+  .login-page-design .navbar {
+    align-items: center;
+    display: flex;
+    gap: 111px;
+    left: 98px;
+    position: relative;
+    top: 26px;
+    width: 1341px;
+  }
+  
+  .login-page-design .navbar-buttons {
+    align-items: center;
+    display: flex;
+    gap: 90px;
+    left: 450px;
+    position: relative;
+    width: 1341px;
+  }
   
   .login-page .overlap-group {
     background-color: #518200;
@@ -33,26 +73,26 @@
   
   .login-page .text-wrapper {
     color: #ffffff;
-    font-family: "Poppins-Bold", Helvetica;
+    font-family: "Poppins", Helvetica;
     font-size: 50px;
     font-weight: 700;
-    left: 43px;
+    left: 98px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 30px;
+    top: 25px;
   }
   
   .login-page .text-wrapper-2 {
     color: #ffffff;
-    font-family: "Poppins-Regular", Helvetica;
+    font-family: "Poppins", Helvetica;
     font-size: 28px;
     font-weight: 400;
-    left: 788px;
+    left: 907px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 53px;
+    top: 43px;
   }
   
   .login-page .text-wrapper-3 {
@@ -81,26 +121,26 @@
   
   .login-page .text-wrapper-5 {
     color: #ffffff;
-    font-family: "Poppins-Bold", Helvetica;
+    font-family: "Poppins", Helvetica;
     font-size: 28px;
-    font-weight: 700;
-    left: 1161px;
+    font-weight: 400;
+    left: 1081px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 53px;
+    top: 43px;
   }
   
   .login-page .text-wrapper-6 {
     color: #ffffff;
-    font-family: "Poppins-Regular", Helvetica;
+    font-family: "Poppins", Helvetica;
     font-size: 28px;
     font-weight: 400;
-    left: 1260px;
+    left: 1245px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 53px;
+    top: 43px;
   }
   
   .login-page .fotter {
@@ -255,11 +295,11 @@
   }
   
   .login-page .copyright {
-    height: 66px;
-    left: 675px;
+    height: 30px;
+    left: 580px;
     position: absolute;
-    top: 301px;
-    width: 90px;
+    top: 330px;
+    width: 30px;
   }
   
   .login-page .copyright-2 {
@@ -442,9 +482,9 @@
   
   .login-page .male-user {
     height: 183px;
-    left: 412px;
+    left: 340px;
     position: absolute;
     top: 72px;
-    width: 183px;
+    width: 325px;
   }
   

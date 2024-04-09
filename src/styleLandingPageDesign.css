@@ -167,11 +167,11 @@
 }
 
 .landing-page-design .copyright {
-  height: 90px;
-  left: 675px;
+  height: 30px;
+  left: 575px;
   position: absolute;
-  top: 301px;
-  width: 90px;
+  top: 335px;
+  width: 30px;
 }
 
 .landing-page-design .copyright-2 {
@@ -696,6 +696,15 @@
   left: 98px;
   position: relative;
   top: 26px;
+  width: 1341px;
+}
+
+.landing-page-design .navbar-buttons {
+  align-items: center;
+  display: flex;
+  gap: 90px;
+  left: 450px;
+  position: relative;
   width: 1341px;
 }
 

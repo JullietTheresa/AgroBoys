@@ -1,18 +1,19 @@
 import React from "react";
 import "./styleLogin.css";
+import userIcon from './components/Images/Login/vecteezy_user-icon-on-transparent-background_19879186.png';
 
 export const LoginPage = () => {
   return (
     <div className="login-page">
       <div className="div">
-        <div className="headder">
+        <div className="header">
           <div className="overlap-group">
-            <div className="text-wrapper">AgroBoys</div>
-            <a className="text-wrapper-2" exact href="/">Home</a>
-            <div className="text-wrapper-3">Products</div>
-            <div className="text-wrapper-4">Contact</div>
-            <div className="text-wrapper-5">Login</div>
-            <div className="text-wrapper-6">SignUp</div>
+            <div className=".navbar-buttons">
+              <div className="text-wrapper">AgroBoys</div>
+              <a className="text-wrapper-2" exact href="/">Home</a>
+              <div className="text-wrapper-5">Login</div>
+              <div className="text-wrapper-6">SignUp</div>
+            </div>
           </div>
         </div>
         <div className="fotter">
@@ -29,15 +30,15 @@ export const LoginPage = () => {
               Empresa de sistema agricula ajudando pequenos agricultores desde 2024 a manejar suas plantações de maneira
               eficiente.
             </p>
-            <img className="envelope" alt="Envelope" src="envelope.png" />
-            <img className="hand-with-smartphone" alt="Hand with smartphone" src="hand-with-smartphone.png" />
-            <img className="internet" alt="Internet" src="internet.png" />
-            <img className="copyright" alt="Copyright" src="copyright.png" />
+            <img className="envelope" alt="Envelope" src="https://c.animaapp.com/ZUyH8RTL/img/envelope@2x.png" />
+            <img className="hand-with-smartphone" alt="Hand with smartphone" src="https://c.animaapp.com/ZUyH8RTL/img/hand-with-smartphone@2x.png" />
+            <img className="internet" alt="Internet" src="https://c.animaapp.com/ZUyH8RTL/img/internet@2x.png" />
+            <img className="copyright" alt="Copyright" src="https://c.animaapp.com/ZUyH8RTL/img/copyright@2x.png" />
             <p className="copyright-2">
               <span className="span">copyright 2024 </span>
               <span className="text-wrapper-13">AgroBoys</span>
             </p>
-            <img className="place-marker" alt="Place marker" src="place-marker.png" />
+            <img className="place-marker" alt="Place marker" src="https://c.animaapp.com/ZUyH8RTL/img/place-marker@2x.png" />
           </div>
         </div>
         <div className="login">
@@ -61,7 +62,7 @@ export const LoginPage = () => {
               </a>
             </p>
             <p className="text-wrapper-19">Faça login na sua conta</p>
-            <img className="male-user" alt="Male user" src="male-user.png" />
+            <img className="male-user" alt="Male user" src={userIcon} />
           </div>
         </div>
       </div>
