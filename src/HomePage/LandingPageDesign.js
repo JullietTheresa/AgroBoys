@@ -1,5 +1,5 @@
 import React from "react";
-import { ListboxComponent } from "./components/ListboxComponent";
+import { ListboxComponent } from "../components/ListboxComponent";
 import "./styleLandingPageDesign.css";
 
 export const LandingPageDesign = () => {

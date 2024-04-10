@@ -1,6 +1,7 @@
 import React from "react";
 import "./styleLogin.css";
-import userIcon from './components/Images/Login/vecteezy_user-icon-on-transparent-background_19879186.png';
+import userIcon from '../../components/Images/Login/UserProfile.png';
+
 
 export const LoginPage = () => {
   return (
