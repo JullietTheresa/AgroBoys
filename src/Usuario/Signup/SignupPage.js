@@ -34,10 +34,14 @@ export const SignupPage = () => {
           <img className="male-user" alt="Male user" src="https://c.animaapp.com/SLqVIjJw/img/male-user@2x.png" />
         </div>
         <div className="overlap-6">
-          <div className="text-wrapper-6">AgroBoys</div>
-          <a className="text-wrapper-7" exact href="/">Home</a>
-          <a className="text-wrapper-10" exact href="/Login">Login</a>
-          <div className="text-wrapper-11">SignUp</div>
+          <div className="navbar">
+            <div className="text-wrapper-6">AgroBoys</div>
+            <div className="navbar-buttons">
+              <a className="text-wrapper-7" exact href="/">Home</a>
+              <a className="text-wrapper-10" exact href="/Login">Login</a>
+              <a className="text-wrapper-11" >SignUp</a>
+            </div>
+          </div>
         </div>
         <div className="rotter">
           <div className="overlap-group-2">

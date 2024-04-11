@@ -205,7 +205,7 @@ export const LandingPageDesign = () => {
         </div>
         <header className="header">
           <div className="overlap-3">
-          <img className="rectangle-6" alt="Rectangle" src="https://c.animaapp.com/ZUyH8RTL/img/rectangle-5.svg" />
+            <img className="rectangle-6" alt="Rectangle" src="https://c.animaapp.com/ZUyH8RTL/img/rectangle-5.svg" />
             <div className="rectangle-wrapper">
               <div className="rectangle-5" />
             </div>
@@ -220,16 +220,16 @@ export const LandingPageDesign = () => {
                 plantação
               </p>
             </div>
-            
+
           </div>
           <div className="navbar-wrapper">
             <div className="navbar">
               <div className="text-wrapper-27">AgroBoys</div>
-                <div className="navbar-buttons">
+              <div className="navbar-buttons">
                 <div className="text-wrapper-28">Home</div>
                 <a className="text-wrapper-28" exact href="/Login">Login</a>
                 <a className="text-wrapper-28" exact href="/SignUp">SignUp</a>
-               </div>
+              </div>
             </div>
           </div>
         </header>
