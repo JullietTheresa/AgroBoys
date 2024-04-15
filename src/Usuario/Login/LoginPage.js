@@ -45,11 +45,11 @@ export const LoginPage = () => {
         <div className="login">
           <div className="overlap-2">
             <div className="overlap-group-2">
-              <div className="rectangle-3" />
+              <input type="text" className="rectangle-3" placeholder="Email ou CPF" />
               <div className="text-wrapper-14">Email ou CPF</div>
             </div>
             <div className="overlap-3">
-              <div className="rectangle-3" />
+            <input type="text" className="rectangle-3" placeholder="Senha" />
               <div className="text-wrapper-15">Senha</div>
             </div>
             <div className="overlap-4">

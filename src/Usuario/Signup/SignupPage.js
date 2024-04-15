@@ -1,5 +1,7 @@
 import React from "react";
 import "./styleSignupPage.css";
+import userIcon from '../../components/Images/Login/UserProfile.png';
+
 
 export const SignupPage = () => {
   return (
@@ -7,31 +9,31 @@ export const SignupPage = () => {
       <div className="div">
         <div className="overlap">
           <div className="overlap-group">
-            <div className="rectangle" />
+            <input type="text" className="rectangle" placeholder="Email" />
             <div className="text-wrapper">Email</div>
           </div>
           <div className="overlap-2">
-            <div className="rectangle" />
+          <input type="text" className="rectangle" placeholder="CPF" />
             <div className="text-wrapper-2">CPF</div>
+          </div>
+          <div className="overlap-4">
+           <input type="text" className="rectangle" placeholder="Senha" />
+            <div className="text-wrapper-2">Senha</div>
+          </div>
+          <div className="overlap-5">
+            <input type="text" className="rectangle" placeholder="Confirme a senha" />
+            <div className="text-wrapper-2">Confirme a senha</div>
           </div>
           <div className="overlap-3">
             <a className="rectangle-2" href="/controle" />
             <a className="text-wrapper-3" href="/controle">Inscreva-se</a>
-          </div>
-          <div className="overlap-4">
-            <div className="rectangle" />
-            <div className="text-wrapper-2">Senha</div>
-          </div>
-          <div className="overlap-5">
-            <div className="rectangle" />
-            <div className="text-wrapper-2">Confirme a senha</div>
           </div>
           <p className="j-usu-rio-login">
             <span className="span">Já é usuário? </span>
             <a className="text-wrapper-4" exact href="/Login">Login</a>
           </p>
           <div className="text-wrapper-5">Inscreva-se</div>
-          <img className="male-user" alt="Male user" src="https://c.animaapp.com/SLqVIjJw/img/male-user@2x.png" />
+          <img className="male-user" alt="Male user" src={userIcon} />
         </div>
         <div className="overlap-6">
           <div className="navbar">

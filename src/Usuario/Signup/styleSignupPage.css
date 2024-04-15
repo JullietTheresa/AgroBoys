@@ -61,6 +61,7 @@
   position: absolute;
   top: 54px;
   width: 793px;
+  font-size: 30px;
 }
 
 .signup-page .text-wrapper {
@@ -187,10 +188,10 @@
 
 .signup-page .male-user {
   height: 183px;
-  left: 426px;
+  left: 340px;
   position: absolute;
   top: 72px;
-  width: 183px;
+  width: 325px;
 }
 
 .signup-page .overlap-6 {
@@ -427,10 +428,11 @@
 
 .signup-page .copyright {
   height: 75px;
-  left: 675px;
+  left: 570px;
   position: absolute;
-  top: 301px;
-  width: 90px;
+  top: 330px;
+  width: 30px;
+  height: 30px;
 }
 
 .signup-page .copyright-2 {
