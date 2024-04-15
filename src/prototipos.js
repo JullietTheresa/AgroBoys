@@ -1,7 +1,7 @@
 import React from "react";
 import { DropdownList } from "./components/DropdownList";
 import { HoverState } from "./components/HoverState";
-import { ListboxComponent } from "./components/ListboxComponent";
+import ListboxComponent from "./components/ListboxComponent/ListboxComponent";
 import { ListboxTitle } from "./components/ListboxTitle";
 import { PlaceholderText } from "./components/PlaceholderText";
 import "./styleprototipos.css";

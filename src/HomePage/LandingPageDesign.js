@@ -1,5 +1,5 @@
 import React from "react";
-import { ListboxComponent } from "../components/ListboxComponent";
+import ListboxComponent from "../components/ListboxComponent/ListboxComponent";
 import "./styleLandingPageDesign.css";
 
 export const LandingPageDesign = () => {
@@ -41,12 +41,12 @@ export const LandingPageDesign = () => {
         </div>
         <div className="seleo-de-regio">
           <img className="img" alt="Objects" src="https://c.animaapp.com/ZUyH8RTL/img/objects-5.png" />
+          <div className="text-wrapper-9">Selecione sua região</div>
           <ListboxComponent
             chevronClassName="design-component-instance-node"
             className="listbox-component-instance"
             property1="default"
           />
-          <div className="text-wrapper-9">Selecione sua região</div>
           <div className="frame">
             <div className="text-wrapper-10">Região</div>
           </div>

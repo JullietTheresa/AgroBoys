@@ -1,10 +1,6 @@
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/
-
 import PropTypes from "prop-types";
 import React from "react";
+import React, { useRef, useEffect } from "react";
 import { useReducer } from "react";
 import { DropdownList } from "../DropdownList";
 import { ListboxTitle } from "../ListboxTitle";
@@ -18,10 +14,10 @@ export const ListboxComponent = ({ property1, className, chevronClassName }) => 
 
   return (
     <div
-      className={`listbox-component property-1-${state.property1} ${className}`}
-      onClick={() => {
-        dispatch("click");
-      }}
+    className={`listbox-component property-1-${state.property1} ${className}`}
+    onClick={() => {
+      dispatch({ type: "toggle" });
+    }}
     >
       <ListboxTitle className={`${state.property1 === "variant-2" ? "class" : "class-2"}`} />
       <div className="overlap-group">
@@ -98,17 +94,19 @@ export const ListboxComponent = ({ property1, className, chevronClassName }) => 
 };
 
 function reducer(state, action) {
-  switch (action) {
-    case "click":
+  switch (action.type) {
+    case "toggle":
       return {
         ...state,
-        property1: "variant-2",
+        property1: state.property1 === "default" ? "variant-2" : "default",
       };
+    default:
+      return state;
   }
-
-  return state;
 }
 
 ListboxComponent.propTypes = {
   property1: PropTypes.oneOf(["default", "variant-5", "variant-2", "variant-4", "variant-8", "variant-7", "variant-6"]),
 };
+
+export default ListboxComponent
