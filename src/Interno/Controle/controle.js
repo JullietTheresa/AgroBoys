@@ -1,79 +1,216 @@
-import React from "react";
+import React, { useState } from "react";
+import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import "./stylecontrole.css";
 
+const initialData = {
+  tasks: {
+    "task-1": { id: "task-1", content: 
+    <><div className="text-wrapper-2">Label</div>
+    <div className="text-wrapper-3">Label Label</div>
+      <p className="label-label-label">
+        <span className="span">Label</span>
+        <span className="text-wrapper-4">
+          : Label Label
+          <br />
+        </span>
+        <span className="span">Label</span>
+        <span className="text-wrapper-4">: Label Label</span>
+      </p></>
+   },
+    "task-2": { id: "task-2", content: <><div className="text-wrapper-2">Label</div>
+    <div className="text-wrapper-3">Label Label</div>
+      <p className="label-label-label">
+        <span className="span">Label</span>
+        <span className="text-wrapper-4">
+          : Label Label
+          <br />
+        </span>
+        <span className="span">Label</span>
+        <span className="text-wrapper-4">: Label Label</span>
+      </p></> },
+    "task-3": { id: "task-3", content: <><div className="text-wrapper-2">Label</div>
+    <div className="text-wrapper-3">Label Label</div>
+      <p className="label-label-label">
+        <span className="span">Label</span>
+        <span className="text-wrapper-4">
+          : Label Label
+          <br />
+        </span>
+        <span className="span">Label</span>
+        <span className="text-wrapper-4">: Label Label</span>
+      </p></> },
+    "task-4": { id: "task-4", content: <><div className="text-wrapper-2">Label</div>
+    <div className="text-wrapper-3">Label Label</div>
+      <p className="label-label-label">
+        <span className="span">Label</span>
+        <span className="text-wrapper-4">
+          : Label Label
+          <br />
+        </span>
+        <span className="span">Label</span>
+        <span className="text-wrapper-4">: Label Label</span>
+      </p></> },
+    "task-5": { id: "task-5", content: <><div className="text-wrapper-2">Label</div>
+    <div className="text-wrapper-3">Label Label</div>
+      <p className="label-label-label">
+        <span className="span">Label</span>
+        <span className="text-wrapper-4">
+          : Label Label
+          <br />
+        </span>
+        <span className="span">Label</span>
+        <span className="text-wrapper-4">: Label Label</span>
+      </p></> },
+    "task-6": { id: "task-6", content: <><div className="text-wrapper-2">Label</div>
+    <div className="text-wrapper-3">Label Label</div>
+      <p className="label-label-label">
+        <span className="span">Label</span>
+        <span className="text-wrapper-4">
+          : Label Label
+          <br />
+        </span>
+        <span className="span">Label</span>
+        <span className="text-wrapper-4">: Label Label</span>
+      </p></> },
+  },
+  columns: {
+    "column-1": {
+      id: "column-1",
+      title: "A FAZER",
+      taskIds: ["task-1", "task-2", "task-3"],
+    },
+    "column-2": {
+      id: "column-2",
+      title: "EM ANDAMENTO",
+      taskIds: ["task-4", "task-5"],
+    },
+    "column-3": {
+      id: "column-3",
+      title: "FINALIZADO",
+      taskIds: ["task-6"],
+    },
+  },
+  // Facilitate reordering of the columns
+  columnOrder: ["column-1", "column-2", "column-3"],
+};
+
 export const Tasks = () => {
+  const [state, setState] = useState(initialData);
+
+  const onDragEnd = (result) => {
+    const { destination, source } = result;
+
+    if (!destination) {
+      return;
+    }
+
+    if (
+      destination.droppableId === source.droppableId &&
+      destination.index === source.index
+    ) {
+      return;
+    }
+
+    const start = state.columns[source.droppableId];
+    const finish = state.columns[destination.droppableId];
+
+    if (start === finish) {
+      const newTaskIds = Array.from(start.taskIds);
+      newTaskIds.splice(source.index, 1);
+      newTaskIds.splice(destination.index, 0, result.draggableId);
+
+      const newColumn = {
+        ...start,
+        taskIds: newTaskIds,
+      };
+
+      setState({
+        ...state,
+        columns: {
+          ...state.columns,
+          [newColumn.id]: newColumn,
+        },
+      });
+    } else {
+      const startTaskIds = Array.from(start.taskIds);
+      startTaskIds.splice(source.index, 1);
+      const newStart = {
+        ...start,
+        taskIds: startTaskIds,
+      };
+
+      const finishTaskIds = Array.from(finish.taskIds);
+      finishTaskIds.splice(destination.index, 0, result.draggableId);
+      const newFinish = {
+        ...finish,
+        taskIds: finishTaskIds,
+      };
+
+      setState({
+        ...state,
+        columns: {
+          ...state.columns,
+          [newStart.id]: newStart,
+          [newFinish.id]: newFinish,
+        },
+      });
+    }
+  };
+
   return (
     <div className="tasks">
       <div className="div">
-        <div className="overlap">
-          <div className="text-wrapper">A Fazer</div>
-          <div className="group">
-            <div className="overlap-group">
-              <div className="text-wrapper-2">Label</div>
-              <div className="text-wrapper-3">Label Label</div>
-              <p className="label-label-label">
-                <span className="span">Label</span>
-                <span className="text-wrapper-4">
-                  : Label Label
-                  <br />
-                </span>
-                <span className="span">Label</span>
-                <span className="text-wrapper-4">: Label Label</span>
-              </p>
-            </div>
-          </div>
-          <div className="overlap-wrapper">
-            <div className="overlap-2">
-              <div className="text-wrapper-5">Label</div>
-              <div className="text-wrapper-6">Label Label</div>
-              <p className="p">
-                <span className="span">Label</span>
-                <span className="text-wrapper-4">
-                  : Label Label
-                  <br />
-                </span>
-                <span className="span">Label</span>
-                <span className="text-wrapper-4">: Label Label</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="overlap-3">
-          <div className="text-wrapper-7">Em andamento</div>
-          <div className="overlap-group-wrapper">
-            <div className="overlap-4">
-              <div className="text-wrapper-2">Label</div>
-              <div className="text-wrapper-3">Label Label</div>
-              <p className="label-label-label">
-                <span className="span">Label</span>
-                <span className="text-wrapper-4">
-                  : Label Label
-                  <br />
-                </span>
-                <span className="span">Label</span>
-                <span className="text-wrapper-4">: Label Label</span>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="overlap-5">
-          <div className="text-wrapper-8">Finalizado</div>
-          <div className="overlap-group-wrapper">
-            <div className="overlap-6">
-              <div className="text-wrapper-2">Label</div>
-              <div className="text-wrapper-3">Label Label</div>
-              <p className="label-label-label">
-                <span className="span">Label</span>
-                <span className="text-wrapper-4">
-                  : Label Label
-                  <br />
-                </span>
-                <span className="span">Label</span>
-                <span className="text-wrapper-4">: Label Label</span>
-              </p>
-            </div>
-          </div>
-        </div>
+        <DragDropContext onDragEnd={onDragEnd}>
+          {state.columnOrder.map((columnId) => {
+            const column = state.columns[columnId];
+            const tasks = column.taskIds.map((taskId) => state.tasks[taskId]);
+
+            // Definindo a classe CSS com base no título da coluna
+            const columnClass =
+              column.title === "A FAZER"
+                ? "overlap"
+                : column.title === "EM ANDAMENTO"
+                ? "overlap-3"
+                : "overlap-5";
+
+            return (
+              <div key={column.id} className={columnClass}>
+                <div className="text-wrapper">{column.title}</div>
+                <Droppable droppableId={column.id}>
+                  {(provided) => (
+                    <div
+                      className="group"
+                      ref={provided.innerRef}
+                      {...provided.droppableProps}
+                    >
+                      {tasks.map((task, index) => (
+                        <Draggable
+                          key={task.id}
+                          draggableId={task.id}
+                          index={index}
+                        >
+                          {(provided) => (
+                            <div
+                              className="overlap-group"
+                              ref={provided.innerRef}
+                              {...provided.draggableProps}
+                              {...provided.dragHandleProps}
+                            >
+                              <div className="text-wrapper-3">
+                                {task.content}
+                              </div>
+                            </div>
+                          )}
+                        </Draggable>
+                      ))}
+                      {provided.placeholder}
+                    </div>
+                  )}
+                </Droppable>
+              </div>
+            );
+          })}
+        </DragDropContext>
         <div className="overlap-7">
           <div className="rectangle" />
           <div className="rectangle-2" />
@@ -157,4 +294,5 @@ export const Tasks = () => {
     </div>
   );
 };
-export default Tasks
+
+export default Tasks;
