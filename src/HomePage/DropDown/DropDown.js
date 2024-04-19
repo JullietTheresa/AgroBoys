@@ -4,7 +4,7 @@ import "../styleLandingPageDesign.css";
 import DynamicSelect from './DynamicSelect';
 
 
-// Importe os componentes de conteúdo específicos para cada região
+// Importe os componentes de conteúdo específicos para cada região.
 import DadosNorte from '../DadosRegiao/DadosNorte';
 import DadosNordeste from '../DadosRegiao/DadosNordeste';
 import DadosCentroOeste from '../DadosRegiao/DadosCentroOeste';
