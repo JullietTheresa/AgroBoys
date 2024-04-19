@@ -1,6 +1,6 @@
 import React from "react";
-import ListboxComponent from "../components/ListboxComponent/ListboxComponent";
 import "./styleLandingPageDesign.css";
+import DropDown from "./DropDown/DropDown";
 
 export const LandingPageDesign = () => {
   return (
@@ -42,27 +42,13 @@ export const LandingPageDesign = () => {
         <div className="seleo-de-regio">
           <img className="img" alt="Objects" src="https://c.animaapp.com/ZUyH8RTL/img/objects-5.png" />
           <div className="text-wrapper-9">Selecione sua região</div>
-          <ListboxComponent
+          <DropDown
             chevronClassName="design-component-instance-node"
             className="listbox-component-instance"
-            property1="default"
           />
           <div className="frame">
             <div className="text-wrapper-10">Região</div>
           </div>
-          <div className="overlap">
-            <div className="text-wrapper-11">Informações da Região</div>
-            <div className="text-wrapper-12">Temperatura:</div>
-            <div className="text-wrapper-13">Media: Label</div>
-          </div>
-          <div className="text-wrapper-14">Estação: Label</div>
-          <div className="text-wrapper-15">Informações climaticas:</div>
-          <div className="text-wrapper-16">Umidade: Label</div>
-          <div className="text-wrapper-17">Previsão do tempo: Label</div>
-          <div className="text-wrapper-18">Índice pluviométrico: Label</div>
-          <div className="text-wrapper-19">Maxima: Label</div>
-          <div className="text-wrapper-20">Minima: Label</div>
-          <div className="text-wrapper-21">Bioma: Label</div>
           <div className="div-wrapper">
             <div className="text-wrapper-22">Historico Climatico</div>
           </div>

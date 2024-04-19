@@ -224,6 +224,46 @@
   width: 636px;
 }
 
+.landing-page-design .img-norte {
+  position: absolute;
+  left: 500px;
+  top: 92px;
+  width: 400px;
+  height: 285px;
+}
+
+.landing-page-design .img-nordeste {
+  position: absolute;
+  left: 853px;
+  top: 185px;
+  width: 238px;
+  height: 262px;
+}
+
+.landing-page-design .img-centro {
+  position: absolute;
+  left: 675px;
+  top: 279px;
+  width: 223px;
+  height: 260px;
+}
+
+.landing-page-design .img-sudeste {
+  position: absolute;
+  left: 794px;
+  top: 382px;
+  width: 334px;
+  height: 180px;
+}
+
+.landing-page-design .img-sul {
+  position: absolute;
+  left: 730px;
+  top: 513px;
+  width: 140px;
+  height: 190px;
+}
+
 .landing-page-design .listbox-component-instance {
   left: 38px !important;
   position: absolute !important;
@@ -319,7 +359,6 @@
   line-height: normal;
   position: absolute;
   top: 111px;
-  width: 220px;
 }
 
 .landing-page-design .text-wrapper-14 {
@@ -332,7 +371,6 @@
   line-height: normal;
   position: absolute;
   top: 778px;
-  width: 264px;
 }
 
 .landing-page-design .text-wrapper-15 {
@@ -384,7 +422,6 @@
   line-height: normal;
   position: absolute;
   top: 928px;
-  width: 470px;
 }
 
 .landing-page-design .text-wrapper-19 {
@@ -397,7 +434,6 @@
   line-height: normal;
   position: absolute;
   top: 878px;
-  width: 237px;
 }
 
 .landing-page-design .text-wrapper-20 {
@@ -410,7 +446,6 @@
   line-height: normal;
   position: absolute;
   top: 928px;
-  width: 220px;
 }
 
 .landing-page-design .text-wrapper-21 {
