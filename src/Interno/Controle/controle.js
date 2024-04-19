@@ -5,73 +5,102 @@ import "./stylecontrole.css";
 const initialData = {
   tasks: {
     "task-1": { id: "task-1", content: 
-    <><div className="text-wrapper-2">Label</div>
-    <div className="text-wrapper-3">Label Label</div>
-      <p className="label-label-label">
-        <span className="span">Label</span>
-        <span className="text-wrapper-4">
-          : Label Label
-          <br />
-        </span>
-        <span className="span">Label</span>
-        <span className="text-wrapper-4">: Label Label</span>
-      </p></>
+    (
+      <>
+        <div className="text-wrapper-2">Label</div>
+        <div className="text-wrapper-3">Label Label</div>
+          <p className="label-label-label">
+            <span className="span">Label</span>
+            <span className="text-wrapper-4">
+              : Label Label
+              <br />
+            </span>
+            <span className="span">Label</span>
+            <span className="text-wrapper-4">: Label Label</span>
+          </p>
+      </>
+    ),
    },
-    "task-2": { id: "task-2", content: <><div className="text-wrapper-2">Label</div>
-    <div className="text-wrapper-3">Label Label</div>
-      <p className="label-label-label">
-        <span className="span">Label</span>
-        <span className="text-wrapper-4">
-          : Label Label
-          <br />
-        </span>
-        <span className="span">Label</span>
-        <span className="text-wrapper-4">: Label Label</span>
-      </p></> },
-    "task-3": { id: "task-3", content: <><div className="text-wrapper-2">Label</div>
-    <div className="text-wrapper-3">Label Label</div>
-      <p className="label-label-label">
-        <span className="span">Label</span>
-        <span className="text-wrapper-4">
-          : Label Label
-          <br />
-        </span>
-        <span className="span">Label</span>
-        <span className="text-wrapper-4">: Label Label</span>
-      </p></> },
-    "task-4": { id: "task-4", content: <><div className="text-wrapper-2">Label</div>
-    <div className="text-wrapper-3">Label Label</div>
-      <p className="label-label-label">
-        <span className="span">Label</span>
-        <span className="text-wrapper-4">
-          : Label Label
-          <br />
-        </span>
-        <span className="span">Label</span>
-        <span className="text-wrapper-4">: Label Label</span>
-      </p></> },
-    "task-5": { id: "task-5", content: <><div className="text-wrapper-2">Label</div>
-    <div className="text-wrapper-3">Label Label</div>
-      <p className="label-label-label">
-        <span className="span">Label</span>
-        <span className="text-wrapper-4">
-          : Label Label
-          <br />
-        </span>
-        <span className="span">Label</span>
-        <span className="text-wrapper-4">: Label Label</span>
-      </p></> },
-    "task-6": { id: "task-6", content: <><div className="text-wrapper-2">Label</div>
-    <div className="text-wrapper-3">Label Label</div>
-      <p className="label-label-label">
-        <span className="span">Label</span>
-        <span className="text-wrapper-4">
-          : Label Label
-          <br />
-        </span>
-        <span className="span">Label</span>
-        <span className="text-wrapper-4">: Label Label</span>
-      </p></> },
+    "task-2": { id: "task-2", content: (
+      <>
+        <div className="text-wrapper-2">Label</div>
+        <div className="text-wrapper-3">Label Label</div>
+          <p className="label-label-label">
+            <span className="span">Label</span>
+            <span className="text-wrapper-4">
+              : Label Label
+              <br />
+            </span>
+            <span className="span">Label</span>
+            <span className="text-wrapper-4">: Label Label</span>
+          </p>
+      </>
+    ),
+  },
+    "task-3": { id: "task-3", content: (
+      <>
+        <div className="text-wrapper-2">Label</div>
+        <div className="text-wrapper-3">Label Label</div>
+          <p className="label-label-label">
+            <span className="span">Label</span>
+            <span className="text-wrapper-4">
+              : Label Label
+              <br />
+            </span>
+            <span className="span">Label</span>
+            <span className="text-wrapper-4">: Label Label</span>
+          </p>
+      </>
+    ),
+  },
+    "task-4": { id: "task-4", content: (
+      <>
+        <div className="text-wrapper-2">Label</div>
+        <div className="text-wrapper-3">Label Label</div>
+          <p className="label-label-label">
+            <span className="span">Label</span>
+            <span className="text-wrapper-4">
+              : Label Label
+              <br />
+            </span>
+            <span className="span">Label</span>
+            <span className="text-wrapper-4">: Label Label</span>
+          </p>
+      </>
+    ),
+  },
+    "task-5": { id: "task-5", content: (
+      <>
+        <div className="text-wrapper-2">Label</div>
+        <div className="text-wrapper-3">Label Label</div>
+          <p className="label-label-label">
+            <span className="span">Label</span>
+            <span className="text-wrapper-4">
+              : Label Label
+              <br />
+            </span>
+            <span className="span">Label</span>
+            <span className="text-wrapper-4">: Label Label</span>
+          </p>
+      </>
+    ),
+  },
+    "task-6": { id: "task-6", content: (
+      <>
+        <div className="text-wrapper-2">Label</div>
+        <div className="text-wrapper-3">Label Label</div>
+          <p className="label-label-label">
+            <span className="span">Label</span>
+            <span className="text-wrapper-4">
+              : Label Label
+              <br />
+            </span>
+            <span className="span">Label</span>
+            <span className="text-wrapper-4">: Label Label</span>
+          </p>
+      </>
+    ),
+  },
   },
   columns: {
     "column-1": {
@@ -160,7 +189,7 @@ export const Tasks = () => {
   return (
     <div className="tasks">
       <div className="div">
-        <DragDropContext onDragEnd={onDragEnd}>
+      <DragDropContext onDragEnd={onDragEnd}>
           {state.columnOrder.map((columnId) => {
             const column = state.columns[columnId];
             const tasks = column.taskIds.map((taskId) => state.tasks[taskId]);
@@ -175,7 +204,6 @@ export const Tasks = () => {
 
             return (
               <div key={column.id} className={columnClass}>
-                <div className="text-wrapper">{column.title}</div>
                 <Droppable droppableId={column.id}>
                   {(provided) => (
                     <div
@@ -196,8 +224,12 @@ export const Tasks = () => {
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
                             >
-                              <div className="text-wrapper-3">
-                                {task.content}
+                              <div>
+                                {index === 0 ? (
+                                  <p className="title">{task.content}</p>
+                                ) : (
+                                  <>{task.content}</>
+                                )}
                               </div>
                             </div>
                           )}
