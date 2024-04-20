@@ -1,33 +1,154 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styleSignupPage.css";
 import userIcon from '../../components/Images/Login/UserProfile.png';
-
+import eyeIconClosed from '../../components/Images/Login/eye-closed.png';
+import eyeIconOpen from '../../components/Images/Login/eye-open.png';
 
 export const SignupPage = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [cpf, setCpf] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [emailValid, setEmailValid] = useState(false);
+  const [showEmailError, setShowEmailError] = useState(false);
+  const [showSubmitError, setShowSubmitError] = useState(false); // Estado para controlar a exibição da mensagem de erro ao enviar o formulário
+  const [passwordMatchError, setPasswordMatchError] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const toggleConfirmPasswordVisibility = () => {
+    setShowConfirmPassword(!showConfirmPassword);
+  };
+
+  const handleCpfChange = (e) => {
+    let value = e.target.value.replace(/\D/g, '');
+    value = value.slice(0, 11);
+    setCpf(formatCpf(value));
+  };
+
+  const formatCpf = (value) => {
+    return value.replace(/^(\d{0,3})(\d{0,3})(\d{0,3})(\d{0,2})/,
+      (match, p1, p2, p3, p4) => {
+        return (p1 ? p1 + '.' : '') + (p2 ? p2 + '.' : '') + (p3 ? p3 + '-' : '') + p4;
+      }
+    );
+  };
+
+  const handleEmailChange = (e) => {
+    const value = e.target.value;
+    setEmail(value);
+    setEmailValid(value.includes('@'));
+    setShowEmailError(false); // Reset email error when email is changed
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleConfirmPasswordChange = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const handleSubmit = () => {
+    if (!emailValid) {
+      setShowEmailError(true);
+      setTimeout(() => setShowEmailError(false), 4000); // Hide email error after 2 seconds
+    }
+
+    if (!cpf || !password || !confirmPassword) {
+      setShowSubmitError(true);
+      setTimeout(() => setShowSubmitError(false), 4000); // Hide submit error after 2 seconds
+    }
+
+    if (password !== confirmPassword) {
+      setPasswordMatchError(true);
+      setTimeout(() => setPasswordMatchError(false), 4000); // Hide password match error after 2 seconds
+      return; // Impedir o envio do formulário se as senhas não coincidirem
+    }
+
+    if (emailValid && cpf && password && confirmPassword) {
+      // Coloque aqui a lógica para submeter o formulário
+      console.log("Formulário submetido!");
+      // Redirecionar para a tela de controle apenas se todos os campos estiverem preenchidos
+      window.location.href = "/controle";
+    }
+  };
+
   return (
     <div className="signup-page">
       <div className="div">
         <div className="overlap">
           <div className="overlap-group">
-            <input type="text" className="rectangle" placeholder="Email" />
+            <input
+              type="text"
+              className="rectangle"
+              placeholder="Email"
+              value={email}
+              onChange={handleEmailChange}
+            />
             <div className="text-wrapper">Email</div>
           </div>
           <div className="overlap-2">
-          <input type="text" className="rectangle" placeholder="CPF" />
+            <input
+              type="text"
+              className="rectangle"
+              placeholder="CPF"
+              inputMode="numeric"
+              value={cpf}
+              onChange={handleCpfChange}
+            />
             <div className="text-wrapper-2">CPF</div>
           </div>
           <div className="overlap-4">
-           <input type="text" className="rectangle" placeholder="Senha" />
-            <div className="text-wrapper-2">Senha</div>
+            <div className="password-input">
+              <input
+                type={showPassword ? "text" : "password"}
+                className="rectangle"
+                placeholder="Senha"
+                value={password}
+                onChange={handlePasswordChange}
+              />
+              <img
+                className="password-toggle-1"
+                src={showPassword ? eyeIconOpen : eyeIconClosed}
+                alt="Toggle Password Visibility"
+                onClick={togglePasswordVisibility}
+              />
+            </div>
+            <div className="text-wrapper-2 password-label">Senha</div>
           </div>
           <div className="overlap-5">
-            <input type="text" className="rectangle" placeholder="Confirme a senha" />
-            <div className="text-wrapper-2">Confirme a senha</div>
+            <div className="password-input">
+              <input
+                type={showConfirmPassword ? "text" : "password"}
+                className="rectangle"
+                placeholder="Confirme a senha"
+                value={confirmPassword}
+                onChange={handleConfirmPasswordChange}
+              />
+              <img
+                className="password-toggle-2"
+                src={showConfirmPassword ? eyeIconOpen : eyeIconClosed}
+                alt="Toggle Password Visibility"
+                onClick={toggleConfirmPasswordVisibility}
+              />
+            </div>
+            <div className="text-wrapper-2 password-label">Confirme a senha</div>
           </div>
+
+          {showEmailError && <p className="error-message-1">Por favor, insira um e-mail válido.</p>}
+          {showSubmitError && (!cpf || !password || !confirmPassword) && <p className="error-message-2">Por favor, preencha todos os campos corretamente.</p>}
+          {passwordMatchError && <p className="error-message-3">As senhas não coincidem.</p>}
+
           <div className="overlap-3">
-            <a className="rectangle-2" href="/controle" />
-            <a className="text-wrapper-3" href="/controle">Inscreva-se</a>
+            <a className="rectangle-2" href="#" />
+            <a className="text-wrapper-3" href="#" onClick={handleSubmit} disabled={!emailValid}>Inscreva-se</a>
           </div>
+
           <p className="j-usu-rio-login">
             <span className="span">Já é usuário? </span>
             <a className="text-wrapper-4" exact href="/Login">Login</a>
@@ -83,4 +204,4 @@ export const SignupPage = () => {
   );
 };
 
-export default SignupPage
+export default SignupPage;

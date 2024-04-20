@@ -64,6 +64,31 @@
   font-size: 30px;
 }
 
+.password-input {
+  position: relative;
+}
+
+.password-toggle-1 {
+  position: absolute;
+  top: calc(50% + 30px); 
+  right: 10px; 
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-toggle-2 {
+  position: absolute;
+  top: calc(50% + 30px); 
+  right: 10px; 
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-label {
+  color: #161515; 
+}
+
+
 .signup-page .text-wrapper {
   color: #121212;
   font-family: "Poppins", Helvetica;
@@ -463,4 +488,42 @@
   position: absolute;
   top: 103px;
   width: 20px;
+}
+.error-message-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  border: 1px solid red;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", Helvetica;
+}
+
+.error-message-2 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  border: 1px solid red;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", Helvetica;
+}
+
+.error-message-3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  border: 1px solid red;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", Helvetica;
 }
