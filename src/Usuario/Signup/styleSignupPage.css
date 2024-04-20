@@ -491,7 +491,7 @@
 }
 .error-message-1 {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: red;
@@ -517,7 +517,7 @@
 
 .error-message-3 {
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: red;
