@@ -759,4 +759,72 @@
     position: absolute;
     top: 39px;
   }
+
+  .modal-container {
+    position: relative;
+    
+  }
+
+  .modal {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
   
+  .tasks .text-wrapper-31 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 700;    
+    letter-spacing: 0;    
+    width: 173px;
+  }
+
+  .tasks .overlap-12 {
+    height: 39px;
+    width: 199px;
+  }
+
+  .tasks .rectangle-8 {
+    background-color: #609b00;
+    border-radius: 10px;
+    height: 39px;
+    width: 152px;
+  }
+
+  .tasks .text-wrapper-32 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 93px;
+    left: 40px;
+    width: 160px;
+  }
+
+  .tasks .text-wrapper-33 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 93px;
+    left: 240px;
+    width: 160px;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 10px;
+  }

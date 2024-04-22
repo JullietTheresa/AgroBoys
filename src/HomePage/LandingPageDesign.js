@@ -1,6 +1,8 @@
 import React from "react";
 import "./styleLandingPageDesign.css";
 import DropDown from "./DropDown/DropDown";
+import fazenda from '../components/Images/Login/nc-fazenda-itu-061220.jpg';
+
 
 export const LandingPageDesign = () => {
   return (
@@ -191,7 +193,7 @@ export const LandingPageDesign = () => {
         </div>
         <header className="header">
           <div className="overlap-3">
-            <img className="rectangle-6" alt="Rectangle" src="https://c.animaapp.com/ZUyH8RTL/img/rectangle-5.svg" />
+            <img className="rectangle-6" alt="Rectangle" src={fazenda} />
             <div className="rectangle-wrapper">
               <div className="rectangle-5" />
             </div>
