@@ -9,6 +9,7 @@ import Tasks from './Interno/Controle/controle';
 import Regio_Estaocao from './Interno/Regiao Estacao/Regiao_Estacao';
 import PlanoPlantio from './Interno/Plano de Plantio/plano';
 import DadosDeSolo from './Interno/Dados do solo/DadosSolo';
+import Pesticidas from './Interno/Pesticidas/pesticidas';
 
 const App = () => {
     return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route exact path="/regiao" element={<Regio_Estaocao/>}/>
             <Route exact path="/plano" element={<PlanoPlantio/>}/>
             <Route exact path="/DadosSolo" element={<DadosDeSolo/>}/>
+            <Route exact path="/Pesticidas" element={<Pesticidas/>}/>
           </Routes>
       </Router>
     );

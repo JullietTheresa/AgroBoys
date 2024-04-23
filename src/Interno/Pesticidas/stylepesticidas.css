@@ -1,0 +1,973 @@
+.pesticides {
+    background-color: #eef2f7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .pesticides .div {
+    background-color: #eef2f7;
+    height: 1450px;
+    overflow: hidden;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .pesticides .fotter {
+    height: 382px;
+    left: 0;
+    position: absolute;
+    top: 1067px;
+    width: 1456px;
+  }
+  
+  .pesticides .overlap-group {
+    height: 382px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .pesticides .rectangle {
+    background-color: #609b00;
+    height: 354px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1440px;
+  }
+  
+  .pesticides .rectangle-2 {
+    background-color: #000000;
+    height: 72px;
+    left: 0;
+    position: absolute;
+    top: 310px;
+    width: 1440px;
+  }
+  
+  .pesticides .copyright {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 457px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 332px;
+    width: 548px;
+  }
+  
+  .pesticides .text-wrapper {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  
+  .pesticides .span {
+    font-weight: 700;
+  }
+  
+  .pesticides .text-wrapper-2 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 208px;
+    width: 198px;
+  }
+  
+  .pesticides .internet {
+    height: 20px;
+    left: 926px;
+    position: absolute;
+    top: 211px;
+    width: 20px;
+  }
+  
+  .pesticides .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 172px;
+    width: 188px;
+  }
+  
+  .pesticides .hand-with-smartphone {
+    height: 20px;
+    left: 926px;
+    position: absolute;
+    top: 175px;
+    width: 20px;
+  }
+  
+  .pesticides .text-wrapper-4 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 136px;
+    width: 175px;
+  }
+  
+  .pesticides .envelope {
+    height: 20px;
+    left: 926px;
+    position: absolute;
+    top: 142px;
+    width: 20px;
+  }
+  
+  .pesticides .text-wrapper-5 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 100px;
+    width: 188px;
+  }
+  
+  .pesticides .place-marker {
+    height: 20px;
+    left: 925px;
+    position: absolute;
+    top: 103px;
+    width: 20px;
+  }
+  
+  .pesticides .text-wrapper-6 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    left: 866px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 58px;
+    white-space: nowrap;
+    width: 232px;
+  }
+  
+  .pesticides .text-wrapper-7 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    left: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 58px;
+    white-space: nowrap;
+    width: 232px;
+  }
+  
+  .pesticides .p {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 300;
+    left: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 114px;
+    width: 627px;
+  }
+  
+  .pesticides .overlap {
+    height: 1067px;
+    left: 4px;
+    position: absolute;
+    top: 0;
+    width: 1444px;
+  }
+  
+  .pesticides .tabela {
+    height: 961px;
+    left: 317px;
+    position: absolute;
+    top: 89px;
+    width: 1093px;
+  }
+  
+  .pesticides .overlap-2 {
+    height: 961px;
+    position: relative;
+    width: 1091px;
+  }
+  
+  .pesticides .rectangle-3 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    height: 912px;
+    left: 0;
+    position: absolute;
+    top: 49px;
+    width: 1091px;
+  }
+  
+  .pesticides .tabela-dados {
+    height: 824px;
+    left: 22px;
+    position: absolute;
+    top: 95px;
+    width: 1059px;
+  }
+  
+  .pesticides .overlap-3 {
+    height: 817px;
+    left: 0;
+    position: absolute;
+    top: 7px;
+    width: 1057px;
+  }
+  
+  .pesticides .overlap-4 {
+    height: 817px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1048px;
+  }
+  
+  .pesticides .flexcontainer {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    height: 817px;
+    left: 422px;
+    position: absolute;
+    top: 0;
+    width: 113px;
+  }
+  
+  .pesticides .text {
+    align-self: stretch;
+    color: #727272;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    position: relative;
+  }
+  
+  .pesticides .text-wrapper-8 {
+    color: #727272;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  
+  .pesticides .flexcontainer-2 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    height: 817px;
+    left: 610px;
+    position: absolute;
+    top: 0;
+    width: 113px;
+  }
+  
+  .pesticides .line {
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 698px;
+    width: 1048px;
+  }
+  
+  .pesticides .img {
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 596px;
+    width: 1048px;
+  }
+  
+  .pesticides .line-2 {
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 491px;
+    width: 1048px;
+  }
+  
+  .pesticides .line-3 {
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 392px;
+    width: 1048px;
+  }
+  
+  .pesticides .line-4 {
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 285px;
+    width: 1048px;
+  }
+  
+  .pesticides .line-5 {
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 183px;
+    width: 1048px;
+  }
+  
+  .pesticides .line-6 {
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 81px;
+    width: 1048px;
+  }
+  
+  .pesticides .view {
+    height: 34px;
+    left: 912px;
+    position: absolute;
+    top: 621px;
+    width: 68px;
+  }
+  
+  .pesticides .div-wrapper {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #518200;
+    border-radius: 3px;
+    height: 34px;
+    position: relative;
+    width: 66px;
+  }
+  
+  .pesticides .text-wrapper-9 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 500;
+    left: 6px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 6px;
+    width: 53px;
+  }
+  
+  .pesticides .delete {
+    height: 34px;
+    left: 989px;
+    position: absolute;
+    top: 621px;
+    width: 68px;
+  }
+  
+  .pesticides .overlap-5 {
+    background-color: #518200;
+    border-radius: 3px;
+    height: 34px;
+    position: relative;
+    width: 66px;
+  }
+  
+  .pesticides .text-wrapper-10 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 500;
+    left: 7px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 7px;
+    width: 53px;
+  }
+  
+  .pesticides .img-2 {
+    height: 76px;
+    left: 230px;
+    object-fit: cover;
+    position: absolute;
+    top: 610px;
+    width: 98px;
+  }
+  
+  .pesticides .overlap-wrapper {
+    height: 34px;
+    left: 912px;
+    position: absolute;
+    top: 517px;
+    width: 68px;
+  }
+  
+  .pesticides .overlap-group-wrapper {
+    height: 34px;
+    left: 989px;
+    position: absolute;
+    top: 517px;
+    width: 68px;
+  }
+  
+  .pesticides .img-3 {
+    height: 76px;
+    left: 230px;
+    object-fit: cover;
+    position: absolute;
+    top: 508px;
+    width: 98px;
+  }
+  
+  .pesticides .view-2 {
+    height: 34px;
+    left: 912px;
+    position: absolute;
+    top: 416px;
+    width: 68px;
+  }
+  
+  .pesticides .delete-2 {
+    height: 34px;
+    left: 989px;
+    position: absolute;
+    top: 416px;
+    width: 68px;
+  }
+  
+  .pesticides .img-4 {
+    height: 76px;
+    left: 230px;
+    object-fit: cover;
+    position: absolute;
+    top: 403px;
+    width: 98px;
+  }
+  
+  .pesticides .view-3 {
+    height: 34px;
+    left: 912px;
+    position: absolute;
+    top: 315px;
+    width: 68px;
+  }
+  
+  .pesticides .delete-3 {
+    height: 34px;
+    left: 989px;
+    position: absolute;
+    top: 315px;
+    width: 68px;
+  }
+  
+  .pesticides .img-5 {
+    height: 76px;
+    left: 230px;
+    object-fit: cover;
+    position: absolute;
+    top: 297px;
+    width: 98px;
+  }
+  
+  .pesticides .view-4 {
+    height: 34px;
+    left: 912px;
+    position: absolute;
+    top: 213px;
+    width: 68px;
+  }
+  
+  .pesticides .delete-4 {
+    height: 34px;
+    left: 989px;
+    position: absolute;
+    top: 213px;
+    width: 68px;
+  }
+  
+  .pesticides .img-6 {
+    height: 76px;
+    left: 230px;
+    object-fit: cover;
+    position: absolute;
+    top: 196px;
+    width: 98px;
+  }
+  
+  .pesticides .view-5 {
+    height: 34px;
+    left: 912px;
+    position: absolute;
+    top: 112px;
+    width: 68px;
+  }
+  
+  .pesticides .delete-5 {
+    height: 34px;
+    left: 989px;
+    position: absolute;
+    top: 112px;
+    width: 68px;
+  }
+  
+  .pesticides .img-7 {
+    height: 76px;
+    left: 230px;
+    object-fit: cover;
+    position: absolute;
+    top: 95px;
+    width: 98px;
+  }
+  
+  .pesticides .view-6 {
+    height: 34px;
+    left: 912px;
+    position: absolute;
+    top: 15px;
+    width: 68px;
+  }
+  
+  .pesticides .delete-6 {
+    height: 34px;
+    left: 989px;
+    position: absolute;
+    top: 15px;
+    width: 68px;
+  }
+  
+  .pesticides .img-8 {
+    height: 76px;
+    left: 230px;
+    object-fit: cover;
+    position: absolute;
+    top: 1px;
+    width: 98px;
+  }
+  
+  .pesticides .line-7 {
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1048px;
+  }
+  
+  .pesticides .tabela-tags {
+    height: 25px;
+    left: 85px;
+    position: absolute;
+    top: 65px;
+    width: 992px;
+  }
+  
+  .pesticides .text-wrapper-11 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    left: 882px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 2px;
+    width: 100px;
+  }
+  
+  .pesticides .text-wrapper-12 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    left: 547px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 2px;
+    width: 138px;
+  }
+  
+  .pesticides .text-wrapper-13 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    left: 350px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 101px;
+  }
+  
+  .pesticides .text-wrapper-14 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    left: 177px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 77px;
+  }
+  
+  .pesticides .text-wrapper-15 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 98px;
+  }
+  
+  .pesticides .text-wrapper-16 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 700;
+    left: 5px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 287px;
+  }
+  
+  .pesticides .overlap-6 {
+    height: 1067px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1444px;
+  }
+  
+  .pesticides .menu {
+    height: 1067px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 306px;
+  }
+  
+  .pesticides .overlap-7 {
+    background-color: #ffffff;
+    height: 1067px;
+    position: relative;
+    width: 290px;
+  }
+  
+  .pesticides .suporte-house {
+    height: 41px;
+    left: 13px;
+    position: absolute;
+    top: 511px;
+    width: 24px;
+  }
+  
+  .pesticides .text-wrapper-17 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 53px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 515px;
+    width: 235px;
+  }
+  
+  .pesticides .histrico-plantio {
+    height: 41px;
+    left: 13px;
+    position: absolute;
+    top: 465px;
+    width: 24px;
+  }
+  
+  .pesticides .text-wrapper-18 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 56px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 469px;
+    width: 179px;
+  }
+  
+  .pesticides .overlap-8 {
+    height: 189px;
+    left: 13px;
+    position: absolute;
+    top: 270px;
+    width: 258px;
+  }
+  
+  .pesticides .overlap-9 {
+    height: 144px;
+    left: 0;
+    position: absolute;
+    top: 45px;
+    width: 258px;
+  }
+  
+  .pesticides .overlap-group-2 {
+    height: 138px;
+    left: 20px;
+    position: absolute;
+    top: 6px;
+    width: 238px;
+  }
+  
+  .pesticides .rectangle-4 {
+    background-color: #518200;
+    border-radius: 10px;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    top: 88px;
+    width: 238px;
+  }
+  
+  .pesticides .text-wrapper-19 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 99px;
+  }
+  
+  .pesticides .text-wrapper-20 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 48px;
+    width: 164px;
+  }
+  
+  .pesticides .text-wrapper-21 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 164px;
+  }
+  
+  .pesticides .dados-do-solo-house {
+    height: 41px;
+    left: 0;
+    position: absolute;
+    top: 48px;
+    width: 24px;
+  }
+  
+  .pesticides .seleo-cultura-house {
+    height: 41px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 24px;
+  }
+  
+  .pesticides .text-wrapper-22 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 191px;
+  }
+  
+  .pesticides .regio-e-estao-house {
+    height: 41px;
+    left: 13px;
+    position: absolute;
+    top: 265px;
+    width: 24px;
+  }
+  
+  .pesticides .plano-plantio-house {
+    height: 41px;
+    left: 13px;
+    position: absolute;
+    top: 217px;
+    width: 24px;
+  }
+  
+  .pesticides .text-wrapper-23 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 56px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 221px;
+    width: 144px;
+  }
+  
+  .pesticides .controle-house {
+    height: 41px;
+    left: 13px;
+    position: absolute;
+    top: 165px;
+    width: 24px;
+  }
+  
+  .pesticides .text-wrapper-24 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 56px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 169px;
+    width: 144px;
+  }
+  
+  .pesticides .header {
+    background-color: transparent;
+    height: 70px;
+    left: 13px;
+    position: absolute;
+    top: 0;
+    width: 1431px;
+  }
+  
+  .pesticides .overlap-10 {
+    background-color: #518200;
+    height: 70px;
+    left: 277px;
+    position: absolute;
+    top: 0;
+    width: 1146px;
+  }
+  
+  .pesticides .overlap-group-3 {
+    height: 50px;
+    left: 880px;
+    position: absolute;
+    top: 8px;
+    width: 46px;
+  }
+  
+  .pesticides .ellipse {
+    background-color: #ffffff;
+    border-radius: 23px;
+    height: 46px;
+    left: 0;
+    position: absolute;
+    top: 4px;
+    width: 46px;
+  }
+  
+  .pesticides .text-wrapper-25 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 35px;
+    font-weight: 700;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 28px;
+  }
+  
+  .pesticides .text-wrapper-26 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 500;
+    left: 935px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 16px;
+  }
+  
+  .pesticides .text-wrapper-27 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    left: 935px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 39px;
+  }
+  
+  .pesticides .text-wrapper-28 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 35px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 10px;
+  }
+  
