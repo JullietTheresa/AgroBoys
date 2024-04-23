@@ -220,20 +220,18 @@ export const Tasks = () => {
           <div className="text-wrapper-10">Dados do Solo</div>
           <a className="text-wrapper-11" href="/">AgroBoys</a>
           <div className="group-2">
-            <div className="text-wrapper-12">Pragas e Agrotóxico</div>
+            <a className="text-wrapper-12" href="/">Pragas e Agrotóxico</a>
             <img className="img" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
           </div>
           <img className="house-2" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
           <div className="rectangle-4" />
           <div className="group-3">
-            <div className="text-wrapper-13">Região e Estação</div>
+            <a className="text-wrapper-13" href="/regiao">Região e Estação</a>
             <img className="img" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
           </div>
-          <div className="group-4">
             <div className="text-wrapper-14">Plano Plantio</div>
             <div className="text-wrapper-15">Histórico Plantio</div>
-            <img className="img" alt="Calendar" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
-          </div>
+            <img className="img-historico" alt="Calendar" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
           <div className="div-wrapper">
             <div className="text-wrapper-16">Controle</div>
           </div>

@@ -14,45 +14,9 @@ export const SelecaoDeCultura = () => {
               spandan@gmail.com
             </a>
             <div className="text-wrapper-2">admin</div>
-            <div className="flexcontainer">
-              <p className="text">
-                <span className="span">
-                  1<br />
-                </span>
-              </p>
-              <p className="text">
-                <span className="span">
-                  2<br />
-                </span>
-              </p>
-              <p className="text">
-                <span className="span">
-                  3<br />
-                </span>
-              </p>
-              <p className="text">
-                <span className="span">
-                  4<br />
-                </span>
-              </p>
-              <p className="text">
-                <span className="span">
-                  5<br />
-                </span>
-              </p>
-              <p className="text">
-                <span className="span">
-                  6<br />
-                </span>
-              </p>
-              <p className="text">
-                <span className="span">7</span>
-              </p>
-            </div>
-            <div className="text-wrapper-3">Orders</div>
             <div className="rectangle-2" />
             <div className="rectangle-3" />
-            <div className="text-wrapper-4">Região e Estação</div>
+            <a className="text-wrapper-4" href="/regiao">Região e Estação</a>
             <img className="house" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
             <div className="text-wrapper-5">Plano Plantio</div>
             <img className="calendar" alt="Calendar" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />

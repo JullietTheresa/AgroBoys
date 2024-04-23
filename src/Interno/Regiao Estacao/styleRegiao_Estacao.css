@@ -1,0 +1,810 @@
+.regio-e-estao {
+    background-color: #eef2f7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .regio-e-estao .div {
+    background-color: #eef2f7;
+    height: 1059px;
+    overflow: hidden;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .regio-e-estao .fotter {
+    height: 341px;
+    left: 0;
+    position: absolute;
+    top: 726px;
+    width: 1456px;
+  }
+  
+  .regio-e-estao .overlap-group {
+    height: 333px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .regio-e-estao .rectangle {
+    background-color: #609b00;
+    height: 304px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1440px;
+  }
+  
+  .regio-e-estao .rectangle-2 {
+    background-color: #000000;
+    height: 72px;
+    left: 0;
+    position: absolute;
+    top: 260px;
+    width: 1440px;
+  }
+  
+  .regio-e-estao .text-wrapper {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 50px;
+    width: 188px;
+  }
+  
+  .regio-e-estao .text-wrapper-2 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 86px;
+    width: 175px;
+  }
+  
+  .regio-e-estao .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 122px;
+    width: 188px;
+  }
+  
+  .regio-e-estao .text-wrapper-4 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 158px;
+    width: 198px;
+  }
+  
+  .regio-e-estao .text-wrapper-5 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    left: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 8px;
+    white-space: nowrap;
+    width: 232px;
+  }
+  
+  .regio-e-estao .text-wrapper-6 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    left: 866px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 8px;
+    white-space: nowrap;
+    width: 232px;
+  }
+  
+  .regio-e-estao .p {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 300;
+    left: 53px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 64px;
+    width: 627px;
+  }
+  
+  .regio-e-estao .envelope {
+    height: 20px;
+    left: 926px;
+    position: absolute;
+    top: 92px;
+    width: 20px;
+  }
+  
+  .regio-e-estao .hand-with-smartphone {
+    height: 20px;
+    left: 926px;
+    position: absolute;
+    top: 125px;
+    width: 20px;
+  }
+  
+  .regio-e-estao .internet {
+    height: 20px;
+    left: 926px;
+    position: absolute;
+    top: 161px;
+    width: 20px;
+  }
+  
+  .regio-e-estao .copyright {
+    height: 82px;
+    left: 675px;
+    position: absolute;
+    top: 251px;
+    width: 90px;
+  }
+  
+  .regio-e-estao .copyright-2 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 457px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 274px;
+    width: 548px;
+  }
+  
+  .regio-e-estao .span {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  
+  .regio-e-estao .text-wrapper-7 {
+    font-weight: 700;
+  }
+  
+  .regio-e-estao .place-marker {
+    height: 20px;
+    left: 925px;
+    position: absolute;
+    top: 53px;
+    width: 20px;
+  }
+  
+  .regio-e-estao .overlap {
+    height: 726px;
+    left: -4px;
+    position: absolute;
+    top: 0;
+    width: 1575px;
+  }
+  
+  .regio-e-estao .dados {
+    height: 549px;
+    left: 319px;
+    position: absolute;
+    top: 85px;
+    width: 1256px;
+  }
+  
+  .regio-e-estao .informaes-climaticas {
+    height: 478px;
+    left: 761px;
+    position: absolute;
+    top: 67px;
+    width: 501px;
+  }
+  
+  .regio-e-estao .overlap-group-2 {
+    height: 478px;
+    position: relative;
+    width: 493px;
+  }
+  
+  .regio-e-estao .rectangle-3 {
+    background-color: #fafafa;
+    border-radius: 12px;
+    height: 478px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 335px;
+  }
+  
+  .regio-e-estao .image {
+    height: 203px;
+    left: 49px;
+    object-fit: cover;
+    position: absolute;
+    top: 73px;
+    width: 208px;
+  }
+  
+  .regio-e-estao .text-wrapper-8 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 22px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 294px;
+    width: 471px;
+  }
+  
+  .regio-e-estao .text-wrapper-9 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 344px;
+    width: 470px;
+  }
+  
+  .regio-e-estao .text-wrapper-10 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 23px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 394px;
+    width: 470px;
+  }
+  
+  .regio-e-estao .text-wrapper-11 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 46px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 25px;
+    width: 274px;
+  }
+  
+  .regio-e-estao .regio {
+    height: 478px;
+    left: 0;
+    position: absolute;
+    top: 71px;
+    width: 337px;
+  }
+  
+  .regio-e-estao .overlap-2 {
+    background-color: #fafafa;
+    border-radius: 12px;
+    height: 478px;
+    position: relative;
+    width: 335px;
+  }
+  
+  .regio-e-estao .overlap-group-3 {
+    height: 258px;
+    left: 38px;
+    position: absolute;
+    top: 25px;
+    width: 239px;
+  }
+  
+  .regio-e-estao .OBJECTS {
+    height: 215px;
+    left: 16px;
+    position: absolute;
+    top: 42px;
+    width: 223px;
+  }
+  
+  .regio-e-estao .text-wrapper-12 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 173px;
+  }
+  
+  .regio-e-estao .group {
+    height: 116px;
+    left: 62px;
+    position: absolute;
+    top: 300px;
+    width: 203px;
+  }
+  
+  .regio-e-estao .text-wrapper-13 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+  }
+  
+  .regio-e-estao .text-wrapper-14 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 43px;
+  }
+  
+  .regio-e-estao .text-wrapper-15 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 86px;
+  }
+  
+  .regio-e-estao .temperatura {
+    height: 478px;
+    left: 380px;
+    position: absolute;
+    top: 67px;
+    width: 343px;
+  }
+  
+  .regio-e-estao .text-wrapper-16 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 41px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 25px;
+    width: 173px;
+  }
+  
+  .regio-e-estao .img {
+    height: 211px;
+    left: 73px;
+    object-fit: cover;
+    position: absolute;
+    top: 79px;
+    width: 171px;
+  }
+  
+  .regio-e-estao .text-wrapper-17 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 42px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 297px;
+    width: 220px;
+  }
+  
+  .regio-e-estao .text-wrapper-18 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 42px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 347px;
+    width: 237px;
+  }
+  
+  .regio-e-estao .text-wrapper-19 {
+    color: #000000;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    left: 42px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 397px;
+    width: 220px;
+  }
+  
+  .regio-e-estao .text-wrapper-20 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 241px;
+  }
+  
+  .regio-e-estao .overlap-3 {
+    height: 726px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1452px;
+  }
+  
+  .regio-e-estao .menu {
+    height: 726px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 300px;
+  }
+  
+  .regio-e-estao .overlap-4 {
+    height: 726px;
+    position: relative;
+    width: 294px;
+  }
+  
+  .regio-e-estao .rectangle-4 {
+    background-color: #ffffff;
+    height: 676px;
+    left: 4px;
+    position: absolute;
+    top: 0;
+    width: 235px;
+  }
+  
+  .regio-e-estao .rectangle-5 {
+    background-color: #ffffff;
+    height: 726px;
+    left: 4px;
+    position: absolute;
+    top: 0;
+    width: 290px;
+  }
+  
+  .regio-e-estao .rectangle-6 {
+    background-color: #ffffff;
+    height: 641px;
+    left: 0;
+    position: absolute;
+    top: 85px;
+    width: 267px;
+  }
+  
+  .regio-e-estao .text-wrapper-21 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 57px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 515px;
+    width: 92px;
+  }
+  
+  .regio-e-estao .house {
+    height: 41px;
+    left: 17px;
+    position: absolute;
+    top: 465px;
+    width: 24px;
+  }
+  
+  .regio-e-estao .text-wrapper-22 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 60px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 369px;
+    width: 164px;
+  }
+  
+  .regio-e-estao .group-2 {
+    height: 54px;
+    left: 17px;
+    position: absolute;
+    top: 411px;
+    width: 255px;
+  }
+  
+  .regio-e-estao .text-wrapper-23 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 5px;
+    width: 210px;
+  }
+  
+  .regio-e-estao .img-2 {
+    height: 41px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 24px;
+  }
+  
+  .regio-e-estao .house-2 {
+    height: 41px;
+    left: 17px;
+    position: absolute;
+    top: 315px;
+    width: 24px;
+  }
+  
+  .regio-e-estao .menu-2 {
+    height: 336px;
+    left: 17px;
+    position: absolute;
+    top: 163px;
+    width: 228px;
+  }
+  
+  .regio-e-estao .text-wrapper-24 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 306px;
+    width: 179px;
+  }
+  
+  .regio-e-estao .text-wrapper-25 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 58px;
+    width: 144px;
+  }
+  
+  .regio-e-estao .calendar {
+    height: 41px;
+    left: 0;
+    position: absolute;
+    top: 54px;
+    width: 24px;
+  }
+  
+  .regio-e-estao .text-wrapper-26 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 4px;
+    width: 144px;
+  }
+  
+  .regio-e-estao .rectangle-7 {
+    background-color: #518200;
+    border-radius: 10px;
+    height: 50px;
+    left: 37px;
+    position: absolute;
+    top: 260px;
+    width: 170px;
+  }
+  
+  .regio-e-estao .div-wrapper {
+    height: 27px;
+    left: 51px;
+    position: absolute;
+    top: 272px;
+    width: 183px;
+  }
+  
+  .regio-e-estao .text-wrapper-27 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 181px;
+  }
+  
+  .regio-e-estao .text-wrapper-28 {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 500;
+    left: 60px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 321px;
+    width: 164px;
+  }
+  
+  .regio-e-estao .house-3 {
+    height: 41px;
+    left: 17px;
+    position: absolute;
+    top: 363px;
+    width: 24px;
+  }
+  
+  .regio-e-estao .house-4 {
+    height: 41px;
+    left: 17px;
+    position: absolute;
+    top: 511px;
+    width: 24px;
+  }
+  
+  .regio-e-estao .header {
+    background-color: transparent;
+    height: 70px;
+    left: 17px;
+    position: absolute;
+    top: 0;
+    width: 1435px;
+  }
+  
+  .regio-e-estao .text-wrapper-29 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 35px;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 10px;
+  }
+  
+  .regio-e-estao .overlap-5 {
+    background-color: #518200;
+    height: 70px;
+    left: 277px;
+    position: absolute;
+    top: 0;
+    width: 1150px;
+  }
+  
+  .regio-e-estao .usuario-gmail-com {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 500;
+    left: 939px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 16px;
+  }
+  
+  .regio-e-estao .text-wrapper-30 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+  
+  .regio-e-estao .text-wrapper-31 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    left: 939px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 39px;
+  }
+  
+  .regio-e-estao .overlap-group-4 {
+    height: 50px;
+    left: 884px;
+    position: absolute;
+    top: 8px;
+    width: 46px;
+  }
+  
+  .regio-e-estao .ellipse {
+    background-color: #ffffff;
+    border-radius: 23px;
+    height: 46px;
+    left: 0;
+    position: absolute;
+    top: 4px;
+    width: 46px;
+  }
+  
+  .regio-e-estao .text-wrapper-32 {
+    color: #7da240;
+    font-family: "Poppins", Helvetica;
+    font-size: 35px;
+    font-weight: 700;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 28px;
+  }
+  
