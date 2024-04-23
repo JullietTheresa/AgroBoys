@@ -8,6 +8,7 @@ import SelecaoDeCultura from './Interno/Seleção Cultura/selecaocultura';
 import Tasks from './Interno/Controle/controle';
 import Regio_Estaocao from './Interno/Regiao Estacao/Regiao_Estacao';
 import PlanoPlantio from './Interno/Plano de Plantio/plano';
+import DadosDeSolo from './Interno/Dados do solo/DadosSolo';
 
 const App = () => {
     return (
@@ -20,6 +21,7 @@ const App = () => {
             <Route exact path="/controle" element={<Tasks/>}/>
             <Route exact path="/regiao" element={<Regio_Estaocao/>}/>
             <Route exact path="/plano" element={<PlanoPlantio/>}/>
+            <Route exact path="/DadosSolo" element={<DadosDeSolo/>}/>
           </Routes>
       </Router>
     );
