@@ -30,7 +30,6 @@ export const SelecaoDeCultura = () => {
               <a className="text-wrapper-10" href="/pesticidas" >Pragas e Agrotóxico</a>
               <img className="house-3" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
             </div>
-            <div className="rectangle-4" />
             <div className="overlap-group-wrapper">
               <div className="overlap-group-2">
                 <div className="rectangle-5" />
@@ -40,6 +39,7 @@ export const SelecaoDeCultura = () => {
             <div className="div-wrapper">
               <a className="text-wrapper-12" href="/controle">Controle</a>
             </div>
+            <img className="controle-house" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
             <img className="house-4" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
             <div className="rotter">
               <div className="overlap-2">

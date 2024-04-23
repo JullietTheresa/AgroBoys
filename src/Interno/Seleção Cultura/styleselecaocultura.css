@@ -169,6 +169,14 @@
     width: 24px;
   }
   
+  .seleo-de-cultura .controle-house {
+    height: 41px;
+    left: 13;
+    position: absolute;
+    top: 168;
+    width: 24px;
+  }
+
   .seleo-de-cultura .text-wrapper-5 {
     color: #609b00;
     font-family: "Poppins", Helvetica;
@@ -342,15 +350,15 @@
   }
   
   .seleo-de-cultura .text-wrapper-12 {
-    color: #ffffff;
+    color: #609b00;
     font-family: "Poppins", Helvetica;
     font-size: 20px;
     font-weight: 500;
-    left: 0;
+    left: -15px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 0;
+    top: 15;
     width: 91px;
   }
   
