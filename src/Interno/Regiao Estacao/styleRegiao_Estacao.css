@@ -612,11 +612,11 @@
     font-family: "Poppins", Helvetica;
     font-size: 20px;
     font-weight: 500;
-    left: 43px;
+    left: 60px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 306px;
+    top: 470px;
     width: 179px;
   }
   
@@ -625,11 +625,11 @@
     font-family: "Poppins", Helvetica;
     font-size: 20px;
     font-weight: 500;
-    left: 43px;
+    left: 60px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 58px;
+    top: 220px;
     width: 144px;
   }
   
@@ -640,17 +640,34 @@
     top: 54px;
     width: 24px;
   }
+
+  .regio-e-estao .plano-house {
+    height: 41px;
+    left: 16;
+    position: absolute;
+    top: 214px;
+    width: 24px;
+  }
+
+  .regio-e-estao .controle-house {
+    height: 41px;
+    left: 16;
+    position: absolute;
+    top: 170px;
+    width: 24px;
+  }
+  
   
   .regio-e-estao .text-wrapper-26 {
     color: #609b00;
     font-family: "Poppins", Helvetica;
     font-size: 20px;
     font-weight: 500;
-    left: 43px;
+    left: 60px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 4px;
+    top: 177px;
     width: 144px;
   }
   

@@ -58,9 +58,9 @@ export const Suporte = () => {
                 />
               </div>
               <div className="overlap-4">
-                <div className="text-wrapper-9">Histórico Plantio</div>
-                <div className="text-wrapper-10">Pragas e Agrotóxico</div>
-                <div className="text-wrapper-11">Dados do Solo</div>
+                <a className="text-wrapper-9" href="/historico" >Histórico Plantio</a>
+                <a className="text-wrapper-10" href="/pesticidas" >Pragas e Agrotóxico</a>
+                <a className="text-wrapper-11" href="/dadossolo" >Dados do Solo</a>
               </div>
               <img
                 className="dados-do-solo-house"
@@ -73,9 +73,9 @@ export const Suporte = () => {
                 src="https://c.animaapp.com/gty5W9Sn/img/sele--o-cultura-house@2x.png"
               />
               <div className="overlap-5">
-                <div className="text-wrapper-12">Seleção Cultura</div>
-                <div className="text-wrapper-13">Região e Estação</div>
-                <div className="text-wrapper-14">Plano Plantio</div>
+                <a className="text-wrapper-12" href="/selcultura" >Seleção Cultura</a>
+                <a className="text-wrapper-13" href="/regiao" >Região e Estação</a>
+                <a className="text-wrapper-14" href="/plano" >Plano Plantio</a>
               </div>
               <img
                 className="regio-e-estao-house"
@@ -92,7 +92,7 @@ export const Suporte = () => {
                 alt="Controle house"
                 src="https://c.animaapp.com/gty5W9Sn/img/controle-house@2x.png"
               />
-              <div className="text-wrapper-15">Controle</div>
+              <a className="text-wrapper-15" href="/controle" >Controle</a>
             </div>
           </div>
           <div className="perguntas-frequentes">
@@ -152,7 +152,7 @@ export const Suporte = () => {
               </a>
               <div className="text-wrapper-33">admin</div>
             </div>
-            <div className="text-wrapper-34">AgroBoys</div>
+            <a className="text-wrapper-34" href="/" >AgroBoys</a>
           </div>
         </div>
       </div>

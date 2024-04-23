@@ -232,20 +232,20 @@ export const Pesticidas = () => {
                   alt="Suporte house"
                   src="https://c.animaapp.com/ROdEJw0v/img/controle-house@2x.png"
                 />
-                <div className="text-wrapper-17">Suporte</div>
+                <a className="text-wrapper-17" href="/suporte" >Suporte</a>
                 <img
                   className="histrico-plantio"
                   alt="Histrico plantio"
                   src="https://c.animaapp.com/ROdEJw0v/img/controle-house@2x.png"
                 />
-                <div className="text-wrapper-18">Histórico Plantio</div>
+                <a className="text-wrapper-18" href="/historico">Histórico Plantio</a>
                 <div className="overlap-8">
                   <div className="overlap-9">
                     <div className="overlap-group-2">
                       <div className="rectangle-4" />
                       <div className="text-wrapper-19">Pragas e Agrotóxicos</div>
-                      <div className="text-wrapper-20">Dados do Solo</div>
-                      <div className="text-wrapper-21">Seleção Cultura</div>
+                      <a className="text-wrapper-20" href="/dadossolo" >Dados do Solo</a>
+                      <a className="text-wrapper-21" href="/selcultura" >Seleção Cultura</a>
                     </div>
                     <img
                       className="dados-do-solo-house"
@@ -258,7 +258,7 @@ export const Pesticidas = () => {
                       src="https://c.animaapp.com/ROdEJw0v/img/controle-house@2x.png"
                     />
                   </div>
-                  <div className="text-wrapper-22">Região e Estação</div>
+                  <a className="text-wrapper-22" href="/regiao" >Região e Estação</a>
                 </div>
                 <img
                   className="regio-e-estao-house"
@@ -270,13 +270,13 @@ export const Pesticidas = () => {
                   alt="Plano plantio house"
                   src="https://c.animaapp.com/ROdEJw0v/img/controle-house@2x.png"
                 />
-                <div className="text-wrapper-23">Plano Plantio</div>
+                <a className="text-wrapper-23" href="/plano" >Plano Plantio</a>
                 <img
                   className="controle-house"
                   alt="Controle house"
                   src="https://c.animaapp.com/ROdEJw0v/img/controle-house@2x.png"
                 />
-                <div className="text-wrapper-24">Controle</div>
+                <a className="text-wrapper-24" href="/controle" >Controle</a>
               </div>
             </div>
             <header className="header">
@@ -295,7 +295,7 @@ export const Pesticidas = () => {
                 </a>
                 <div className="text-wrapper-27">admin</div>
               </div>
-              <div className="text-wrapper-28">AgroBoys</div>
+              <a className="text-wrapper-28" href="/" >AgroBoys</a>
             </header>
           </div>
         </div>

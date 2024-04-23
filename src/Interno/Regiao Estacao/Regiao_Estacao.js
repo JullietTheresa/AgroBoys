@@ -47,21 +47,21 @@ export const Regio_Estaocao = () => {
                 <div className="rectangle-4" />
                 <div className="rectangle-5" />
                 <div className="rectangle-6" />
-                <div className="text-wrapper-21">Suporte</div>
+                <a className="text-wrapper-21" href="/suporte" >Suporte</a>
                 <img className="house" alt="House" src="https://c.animaapp.com/bqR5CWSn/img/house-4@2x.png" />
-                <div className="text-wrapper-22">Dados do Solo</div>
+                <a className="text-wrapper-22" href="/dadossolo" >Dados do Solo</a>
                 <div className="group-2">
-                  <div className="text-wrapper-23">Pragas e Agrotóxico</div>
+                  <a className="text-wrapper-23" href="/pesticidas" >Pragas e Agrotóxico</a>
                   <img className="img-2" alt="House" src="https://c.animaapp.com/bqR5CWSn/img/house-4@2x.png" />
                 </div>
                 <img className="house-2" alt="House" src="https://c.animaapp.com/bqR5CWSn/img/house-4@2x.png" />
-                <div className="menu-2">
-                  <div className="text-wrapper-24">Histórico Plantio</div>
-                  <div className="text-wrapper-25">Plano Plantio</div>
-                  <img className="calendar" alt="Calendar" src="https://c.animaapp.com/bqR5CWSn/img/house-4@2x.png" />
-                  <a className="text-wrapper-26" href="/controle">Controle</a>
-                  <img className="img-2" alt="Calendar" src="https://c.animaapp.com/bqR5CWSn/img/house-4@2x.png" />
-                </div>
+
+                  <a className="text-wrapper-24" href="/historico" >Histórico Plantio</a>
+                  <a className="text-wrapper-25" href="/plano" >Plano Plantio</a>
+                  <img className="plano-house" alt="Calendar" src="https://c.animaapp.com/bqR5CWSn/img/house-4@2x.png" />
+                  <a className="text-wrapper-26" href="/controle" >Controle</a>
+                  <img className="controle-house" alt="Calendar" src="https://c.animaapp.com/bqR5CWSn/img/house-4@2x.png" />
+
                 <div className="rectangle-7" />
                 <div className="div-wrapper">
                   <div className="text-wrapper-27">Região e Estação</div>
@@ -72,7 +72,7 @@ export const Regio_Estaocao = () => {
               </div>
             </div>
             <header className="header">
-              <div className="text-wrapper-29">AgroBoys</div>
+              <a className="text-wrapper-29" href="/" >AgroBoys</a>
               <div className="overlap-5">
                 <p className="usuario-gmail-com">
                   <span className="text-wrapper-30">usuario</span>

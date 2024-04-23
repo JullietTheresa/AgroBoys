@@ -326,12 +326,12 @@ const Tasks = () => {
             <div className="rectangle" />
             <div className="rectangle-2" />
             <div className="rectangle-3" />
-            <div className="text-wrapper-9">Suporte</div>
+            <a className="text-wrapper-9" href="/suporte">Suporte</a>
             <img className="house" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
-            <div className="text-wrapper-10">Dados do Solo</div>
+            <a className="text-wrapper-10" href="/dadossolo">Dados do Solo</a>
             <a className="text-wrapper-11" href="/">AgroBoys</a>
             <div className="group-2">
-              <div className="text-wrapper-12">Pragas e Agrotóxico</div>
+              <a className="text-wrapper-12" href="/pesticidas">Pragas e Agrotóxico</a>
               <img className="img" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
             </div>
             <img className="house-2" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
@@ -341,8 +341,8 @@ const Tasks = () => {
               <img className="img" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
             </div>
 
-              <div className="text-wrapper-14">Plano Plantio</div>
-              <div className="text-wrapper-15">Histórico Plantio</div>
+              <a className="text-wrapper-14" href="/plano">Plano Plantio</a>
+              <a className="text-wrapper-15" href="/historico">Histórico Plantio</a>
               <img className="img-historico" alt="Calendar" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
 
             <div className="div-wrapper">

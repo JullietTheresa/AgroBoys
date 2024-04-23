@@ -108,7 +108,7 @@ export const HistoricoGeral = () => {
               <div className="batata">
                 <div className="view-batata">
                   <div className="div-wrapper">
-                    <div className="text-wrapper-9">View</div>
+                    <a className="text-wrapper-9" href="/historico/batata">View</a>
                   </div>
                 </div>
                 <div className="text-wrapper-16">1 Hectar</div>
@@ -171,7 +171,7 @@ export const HistoricoGeral = () => {
                 alt="Suporte house"
                 src="https://c.animaapp.com/V72d7Rn8/img/suporte-house@2x.png"
               />
-              <div className="text-wrapper-32">Suporte</div>
+              <a className="text-wrapper-32"href="/suporte">Suporte</a>
               <div className="group">
                 <div className="overlap-group-2">
                   <div className="rectangle-7" />
@@ -184,8 +184,8 @@ export const HistoricoGeral = () => {
                 src="https://c.animaapp.com/V72d7Rn8/img/pragas-e-agrot-xico-house@2x.png"
               />
               <div className="overlap-4">
-                <div className="text-wrapper-34">Pragas e Agrotóxico</div>
-                <div className="text-wrapper-35">Dados do Solo</div>
+                <a className="text-wrapper-34" href="/pesticidas">Pragas e Agrotóxico</a>
+                <a className="text-wrapper-35" href="/dadossolo">Dados do Solo</a>
               </div>
               <img
                 className="dados-do-solo-house"
@@ -198,9 +198,9 @@ export const HistoricoGeral = () => {
                 src="https://c.animaapp.com/V72d7Rn8/img/sele--o-cultura-house@2x.png"
               />
               <div className="overlap-5">
-                <div className="text-wrapper-36">Seleção Cultura</div>
-                <div className="text-wrapper-37">Região e Estação</div>
-                <div className="text-wrapper-38">Plano Plantio</div>
+                <a className="text-wrapper-36" href="/selcultura">Seleção Cultura</a>
+                <a className="text-wrapper-37" href="/regiao">Região e Estação</a>
+                <a className="text-wrapper-38" href="/plano">Plano Plantio</a>
               </div>
               <img
                 className="regio-e-estao-house"
@@ -217,7 +217,7 @@ export const HistoricoGeral = () => {
                 alt="Controle house"
                 src="https://c.animaapp.com/V72d7Rn8/img/controle-house@2x.png"
               />
-              <div className="text-wrapper-39">Controle</div>
+              <a className="text-wrapper-39" href="/controle">Controle</a>
             </div>
           </div>
           <header className="header">
@@ -231,7 +231,7 @@ export const HistoricoGeral = () => {
               </a>
               <div className="text-wrapper-42">admin</div>
             </div>
-            <div className="text-wrapper-43">AgroBoys</div>
+            <a className="text-wrapper-43" href="/">AgroBoys</a>
           </header>
         </div>
       </div>

@@ -76,27 +76,27 @@ export const DadosDeSolo = () => {
                   alt="Suporte house"
                   src="https://c.animaapp.com/KFeF81dS/img/controle-house@2x.png"
                 />
-                <div className="text-wrapper-21">Suporte</div>
+                <a className="text-wrapper-21" href="/suporte" >Suporte</a>
                 <img
                   className="histrico-plantio"
                   alt="Histrico plantio"
                   src="https://c.animaapp.com/KFeF81dS/img/controle-house@2x.png"
                 />
-                <div className="text-wrapper-22">Histórico Plantio</div>
+                <a className="text-wrapper-22" href="/historico">Histórico Plantio</a>
                 <img
                   className="pragas-e-agrotxico"
                   alt="Pragas e agrotxico"
                   src="https://c.animaapp.com/KFeF81dS/img/controle-house@2x.png"
                 />
-                <div className="text-wrapper-23">Pragas e Agrotóxico</div>
+                <a className="text-wrapper-23" href="/pesticidas">Pragas e Agrotóxico</a>
                 <div className="rectangle-6" />
-                <div className="text-wrapper-24">Dados do solo</div>
+                <a className="text-wrapper-24" href="/dadossolo">Dados do solo</a>
                 <img
                   className="seleo-cultura-house"
                   alt="Seleo cultura house"
                   src="https://c.animaapp.com/KFeF81dS/img/controle-house@2x.png"
                 />
-                <div className="text-wrapper-25">Seleção Cultura</div>
+                <a className="text-wrapper-25" href="/selcultura">Seleção Cultura</a>
                 <img
                   className="regio-e-estao-house"
                   alt="Regio e estao house"
@@ -108,7 +108,7 @@ export const DadosDeSolo = () => {
                   alt="Plano plantio house"
                   src="https://c.animaapp.com/KFeF81dS/img/controle-house@2x.png"
                 />
-                <div className="text-wrapper-27">Plano Plantio</div>
+                <a className="text-wrapper-27" href="/plano">Plano Plantio</a>
                 <img
                   className="controle-house"
                   alt="Controle house"
@@ -131,7 +131,7 @@ export const DadosDeSolo = () => {
                 </p>
                 <div className="text-wrapper-31">admin</div>
               </div>
-              <div className="text-wrapper-32">AgroBoys</div>
+              <a className="text-wrapper-32" href="/">AgroBoys</a>
             </div>
           </div>
         </div>

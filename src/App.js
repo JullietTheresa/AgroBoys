@@ -25,11 +25,11 @@ const App = () => {
             <Route exact path="/controle" element={<Tasks/>}/>
             <Route exact path="/regiao" element={<Regio_Estaocao/>}/>
             <Route exact path="/plano" element={<PlanoPlantio/>}/>
-            <Route exact path="/DadosSolo" element={<DadosDeSolo/>}/>
-            <Route exact path="/Pesticidas" element={<Pesticidas/>}/>
-            <Route exact path="/Historico" element={<HistoricoGeral/>}/>
-            <Route exact path="/Historico/Batata" element={<HistoricoDetalhado/>}/>
-            <Route exact path="/Suporte" element={<Suporte/>}/>
+            <Route exact path="/dadossolo" element={<DadosDeSolo/>}/>
+            <Route exact path="/pesticidas" element={<Pesticidas/>}/>
+            <Route exact path="/historico" element={<HistoricoGeral/>}/>
+            <Route exact path="/historico/batata" element={<HistoricoDetalhado/>}/>
+            <Route exact path="/suporte" element={<Suporte/>}/>
           </Routes>
       </Router>
     );

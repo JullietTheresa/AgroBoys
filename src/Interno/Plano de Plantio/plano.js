@@ -53,13 +53,13 @@ export const PlanoPlantio = () => {
             <div className="rectangle-2" />
             <div className="rectangle-3" />
             <img className="house" alt="House" src="https://c.animaapp.com/AneYV77i/img/house-4@2x.png" />
-            <div className="text-wrapper-4">Suporte</div>
-            <div className="text-wrapper-5">Histórico Plantio</div>
+            <a className="text-wrapper-4" href="/suporte" >Suporte</a>
+            <a className="text-wrapper-5" href="/historico" >Histórico Plantio</a>
             <img className="img" alt="House" src="https://c.animaapp.com/AneYV77i/img/house-4@2x.png" />
-            <div className="text-wrapper-6">Dados do Solo</div>
-            <div className="text-wrapper-7">AgroBoys</div>
+            <a className="text-wrapper-6" href="/dadossolo" >Dados do Solo</a>
+            <a className="text-wrapper-7" href="/" >AgroBoys</a>
             <div className="group">
-              <div className="text-wrapper-8">Pragas e Agrotóxico</div>
+              <a className="text-wrapper-8" href="/pesticidas" >Pragas e Agrotóxico</a>
               <img className="house-2" alt="House" src="https://c.animaapp.com/AneYV77i/img/house-4@2x.png" />
             </div>
             <img className="rectangle-4" alt="Rectangle" src="https://c.animaapp.com/AneYV77i/img/house-4@2x.png" />
@@ -69,7 +69,7 @@ export const PlanoPlantio = () => {
             </div>
             <div className="overlap-group-wrapper">
               <div className="div-wrapper">
-                <div className="text-wrapper-10">Plano Plantio</div>
+                <a className="text-wrapper-10" href="/plano" >Plano Plantio</a>
               </div>
             </div>
             <div className="group-3">

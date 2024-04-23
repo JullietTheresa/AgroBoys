@@ -18,23 +18,23 @@ export const SelecaoDeCultura = () => {
             <div className="rectangle-3" />
             <a className="text-wrapper-4" href="/regiao">Região e Estação</a>
             <img className="house" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
-            <div className="text-wrapper-5">Plano Plantio</div>
+            <a className="text-wrapper-5" href="/plano" >Plano Plantio</a>
             <img className="calendar" alt="Calendar" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
             <img className="img" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
-            <div className="text-wrapper-6">Suporte</div>
-            <div className="text-wrapper-7">Histórico Plantio</div>
+            <a className="text-wrapper-6" href="/suporte" >Suporte</a>
+            <a className="text-wrapper-7" href="/historico" >Histórico Plantio</a>
             <img className="house-2" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
-            <div className="text-wrapper-8">Dados do Solo</div>
+            <a className="text-wrapper-8" href="/dadossolo" >Dados do Solo</a>
             <a className="text-wrapper-9" exact href="/">AgroBoys</a>
             <div className="group">
-              <div className="text-wrapper-10">Pragas e Agrotóxico</div>
+              <a className="text-wrapper-10" href="/pesticidas" >Pragas e Agrotóxico</a>
               <img className="house-3" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
             </div>
             <div className="rectangle-4" />
             <div className="overlap-group-wrapper">
               <div className="overlap-group-2">
                 <div className="rectangle-5" />
-                <div className="text-wrapper-11">Seleção Cultura</div>
+                <a className="text-wrapper-11" href="/selcultura" >Seleção Cultura</a>
               </div>
             </div>
             <div className="div-wrapper">

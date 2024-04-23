@@ -108,7 +108,7 @@ export const HistoricoDetalhado = () => {
           </div>
           <div className="overlap-9">
             <div className="text-wrapper-21">Histórico Plantio</div>
-            <Arrow className="circle-arrow-left-instance" />
+            <a href="/historico"> <Arrow className="circle-arrow-left-instance" /></a>
           </div>
         </div>
         <header className="header">
@@ -119,7 +119,7 @@ export const HistoricoDetalhado = () => {
             </div>
             <div className="text-wrapper-23">spandan@gmail.com</div>
             <div className="text-wrapper-24">admin</div>
-            <div className="text-wrapper-25">AgroBoys</div>
+            <a className="text-wrapper-25" href="/" >AgroBoys</a>
           </div>
         </header>
       </div>
