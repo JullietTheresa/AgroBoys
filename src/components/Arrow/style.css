@@ -1,0 +1,33 @@
+.circle-arrow-left {
+    height: 60px;
+    width: 63px;
+  }
+  
+  .circle-arrow-left .overlap-group {
+    border: 1px solid;
+    border-color: #151515;
+    border-radius: 13.12px/12.5px;
+    height: 25px;
+    left: 18px;
+    position: relative;
+    top: 18px;
+    width: 26px;
+  }
+  
+  .circle-arrow-left .vector {
+    height: 11px;
+    left: 6px;
+    position: absolute;
+    top: 6px;
+    width: 6px;
+  }
+  
+  .circle-arrow-left .img {
+    height: 1px;
+    left: 7px;
+    object-fit: cover;
+    position: absolute;
+    top: 11px;
+    width: 10px;
+  }
+  

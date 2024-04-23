@@ -11,6 +11,7 @@ import PlanoPlantio from './Interno/Plano de Plantio/plano';
 import DadosDeSolo from './Interno/Dados do solo/DadosSolo';
 import Pesticidas from './Interno/Pesticidas/pesticidas';
 import HistoricoGeral from './Interno/Historico/Historico-Geral/HistoricoGeral';
+import HistoricoDetalhado from './Interno/Historico/Historico-Detalhado/Detalhado';
 import Suporte from './Interno/Suporte/Suporte';
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
             <Route exact path="/DadosSolo" element={<DadosDeSolo/>}/>
             <Route exact path="/Pesticidas" element={<Pesticidas/>}/>
             <Route exact path="/Historico" element={<HistoricoGeral/>}/>
+            <Route exact path="/Historico/Batata" element={<HistoricoDetalhado/>}/>
             <Route exact path="/Suporte" element={<Suporte/>}/>
           </Routes>
       </Router>

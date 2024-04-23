@@ -1,0 +1,718 @@
+.histrico-detalhado {
+    background-color: #eef2f7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .histrico-detalhado .div {
+    background-color: #eef2f7;
+    height: 1629px;
+    overflow: hidden;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .histrico-detalhado .fotter {
+    height: 382px;
+    left: 0;
+    position: absolute;
+    top: 1247px;
+    width: 1456px;
+  }
+  
+  .histrico-detalhado .overlap-group-2 {
+    height: 382px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .histrico-detalhado .rectangle {
+    background-color: #609b00;
+    height: 354px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1440px;
+  }
+  
+  .histrico-detalhado .rectangle-2 {
+    background-color: #000000;
+    height: 72px;
+    left: 0;
+    position: absolute;
+    top: 310px;
+    width: 1440px;
+  }
+  
+  .histrico-detalhado .copyright {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 457px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 332px;
+    width: 548px;
+  }
+  
+  .histrico-detalhado .text-wrapper {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  
+  .histrico-detalhado .span {
+    font-weight: 700;
+  }
+  
+  .histrico-detalhado .text-wrapper-2 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 208px;
+    width: 198px;
+  }
+  
+  .histrico-detalhado .internet {
+    height: 20px;
+    left: 926px;
+    position: absolute;
+    top: 211px;
+    width: 20px;
+  }
+  
+  .histrico-detalhado .text-wrapper-3 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 172px;
+    width: 188px;
+  }
+  
+  .histrico-detalhado .hand-with-smartphone {
+    height: 20px;
+    left: 926px;
+    position: absolute;
+    top: 175px;
+    width: 20px;
+  }
+  
+  .histrico-detalhado .text-wrapper-4 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 136px;
+    width: 175px;
+  }
+  
+  .histrico-detalhado .envelope {
+    height: 20px;
+    left: 926px;
+    position: absolute;
+    top: 142px;
+    width: 20px;
+  }
+  
+  .histrico-detalhado .text-wrapper-5 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 960px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 100px;
+    width: 188px;
+  }
+  
+  .histrico-detalhado .place-marker {
+    height: 20px;
+    left: 925px;
+    position: absolute;
+    top: 103px;
+    width: 20px;
+  }
+  
+  .histrico-detalhado .text-wrapper-6 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    left: 866px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 58px;
+    white-space: nowrap;
+    width: 232px;
+  }
+  
+  .histrico-detalhado .p {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 300;
+    left: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 114px;
+    width: 627px;
+  }
+  
+  .histrico-detalhado .text-wrapper-7 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    left: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 58px;
+    white-space: nowrap;
+    width: 232px;
+  }
+  
+  .histrico-detalhado .dados {
+    height: 886px;
+    left: 44px;
+    position: absolute;
+    top: 158px;
+    width: 1379px;
+  }
+  
+  .histrico-detalhado .lucro {
+    height: 262px;
+    left: 718px;
+    position: absolute;
+    top: 624px;
+    width: 669px;
+  }
+  
+  .histrico-detalhado .overlap-group-3 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 1px 5px 4px #00000045;
+    height: 262px;
+    position: relative;
+    width: 659px;
+  }
+  
+  .histrico-detalhado .overlap {
+    height: 85px;
+    left: 15px;
+    position: absolute;
+    top: 148px;
+    width: 471px;
+  }
+  
+  .histrico-detalhado .rectangle-3 {
+    background-color: #fcfcfc;
+    border: 1px solid;
+    border-color: #d1cbcb;
+    height: 39px;
+    left: 0;
+    position: absolute;
+    top: 29px;
+    width: 471px;
+  }
+  
+  .histrico-detalhado .text-wrapper-8 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 36px;
+    width: 204px;
+  }
+  
+  .histrico-detalhado .text-wrapper-9 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 417px;
+  }
+  
+  .histrico-detalhado .overlap-2 {
+    height: 84px;
+    left: 15px;
+    position: absolute;
+    top: 59px;
+    width: 471px;
+  }
+  
+  .histrico-detalhado .rectangle-4 {
+    background-color: #fcfcfc;
+    border: 1px solid;
+    border-color: #d1cbcb;
+    height: 39px;
+    left: 0;
+    position: absolute;
+    top: 35px;
+    width: 471px;
+  }
+  
+  .histrico-detalhado .text-wrapper-10 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 35px;
+    width: 204px;
+  }
+  
+  .histrico-detalhado .text-wrapper-11 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    left: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 14px;
+    width: 276px;
+  }
+  
+  .histrico-detalhado .hectare {
+    height: 304px;
+    left: 718px;
+    position: absolute;
+    top: 294px;
+    width: 667px;
+  }
+  
+  .histrico-detalhado .overlap-3 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 1px 5px 4px #00000045;
+    height: 304px;
+    position: relative;
+    width: 659px;
+  }
+  
+  .histrico-detalhado .overlap-4 {
+    height: 73px;
+    left: 15px;
+    position: absolute;
+    top: 173px;
+    width: 471px;
+  }
+  
+  .histrico-detalhado .rectangle-5 {
+    background-color: #fcfcfc;
+    border: 1px solid;
+    border-color: #d1cbcb;
+    height: 39px;
+    left: 0;
+    position: absolute;
+    top: 34px;
+    width: 471px;
+  }
+  
+  .histrico-detalhado .overlap-group-4 {
+    height: 93px;
+    left: 15px;
+    position: absolute;
+    top: 75px;
+    width: 471px;
+  }
+  
+  .histrico-detalhado .rectangle-6 {
+    background-color: #fcfcfc;
+    border: 1px solid;
+    border-color: #d1cbcb;
+    height: 39px;
+    left: 0;
+    position: absolute;
+    top: 38px;
+    width: 471px;
+  }
+  
+  .histrico-detalhado .text-wrapper-12 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 5px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 44px;
+    width: 204px;
+  }
+  
+  .histrico-detalhado .text-wrapper-13 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    left: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 9px;
+    width: 276px;
+  }
+  
+  .histrico-detalhado .pragas {
+    height: 166px;
+    left: 718px;
+    position: absolute;
+    top: 91px;
+    width: 663px;
+  }
+  
+  .histrico-detalhado .overlap-5 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 1px 5px 4px #00000045;
+    height: 166px;
+    position: relative;
+    width: 659px;
+  }
+  
+  .histrico-detalhado .para-a-praga-x-voc {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 56px;
+    width: 528px;
+  }
+  
+  .histrico-detalhado .text-wrapper-14 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    left: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 2px;
+    width: 276px;
+  }
+  
+  .histrico-detalhado .data-de-plantio {
+    height: 304px;
+    left: 0;
+    position: absolute;
+    top: 582px;
+    width: 669px;
+  }
+  
+  .histrico-detalhado .overlap-group-5 {
+    height: 89px;
+    left: 20px;
+    position: absolute;
+    top: 170px;
+    width: 471px;
+  }
+  
+  .histrico-detalhado .rectangle-7 {
+    background-color: #fcfcfc;
+    border: 1px solid;
+    border-color: #d1cbcb;
+    height: 45px;
+    left: 0;
+    position: absolute;
+    top: 31px;
+    width: 471px;
+  }
+  
+  .histrico-detalhado .text-wrapper-15 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 10px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 40px;
+    width: 204px;
+  }
+  
+  .histrico-detalhado .text-wrapper-16 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 3px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 204px;
+  }
+  
+  .histrico-detalhado .overlap-6 {
+    height: 86px;
+    left: 20px;
+    position: absolute;
+    top: 84px;
+    width: 471px;
+  }
+  
+  .histrico-detalhado .rectangle-8 {
+    background-color: #fcfcfc;
+    border: 1px solid;
+    border-color: #d1cbcb;
+    height: 39px;
+    left: 0;
+    position: absolute;
+    top: 31px;
+    width: 471px;
+  }
+  
+  .histrico-detalhado .text-wrapper-17 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 300;
+    left: 10px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 37px;
+    width: 204px;
+  }
+  
+  .histrico-detalhado .text-wrapper-18 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    left: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 13px;
+    width: 276px;
+  }
+  
+  .histrico-detalhado .detalhes {
+    height: 464px;
+    left: 0;
+    position: absolute;
+    top: 91px;
+    width: 665px;
+  }
+  
+  .histrico-detalhado .overlap-7 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 1px 5px 4px #00000045;
+    height: 464px;
+    position: relative;
+    width: 659px;
+  }
+  
+  .histrico-detalhado .overlap-group-6 {
+    height: 93px;
+    left: 16px;
+    position: absolute;
+    top: 371px;
+    width: 218px;
+  }
+  
+  .histrico-detalhado .text-wrapper-19 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 39px;
+    width: 218px;
+  }
+  
+  .histrico-detalhado .text-wrapper-20 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    width: 192px;
+  }
+  
+  .histrico-detalhado .overlap-8 {
+    height: 355px;
+    left: 10px;
+    position: absolute;
+    top: 0;
+    width: 626px;
+  }
+  
+  .histrico-detalhado .imagem {
+    height: 306px;
+    left: 6px;
+    position: absolute;
+    top: 49px;
+    width: 620px;
+  }
+  
+  .histrico-detalhado .overlap-9 {
+    height: 60px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 285px;
+  }
+  
+  .histrico-detalhado .text-wrapper-21 {
+    color: #518200;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 700;
+    left: 53px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 11px;
+    width: 232px;
+  }
+  
+  .histrico-detalhado .circle-arrow-left-instance {
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+  }
+  
+  .histrico-detalhado .header {
+    background-color: transparent;
+    height: 128px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1448px;
+  }
+  
+  .histrico-detalhado .overlap-10 {
+    background-color: #518200;
+    border: 1px solid;
+    border-color: #ffffff;
+    height: 128px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .histrico-detalhado .overlap-group-7 {
+    height: 50px;
+    left: 1194px;
+    position: absolute;
+    top: 36px;
+    width: 46px;
+  }
+  
+  .histrico-detalhado .ellipse {
+    background-color: #ffffff;
+    border-radius: 23px;
+    height: 46px;
+    left: 0;
+    position: absolute;
+    top: 4px;
+    width: 46px;
+  }
+  
+  .histrico-detalhado .text-wrapper-22 {
+    color: #7da240;
+    font-family: "Poppins", Helvetica;
+    font-size: 35px;
+    font-weight: 700;
+    left: 13px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 28px;
+  }
+  
+  .histrico-detalhado .text-wrapper-23 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 500;
+    left: 1248px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 43px;
+  }
+  
+  .histrico-detalhado .text-wrapper-24 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    left: 1248px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 66px;
+  }
+  
+  .histrico-detalhado .text-wrapper-25 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 50px;
+    font-weight: 700;
+    left: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 30px;
+  }
+  
