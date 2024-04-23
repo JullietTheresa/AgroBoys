@@ -7,6 +7,7 @@ import SignupPage from "./Usuario/Signup/SignupPage";
 import SelecaoDeCultura from './Interno/Seleção Cultura/selecaocultura';
 import Tasks from './Interno/Controle/controle';
 import Regio_Estaocao from './Interno/Regiao Estacao/Regiao_Estacao';
+import PlanoPlantio from './Interno/Plano de Plantio/plano';
 
 const App = () => {
     return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route exact path="/selcultura" element={<SelecaoDeCultura/>}/>
             <Route exact path="/controle" element={<Tasks/>}/>
             <Route exact path="/regiao" element={<Regio_Estaocao/>}/>
+            <Route exact path="/plano" element={<PlanoPlantio/>}/>
           </Routes>
       </Router>
     );
