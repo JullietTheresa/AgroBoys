@@ -13,6 +13,8 @@ import Pesticidas from './Interno/Pesticidas/pesticidas';
 import HistoricoGeral from './Interno/Historico/Historico-Geral/HistoricoGeral';
 import HistoricoDetalhado from './Interno/Historico/Historico-Detalhado/Detalhado';
 import Suporte from './Interno/Suporte/Suporte';
+import PlanoPlantio from './Interno/Plano de Plantio/plano';
+
 
 const App = () => {
     return (
@@ -22,6 +24,7 @@ const App = () => {
             <Route exact path="/login" element={<LoginPage/>}/>
             <Route exact path="/Signup" element={<SignupPage/>}/>
             <Route exact path="/selcultura" element={<SelecaoDeCultura/>}/>
+            <Route exact path="/planPlantio" element={<PlanoDePlantio/>}/>
             <Route exact path="/controle" element={<Tasks/>}/>
             <Route exact path="/regiao" element={<Regio_Estaocao/>}/>
             <Route exact path="/plano" element={<PlanoPlantio/>}/>
