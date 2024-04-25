@@ -145,7 +145,7 @@ export const SignupPage = () => {
           {passwordMatchError && <p className="error-message-3">As senhas não coincidem.</p>}
 
           <div className="overlap-3">
-            <a className="rectangle-2" href="#" />
+            <a className="rectangle-2" href="#" onClick={handleSubmit} disabled={!emailValid}/>
             <a className="text-wrapper-3" href="#" onClick={handleSubmit} disabled={!emailValid}>Inscreva-se</a>
           </div>
 
