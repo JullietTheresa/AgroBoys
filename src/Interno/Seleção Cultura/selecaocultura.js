@@ -7,7 +7,7 @@ export const SelecaoDeCultura = () => {
       <div className="overlap-wrapper">
         <div className="overlap">
           <div className="overlap-group">
-            <div className="rectangle" />
+            <div className="rectangle" />a
             <div className="ellipse" />
             <div className="text-wrapper">S</div>
             <a className="div" href="mailto:spandan@gmail.com" rel="noopener noreferrer" target="_blank">
@@ -54,7 +54,7 @@ export const SelecaoDeCultura = () => {
             <div className="rectangle-3" />
             <div className="text-wrapper-4">Região e Estação</div>
             <img className="house" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
-            <div className="text-wrapper-5">Plano Plantio</div>
+            <div className="text-wrapper-5" href="/planPlantio">Plano Plantio</div>
             <img className="calendar" alt="Calendar" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
             <img className="img" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
             <div className="text-wrapper-6">Suporte</div>
@@ -70,7 +70,7 @@ export const SelecaoDeCultura = () => {
             <div className="overlap-group-wrapper">
               <div className="overlap-group-2">
                 <div className="rectangle-5" />
-                <div className="text-wrapper-11">Seleção Cultura</div>
+                <div className="text-wrapper-11" href="/selcultura">Seleção Cultura</div>
               </div>
             </div>
             <div className="div-wrapper">

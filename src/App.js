@@ -6,6 +6,7 @@ import LoginPage from './Usuario/Login/LoginPage';
 import SignupPage from "./Usuario/Signup/SignupPage";
 import SelecaoDeCultura from './Interno/Seleção Cultura/selecaocultura';
 import Tasks from './Interno/Controle/controle';
+import PlanoDePlantio from './Interno/Plano Plantio/planoPlantio';
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
             <Route exact path="/login" element={<LoginPage/>}/>
             <Route exact path="/Signup" element={<SignupPage/>}/>
             <Route exact path="/selcultura" element={<SelecaoDeCultura/>}/>
+            <Route exact path="/planPlantio" element={<PlanoDePlantio/>}/>
             <Route exact path="/controle" element={<Tasks/>}/>
           </Routes>
       </Router>

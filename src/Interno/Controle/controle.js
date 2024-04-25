@@ -262,12 +262,12 @@ export const Tasks = () => {
             <img className="img" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
           </div>
           <div className="group-4">
-            <div className="text-wrapper-14">Plano Plantio</div>
+            <a className="text-wrapper-14" href="/planPlantio">Plano Plantio</a>
             <div className="text-wrapper-15">Histórico Plantio</div>
             <img className="img" alt="Calendar" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
           </div>
           <div className="div-wrapper">
-            <div className="text-wrapper-16">Controle</div>
+            <div className="text-wrapper-16" href="/controle">Controle</div>
           </div>
           <a className="text-wrapper-17" href="/selcultura">Seleção Cultura</a>
           <img className="house-3" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
