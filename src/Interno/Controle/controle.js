@@ -10,7 +10,7 @@ const initialData = {
         <div className="text-wrapper-2">Label</div>
         <div className="text-wrapper-3">Label Label</div>
           <p className="label-label-label">
-            <span className="span">Label</span>
+            <span className="span">Detalhes</span>
             <span className="text-wrapper-4">
               : Label Label
               <br />
@@ -26,7 +26,7 @@ const initialData = {
         <div className="text-wrapper-2">Label</div>
         <div className="text-wrapper-3">Label Label</div>
           <p className="label-label-label">
-            <span className="span">Label</span>
+            <span className="span">Detalhes</span>
             <span className="text-wrapper-4">
               : Label Label
               <br />
@@ -42,7 +42,7 @@ const initialData = {
         <div className="text-wrapper-2">Label</div>
         <div className="text-wrapper-3">Label Label</div>
           <p className="label-label-label">
-            <span className="span">Label</span>
+            <span className="span">Detalhes</span>
             <span className="text-wrapper-4">
               : Label Label
               <br />
@@ -58,7 +58,7 @@ const initialData = {
         <div className="text-wrapper-2">Label</div>
         <div className="text-wrapper-3">Label Label</div>
           <p className="label-label-label">
-            <span className="span">Label</span>
+            <span className="span">Detalhes</span>
             <span className="text-wrapper-4">
               : Label Label
               <br />
@@ -96,12 +96,14 @@ const Tasks = () => {
   const [showModal, setShowModal] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [details, setDetails] = useState("");
+  const [details1, setDetails1] = useState("");
+  const [details2, setDetails2] = useState("");
   const [selectedTaskId, setSelectedTaskId] = useState(null);
   const [showEditModal, setShowEditModal] = useState(false);
   const [editTitle, setEditTitle] = useState("");
   const [editDescription, setEditDescription] = useState("");
-  const [editDetails, setEditDetails] = useState("");
+  const [editDetails1, setEditDetails1] = useState("");
+  const [editDetails2, setEditDetails2] = useState("");
 
   const handleCreateTask = () => {
     const newTaskId = `task-${Object.keys(state.tasks).length + 1}`;
@@ -109,12 +111,17 @@ const Tasks = () => {
       <>
         <div className="text-wrapper-2">{title}</div>
         <div className="text-wrapper-3">{description}</div>
-        {details && (
+        {details1 && (
           <p className="label-label-label">
-            <span className="span">Label:</span> <span>{details}</span>
+            <span className="span">Detalhes:</span> <span>{details1}</span>
           </p>
         )}
         <br />
+        {details2 && (
+          <p className="label-label-label">
+            <span className="span">Detalhes:</span> <span>{details2}</span>
+          </p>
+        )}
       </>
     );
 
@@ -136,7 +143,8 @@ const Tasks = () => {
 
     setTitle("");
     setDescription("");
-    setDetails("");
+    setDetails1("");
+    setDetails2("");
     setShowModal(false);
   };
 
@@ -148,7 +156,8 @@ const Tasks = () => {
     setSelectedTaskId(taskId);
     setEditTitle(state.tasks[taskId].content.props.children[0].props.children);
     setEditDescription(state.tasks[taskId].content.props.children[1].props.children);
-    setEditDetails(state.tasks[taskId].content.props.children[2].props.children[1].props.children);
+    setEditDetails1(state.tasks[taskId].content.props.children[2].props.children[1].props.children);
+    setEditDetails2(state.tasks[taskId].content.props.children[2].props.children[2].props.children);
     setShowEditModal(true);
   };
 
@@ -157,12 +166,17 @@ const Tasks = () => {
       <>
         <div className="text-wrapper-2">{editTitle}</div>
         <div className="text-wrapper-3">{editDescription}</div>
-        {editDetails && (
+        {editDetails1 && (
           <p className="label-label-label">
-            <span className="span">Label:</span> <span>{editDetails}</span>
+            <span className="span">Detalhes:</span> <span>{editDetails1}</span>
           </p>
         )}
         <br />
+        {editDetails2 && (
+          <p className="label-label-label">
+            <span className="span">Detalhes:</span> <span>{editDetails2}</span>
+          </p>
+        )}
       </>
     );
 
@@ -401,19 +415,6 @@ const Tasks = () => {
             </p>
             <div className="text-wrapper-30">admin</div>
           </div>
-
-          <div className="group-4">
-            <a className="text-wrapper-14" href="/planPlantio">Plano Plantio</a>
-            <div className="text-wrapper-15">Histórico Plantio</div>
-            <img className="img" alt="Calendar" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
-          </div>
-          <div className="div-wrapper">
-            <div className="text-wrapper-16" href="/controle">Controle</div>
-          </div>
-          <a className="text-wrapper-17" href="/selcultura">Seleção Cultura</a>
-          <img className="house-3" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
-          <img className="house-4" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
-
         </div>
         {/* Modal para criar nova tarefa */}
         {showModal && (
@@ -434,14 +435,14 @@ const Tasks = () => {
             <input
               type="text"
               placeholder="Detalhes"
-              value={details}
-              onChange={(e) => setDetails(e.target.value)}
+              value={details1}
+              onChange={(e) => setDetails1(e.target.value)}
             />
             <input
               type="text"
               placeholder="Detalhes"
-              value={details}
-              onChange={(e) => setDetails(e.target.value)}
+              value={details2}
+              onChange={(e) => setDetails2(e.target.value)}
             />
             <div className="button-container">
               <a className="overlap-12" href="#" onClick={handleCreateTask}>
@@ -473,14 +474,14 @@ const Tasks = () => {
             <input
               type="text"
               placeholder="Detalhes"
-              value={details}
-              onChange={(e) => setEditDetails(e.target.value)}
+              value={details1}
+              onChange={(e) => setEditDetails1(e.target.value)}
             />
             <input
               type="text"
               placeholder="Detalhes"
-              value={details}
-              onChange={(e) => setEditDetails(e.target.value)}
+              value={details2}
+              onChange={(e) => setEditDetails2(e.target.value)}
             />
             <button onClick={handleUpdateTask}>Atualizar Tarefa</button>
             <button onClick={handleDeleteTask}>Excluir Tarefa</button>
