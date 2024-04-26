@@ -38,11 +38,12 @@
   }
   
   .tasks .group {
-    height: 170px;
+    max-height: 370px;
+    min-height: 180px;
     left: 31px;
     position: absolute;
     top: 79px;
-    width: 274px;
+    width: 290px;
   }
   
   .tasks .overlap-group {
@@ -52,6 +53,7 @@
     height: 170px;
     position: relative;
     width: 268px;
+    margin-bottom: 8px;
   }
   
   .tasks .text-wrapper-2 {

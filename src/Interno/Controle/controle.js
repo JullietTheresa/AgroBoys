@@ -104,6 +104,7 @@ const Tasks = () => {
   const [editDescription, setEditDescription] = useState("");
   const [editDetails1, setEditDetails1] = useState("");
   const [editDetails2, setEditDetails2] = useState("");
+  const [selectedBoxId, setSelectedBoxId] = useState(null); // Novo estado para armazenar o ID da box selecionada para edição
 
   const handleCreateTask = () => {
     const newTaskId = `task-${Object.keys(state.tasks).length + 1}`;
@@ -124,23 +125,24 @@ const Tasks = () => {
         )}
       </>
     );
-
+  
     const newTasks = {
       ...state.tasks,
       [newTaskId]: { id: newTaskId, content: newTaskContent },
     };
-
+  
     const newColumn = {
       ...state.columns["column-1"],
       taskIds: [...state.columns["column-1"].taskIds, newTaskId],
     };
-
+  
     setState({
       ...state,
       tasks: newTasks,
       columns: { ...state.columns, ["column-1"]: newColumn },
     });
-
+  
+    // Limpa os estados de texto após a criação da tarefa
     setTitle("");
     setDescription("");
     setDetails1("");
@@ -154,12 +156,50 @@ const Tasks = () => {
 
   const handleEditTask = (taskId) => {
     setSelectedTaskId(taskId);
-    setEditTitle(state.tasks[taskId].content.props.children[0].props.children);
-    setEditDescription(state.tasks[taskId].content.props.children[1].props.children);
-    setEditDetails1(state.tasks[taskId].content.props.children[2].props.children[1].props.children);
-    setEditDetails2(state.tasks[taskId].content.props.children[2].props.children[2].props.children);
+    const taskContent = state.tasks[taskId].content;
+  
+    // Verifica se a tarefa possui conteúdo
+    if (taskContent) {
+      const children = taskContent.props.children;
+  
+      // Verifica se a tarefa possui filhos e se o primeiro filho é um array
+      if (children && Array.isArray(children)) {
+        // Define o título como o conteúdo do primeiro filho
+        setEditTitle(children[0]?.props?.children || '');
+        // Verifica se o segundo filho existe e se é um array
+        if (children[1] && Array.isArray(children[1]?.props?.children)) {
+          // Define a descrição como o conteúdo do segundo filho
+          setEditDescription(children[1].props.children);
+        } else {
+          setEditDescription('');
+        }
+        // Verifica se o terceiro filho existe e se é um array
+        if (children[2] && Array.isArray(children[2]?.props?.children)) {
+          const detailsChildren = children[2].props.children;
+  
+          // Verifica se o terceiro filho tem mais de um filho e se o segundo filho é um array
+          if (detailsChildren.length > 1 && Array.isArray(detailsChildren[1]?.props?.children)) {
+            // Define os detalhes 1 como o conteúdo do segundo filho do terceiro filho
+            setEditDetails1(detailsChildren[1].props.children);
+          } else {
+            setEditDetails1('');
+          }
+          // Verifica se o terceiro filho tem mais de dois filhos e se o terceiro filho é um array
+          if (detailsChildren.length > 2 && Array.isArray(detailsChildren[2]?.props?.children)) {
+            // Define os detalhes 2 como o conteúdo do terceiro filho do terceiro filho
+            setEditDetails2(detailsChildren[2].props.children);
+          } else {
+            setEditDetails2('');
+          }
+        } else {
+          setEditDetails1('');
+          setEditDetails2('');
+        }
+      }
+    }
+  
     setShowEditModal(true);
-  };
+  };  
 
   const handleUpdateTask = () => {
     const updatedTaskContent = (
@@ -193,21 +233,33 @@ const Tasks = () => {
     setShowEditModal(false);
   };
 
-  const handleDeleteTask = (taskId) => {
+  const handleDeleteTask = () => {
+    if (!selectedTaskId) return; // Verifica se há uma tarefa selecionada para exclusão
+  
+    // Criando uma cópia dos objetos de estado
     const updatedTasks = { ...state.tasks };
-    delete updatedTasks[taskId];
-
     const updatedColumns = { ...state.columns };
+  
+    // Removendo a tarefa da lista de tarefas
+    delete updatedTasks[selectedTaskId];
+  
+    // Iterando sobre as colunas para remover o ID da tarefa excluída
     for (const columnId in updatedColumns) {
-      updatedColumns[columnId].taskIds = updatedColumns[columnId].taskIds.filter((id) => id !== taskId);
+      updatedColumns[columnId].taskIds = updatedColumns[columnId].taskIds.filter((id) => id !== selectedTaskId);
     }
-
+  
+    // Atualizando o estado com os objetos atualizados
     setState({
       ...state,
       tasks: updatedTasks,
       columns: updatedColumns,
     });
+  
+    // Resetando o estado de seleção da tarefa após a exclusão
+    setSelectedTaskId(null);
+    setShowEditModal(false);
   };
+  
 
   const onDragEnd = (result) => {
     const { destination, source } = result;
@@ -302,6 +354,9 @@ const Tasks = () => {
                         className="group"
                         ref={provided.innerRef}
                         {...provided.droppableProps}
+                        style={{
+                          overflowY: "auto",
+                        }}
                       >
                         {tasks.map((task, index) => (
                           <Draggable
@@ -438,12 +493,6 @@ const Tasks = () => {
               value={details1}
               onChange={(e) => setDetails1(e.target.value)}
             />
-            <input
-              type="text"
-              placeholder="Detalhes"
-              value={details2}
-              onChange={(e) => setDetails2(e.target.value)}
-            />
             <div className="button-container">
               <a className="overlap-12" href="#" onClick={handleCreateTask}>
                 <div className="rectangle-8" />
@@ -477,15 +526,11 @@ const Tasks = () => {
               value={details1}
               onChange={(e) => setEditDetails1(e.target.value)}
             />
-            <input
-              type="text"
-              placeholder="Detalhes"
-              value={details2}
-              onChange={(e) => setEditDetails2(e.target.value)}
-            />
-            <button onClick={handleUpdateTask}>Atualizar Tarefa</button>
-            <button onClick={handleDeleteTask}>Excluir Tarefa</button>
-            <button onClick={() => setShowEditModal(false)}>Cancelar</button>
+            <div>
+              <button onClick={handleUpdateTask}>Atualizar Tarefa</button>
+              <button onClick={() => handleDeleteTask(selectedTaskId)}>Excluir Tarefa</button>
+              <button onClick={() => setShowEditModal(false)}>Cancelar</button>
+            </div>
           </div>
         )}
       </div>
