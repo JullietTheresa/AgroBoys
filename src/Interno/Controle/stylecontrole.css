@@ -834,7 +834,78 @@
     width: 160px;
   }
 
-  .button-container {
+  .tasks .button-container {
     display: flex;
     gap: 10px;
+  }
+
+  .tasks .button-container2 {
+    display: flex;
+    gap: 5px;
+  }
+
+  .tasks .rectangle-9 {
+    background-color: #609b00;
+    border-radius: 5px;
+    height: 39px;
+    width: 118px;
+  }
+
+  .tasks .text-wrapper-34 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 133px;
+    left: 25px;
+    width: 160px;
+  }
+
+  .tasks .text-wrapper-35 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 132px;
+    left: 150px;
+    width: 160px;
+  }
+
+  .tasks .text-wrapper-36 {
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 130px;
+    left: 280px;
+    width: 160px;
+  }
+
+  .tesks .rectangle-10 {
+    background-color: #fcfcfc;
+    border: 1px solid;
+    border-color: #000000;
+    height: 87px;
+    left: 0;
+    position: absolute;
+    top: 54px;
+    width: 793px;
+    font-size: 30px;
+  }
+
+  .tesks .overlap-3 {
+    height: 141px;
+    left: 107px;
+    position: absolute;
+    top: 590px;
+    width: 793px;
   }

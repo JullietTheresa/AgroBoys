@@ -151,7 +151,6 @@ const Tasks = () => {
     setTitle("");
     setDescription("");
     setDetails("");
-    setDetails2("");
     setShowModal(false);
   };
 
@@ -520,28 +519,47 @@ const Tasks = () => {
         {showEditModal && (
           <div className="modal">
             <h2 className="text-wrapper-31">Editar Tarefa</h2>
-            <input
-              type="text"
-              placeholder="titulo"
-              value={editTask.title}
-              onChange={(e) => setEditTask({ ...editTask, title: e.target.value })}
-            />
-            <input
-              type="text"
-              placeholder="Descrção"
-              value={editTask.content}
-              onChange={(e) => setEditTask({ ...editTask, content: e.target.value })}
-            />
-            <input
-              type="text"
-              placeholder="Detalhes"
-              value={editTask.details}
-              onChange={(e) => setEditTask({ ...editTask, details: e.target.value })}
-            />
             <div>
-              <button onClick={handleUpdateTask}>Atualizar Tarefa</button>
-              <button onClick={() => handleDeleteTask(selectedTaskId)}>Excluir Tarefa</button>
-              <button onClick={() => setShowEditModal(false)}>Cancelar</button>
+              <input
+                type="text"
+                className="rectangle-10"
+                placeholder="titulo"
+                value={editTask.title}
+                onChange={(e) => setEditTask({ ...editTask, title: e.target.value })}
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                className="rectangle-10"
+                placeholder="Descrção"
+                value={editTask.content}
+                onChange={(e) => setEditTask({ ...editTask, content: e.target.value })}
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                className="rectangle-10"
+                placeholder="Detalhes"
+                value={editTask.details}
+                onChange={(e) => setEditTask({ ...editTask, details: e.target.value })}
+              />
+            </div>
+            <br />
+            <div className="button-container2">
+              <a className="overlap-12" href="#" onClick={handleUpdateTask}>
+                <div className="rectangle-9" />
+                <div className="text-wrapper-34">Atualizar Tarefa</div>
+              </a>
+              <a className="overlap-12" href="#" onClick={() => handleDeleteTask(selectedTaskId)}>
+                <div className="rectangle-9" />
+                <div className="text-wrapper-35">Excluir Tarefa</div>
+              </a>
+              <a className="overlap-12" href="#" onClick={() => setShowEditModal(false)}>
+                <div className="rectangle-9" />
+                <div className="text-wrapper-36">Cancelar</div>
+              </a>
             </div>
           </div>
         )}
