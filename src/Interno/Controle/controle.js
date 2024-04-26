@@ -96,15 +96,20 @@ const Tasks = () => {
   const [showModal, setShowModal] = useState(false);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [details1, setDetails1] = useState("");
+  const [details1, setDetails] = useState("");
   const [details2, setDetails2] = useState("");
   const [selectedTaskId, setSelectedTaskId] = useState(null);
   const [showEditModal, setShowEditModal] = useState(false);
   const [editTitle, setEditTitle] = useState("");
   const [editDescription, setEditDescription] = useState("");
-  const [editDetails1, setEditDetails1] = useState("");
+  const [editDetails1, setEditDetails] = useState("");
   const [editDetails2, setEditDetails2] = useState("");
   const [selectedBoxId, setSelectedBoxId] = useState(null); // Novo estado para armazenar o ID da box selecionada para edição
+  const [editTask, setEditTask] = useState({
+    taskId: null,
+    title: "",
+    content: "",
+  });
 
   const handleCreateTask = () => {
     const newTaskId = `task-${Object.keys(state.tasks).length + 1}`;
@@ -145,7 +150,7 @@ const Tasks = () => {
     // Limpa os estados de texto após a criação da tarefa
     setTitle("");
     setDescription("");
-    setDetails1("");
+    setDetails("");
     setDetails2("");
     setShowModal(false);
   };
@@ -154,7 +159,12 @@ const Tasks = () => {
     setShowModal(true);
   };
 
-  const handleEditTask = (taskId) => {
+  const handleEditTask = (taskId, content) => {
+    setEditTask({
+      taskId,
+      title: content, // Inicializa o estado do título com o conteúdo da tarefa
+      content, // Inicializa o estado do conteúdo da tarefa com o conteúdo da tarefa
+    });
     setSelectedTaskId(taskId);
     const taskContent = state.tasks[taskId].content;
   
@@ -180,9 +190,9 @@ const Tasks = () => {
           // Verifica se o terceiro filho tem mais de um filho e se o segundo filho é um array
           if (detailsChildren.length > 1 && Array.isArray(detailsChildren[1]?.props?.children)) {
             // Define os detalhes 1 como o conteúdo do segundo filho do terceiro filho
-            setEditDetails1(detailsChildren[1].props.children);
+            setEditDetails(detailsChildren[1].props.children);
           } else {
-            setEditDetails1('');
+            setEditDetails('');
           }
           // Verifica se o terceiro filho tem mais de dois filhos e se o terceiro filho é um array
           if (detailsChildren.length > 2 && Array.isArray(detailsChildren[2]?.props?.children)) {
@@ -192,7 +202,7 @@ const Tasks = () => {
             setEditDetails2('');
           }
         } else {
-          setEditDetails1('');
+          setEditDetails('');
           setEditDetails2('');
         }
       }
@@ -202,34 +212,36 @@ const Tasks = () => {
   };  
 
   const handleUpdateTask = () => {
-    const updatedTaskContent = (
-      <>
-        <div className="text-wrapper-2">{editTitle}</div>
-        <div className="text-wrapper-3">{editDescription}</div>
-        {editDetails1 && (
-          <p className="label-label-label">
-            <span className="span">Detalhes:</span> <span>{editDetails1}</span>
-          </p>
-        )}
-        <br />
-        {editDetails2 && (
-          <p className="label-label-label">
-            <span className="span">Detalhes:</span> <span>{editDetails2}</span>
-          </p>
-        )}
-      </>
-    );
-
     const updatedTasks = {
       ...state.tasks,
-      [selectedTaskId]: { ...state.tasks[selectedTaskId], content: updatedTaskContent },
+      [editTask.taskId]: {
+        ...state.tasks[editTask.taskId],
+        content: (
+          <>
+            <div className="text-wrapper-2">{editTask.title}</div>
+            <div className="text-wrapper-3">{editTask.content}</div>
+            {editTask.details && (
+              <p className="label-label-label">
+                <span className="span">Detalhes:</span> <span>{editTask.details}</span>
+              </p>
+            )}
+          </>
+        ),
+      },
     };
 
-    setState({
+    const updatedData = {
       ...state,
       tasks: updatedTasks,
-    });
+    };
 
+    setState(updatedData);
+    setEditTask({
+      taskId: null,
+      title: "",
+      content: "",
+      details: "",
+    });
     setShowEditModal(false);
   };
 
@@ -491,7 +503,7 @@ const Tasks = () => {
               type="text"
               placeholder="Detalhes"
               value={details1}
-              onChange={(e) => setDetails1(e.target.value)}
+              onChange={(e) => setDetails(e.target.value)}
             />
             <div className="button-container">
               <a className="overlap-12" href="#" onClick={handleCreateTask}>
@@ -510,21 +522,21 @@ const Tasks = () => {
             <h2 className="text-wrapper-31">Editar Tarefa</h2>
             <input
               type="text"
-              placeholder="Título"
-              value={title}
-              onChange={(e) => setEditTitle(e.target.value)}
+              placeholder="titulo"
+              value={editTask.title}
+              onChange={(e) => setEditTask({ ...editTask, title: e.target.value })}
             />
             <input
               type="text"
-              placeholder="Descrição"
-              value={description}
-              onChange={(e) => setEditDescription(e.target.value)}
+              placeholder="Descrção"
+              value={editTask.content}
+              onChange={(e) => setEditTask({ ...editTask, content: e.target.value })}
             />
             <input
               type="text"
               placeholder="Detalhes"
-              value={details1}
-              onChange={(e) => setEditDetails1(e.target.value)}
+              value={editTask.details}
+              onChange={(e) => setEditTask({ ...editTask, details: e.target.value })}
             />
             <div>
               <button onClick={handleUpdateTask}>Atualizar Tarefa</button>
