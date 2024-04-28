@@ -5,11 +5,13 @@ import DynamicSelect from './DynamicSelect';
 
 
 // Importe os componentes de conteúdo específicos para cada região.
+import DropDownEstados from './DropDownEstados';
 import DadosNorte from '../DadosRegiao/DadosNorte';
 import DadosNordeste from '../DadosRegiao/DadosNordeste';
 import DadosCentroOeste from '../DadosRegiao/DadosCentroOeste';
 import DadosSul from '../DadosRegiao/DadosSul';
 import DadosSudeste from '../DadosRegiao/DadosSudeste';
+
 
 const arrayOfData = [
   {
@@ -36,14 +38,15 @@ const arrayOfData = [
 
 // Mapeamento dos conteúdos para cada região
 const regionContents = {
-  '1 - Norte': <DadosNorte />,
-  '2 - Nordeste': <DadosNordeste />,
-  '3 - Centro-Oeste': <DadosCentroOeste />,
-  '4 - Sudeste': <DadosSudeste />,
-  '5 - Sul': <DadosSul />
+  '1 - Norte': <DropDownEstados idRegiao={1}/>,
+  '2 - Nordeste': <DropDownEstados idRegiao={2}/>,
+  '3 - Centro-Oeste': <DropDownEstados idRegiao={3}/>,
+  '4 - Sudeste': <DropDownEstados idRegiao={4}/>,
+  '5 - Sul': <DropDownEstados idRegiao={5}/>
 };
 
 class DropDown extends Component {
+  
   constructor(props){
     super(props)
     this.state={
@@ -62,8 +65,8 @@ class DropDown extends Component {
 
   render() {
     return (
-      <div className="">
-        <p className="DropDown-intro">
+      <div>
+        <p>
           <DynamicSelect arrayOfData={arrayOfData} onSelectChange={this.handleSelectChange} />
         </p>
         <div>

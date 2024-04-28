@@ -25,8 +25,8 @@ class DynamicSelect extends Component{
             );
         
             return (
-            <select name="customSearch" className="listbox-main" onChange={this.handleChange}>
-                <option>Selecione sua região</option>
+            <select name="customSearch" className="listbox-main-estados" onChange={this.handleChange}>
+                <option>Selecione seu estado</option>
                 {options}
            </select>
         )
