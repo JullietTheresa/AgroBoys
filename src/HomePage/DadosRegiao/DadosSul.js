@@ -19,7 +19,7 @@ function DadosSul({currentWeather, bioma}) {
       // Supondo que currentWeather.max e currentWeather.min são variáveis que contêm os números floats
       var max = currentWeather.max;
       var min = currentWeather.min;
-      var media = Math.round((max + min) / 2); // Calcula a média e arredonda
+      var media = (max + min) / 2; // Calcula a média e arredonda
     
       const estacao = getEstacao(new Date()); // Obtém a estação atual com base na data atual
 
@@ -29,7 +29,7 @@ function DadosSul({currentWeather, bioma}) {
         <div className="overlap">
           <div className="text-wrapper-11">Informações da Região</div>
           <div className="text-wrapper-12">Temperatura:</div>
-          <div className="text-wrapper-13">Media: {media}</div>
+          <div className="text-wrapper-13">Media: {media.toFixed(2)}</div>
         </div>
         <div className="text-wrapper-14">Estação: {estacao}</div>
         <div className="text-wrapper-15">Informações climaticas:</div>

@@ -153,6 +153,11 @@ function WeatherComponent({ id }) {
     regiao = "Sul";
     bioma = "Mata Atlântica";
   }
+  if (id === "27") {
+    city = "Brasilia";
+    regiao = "Centro-Oeste";
+    bioma = "Cerrado";
+  }
   
   console.log("Chegou no WeatherComponent com id:", id);
   console.log("Chegou no WeatherComponent com city:", city);
@@ -225,7 +230,8 @@ class DropDownEstados extends Component {
         arrayOfData = [
           { id: 17, name: 'Mato Grosso' },
           { id: 18, name: 'Mato Grosso do Sul' },
-          { id: 19, name: 'Goiás' }
+          { id: 19, name: 'Goiás' },
+          {id: 27, name: 'DF'}
         ];
         break;
       case 4:

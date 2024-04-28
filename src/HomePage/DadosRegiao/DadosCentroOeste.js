@@ -19,7 +19,7 @@ function DadosCentroOeste({ currentWeather, bioma }) {
   // Supondo que currentWeather.max e currentWeather.min são variáveis que contêm os números floats
   var max = currentWeather.max;
   var min = currentWeather.min;
-  var media = Math.round((max + min) / 2); // Calcula a média e arredonda
+  var media = (max + min) / 2; // Calcula a média e arredonda
 
   const estacao = getEstacao(new Date()); // Obtém a estação atual com base na data atual
 
@@ -34,7 +34,7 @@ function DadosCentroOeste({ currentWeather, bioma }) {
         <div className="text-wrapper-11">Informações da Região</div>
         <div className="text-wrapper-12">Temperatura:</div>
         <div className="text-wrapper-13">
-          <p>Media: {media}</p>
+          <p>Media: {media.toFixed(2)}</p>
         </div>
       </div>
       <div className="text-wrapper-14">Estação: {estacao}</div>
