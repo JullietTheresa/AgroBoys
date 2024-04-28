@@ -486,32 +486,44 @@ const Tasks = () => {
         {showModal && (
           <div className="modal">
             <h2 className="text-wrapper-31">Nova Tarefa</h2>
-            <input
-              type="text"
-              placeholder="Título"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Descrição"
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-            />
-            <input
-              type="text"
-              placeholder="Detalhes"
-              value={details1}
-              onChange={(e) => setDetails(e.target.value)}
-            />
+            <div>
+              <input
+                type="text"
+                className="rectangle-10 bigger-input" 
+                placeholder="Título"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                className="rectangle-10 bigger-input" 
+                placeholder="Descrição"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                className="rectangle-10 bigger-input" 
+                placeholder="Detalhes"
+                value={details1}
+                onChange={(e) => setDetails(e.target.value)}
+              />
+            </div>
+            <br />
             <div className="button-container">
               <a className="overlap-12" href="#" onClick={handleCreateTask}>
-                <div className="rectangle-8" />
-                <div className="text-wrapper-32">Criar Tarefa</div>
+                <div className="rectangle-8">
+                  <div className="button-text2">Criar Tarefa</div> {/* Centraliza o texto dos botões */}
+                </div>
               </a>
               <a className="overlap-12" href="#" onClick={() => setShowModal(false)}>
-                <div className="rectangle-8" />
-                <div className="text-wrapper-33">Cancelar</div>
+                <div className="rectangle-8">
+                  <div className="button-text2">Cancelar</div> {/* Centraliza o texto dos botões */}
+                </div>
               </a>
             </div>
           </div>
@@ -522,8 +534,8 @@ const Tasks = () => {
             <div>
               <input
                 type="text"
-                className="rectangle-10"
-                placeholder="titulo"
+                className="rectangle-10 bigger-input" 
+                placeholder="Título"
                 value={editTask.title}
                 onChange={(e) => setEditTask({ ...editTask, title: e.target.value })}
               />
@@ -531,8 +543,8 @@ const Tasks = () => {
             <div>
               <input
                 type="text"
-                className="rectangle-10"
-                placeholder="Descrção"
+                className="rectangle-10 bigger-input" 
+                placeholder="Descrição"
                 value={editTask.content}
                 onChange={(e) => setEditTask({ ...editTask, content: e.target.value })}
               />
@@ -540,7 +552,7 @@ const Tasks = () => {
             <div>
               <input
                 type="text"
-                className="rectangle-10"
+                className="rectangle-10 bigger-input" 
                 placeholder="Detalhes"
                 value={editTask.details}
                 onChange={(e) => setEditTask({ ...editTask, details: e.target.value })}
@@ -549,16 +561,19 @@ const Tasks = () => {
             <br />
             <div className="button-container2">
               <a className="overlap-12" href="#" onClick={handleUpdateTask}>
-                <div className="rectangle-9" />
-                <div className="text-wrapper-34">Atualizar Tarefa</div>
+                <div className="rectangle-9">
+                  <div className="button-text">Atualizar Tarefa</div>
+                </div>
               </a>
               <a className="overlap-12" href="#" onClick={() => handleDeleteTask(selectedTaskId)}>
-                <div className="rectangle-9" />
-                <div className="text-wrapper-35">Excluir Tarefa</div>
+                <div className="rectangle-9">
+                  <div className="button-text">Excluir Tarefa</div>
+                </div>
               </a>
               <a className="overlap-12" href="#" onClick={() => setShowEditModal(false)}>
-                <div className="rectangle-9" />
-                <div className="text-wrapper-36">Cancelar</div>
+                <div className="rectangle-9">
+                  <div className="button-text">Cancelar</div>
+                </div>
               </a>
             </div>
           </div>

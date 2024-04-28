@@ -836,58 +836,25 @@
 
   .tasks .button-container {
     display: flex;
+    justify-content: space-between;
     gap: 10px;
   }
 
-  .tasks .button-container2 {
+  .button-container2 {
     display: flex;
-    gap: 5px;
+    justify-content: space-between;
   }
 
-  .tasks .rectangle-9 {
+  .rectangle-9 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 118px; /* Ajuste o tamanho conforme necessário */
+    height: 39px; /* Ajuste o tamanho conforme necessário */
     background-color: #609b00;
     border-radius: 5px;
-    height: 39px;
-    width: 118px;
-  }
-
-  .tasks .text-wrapper-34 {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 133px;
-    left: 25px;
-    width: 160px;
-  }
-
-  .tasks .text-wrapper-35 {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 132px;
-    left: 150px;
-    width: 160px;
-  }
-
-  .tasks .text-wrapper-36 {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 130px;
-    left: 280px;
-    width: 160px;
+    margin-bottom: 10px;
+    cursor: pointer;
   }
 
   .tesks .rectangle-10 {
@@ -909,3 +876,27 @@
     top: 590px;
     width: 793px;
   }
+
+  .button-text {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Poppins", Helvetica;
+  }
+
+  .bigger-input {
+    width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
+    padding: 10px; /* Adiciona um espaçamento interno para melhor legibilidade */
+    margin-bottom: 3px; /* Adiciona um espaçamento inferior para separar os inputs */
+    box-sizing: border-box; /* Inclui a largura e o padding na largura total */
+  }
+
+  .button-text2 {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Poppins", Helvetica;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    line-height: 40px; /* Ajusta a altura da linha para centralizar verticalmente */
+  }
+  
