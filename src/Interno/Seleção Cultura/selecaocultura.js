@@ -1,5 +1,13 @@
 import React from "react";
 import "./styleselecaocultura.css";
+import cafeImage from "../../components/Images/Interno/cafe.jpg";
+import laranjaImage from "../../components/Images/Interno/laranja.jpg";
+import sojaImage from "../../components/Images/Interno/soja.jpg";
+import tabacoImage from "../../components/Images/Interno/tabaco.jpg";
+import cacauImage from "../../components/Images/Interno/cacau.jpg";
+import milhoImage from "../../components/Images/Interno/milho.jpg";
+import tomateImage from "../../components/Images/Interno/tomate.jpg";
+import arrozImage from "../../components/Images/Interno/arroz.jpg";
 
 export const SelecaoDeCultura = () => {
   return (
@@ -76,10 +84,10 @@ export const SelecaoDeCultura = () => {
             </div>
           </div>
           <div className="overlap-3">
-            <div className="text-wrapper-21">Seleção Cultura</div>
-            <p className="text-wrapper-22">Gostaria de mudar a plantação selecionada?</p>
+            <div className="text-wrapper-21">Seleção de Cultura</div>
+            <p className="text-wrapper-22">Gostaria de mudar a plantação pré-selecionada na página Home?</p>
           </div>
-          <div className="text-wrapper-23">Ver Mais</div>
+          {/* <div className="text-wrapper-23">Ver Mais</div> */}
           <div className="overlap-4">
             <div className="rectangle-8" />
             <div className="text-wrapper-24">Confirmar</div>
@@ -90,9 +98,11 @@ export const SelecaoDeCultura = () => {
                 <img
                   className="rectangle-9"
                   alt="Rectangle"
-                  src="https://c.animaapp.com/fkXnBuii/img/rectangle-7-1@2x.png"
+                  src={cacauImage}
                 />
-                <div className="text-wrapper-25">Cabbage</div>
+
+                <div className="text-wrapper-25">Cacau
+                </div>
               </div>
             </div>
             <div className="group-3">
@@ -100,9 +110,9 @@ export const SelecaoDeCultura = () => {
                 <img
                   className="rectangle-9"
                   alt="Rectangle"
-                  src="https://c.animaapp.com/fkXnBuii/img/rectangle-38-1@2x.png"
+                  src={milhoImage}
                 />
-                <div className="text-wrapper-25">Carrot</div>
+                <div className="text-wrapper-25">Milho</div>
               </div>
             </div>
             <div className="group-4">
@@ -110,9 +120,9 @@ export const SelecaoDeCultura = () => {
                 <img
                   className="rectangle-9"
                   alt="Rectangle"
-                  src="https://c.animaapp.com/fkXnBuii/img/rectangle-41-1@2x.png"
+                  src={tomateImage}
                 />
-                <div className="text-wrapper-25">Brocolli</div>
+                <div className="text-wrapper-25">Tomate</div>
               </div>
             </div>
             <div className="group-5">
@@ -120,9 +130,9 @@ export const SelecaoDeCultura = () => {
                 <img
                   className="rectangle-9"
                   alt="Rectangle"
-                  src="https://c.animaapp.com/fkXnBuii/img/rectangle-42-1@2x.png"
+                  src={arrozImage}
                 />
-                <div className="text-wrapper-25">Cauliflower</div>
+                <div className="text-wrapper-25">Arroz</div>
               </div>
             </div>
             <div className="frame">
@@ -131,9 +141,9 @@ export const SelecaoDeCultura = () => {
                   <img
                     className="rectangle-9"
                     alt="Rectangle"
-                    src="https://c.animaapp.com/fkXnBuii/img/rectangle-7-1@2x.png"
+                    src={cafeImage}
                   />
-                  <div className="text-wrapper-25">Cabbage</div>
+                  <div className="text-wrapper-25">Café</div>
                 </div>
               </div>
               <div className="group-6">
@@ -141,9 +151,9 @@ export const SelecaoDeCultura = () => {
                   <img
                     className="rectangle-9"
                     alt="Rectangle"
-                    src="https://c.animaapp.com/fkXnBuii/img/rectangle-38-1@2x.png"
+                    src={laranjaImage}
                   />
-                  <div className="text-wrapper-25">Carrot</div>
+                  <div className="text-wrapper-25">Laranja</div>
                 </div>
               </div>
               <div className="group-6">
@@ -151,9 +161,9 @@ export const SelecaoDeCultura = () => {
                   <img
                     className="rectangle-9"
                     alt="Rectangle"
-                    src="https://c.animaapp.com/fkXnBuii/img/rectangle-41-1@2x.png"
+                    src={sojaImage}
                   />
-                  <div className="text-wrapper-25">Brocolli</div>
+                  <div className="text-wrapper-25">Soja</div>
                 </div>
               </div>
               <div className="group-6">
@@ -161,9 +171,9 @@ export const SelecaoDeCultura = () => {
                   <img
                     className="rectangle-9"
                     alt="Rectangle"
-                    src="https://c.animaapp.com/fkXnBuii/img/rectangle-42-1@2x.png"
+                    src={tabacoImage}
                   />
-                  <div className="text-wrapper-25">Cauliflower</div>
+                  <div className="text-wrapper-25">Tabaco</div>
                 </div>
               </div>
             </div>
