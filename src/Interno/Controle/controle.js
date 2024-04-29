@@ -1,6 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import "./stylecontrole.css";
+
+const TaskComponent = ({ description, details }) => {
+  return (
+    <div className="tasks">
+      <div className="div">
+        <div className="overlap">
+          <div className="text-wrapper">{description}</div>
+        </div>
+        <div className="overlap-3">
+          <div className="rectangle-10">
+            <div className="text-wrapper-33">{details}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 
 const initialData = {
   tasks: {
@@ -9,14 +27,12 @@ const initialData = {
       <>
         <div className="text-wrapper-2">Label</div>
         <div className="text-wrapper-3">Label Label</div>
-          <p className="label-label-label">
-            <span className="span">Detalhes</span>
+          <p className="label-label-label" style={{ top: `60%`}}>
+            <span className="span">Detalhes:</span>
             <span className="text-wrapper-4">
-              : Label Label
+              Label Label
               <br />
             </span>
-            <span className="span">Label</span>
-            <span className="text-wrapper-4">: Label Label</span>
           </p>
       </>
     ),
@@ -25,14 +41,12 @@ const initialData = {
       <>
         <div className="text-wrapper-2">Label</div>
         <div className="text-wrapper-3">Label Label</div>
-          <p className="label-label-label">
-            <span className="span">Detalhes</span>
+          <p className="label-label-label" style={{ top: `60%`}}>
+            <span className="span">Detalhes:</span>
             <span className="text-wrapper-4">
-              : Label Label
+              Label Label
               <br />
             </span>
-            <span className="span">Label</span>
-            <span className="text-wrapper-4">: Label Label</span>
           </p>
       </>
     ),
@@ -41,14 +55,12 @@ const initialData = {
       <>
         <div className="text-wrapper-2">Label</div>
         <div className="text-wrapper-3">Label Label</div>
-          <p className="label-label-label">
-            <span className="span">Detalhes</span>
+          <p className="label-label-label" style={{ top: `60%`}}>
+            <span className="span">Detalhes:</span>
             <span className="text-wrapper-4">
-              : Label Label
+              Label Label
               <br />
             </span>
-            <span className="span">Label</span>
-            <span className="text-wrapper-4">: Label Label</span>
           </p>
       </>
     ),
@@ -57,14 +69,12 @@ const initialData = {
       <>
         <div className="text-wrapper-2">Label</div>
         <div className="text-wrapper-3">Label Label</div>
-          <p className="label-label-label">
-            <span className="span">Detalhes</span>
+          <p className="label-label-label" style={{ top: `60%`}}>
+            <span className="span">Detalhes:</span>
             <span className="text-wrapper-4">
-              : Label Label
+              Label Label
               <br />
             </span>
-            <span className="span">Label</span>
-            <span className="text-wrapper-4">: Label Label</span>
           </p>
       </>
     ),
@@ -110,6 +120,16 @@ const Tasks = () => {
     title: "",
     content: "",
   });
+  const descriptionRef = useRef(null);
+  const [descriptionHeight, setDescriptionHeight] = useState(0);
+
+  useEffect(() => {
+    const descriptionElement = document.querySelector('.text-wrapper');
+    if (descriptionElement) {
+      const height = descriptionElement.getBoundingClientRect().height;
+      setDescriptionHeight(height);
+    }
+  }, [description]);
 
   const handleCreateTask = () => {
     const newTaskId = `task-${Object.keys(state.tasks).length + 1}`;
@@ -117,15 +137,10 @@ const Tasks = () => {
       <>
         <div className="text-wrapper-2">{title}</div>
         <div className="text-wrapper-3">{description}</div>
-        {details1 && (
-          <p className="label-label-label">
-            <span className="span">Detalhes:</span> <span>{details1}</span>
-          </p>
-        )}
         <br />
-        {details2 && (
-          <p className="label-label-label">
-            <span className="span">Detalhes:</span> <span>{details2}</span>
+        {details1 && (
+          <p className="label-label-label" style={{ top: `${descriptionHeight+60}%` }}>
+            <span className="span">Detalhes:</span> <span>{details1}</span>
           </p>
         )}
       </>
@@ -220,7 +235,7 @@ const Tasks = () => {
             <div className="text-wrapper-2">{editTask.title}</div>
             <div className="text-wrapper-3">{editTask.content}</div>
             {editTask.details && (
-              <p className="label-label-label">
+              <p className="label-label-label" style={{ top: `${descriptionHeight+60}%` }}>
                 <span className="span">Detalhes:</span> <span>{editTask.details}</span>
               </p>
             )}
@@ -385,10 +400,16 @@ const Tasks = () => {
                               >
                                 <div>
                                   {index === 0 ? (
-                                    <p className="title">{task.content}</p>
+                                    <p className="title">
+                                      <div ref={descriptionRef}>
+                                        {task.content}
+                                      </div>
+                                    </p>
                                   ) : (
                                     <>{task.content}</>
                                   )}
+                                </div>
+                                <div className="label-label-label" style={{ top: `${descriptionHeight+60}%` }}>
                                 </div>
                               </div>
                             )}
@@ -489,7 +510,7 @@ const Tasks = () => {
             <div>
               <input
                 type="text"
-                className="rectangle-10 bigger-input" 
+                className="bigger-input" 
                 placeholder="Título"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
@@ -498,7 +519,7 @@ const Tasks = () => {
             <div>
               <input
                 type="text"
-                className="rectangle-10 bigger-input" 
+                className="bigger-input" 
                 placeholder="Descrição"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
@@ -507,7 +528,7 @@ const Tasks = () => {
             <div>
               <input
                 type="text"
-                className="rectangle-10 bigger-input" 
+                className="bigger-input" 
                 placeholder="Detalhes"
                 value={details1}
                 onChange={(e) => setDetails(e.target.value)}
@@ -517,12 +538,12 @@ const Tasks = () => {
             <div className="button-container">
               <a className="overlap-12" href="#" onClick={handleCreateTask}>
                 <div className="rectangle-8">
-                  <div className="button-text2">Criar Tarefa</div> {/* Centraliza o texto dos botões */}
+                  <div className="button-text2">Criar Tarefa</div> 
                 </div>
               </a>
               <a className="overlap-12" href="#" onClick={() => setShowModal(false)}>
                 <div className="rectangle-8">
-                  <div className="button-text2">Cancelar</div> {/* Centraliza o texto dos botões */}
+                  <div className="button-text2">Cancelar</div> 
                 </div>
               </a>
             </div>
@@ -534,7 +555,7 @@ const Tasks = () => {
             <div>
               <input
                 type="text"
-                className="rectangle-10 bigger-input" 
+                className="bigger-input" 
                 placeholder="Título"
                 value={editTask.title}
                 onChange={(e) => setEditTask({ ...editTask, title: e.target.value })}
@@ -543,7 +564,7 @@ const Tasks = () => {
             <div>
               <input
                 type="text"
-                className="rectangle-10 bigger-input" 
+                className="bigger-input" 
                 placeholder="Descrição"
                 value={editTask.content}
                 onChange={(e) => setEditTask({ ...editTask, content: e.target.value })}
@@ -552,7 +573,7 @@ const Tasks = () => {
             <div>
               <input
                 type="text"
-                className="rectangle-10 bigger-input" 
+                className="bigger-input" 
                 placeholder="Detalhes"
                 value={editTask.details}
                 onChange={(e) => setEditTask({ ...editTask, details: e.target.value })}

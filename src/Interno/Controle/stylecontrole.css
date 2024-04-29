@@ -22,6 +22,7 @@
     position: absolute;
     top: 156px;
     width: 335px;
+    padding: 20px;
   }
   
   .tasks .text-wrapper {
@@ -54,6 +55,8 @@
     position: relative;
     width: 268px;
     margin-bottom: 8px;
+    max-height: 150px;
+    overflow-y: auto;
   }
   
   .tasks .text-wrapper-2 {
@@ -89,7 +92,6 @@
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 94px;
   }
   
   .tasks .span {
@@ -102,6 +104,7 @@
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 0;
+    position: absolute;
   }
   
   .tasks .overlap-wrapper {
@@ -165,7 +168,12 @@
     position: absolute;
     top: 152px;
     width: 335px;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 700px;
   }
+
+  
   
   .tasks .text-wrapper-7 {
     color: #609b00;
@@ -857,7 +865,7 @@
     cursor: pointer;
   }
 
-  .tesks .rectangle-10 {
+  .rectangle-10 {
     background-color: #fcfcfc;
     border: 1px solid;
     border-color: #000000;
@@ -869,13 +877,7 @@
     font-size: 30px;
   }
 
-  .tesks .overlap-3 {
-    height: 141px;
-    left: 107px;
-    position: absolute;
-    top: 590px;
-    width: 793px;
-  }
+  
 
   .button-text {
     color: white;
