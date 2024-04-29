@@ -40,7 +40,7 @@ function DadosCentroOeste({ currentWeather, bioma }) {
       <div className="text-wrapper-14">Estação: {estacao}</div>
       <div className="text-wrapper-15">Informações climaticas:</div>
       <div className="text-wrapper-16">
-        <p>Umidade: {currentWeather.humidity}</p>
+        <p>Umidade: {currentWeather.humidity}%</p>
       </div>
       <div className="text-wrapper-17"><p>Clima: {currentWeather.weather}</p></div>
       <div className="text-wrapper-19">

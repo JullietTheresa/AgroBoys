@@ -371,6 +371,7 @@
     line-height: normal;
     position: absolute;
     top: 0;
+    width: 503px;
   }
   
   .regio-e-estao .text-wrapper-14 {
@@ -395,6 +396,7 @@
     line-height: normal;
     position: absolute;
     top: 86px;
+    width: 503px;
   }
   
   .regio-e-estao .temperatura {

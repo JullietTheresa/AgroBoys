@@ -13,7 +13,7 @@ import React from "react";
 export default function Graphic({ data, background }: GraphicProps) {
   return (
     <GraphicStyle>
-      <LineChart width={700} height={300} data={data}>
+      <LineChart width={1000} height={400} data={data}>
         <Line type="monotone" dataKey="temp" stroke={background || "#006eff"} />
         <CartesianGrid stroke="#ccc" strokeDasharray="15 15" />
         <XAxis dataKey="day" />

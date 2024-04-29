@@ -1,8 +1,51 @@
 import React from "react";
 import "./styleRegiao_Estacao.css";
 
+// Weather Imports
+import { BackGround } from '../../Weather/style/HomeStyle';
+import { useState } from "react"
+import FindCity from '../../Weather/components/FindCity/FindCity';
+import Graphic from '../../Weather/components/Graphic/Graphic';
+import Weather from '../../Weather/components/Weather/Weather';
+import { Data } from "../../Weather/common/types";
+import { dataConst, weatherConst } from "../../Weather/common/constants"
+
 export const Regio_Estaocao = () => {
+  const [currentWeather, setCurrentWeather] = useState(weatherConst);
+  const [background, setBackground] = useState("");
+  const [data, setData] = useState(dataConst);
+  city = "Brasilia";
+  regiao = "Centro-Oeste";
+  bioma = "Cerrado";
+
+
+  function getEstacao(data) {
+    const mes = data.getMonth() + 1; // Os meses são indexados a partir de zero (janeiro = 0)
+    if (mes >= 3 && mes <= 5) {
+      return "Outono";
+    } else if (mes >= 6 && mes <= 8) {
+      return "Inverno";
+    } else if (mes >= 9 && mes <= 11) {
+      return "Primavera";
+    } else {
+      return "Verão";
+    }
+  }
+
+  
+  // Supondo que currentWeather.max e currentWeather.min são variáveis que contêm os números floats
+  var max = currentWeather.max;
+  var min = currentWeather.min;
+  var media = (max + min) / 2; // Calcula a média e arredonda
+
+  const estacao = getEstacao(new Date()); // Obtém a estação atual com base na data atual
   return (
+    <>
+      <FindCity
+      Cidade={city}
+      setData={setData}
+      setCurrentWeather={setCurrentWeather}
+    />
     <div className="regio-e-estao">
       <div className="div">
         <div className="overlap">
@@ -11,9 +54,8 @@ export const Regio_Estaocao = () => {
               <div className="overlap-group-2">
                 <div className="rectangle-3" />
                 <img className="image" alt="Image" src="https://c.animaapp.com/bqR5CWSn/img/image-2@2x.png" />
-                <div className="text-wrapper-8">Umidade: Label</div>
-                <div className="text-wrapper-9">Previsão do tempo: Label</div>
-                <div className="text-wrapper-10">Índice pluviométrico: Label</div>
+                <div className="text-wrapper-8">Umidade: {currentWeather.humidity}%</div>
+                <div className="text-wrapper-9">Clima: {currentWeather.weather}</div>
                 <div className="text-wrapper-11">Informações climaticas</div>
               </div>
             </div>
@@ -24,9 +66,9 @@ export const Regio_Estaocao = () => {
                   <div className="text-wrapper-12">Região</div>
                 </div>
                 <div className="group">
-                  <div className="text-wrapper-13">Região: Label</div>
-                  <div className="text-wrapper-14">Estação: Label</div>
-                  <div className="text-wrapper-15">Bioma: Label</div>
+                  <div className="text-wrapper-13">Região: {regiao}</div>
+                  <div className="text-wrapper-14">Estação: {estacao}</div>
+                  <div className="text-wrapper-15">Bioma: {bioma}</div>
                 </div>
               </div>
             </div>
@@ -34,9 +76,9 @@ export const Regio_Estaocao = () => {
               <div className="overlap-2">
                 <div className="text-wrapper-16">Temperatura</div>
                 <img className="img" alt="Image" src="https://c.animaapp.com/bqR5CWSn/img/image-1@2x.png" />
-                <div className="text-wrapper-17">Media: Label</div>
-                <div className="text-wrapper-18">Maxima: Label</div>
-                <div className="text-wrapper-19">Minima: Label</div>
+                <p className="text-wrapper-17">Media: {media.toFixed(2)}</p>
+                <p className="text-wrapper-18">Máxima: {currentWeather.max}</p>
+                <p className="text-wrapper-19">Mínima: {currentWeather.min}</p>
               </div>
             </div>
             <div className="text-wrapper-20">Região e Estação</div>
@@ -124,6 +166,7 @@ export const Regio_Estaocao = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

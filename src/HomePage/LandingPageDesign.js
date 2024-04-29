@@ -52,7 +52,7 @@ export const LandingPageDesign = () => {
             <div className="text-wrapper-10">Região</div>
           </div>
           <div className="div-wrapper">
-            <div className="text-wrapper-22">Historico Climatico</div>
+            <a className="text-wrapper-22" href="/historicoClimatico">Previsão do Tempo</a>
           </div>
           <div className="overlap-2">
             <div className="rectangle-3" />

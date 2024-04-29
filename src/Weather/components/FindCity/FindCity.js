@@ -4,6 +4,7 @@ import axios from "axios"
 import { formatStringDate, translateWeather } from "../../utils/findCityUtils"
 
 export default function FindCity({ Cidade, setData, setCurrentWeather }) {
+  console.log("Cheguei com cidade:", Cidade)
   const city = Cidade
   useEffect(() => {
     findWeather(city);

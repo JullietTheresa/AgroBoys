@@ -33,7 +33,7 @@ function DadosSudeste({currentWeather, bioma}) {
         </div>
         <div className="text-wrapper-14">Estação: {estacao}</div>
         <div className="text-wrapper-15">Informações climaticas:</div>
-        <div className="text-wrapper-16">Umidade: {currentWeather.humidity}</div>
+        <div className="text-wrapper-16">Umidade: {currentWeather.humidity}%</div>
         <div className="text-wrapper-17">Clima: {currentWeather.weather}</div>
         <div className="text-wrapper-19">Maxima: {currentWeather.max}</div>
         <div className="text-wrapper-20">Minima: {currentWeather.min}</div>

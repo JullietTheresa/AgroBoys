@@ -35,7 +35,7 @@ function WeatherComponent({ id }) {
     bioma = "Amazônia";
   }
   if (id === "4") {
-    city = "Amapá";
+    city = "Amapá, BR";
     regiao = "Norte";
     bioma = "Amazônia";
   }

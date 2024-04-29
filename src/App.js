@@ -14,7 +14,7 @@ import HistoricoGeral from './Interno/Historico/Historico-Geral/HistoricoGeral';
 import HistoricoDetalhado from './Interno/Historico/Historico-Detalhado/Detalhado';
 import Suporte from './Interno/Suporte/Suporte';
 import PlanoPlantio from './Interno/Plano de Plantio/plano';
-
+import HistoricoClimatico from './HomePage/HistoricoClimatico/HistoricoClimatico';
 
 const App = () => {
     return (
@@ -32,6 +32,7 @@ const App = () => {
             <Route exact path="/historico" element={<HistoricoGeral/>}/>
             <Route exact path="/historico/batata" element={<HistoricoDetalhado/>}/>
             <Route exact path="/suporte" element={<Suporte/>}/>
+            <Route exact path="/historicoClimatico" element={<HistoricoClimatico/>}/>
           </Routes>
       </Router>
     );
