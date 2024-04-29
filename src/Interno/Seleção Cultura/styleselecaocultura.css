@@ -600,14 +600,14 @@
 .seleo-de-cultura .text-wrapper-23 {
   color: #518200;
   font-family: "Poppins", Helvetica;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
-  left: 809px;
+  left: 500px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 599px;
-  width: 83px;
+  top: 550px;
+  width: 500px;
 }
 
 .seleo-de-cultura .overlap-4 {
@@ -615,11 +615,13 @@
   left: 1188px;
   position: absolute;
   top: 622px;
-  width: 270px;
+  width: 166px;
+  cursor: pointer;
 }
 
+
 .seleo-de-cultura .rectangle-8 {
-  background-color: #609b00;
+  background-color:#518200;
   border-radius: 20px;
   height: 62px;
   left: 52px;
@@ -627,6 +629,7 @@
   top: 0;
   width: 166px;
 }
+
 
 .seleo-de-cultura .text-wrapper-24 {
   color: #ffffff;
@@ -731,3 +734,70 @@
   position: relative;
   width: 221px;
 }
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 16px; /* Espaço entre a imagem e o texto */
+}
+
+.modal-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.seleo-de-cultura .group-6.active .overlap-group-3 {
+  background-color: green; /* Define a cor de fundo para verde quando a cultura está ativa */
+}
+
+.seleo-de-cultura .overlap-group-3.active {
+  background-color: white; /* Define a cor de fundo para branco quando a cultura está ativa */
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  max-width: 80%; /* Defina o tamanho máximo da modal */
+  max-height: 80vh; /* Defina o tamanho máximo da modal como 90% da altura da viewport */
+  overflow-y: auto; /* Adiciona rolagem vertical se o conteúdo exceder o tamanho máximo */
+}
+
+.modal-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.modal-description {
+  overflow-wrap: break-word; /* Quebra de palavras em caso de overflow */
+}
+

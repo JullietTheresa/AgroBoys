@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styleselecaocultura.css";
 import cafeImage from "../../components/Images/Interno/cafe.jpg";
 import laranjaImage from "../../components/Images/Interno/laranja.jpg";
@@ -10,6 +10,24 @@ import tomateImage from "../../components/Images/Interno/tomate.jpg";
 import arrozImage from "../../components/Images/Interno/arroz.jpg";
 
 export const SelecaoDeCultura = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedPlant, setSelectedPlant] = useState(null);
+  const [activeCulture, setActiveCulture] = useState(null);
+
+  const openModal = (plant) => {
+    setSelectedPlant(plant);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedPlant(null);
+    setModalOpen(false);
+  };
+
+  const handleCultureClick = (plant) => {
+    setActiveCulture(plant); // Atualiza a cultura ativa quando clicada
+  };
+
   return (
     <div className="seleo-de-cultura">
       <div className="overlap-wrapper">
@@ -86,102 +104,115 @@ export const SelecaoDeCultura = () => {
           <div className="overlap-3">
             <div className="text-wrapper-21">Seleção de Cultura</div>
             <p className="text-wrapper-22">Gostaria de mudar a plantação pré-selecionada na página Home?</p>
+            <p className="text-wrapper-23">Cultura Selecionada: {activeCulture && activeCulture.name}</p>
           </div>
-          {/* <div className="text-wrapper-23">Ver Mais</div> */}
           <div className="overlap-4">
             <div className="rectangle-8" />
-            <div className="text-wrapper-24">Confirmar</div>
+            <a className="text-wrapper-24">Confirmar</a>
           </div>
           <div className="overlap-5">
             <div className="group-2">
-              <div className="overlap-group-3">
-                <img
-                  className="rectangle-9"
-                  alt="Rectangle"
-                  src={cacauImage}
-                />
-
-                <div className="text-wrapper-25">Cacau
-                </div>
-              </div>
+              <img
+                className="rectangle-9"
+                alt="Rectangle"
+                src={cacauImage}
+                onClick={() => openModal({ image: cacauImage, name: 'Cacau', description: "Descrição:O cacau é uma planta perene cultivada em regiões tropicais e subtropicais para a produção de chocolate. Prefere climas quentes e úmidos, solos bem drenados e ricos em matéria orgânica, com pH entre 5,0 e 6,5. No Brasil, é mais comum na região da Bahia, especialmente na Costa do Cacau. Requer cuidados específicos, como controle de pragas, e sua colheita é manual. A produção de cacau é economicamente importante, proporcionando empregos e contribuindo para a balança comercial em muitas regiões." })} />
+              <button className="text-wrapper-25" onClick={() => handleCultureClick({ image: cacauImage, name: 'Cacau', description: 'Descrição' })}>Cacau</button>
             </div>
+
             <div className="group-3">
-              <div className="overlap-group-3">
-                <img
-                  className="rectangle-9"
-                  alt="Rectangle"
-                  src={milhoImage}
-                />
-                <div className="text-wrapper-25">Milho</div>
-              </div>
+
+              <img
+                className="rectangle-9"
+                alt="Rectangle"
+                src={milhoImage}
+                onClick={() => openModal({ image: milhoImage, name: 'Milho', description: "Descrição: O milho é uma planta anual amplamente cultivada em várias partes do mundo, especialmente em climas temperados e tropicais. Prefere solos bem drenados e profundos, com boa fertilidade e pH entre 5,5 e 7,5. No Brasil, é cultivado em diferentes regiões, principalmente no Centro-Oeste, Sul e Sudeste. O plantio ocorre principalmente na primavera e verão. O milho é uma cultura versátil, utilizada para alimentação humana, animal e na indústria. É uma importante fonte de carboidratos, proteínas e fibras, desempenhando um papel crucial na segurança alimentar e na economia agrícola." })} />
+              <button className="text-wrapper-25" onClick={() => handleCultureClick({ image: milhoImage, name: 'Milho', description: 'Descrição' })}>Milho</button>
+
             </div>
             <div className="group-4">
-              <div className="overlap-group-3">
-                <img
-                  className="rectangle-9"
-                  alt="Rectangle"
-                  src={tomateImage}
-                />
-                <div className="text-wrapper-25">Tomate</div>
-              </div>
+
+              <img
+                className="rectangle-9"
+                alt="Rectangle"
+                src={tomateImage}
+                onClick={() => openModal({ image: tomateImage, name: 'Tomate', description: 'Descrição: O tomate é uma planta anual cultivada em todo o mundo, especialmente em climas temperados e subtropicais. Prefere solos bem drenados e ricos em matéria orgânica, com pH entre 6,0 e 6,8. No Brasil, é cultivado em diversas regiões, principalmente no Sudeste, Sul e Centro-Oeste. O plantio geralmente ocorre na primavera e verão, embora variedades adaptadas possam ser cultivadas durante todo o ano. O tomate é uma cultura muito versátil, sendo consumido fresco, processado em conservas, molhos, sucos e outros produtos. É uma excelente fonte de vitaminas, minerais e antioxidantes, desempenhando um papel importante na dieta e na saúde humana.' })}
+              />
+              <button className="text-wrapper-25" onClick={() => handleCultureClick({ image: tomateImage, name: 'Tomate', description: 'Descrição' })}>Tomate</button>
+
             </div>
             <div className="group-5">
-              <div className="overlap-group-3">
+
+              <img
+                className="rectangle-9"
+                alt="Rectangle"
+                src={arrozImage}
+                onClick={() => openModal({ image: arrozImage, name: 'Arroz', description: 'Descrição: O arroz é uma planta anual que é cultivada em diversos climas ao redor do mundo, sendo uma das principais fontes de alimento para a humanidade. Prefere solos alagados e bem drenados, sendo comumente cultivado em regiões tropicais e subtropicais. No Brasil, é amplamente cultivado em diferentes estados, com destaque para as regiões Sul, Sudeste e Centro-Oeste. O plantio ocorre principalmente na primavera e verão, e a colheita é feita quando os grãos estão maduros. O arroz é uma fonte importante de carboidratos na dieta humana e pode ser consumido de diversas formas, como acompanhamento de pratos principais ou na forma de produtos processados, como farinha e macarrão. ' })}
+              />
+              <button className="text-wrapper-25" onClick={() => handleCultureClick({ image: arrozImage, name: 'Arroz', description: 'Descrição' })}>Arroz</button>
+
+            </div>
+            <div className="frame">
+              <div className="group-6" >
+
                 <img
                   className="rectangle-9"
                   alt="Rectangle"
-                  src={arrozImage}
+                  src={cafeImage}
+                  onClick={() => openModal({ image: cafeImage, name: 'Cafe', description: 'Descrição: O café é uma planta perene cultivada principalmente em regiões tropicais e subtropicais. Prefere climas com temperaturas moderadas e solos bem drenados. No Brasil, é amplamente cultivado em várias regiões, especialmente no Sudeste e no Nordeste. O plantio geralmente ocorre no início da estação chuvosa, e a colheita é realizada quando os frutos estão maduros. Os grãos de café são usados para preparar uma das bebidas mais populares do mundo, consumida tanto quente quanto fria. Além disso, o café é uma importante commodity agrícola, com grande impacto econômico em várias partes do mundo.' })}
                 />
-                <div className="text-wrapper-25">Arroz</div>
-              </div>
-            </div>
-            <div className="frame">
-              <div className="group-6">
-                <div className="overlap-group-3">
-                  <img
-                    className="rectangle-9"
-                    alt="Rectangle"
-                    src={cafeImage}
-                  />
-                  <div className="text-wrapper-25">Café</div>
-                </div>
+                <button className="text-wrapper-25" onClick={() => handleCultureClick({ image: cafeImage, name: 'Cafe', description: 'Descrição' })}>Café</button>
+
               </div>
               <div className="group-6">
-                <div className="overlap-group-3">
-                  <img
-                    className="rectangle-9"
-                    alt="Rectangle"
-                    src={laranjaImage}
-                  />
-                  <div className="text-wrapper-25">Laranja</div>
-                </div>
+
+                <img
+                  className="rectangle-9"
+                  alt="Rectangle"
+                  src={laranjaImage}
+                  onClick={() => openModal({ image: laranjaImage, name: 'Laranja', description: 'Descrição: A laranja é uma fruta cítrica amplamente cultivada em climas subtropicais e tropicais. Suas árvores preferem solos bem drenados e locais com boa incidência de luz solar. No Brasil, é cultivada em diversas regiões, especialmente no estado de São Paulo. A colheita das laranjas geralmente ocorre durante o período de maturação dos frutos, que podem variar em tamanho, cor e sabor dependendo da variedade. Além de consumida in natura, a laranja é utilizada na produção de sucos, doces, geleias e outros produtos alimentícios.' })}
+                />
+                <button className="text-wrapper-25" onClick={() => handleCultureClick({ image: laranjaImage, name: 'Laranja', description: 'Descrição' })}>Laranja</button>
+
               </div>
               <div className="group-6">
-                <div className="overlap-group-3">
-                  <img
-                    className="rectangle-9"
-                    alt="Rectangle"
-                    src={sojaImage}
-                  />
-                  <div className="text-wrapper-25">Soja</div>
-                </div>
+
+                <img
+                  className="rectangle-9"
+                  alt="Rectangle"
+                  src={sojaImage}
+                  onClick={() => openModal({ image: sojaImage, name: 'Soja', description: 'Descrição: A soja é uma planta leguminosa de grande importância agrícola devido ao seu alto valor proteico e versatilidade de uso. Ela cresce melhor em climas subtropicais e temperados, com uma estação de crescimento longa e temperaturas amenas. O solo ideal para o cultivo de soja é bem drenado e rico em matéria orgânica. No Brasil, a soja é cultivada principalmente nos estados do Centro-Oeste, Sul e Sudeste, onde as condições climáticas e edáficas são favoráveis. A soja é utilizada na produção de diversos produtos, incluindo óleos vegetais, ração animal, alimentos processados e biodiesel.' })}
+                />
+                <button className="text-wrapper-25" onClick={() => handleCultureClick({ image: sojaImage, name: 'Soja', description: 'Descrição' })}>Soja</button>
+
               </div>
-              <div className="group-6">
-                <div className="overlap-group-3">
-                  <img
-                    className="rectangle-9"
-                    alt="Rectangle"
-                    src={tabacoImage}
-                  />
-                  <div className="text-wrapper-25">Tabaco</div>
-                </div>
+              <div className="group-6" >
+
+                <img
+                  className="rectangle-9"
+                  alt="Rectangle"
+                  src={tabacoImage}
+                  onClick={() => openModal({ image: tabacoImage, name: 'Tabaco', description: 'Descrição: O tabaco é uma planta cultivada principalmente pela indústria do tabaco para a produção de cigarros, charutos, cachimbos e tabaco para mascar. Ele requer um clima ensolarado e quente para crescer, com uma estação de crescimento longa e temperaturas consistentes. O solo ideal para o cultivo de tabaco é bem drenado e fértil, geralmente encontrado em áreas de baixa altitude. No Brasil, o cultivo de tabaco é comum em estados como Rio Grande do Sul, Santa Catarina e Paraná, onde o clima e o solo são adequados. No entanto, o tabaco é uma cultura controversa devido aos seus impactos na saúde pública e ao seu potencial de dependência química.' })}
+                />
+                <button className="text-wrapper-25" onClick={() => handleCultureClick({ image: tabacoImage, name: 'Tabaco', description: 'Descrição' })}>Tabaco</button>
+
               </div>
             </div>
           </div>
         </div>
       </div>
+      {modalOpen && selectedPlant && (
+        <div className="modal-overlay">
+          <div className="modal" onClick={closeModal}>
+            <img src={selectedPlant.image} alt={selectedPlant.name} className="modal-img" />
+            <div className="modal-content">
+              <p className="modal-description" style={{ maxHeight: '400px', overflowY: 'scroll' }}>{selectedPlant.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-export default SelecaoDeCultura
+export default SelecaoDeCultura;
