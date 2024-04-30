@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./styleDadosSolo.css";
 
 export const DadosDeSolo = () => {
   return (
@@ -73,15 +73,15 @@ export const DadosDeSolo = () => {
                   alt="Suporte house"
                   src="https://c.animaapp.com/Jx8XCm2E/img/controle-house@2x.png"
                 />
-                <div className="text-wrapper-21">Suporte</div>
+                <a className="text-wrapper-21" href="/suporte">Suporte</a>
                 <img
                   className="histrico-plantio"
                   alt="Histrico plantio"
                   src="https://c.animaapp.com/Jx8XCm2E/img/controle-house@2x.png"
                 />
                 <div className="overlap-6">
-                  <div className="text-wrapper-22">Histórico Plantio</div>
-                  <div className="text-wrapper-23">Pragas e Agrotóxico</div>
+                  <a className="text-wrapper-22" href="/historico">Histórico Plantio</a>
+                  <a className="text-wrapper-23" href="/pesticidas">Pragas e Agrotóxico</a>
                 </div>
                 <img
                   className="pragas-e-agrotxico"
@@ -93,7 +93,7 @@ export const DadosDeSolo = () => {
                     <div className="overlap-group-3">
                       <div className="rectangle-3" />
                       <div className="text-wrapper-24">Dados do solo</div>
-                      <div className="text-wrapper-25">Seleção Cultura</div>
+                      <a className="text-wrapper-25" href="/selcultura">Seleção Cultura</a>
                     </div>
                     <img
                       className="seleo-cultura-house"
@@ -101,7 +101,7 @@ export const DadosDeSolo = () => {
                       src="https://c.animaapp.com/Jx8XCm2E/img/controle-house@2x.png"
                     />
                   </div>
-                  <div className="text-wrapper-26">Região e Estação</div>
+                  <a className="text-wrapper-26" href="/regiao">Região e Estação</a>
                 </div>
                 <img
                   className="regio-e-estao-house"
@@ -113,13 +113,13 @@ export const DadosDeSolo = () => {
                   alt="Plano plantio house"
                   src="https://c.animaapp.com/Jx8XCm2E/img/controle-house@2x.png"
                 />
-                <div className="text-wrapper-27">Plano Plantio</div>
+                <a className="text-wrapper-27" href="/plano">Plano Plantio</a>
                 <img
                   className="controle-house"
                   alt="Controle house"
                   src="https://c.animaapp.com/Jx8XCm2E/img/controle-house@2x.png"
                 />
-                <div className="text-wrapper-28">Controle</div>
+                <a className="text-wrapper-28" href="/controle">Controle</a>
               </div>
             </div>
             <div className="headder">
@@ -136,7 +136,7 @@ export const DadosDeSolo = () => {
                 </p>
                 <div className="text-wrapper-31">admin</div>
               </div>
-              <div className="text-wrapper-32">AgroBoys</div>
+              <a className="text-wrapper-32" href="/">AgroBoys</a>
             </div>
           </div>
         </div>
@@ -144,6 +144,5 @@ export const DadosDeSolo = () => {
     </div>
   );
 };
-
 
 export default DadosDeSolo
