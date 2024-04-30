@@ -1,5 +1,12 @@
 import React from "react";
 import "./stylepesticidas.css";
+import erva from "../../components/Images/Interno/erva-daninha.png";
+import formiga from "../../components/Images/Interno/Formiga.png";
+import fungo from "../../components/Images/Interno/Fungo.png";
+import mosca from "../../components/Images/Interno/mosca.png";
+import pulgao from "../../components/Images/Interno/Pulgao.png";
+import acaro from "../../components/Images/Interno/acaro.png";
+import piolho from "../../components/Images/Interno/piolho.png";
 
 export const Pesticidas = () => {
   return (
@@ -144,6 +151,7 @@ export const Pesticidas = () => {
                       <div className="text-wrapper-10">Delete</div>
                     </div>
                   </div>
+                  <img className="img-9" alt="Img" src={formiga}/>
                   <img className="img-2" alt="Img" src="https://c.animaapp.com/ROdEJw0v/img/img7@2x.png" />
                   <div className="overlap-wrapper">
                     <div className="div-wrapper">
@@ -155,6 +163,7 @@ export const Pesticidas = () => {
                       <div className="text-wrapper-10">Delete</div>
                     </div>
                   </div>
+                  <img className="img-10" alt="Img" src={mosca}/>
                   <img className="img-3" alt="Img" src="https://c.animaapp.com/ROdEJw0v/img/img6@2x.png" />
                   <div className="view-2">
                     <div className="div-wrapper">
@@ -166,6 +175,7 @@ export const Pesticidas = () => {
                       <div className="text-wrapper-10">Delete</div>
                     </div>
                   </div>
+                  <img className="img-11" alt="Img" src={fungo}/>
                   <img className="img-4" alt="Img" src="https://c.animaapp.com/ROdEJw0v/img/img5@2x.png" />
                   <div className="view-3">
                     <div className="div-wrapper">
@@ -177,6 +187,7 @@ export const Pesticidas = () => {
                       <div className="text-wrapper-10">Delete</div>
                     </div>
                   </div>
+                  <img className="img-12" alt="Img" src={erva}/>
                   <img className="img-5" alt="Img" src="https://c.animaapp.com/ROdEJw0v/img/img4@2x.png" />
                   <div className="view-4">
                     <div className="div-wrapper">
@@ -188,6 +199,7 @@ export const Pesticidas = () => {
                       <div className="text-wrapper-10">Delete</div>
                     </div>
                   </div>
+                  <img className="img-13" alt="Img" src={pulgao}/>
                   <img className="img-6" alt="Img" src="https://c.animaapp.com/ROdEJw0v/img/img3@2x.png" />
                   <div className="view-5">
                     <div className="div-wrapper">
@@ -199,6 +211,7 @@ export const Pesticidas = () => {
                       <div className="text-wrapper-10">Delete</div>
                     </div>
                   </div>
+                  <img className="img-14" alt="Img" src={acaro}/>
                   <img className="img-7" alt="Img" src="https://c.animaapp.com/ROdEJw0v/img/img2@2x.png" />
                   <div className="view-6">
                     <div className="div-wrapper">
@@ -210,6 +223,7 @@ export const Pesticidas = () => {
                       <div className="text-wrapper-10">Delete</div>
                     </div>
                   </div>
+                  <img className="img-15" alt="Img" src={piolho}/>
                   <img className="img-8" alt="Img" src="https://c.animaapp.com/ROdEJw0v/img/img1@2x.png" />
                 </div>
                 <img className="line-7" alt="Line" src="https://c.animaapp.com/ROdEJw0v/img/line-10.svg" />
