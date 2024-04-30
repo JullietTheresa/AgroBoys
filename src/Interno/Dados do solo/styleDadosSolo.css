@@ -1,738 +1,743 @@
 .dados-de-solo {
-    background-color: #eef2f7;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .dados-de-solo .div {
-    background-color: #eef2f7;
-    height: 1059px;
-    overflow: hidden;
-    position: relative;
-    width: 1440px;
-  }
-  
-  .dados-de-solo .fotter {
-    height: 332px;
-    left: 0;
-    position: absolute;
-    top: 726px;
-    width: 1456px;
-  }
-  
-  .dados-de-solo .overlap-group {
-    height: 332px;
-    position: relative;
-    width: 1440px;
-  }
-  
-  .dados-de-solo .rectangle {
-    background-color: #609b00;
-    height: 304px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 1440px;
-  }
-  
-  .dados-de-solo .rectangle-2 {
-    background-color: #000000;
-    height: 72px;
-    left: 0;
-    position: absolute;
-    top: 260px;
-    width: 1440px;
-  }
-  
-  .dados-de-solo .copyright {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 400;
-    left: 457px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 274px;
-    width: 548px;
-  }
-  
-  .dados-de-solo .text-wrapper {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 0;
-  }
-  
-  .dados-de-solo .span {
-    font-weight: 700;
-  }
-  
-  .dados-de-solo .internet {
-    height: 20px;
-    left: 926px;
-    position: absolute;
-    top: 161px;
-    width: 20px;
-  }
-  
-  .dados-de-solo .text-wrapper-2 {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 18px;
-    font-weight: 300;
-    left: 960px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 158px;
-    width: 198px;
-  }
-  
-  .dados-de-solo .hand-with-smartphone {
-    height: 20px;
-    left: 926px;
-    position: absolute;
-    top: 125px;
-    width: 20px;
-  }
-  
-  .dados-de-solo .text-wrapper-3 {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 18px;
-    font-weight: 300;
-    left: 960px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 122px;
-    width: 188px;
-  }
-  
-  .dados-de-solo .envelope {
-    height: 20px;
-    left: 926px;
-    position: absolute;
-    top: 92px;
-    width: 20px;
-  }
-  
-  .dados-de-solo .text-wrapper-4 {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 18px;
-    font-weight: 300;
-    left: 960px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 86px;
-    width: 175px;
-  }
-  
-  .dados-de-solo .place-marker {
-    height: 20px;
-    left: 925px;
-    position: absolute;
-    top: 53px;
-    width: 20px;
-  }
-  
-  .dados-de-solo .text-wrapper-5 {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 18px;
-    font-weight: 300;
-    left: 960px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 50px;
-    width: 188px;
-  }
-  
-  .dados-de-solo .text-wrapper-6 {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 25px;
-    font-weight: 500;
-    left: 866px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 8px;
-    white-space: nowrap;
-    width: 232px;
-  }
-  
-  .dados-de-solo .sobre {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 15px;
-    font-weight: 300;
-    left: 53px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 64px;
-    width: 627px;
-  }
-  
-  .dados-de-solo .text-wrapper-7 {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 25px;
-    font-weight: 500;
-    left: 48px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 8px;
-    white-space: nowrap;
-    width: 232px;
-  }
-  
-  .dados-de-solo .overlap {
-    height: 726px;
-    left: -4px;
-    position: absolute;
-    top: 0;
-    width: 1452px;
-  }
-  
-  .dados-de-solo .dados-do-solo {
-    height: 417px;
-    left: 319px;
-    position: absolute;
-    top: 85px;
-    width: 888px;
-  }
-  
-  .dados-de-solo .analise {
-    height: 282px;
-    left: 551px;
-    position: absolute;
-    top: 135px;
-    width: 345px;
-  }
-  
-  .dados-de-solo .overlap-group-2 {
-    background-color: #fafafa;
-    border-radius: 12px;
-    height: 282px;
-    position: relative;
-    width: 335px;
-  }
-  
-  .dados-de-solo .overlap-2 {
-    height: 83px;
-    left: 41px;
-    position: absolute;
-    top: 138px;
-    width: 279px;
-  }
-  
-  .dados-de-solo .text-wrapper-8 {
-    color: #000000;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 0;
-    width: 279px;
-  }
-  
-  .dados-de-solo .text-wrapper-9 {
-    color: #000000;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 33px;
-    width: 279px;
-  }
-  
-  .dados-de-solo .overlap-3 {
-    height: 111px;
-    left: 41px;
-    position: absolute;
-    top: 25px;
-    width: 286px;
-  }
-  
-  .dados-de-solo .text-wrapper-10 {
-    color: #000000;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 44px;
-    width: 286px;
-  }
-  
-  .dados-de-solo .text-wrapper-11 {
-    color: #000000;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 81px;
-    width: 279px;
-  }
-  
-  .dados-de-solo .text-wrapper-12 {
-    color: #609b00;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 0;
-    width: 286px;
-  }
-  
-  .dados-de-solo .analise-quimica {
-    height: 282px;
-    left: 95px;
-    position: absolute;
-    top: 135px;
-    width: 349px;
-  }
-  
-  .dados-de-solo .text-wrapper-13 {
-    color: #000000;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    left: 11px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 134px;
-    width: 220px;
-  }
-  
-  .dados-de-solo .text-wrapper-14 {
-    color: #000000;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    left: 11px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 167px;
-    width: 220px;
-  }
-  
-  .dados-de-solo .text-wrapper-15 {
-    color: #000000;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    left: 11px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 199px;
-    width: 250px;
-  }
-  
-  .dados-de-solo .text-wrapper-16 {
-    color: #000000;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    left: 11px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 232px;
-    width: 250px;
-  }
-  
-  .dados-de-solo .text-wrapper-17 {
-    color: #000000;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    left: 11px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 65px;
-    width: 220px;
-  }
-  
-  .dados-de-solo .text-wrapper-18 {
-    color: #609b00;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    left: 11px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 19px;
-    width: 173px;
-  }
-  
-  .dados-de-solo .text-wrapper-19 {
-    color: #000000;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    left: 11px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 102px;
-    width: 220px;
-  }
-  
-  .dados-de-solo .text-wrapper-20 {
-    color: #609b00;
-    font-family: "Poppins", Helvetica;
-    font-size: 25px;
-    font-weight: 700;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 0;
-    width: 241px;
-  }
-  
-  .dados-de-solo .overlap-4 {
-    height: 726px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 1452px;
-  }
-  
-  .dados-de-solo .menu {
-    height: 726px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 310px;
-  }
-  
-  .dados-de-solo .overlap-5 {
-    height: 726px;
-    position: relative;
-    width: 294px;
-  }
-  
-  .dados-de-solo .rectangle-3 {
-    background-color: #ffffff;
-    height: 676px;
-    left: 4px;
-    position: absolute;
-    top: 0;
-    width: 235px;
-  }
-  
-  .dados-de-solo .rectangle-4 {
-    background-color: #ffffff;
-    height: 726px;
-    left: 4px;
-    position: absolute;
-    top: 0;
-    width: 290px;
-  }
-  
-  .dados-de-solo .rectangle-5 {
-    background-color: #ffffff;
-    height: 641px;
-    left: 0;
-    position: absolute;
-    top: 85px;
-    width: 267px;
-  }
-  
-  .dados-de-solo .suporte-house {
-    height: 41px;
-    left: 17px;
-    position: absolute;
-    top: 511px;
-    width: 24px;
-  }
-  
-  .dados-de-solo .text-wrapper-21 {
-    color: #609b00;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 500;
-    left: 57px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 515px;
-    width: 92px;
-  }
-  
-  .dados-de-solo .histrico-plantio {
-    height: 41px;
-    left: 17px;
-    position: absolute;
-    top: 465px;
-    width: 24px;
-  }
-  
-  .dados-de-solo .text-wrapper-22 {
-    color: #609b00;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 500;
-    left: 60px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 469px;
-    width: 179px;
-  }
-  
-  .dados-de-solo .pragas-e-agrotxico {
-    height: 41px;
-    left: 17px;
-    position: absolute;
-    top: 420px;
-    width: 24px;
-  }
-  
-  .dados-de-solo .text-wrapper-23 {
-    color: #609b00;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 500;
-    left: 60px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 425px;
-    width: 210px;
-  }
-  
-  .dados-de-solo .rectangle-6 {
-    background-color: #518200;
-    border-radius: 10px;
-    height: 50px;
-    left: 37px;
-    position: absolute;
-    top: 366px;
-    width: 170px;
-  }
-  
-  .dados-de-solo .text-wrapper-24 {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 16px;
-    font-weight: 500;
-    left: 64px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 378px;
-    width: 116px;
-  }
-  
-  .dados-de-solo .seleo-cultura-house {
-    height: 41px;
-    left: 17px;
-    position: absolute;
-    top: 315px;
-    width: 24px;
-  }
-  
-  .dados-de-solo .text-wrapper-25 {
-    color: #609b00;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 500;
-    left: 60px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 321px;
-    width: 164px;
-  }
-  
-  .dados-de-solo .regio-e-estao-house {
-    height: 41px;
-    left: 17px;
-    position: absolute;
-    top: 264px;
-    width: 24px;
-  }
-  
-  .dados-de-solo .text-wrapper-26 {
-    color: #609b00;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 500;
-    left: 60px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 269px;
-    width: 191px;
-  }
-  
-  .dados-de-solo .plano-plantio-house {
-    height: 41px;
-    left: 17px;
-    position: absolute;
-    top: 217px;
-    width: 24px;
-  }
-  
-  .dados-de-solo .text-wrapper-27 {
-    color: #609b00;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 500;
-    left: 60px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 221px;
-    width: 144px;
-  }
-  
-  .dados-de-solo .controle-house {
-    height: 41px;
-    left: 17px;
-    position: absolute;
-    top: 161px;
-    width: 24px;
-  }
-  
-  .dados-de-solo .text-wrapper-28 {
-    color: #609b00;
-    font-family: "Poppins", Helvetica;
-    font-size: 20px;
-    font-weight: 500;
-    left: 60px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 165px;
-    width: 144px;
-  }
-  
-  .dados-de-solo .headder {
-    height: 70px;
-    left: 17px;
-    position: absolute;
-    top: 0;
-    width: 1435px;
-  }
-  
-  .dados-de-solo .overlap-6 {
-    background-color: #518200;
-    height: 70px;
-    left: 277px;
-    position: absolute;
-    top: 0;
-    width: 1150px;
-  }
-  
-  .dados-de-solo .overlap-group-3 {
-    height: 50px;
-    left: 884px;
-    position: absolute;
-    top: 8px;
-    width: 46px;
-  }
-  
-  .dados-de-solo .ellipse {
-    background-color: #ffffff;
-    border-radius: 23px;
-    height: 46px;
-    left: 0;
-    position: absolute;
-    top: 4px;
-    width: 46px;
-  }
-  
-  .dados-de-solo .text-wrapper-29 {
-    color: #7da240;
-    font-family: "Poppins", Helvetica;
-    font-size: 35px;
-    font-weight: 700;
-    left: 13px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 0;
-    white-space: nowrap;
-    width: 28px;
-  }
-  
-  .dados-de-solo .usuario-gmail-com {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 15px;
-    font-weight: 500;
-    left: 939px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 16px;
-  }
-  
-  .dados-de-solo .text-wrapper-30 {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 0;
-  }
-  
-  .dados-de-solo .text-wrapper-31 {
-    color: #ffffff;
-    font-family: "Poppins", Helvetica;
-    font-size: 10px;
-    font-weight: 300;
-    left: 939px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 39px;
-  }
-  
-  .dados-de-solo .text-wrapper-32 {
-    color: #518200;
-    font-family: "Poppins", Helvetica;
-    font-size: 35px;
-    font-weight: 700;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 10px;
-  }
-  
+  background-color: #eef2f7;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.dados-de-solo .div {
+  background-color: #eef2f7;
+  height: 1059px;
+  overflow: hidden;
+  position: relative;
+  width: 1440px;
+}
+
+.dados-de-solo .fotter {
+  height: 332px;
+  left: 0;
+  position: absolute;
+  top: 726px;
+  width: 1456px;
+}
+
+.dados-de-solo .overlap-group {
+  height: 332px;
+  position: relative;
+  width: 1440px;
+}
+
+.dados-de-solo .rectangle {
+  background-color: #609b00;
+  height: 304px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.dados-de-solo .rectangle-2 {
+  background-color: #000000;
+  height: 72px;
+  left: 0;
+  position: absolute;
+  top: 260px;
+  width: 1440px;
+}
+
+.dados-de-solo .copyright {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 457px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 274px;
+  width: 548px;
+}
+
+.dados-de-solo .text-wrapper {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.dados-de-solo .span {
+  font-weight: 700;
+}
+
+.dados-de-solo .internet {
+  height: 20px;
+  left: 926px;
+  position: absolute;
+  top: 161px;
+  width: 20px;
+}
+
+.dados-de-solo .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 18px;
+  font-weight: 300;
+  left: 960px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 158px;
+  width: 198px;
+}
+
+.dados-de-solo .hand-with-smartphone {
+  height: 20px;
+  left: 926px;
+  position: absolute;
+  top: 125px;
+  width: 20px;
+}
+
+.dados-de-solo .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 18px;
+  font-weight: 300;
+  left: 960px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 122px;
+  width: 188px;
+}
+
+.dados-de-solo .envelope {
+  height: 20px;
+  left: 926px;
+  position: absolute;
+  top: 92px;
+  width: 20px;
+}
+
+.dados-de-solo .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 18px;
+  font-weight: 300;
+  left: 960px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 86px;
+  width: 175px;
+}
+
+.dados-de-solo .place-marker {
+  height: 20px;
+  left: 925px;
+  position: absolute;
+  top: 53px;
+  width: 20px;
+}
+
+.dados-de-solo .text-wrapper-5 {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 18px;
+  font-weight: 300;
+  left: 960px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 50px;
+  width: 188px;
+}
+
+.dados-de-solo .text-wrapper-6 {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 25px;
+  font-weight: 500;
+  left: 866px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  white-space: nowrap;
+  width: 232px;
+}
+
+.dados-de-solo .sobre {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 15px;
+  font-weight: 300;
+  left: 53px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 64px;
+  width: 627px;
+}
+
+.dados-de-solo .text-wrapper-7 {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 25px;
+  font-weight: 500;
+  left: 48px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 8px;
+  white-space: nowrap;
+  width: 232px;
+}
+
+.dados-de-solo .overlap {
+  height: 726px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1448px;
+}
+
+.dados-de-solo .dados-do-solo {
+  height: 417px;
+  left: 315px;
+  position: absolute;
+  top: 85px;
+  width: 947px;
+}
+
+.dados-de-solo .analise {
+  height: 282px;
+  left: 610px;
+  position: absolute;
+  top: 135px;
+  width: 345px;
+}
+
+.dados-de-solo .overlap-group-2 {
+  background-image: url(https://c.animaapp.com/Jx8XCm2E/img/rectangle-26.svg);
+  background-size: 100% 100%;
+  height: 282px;
+  position: relative;
+  width: 335px;
+}
+
+.dados-de-solo .overlap-2 {
+  height: 83px;
+  left: 11px;
+  position: absolute;
+  top: 134px;
+  width: 284px;
+}
+
+.dados-de-solo .text-wrapper-8 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 279px;
+}
+
+.dados-de-solo .text-wrapper-9 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 33px;
+  width: 284px;
+}
+
+.dados-de-solo .overlap-3 {
+  height: 79px;
+  left: 11px;
+  position: absolute;
+  top: 19px;
+  width: 306px;
+}
+
+.dados-de-solo .text-wrapper-10 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 46px;
+  width: 306px;
+}
+
+.dados-de-solo .text-wrapper-11 {
+  color: #609b00;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 251px;
+}
+
+.dados-de-solo .text-wrapper-12 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 11px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 102px;
+  width: 272px;
+}
+
+.dados-de-solo .analise-quimica {
+  height: 282px;
+  left: 95px;
+  position: absolute;
+  top: 135px;
+  width: 349px;
+}
+
+.dados-de-solo .overlap-4 {
+  background-color: #fafafa;
+  border-radius: 12px;
+  height: 282px;
+  position: relative;
+  width: 335px;
+}
+
+.dados-de-solo .text-wrapper-13 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 11px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 134px;
+  width: 220px;
+}
+
+.dados-de-solo .text-wrapper-14 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 11px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 167px;
+  width: 220px;
+}
+
+.dados-de-solo .text-wrapper-15 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 11px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 199px;
+  width: 250px;
+}
+
+.dados-de-solo .text-wrapper-16 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 11px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 232px;
+  width: 250px;
+}
+
+.dados-de-solo .text-wrapper-17 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 11px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 65px;
+  width: 220px;
+}
+
+.dados-de-solo .text-wrapper-18 {
+  color: #609b00;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 11px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 19px;
+  width: 173px;
+}
+
+.dados-de-solo .text-wrapper-19 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 11px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 102px;
+  width: 220px;
+}
+
+.dados-de-solo .text-wrapper-20 {
+  color: #609b00;
+  font-family: "Poppins", Helvetica;
+  font-size: 25px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 241px;
+}
+
+.dados-de-solo .menu {
+  height: 726px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 306px;
+}
+
+.dados-de-solo .overlap-5 {
+  background-color: #ffffff;
+  height: 726px;
+  position: relative;
+  width: 290px;
+}
+
+.dados-de-solo .suporte-house {
+  height: 41px;
+  left: 13px;
+  position: absolute;
+  top: 511px;
+  width: 24px;
+}
+
+.dados-de-solo .text-wrapper-21 {
+  color: #609b00;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  left: 53px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 515px;
+  width: 92px;
+}
+
+.dados-de-solo .histrico-plantio {
+  height: 41px;
+  left: 13px;
+  position: absolute;
+  top: 465px;
+  width: 24px;
+}
+
+.dados-de-solo .overlap-6 {
+  height: 74px;
+  left: 56px;
+  position: absolute;
+  top: 425px;
+  width: 210px;
+}
+
+.dados-de-solo .text-wrapper-22 {
+  color: #609b00;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 44px;
+  width: 179px;
+}
+
+.dados-de-solo .text-wrapper-23 {
+  color: #609b00;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 210px;
+}
+
+.dados-de-solo .pragas-e-agrotxico {
+  height: 41px;
+  left: 13px;
+  position: absolute;
+  top: 420px;
+  width: 24px;
+}
+
+.dados-de-solo .overlap-7 {
+  height: 147px;
+  left: 13px;
+  position: absolute;
+  top: 269px;
+  width: 234px;
+}
+
+.dados-de-solo .overlap-8 {
+  height: 101px;
+  left: 0;
+  position: absolute;
+  top: 46px;
+  width: 207px;
+}
+
+.dados-de-solo .overlap-group-3 {
+  height: 95px;
+  left: 20px;
+  position: absolute;
+  top: 6px;
+  width: 187px;
+}
+
+.dados-de-solo .rectangle-3 {
+  background-color: #518200;
+  border-radius: 10px;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  top: 45px;
+  width: 170px;
+}
+
+.dados-de-solo .text-wrapper-24 {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 16px;
+  font-weight: 500;
+  left: 27px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 57px;
+  width: 116px;
+}
+
+.dados-de-solo .text-wrapper-25 {
+  color: #609b00;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  left: 23px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 164px;
+}
+
+.dados-de-solo .seleo-cultura-house {
+  height: 41px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 24px;
+}
+
+.dados-de-solo .text-wrapper-26 {
+  color: #609b00;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  left: 43px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 191px;
+}
+
+.dados-de-solo .regio-e-estao-house {
+  height: 41px;
+  left: 13px;
+  position: absolute;
+  top: 264px;
+  width: 24px;
+}
+
+.dados-de-solo .plano-plantio-house {
+  height: 41px;
+  left: 13px;
+  position: absolute;
+  top: 217px;
+  width: 24px;
+}
+
+.dados-de-solo .text-wrapper-27 {
+  color: #609b00;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  left: 56px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 221px;
+  width: 144px;
+}
+
+.dados-de-solo .controle-house {
+  height: 41px;
+  left: 13px;
+  position: absolute;
+  top: 161px;
+  width: 24px;
+}
+
+.dados-de-solo .text-wrapper-28 {
+  color: #609b00;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  left: 56px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 165px;
+  width: 144px;
+}
+
+.dados-de-solo .headder {
+  height: 70px;
+  left: 13px;
+  position: absolute;
+  top: 0;
+  width: 1435px;
+}
+
+.dados-de-solo .overlap-9 {
+  background-color: #518200;
+  height: 70px;
+  left: 277px;
+  position: absolute;
+  top: 0;
+  width: 1150px;
+}
+
+.dados-de-solo .overlap-group-4 {
+  height: 50px;
+  left: 884px;
+  position: absolute;
+  top: 8px;
+  width: 46px;
+}
+
+.dados-de-solo .ellipse {
+  background-color: #ffffff;
+  border-radius: 23px;
+  height: 46px;
+  left: 0;
+  position: absolute;
+  top: 4px;
+  width: 46px;
+}
+
+.dados-de-solo .text-wrapper-29 {
+  color: #7da240;
+  font-family: "Poppins", Helvetica;
+  font-size: 35px;
+  font-weight: 700;
+  left: 13px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 28px;
+}
+
+.dados-de-solo .usuario-gmail-com {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 15px;
+  font-weight: 500;
+  left: 939px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 16px;
+}
+
+.dados-de-solo .text-wrapper-30 {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.dados-de-solo .text-wrapper-31 {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 10px;
+  font-weight: 300;
+  left: 939px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 39px;
+}
+
+.dados-de-solo .text-wrapper-32 {
+  color: #518200;
+  font-family: "Poppins", Helvetica;
+  font-size: 35px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 10px;
+}
