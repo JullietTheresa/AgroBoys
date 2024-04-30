@@ -2,24 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import "./stylecontrole.css";
 
-const TaskComponent = ({ description, details }) => {
-  return (
-    <div className="tasks">
-      <div className="div">
-        <div className="overlap">
-          <div className="text-wrapper">{description}</div>
-        </div>
-        <div className="overlap-3">
-          <div className="rectangle-10">
-            <div className="text-wrapper-33">{details}</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-
 const initialData = {
   tasks: {
     "task-1": { id: "task-1", content: 
