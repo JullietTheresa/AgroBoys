@@ -95,6 +95,7 @@ export const Suporte = () => {
               <a className="text-wrapper-15" href="/controle" >Controle</a>
             </div>
           </div>
+          <div className="text-wrapper-30">Perguntas frequentes</div>
           <div className="perguntas-frequentes">
             <div className="overlap-6">
               <p className="contatenos-email">
@@ -102,44 +103,45 @@ export const Suporte = () => {
                 <span className="text-wrapper-16">Email@gmail.com</span>
               </p>
               <div className="text-wrapper-17">Ainda com duvidas?</div>
-              <p className="text-wrapper-18">
-                Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label
-                Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label
-                Label Label Label Label
-              </p>
-              <div className="text-wrapper-19">Label:</div>
-              <p className="text-wrapper-20">
-                Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label
-                Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label
-                Label Label Label Label
-              </p>
-              <div className="text-wrapper-21">Label:</div>
-              <p className="text-wrapper-22">
-                Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label
-                Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label
-                Label Label Label Label
-              </p>
-              <div className="text-wrapper-23">Label:</div>
-              <p className="text-wrapper-24">
-                Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label
-                Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label
-                Label Label Label Label
-              </p>
-              <div className="text-wrapper-25">Label:</div>
-              <p className="text-wrapper-26">
-                Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label
-                Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label
-                Label Label Label Label
-              </p>
-              <div className="text-wrapper-27">Label:</div>
-              <p className="text-wrapper-28">
-                Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label
-                Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label
-                Label Label Label Label
-              </p>
-              <div className="text-wrapper-29">Label:</div>
+              <div className="perguntas">
+                {/* <p className="text-wrapper-18">
+                  Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label
+                  Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label
+                  Label Label Label Label
+                </p>
+                <div className="text-wrapper-19">Label:</div> */}
+                <p className="text-wrapper-20">
+                  A escolha das plantas para rotação depende de vários fatores, incluindo o clima, o tipo de solo, as necessidades de nutrientes e os objetivos do agricultor.
+                  No entanto, algumas plantas comumente usadas em rotação de culturas incluem leguminosas (como feijão e ervilha), cereais (como trigo e milho),
+                  raízes (como batata e cenoura) e vegetais de folhas verdes (como alface e espinafre).
+                </p>
+                <div className="text-wrapper-21">Quais plantas são boas para rotação de culturas?</div>
+                <p className="text-wrapper-22">
+                  Existem várias abordagens para a rotação de culturas, incluindo rotação simples, rotação binária, rotação de três ou mais culturas e rotação em faixas.
+                  Cada abordagem tem suas próprias vantagens e pode ser adaptada às condições específicas de uma fazenda ou região.
+                </p>
+                <div className="text-wrapper-23">Quais são os diferentes tipos de rotação de culturas?</div>
+                <p className="text-wrapper-24">
+                  A rotação de culturas envolve planejar e alternar o cultivo de diferentes tipos de plantas em uma sequência lógica.
+                  Por exemplo, uma safra de leguminosas ricas em nitrogênio pode ser seguida por uma safra de cereais, seguida por uma safra de raízes ou tubérculos.
+                  Isso ajuda a equilibrar a demanda de nutrientes do solo e a reduzir a acumulação de pragas e doenças.
+                </p>
+                <div className="text-wrapper-25">Como funciona a rotação de culturas?</div>
+                <p className="text-wrapper-26">
+                  - Melhoria da saúde do solo, através da fixação de nitrogênio, controle de ervas daninhas e redução da erosão.
+                  - Controle natural de pragas e doenças, já que diferentes culturas atraem diferentes tipos de insetos e patógenos.
+                  - Aumento da biodiversidade, promovendo a presença de uma variedade de organismos no solo e no ambiente circundante.
+                  - Melhoria da eficiência no uso de recursos, como água e nutrientes, através da seleção de plantas que complementam umas às outras.
+                </p>
+                <div className="text-wrapper-27">Quais são os benefícios da rotação de culturas?</div>
+                <p className="text-wrapper-28">
+                  A rotação de culturas é o processo de alternar diferentes tipos de plantas em uma área cultivada ao longo do tempo.
+                  Isso pode ajudar a melhorar a saúde do solo, reduzir doenças e pragas, aumentar a biodiversidade e melhorar a eficiência do uso de recursos.
+                </p>
+                <div className="text-wrapper-29">O que é rotação de culturas?</div>
+              </div>
+
             </div>
-            <div className="text-wrapper-30">Perguntas frequentes</div>
           </div>
           <div className="headder">
             <div className="overlap-7">
