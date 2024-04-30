@@ -13,20 +13,20 @@ export const DadosDeSolo = () => {
               <span className="text-wrapper">copyright 2024 </span>
               <span className="span">AgroBoys</span>
             </p>
-            <img className="internet" alt="Internet" src="https://c.animaapp.com/KFeF81dS/img/internet@2x.png" />
+            <img className="internet" alt="Internet" src="https://c.animaapp.com/Jx8XCm2E/img/internet@2x.png" />
             <div className="text-wrapper-2">www.AgroBoys.com</div>
             <img
               className="hand-with-smartphone"
               alt="Hand with smartphone"
-              src="https://c.animaapp.com/KFeF81dS/img/hand-with-smartphone@2x.png"
+              src="https://c.animaapp.com/Jx8XCm2E/img/hand-with-smartphone@2x.png"
             />
             <div className="text-wrapper-3">+55 (61) 999123456</div>
-            <img className="envelope" alt="Envelope" src="https://c.animaapp.com/KFeF81dS/img/envelope@2x.png" />
+            <img className="envelope" alt="Envelope" src="https://c.animaapp.com/Jx8XCm2E/img/envelope@2x.png" />
             <div className="text-wrapper-4">Email@gmail.com</div>
             <img
               className="place-marker"
               alt="Place marker"
-              src="https://c.animaapp.com/KFeF81dS/img/place-marker@2x.png"
+              src="https://c.animaapp.com/Jx8XCm2E/img/place-marker@2x.png"
             />
             <div className="text-wrapper-5">Location, street, 1234</div>
             <div className="text-wrapper-6">Contacts</div>
@@ -47,13 +47,13 @@ export const DadosDeSolo = () => {
                 </div>
                 <div className="overlap-3">
                   <div className="text-wrapper-10">Porcentagem Argila: Label</div>
-                  <div className="text-wrapper-11">Porcentagem Silte: Label</div>
-                  <div className="text-wrapper-12">Análise granulométrica</div>
+                  <div className="text-wrapper-11">Análise granulométrica</div>
                 </div>
+                <div className="text-wrapper-12">Porcentagem Silte: Label</div>
               </div>
             </div>
             <div className="analise-quimica">
-              <div className="overlap-group-2">
+              <div className="overlap-4">
                 <div className="text-wrapper-13">Nutrientes: Label</div>
                 <div className="text-wrapper-14">Saturação: Label</div>
                 <div className="text-wrapper-15">Matéria orgânica: Label</div>
@@ -65,61 +65,66 @@ export const DadosDeSolo = () => {
             </div>
             <div className="text-wrapper-20">Dados do Solo</div>
           </div>
-          <div className="overlap-4">
+          <div className="overlap">
             <div className="menu">
               <div className="overlap-5">
-                <div className="rectangle-3" />
-                <div className="rectangle-4" />
-                <div className="rectangle-5" />
                 <img
                   className="suporte-house"
                   alt="Suporte house"
-                  src="https://c.animaapp.com/KFeF81dS/img/controle-house@2x.png"
+                  src="https://c.animaapp.com/Jx8XCm2E/img/controle-house@2x.png"
                 />
-                <a className="text-wrapper-21" href="/suporte" >Suporte</a>
+                <a className="text-wrapper-21" href="/suporte">Suporte</a>
                 <img
                   className="histrico-plantio"
                   alt="Histrico plantio"
-                  src="https://c.animaapp.com/KFeF81dS/img/controle-house@2x.png"
+                  src="https://c.animaapp.com/Jx8XCm2E/img/controle-house@2x.png"
                 />
-                <a className="text-wrapper-22" href="/historico">Histórico Plantio</a>
+                <div className="overlap-6">
+                  <a className="text-wrapper-22" href="/historico">Histórico Plantio</a>
+                  <a className="text-wrapper-23" href="/pesticidas">Pragas e Agrotóxico</a>
+                </div>
                 <img
                   className="pragas-e-agrotxico"
                   alt="Pragas e agrotxico"
-                  src="https://c.animaapp.com/KFeF81dS/img/controle-house@2x.png"
+                  src="https://c.animaapp.com/Jx8XCm2E/img/controle-house@2x.png"
                 />
-                <a className="text-wrapper-23" href="/pesticidas">Pragas e Agrotóxico</a>
-                <div className="rectangle-6" />
-                <a className="text-wrapper-24" href="/dadossolo">Dados do solo</a>
-                <img
-                  className="seleo-cultura-house"
-                  alt="Seleo cultura house"
-                  src="https://c.animaapp.com/KFeF81dS/img/controle-house@2x.png"
-                />
-                <a className="text-wrapper-25" href="/selcultura">Seleção Cultura</a>
+                <div className="overlap-7">
+                  <div className="overlap-8">
+                    <div className="overlap-group-3">
+                      <div className="rectangle-3" />
+                      <div className="text-wrapper-24">Dados do solo</div>
+                      <a className="text-wrapper-25" href="/selcultura">Seleção Cultura</a>
+                    </div>
+                    <img
+                      className="seleo-cultura-house"
+                      alt="Seleo cultura house"
+                      src="https://c.animaapp.com/Jx8XCm2E/img/controle-house@2x.png"
+                    />
+                  </div>
+                  <a className="text-wrapper-26" href="/regiao">Região e Estação</a>
+                </div>
                 <img
                   className="regio-e-estao-house"
                   alt="Regio e estao house"
-                  src="https://c.animaapp.com/KFeF81dS/img/controle-house@2x.png"
+                  src="https://c.animaapp.com/Jx8XCm2E/img/controle-house@2x.png"
                 />
-                <a className="text-wrapper-26" href="/regiao">Região e Estação</a>
                 <img
                   className="plano-plantio-house"
                   alt="Plano plantio house"
-                  src="https://c.animaapp.com/KFeF81dS/img/controle-house@2x.png"
+                  src="https://c.animaapp.com/Jx8XCm2E/img/controle-house@2x.png"
                 />
                 <a className="text-wrapper-27" href="/plano">Plano Plantio</a>
                 <img
                   className="controle-house"
                   alt="Controle house"
-                  src="https://c.animaapp.com/KFeF81dS/img/controle-house@2x.png"
+                  src="https://c.animaapp.com/Jx8XCm2E/img/controle-house@2x.png"
                 />
                 <a className="text-wrapper-28" href="/controle">Controle</a>
               </div>
             </div>
             <div className="headder">
-              <div className="overlap-6">
-                <div className="overlap-group-3">
+              <div className="overlap-9">
+                <div className="overlap-group-4">
                   <div className="ellipse" />
                   <div className="text-wrapper-29">S</div>
                 </div>
