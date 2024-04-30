@@ -1,6 +1,7 @@
 import React from "react";
 import Arrow from "../../../components/Arrow/arrow";
 import "./styleDetalhado.css";
+import cacauImage from "../../../components/Images/Interno/cacau.jpg";
 
 export const HistoricoDetalhado = () => {
   return (
@@ -43,12 +44,12 @@ export const HistoricoDetalhado = () => {
             <div className="overlap-group-3">
               <div className="overlap">
                 <div className="rectangle-3" />
-                <div className="text-wrapper-8">X</div>
+                <div className="text-wrapper-8">9 mil</div>
                 <div className="text-wrapper-9">Quanto você ganhou?</div>
               </div>
               <div className="overlap-2">
                 <div className="rectangle-4" />
-                <div className="text-wrapper-10">X</div>
+                <div className="text-wrapper-10">10 mil</div>
                 <p className="text-wrapper-9">Quanto você gastou durante esse plantio?</p>
               </div>
               <div className="text-wrapper-11">$$</div>
@@ -58,11 +59,12 @@ export const HistoricoDetalhado = () => {
             <div className="overlap-3">
               <div className="overlap-4">
                 <div className="rectangle-5" />
+                <div className="text-wrapper-12">9</div>
                 <div className="text-wrapper-9">Quantidade de Hectares Aproveitados</div>
               </div>
               <div className="overlap-group-4">
                 <div className="rectangle-6" />
-                <div className="text-wrapper-12">X</div>
+                <div className="text-wrapper-12">10</div>
                 <div className="text-wrapper-9">Quantidade de Hectares Plantados</div>
               </div>
               <div className="text-wrapper-13">Hectare</div>
@@ -71,10 +73,9 @@ export const HistoricoDetalhado = () => {
           <div className="pragas">
             <div className="overlap-5">
               <p className="para-a-praga-x-voc">
-                Para a praga X, você utilizou o pesticida
+                Para o Fungo, você utilizou o fungicida
                 <br />
-                Para a praga X, você utilizou o pesticida Y<br />
-                Para a praga X, você utilizou o pesticida Y
+                Para o Monalonium, você utilizou o inseticida
               </p>
               <div className="text-wrapper-14">Pragas e pesticidas</div>
             </div>
@@ -83,12 +84,12 @@ export const HistoricoDetalhado = () => {
             <div className="overlap-3">
               <div className="overlap-group-5">
                 <div className="rectangle-7" />
-                <div className="text-wrapper-15">DD/MM/AA</div>
+                <div className="text-wrapper-15">29/03/24</div>
                 <div className="text-wrapper-16">Data de Colheita *</div>
               </div>
               <div className="overlap-6">
                 <div className="rectangle-8" />
-                <div className="text-wrapper-17">DD/MM/AA</div>
+                <div className="text-wrapper-17">22/11/23</div>
                 <div className="text-wrapper-16">Data de Plantio*</div>
               </div>
               <div className="text-wrapper-18">Data de Plantio</div>
@@ -97,11 +98,11 @@ export const HistoricoDetalhado = () => {
           <div className="detalhes">
             <div className="overlap-7">
               <div className="overlap-group-6">
-                <div className="text-wrapper-19">Batata Inglesa</div>
-                <div className="text-wrapper-20">Batata</div>
+                <div className="text-wrapper-19">Cacau Forasteiro</div>
+                <div className="text-wrapper-20">Cacau</div>
               </div>
               <div className="overlap-8">
-                <img className="imagem" alt="Imagem" src="https://c.animaapp.com/nQh2W4E3/img/imagem.svg" />
+                <img className="imagem" alt="Imagem" src={cacauImage} />
                 <div className="text-wrapper-20">Detalhes</div>
               </div>
             </div>

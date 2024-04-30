@@ -1,5 +1,10 @@
 import React from "react";
 import "./styleHistoricoGeral.css";
+import cafeImage from "../../../components/Images/Interno/cafe.jpg";
+import laranjaImage from "../../../components/Images/Interno/laranja.jpg";
+import sojaImage from "../../../components/Images/Interno/soja.jpg";
+import cacauImage from "../../../components/Images/Interno/cacau.jpg";
+import milhoImage from "../../../components/Images/Interno/milho.jpg";
 
 export const HistoricoGeral = () => {
   return (
@@ -44,31 +49,31 @@ export const HistoricoGeral = () => {
               <div className="flexcontainer">
                 <p className="text">
                   <span className="text-wrapper-8">
+                    Café
+                    <br />
+                  </span>
+                </p>
+                <p className="text">
+                  <span className="text-wrapper-8">
+                    Laranja
+                    <br />
+                  </span>
+                </p>
+                <p className="text">
+                  <span className="text-wrapper-8">
+                    Cacau
+                    <br />
+                  </span>
+                </p>
+                <p className="text">
+                  <span className="text-wrapper-8">
                     Milho
                     <br />
                   </span>
                 </p>
                 <p className="text">
                   <span className="text-wrapper-8">
-                    Cenoura
-                    <br />
-                  </span>
-                </p>
-                <p className="text">
-                  <span className="text-wrapper-8">
-                    Batata
-                    <br />
-                  </span>
-                </p>
-                <p className="text">
-                  <span className="text-wrapper-8">
-                    Macaxeira
-                    <br />
-                  </span>
-                </p>
-                <p className="text">
-                  <span className="text-wrapper-8">
-                    Cebola
+                    Soja
                     <br />
                   </span>
                 </p>
@@ -86,7 +91,7 @@ export const HistoricoGeral = () => {
                 <div className="text-wrapper-10">2 Hectares</div>
                 <div className="text-wrapper-11">8</div>
                 <div className="text-wrapper-12">10</div>
-                <img className="img" alt="Rectangle" src="https://c.animaapp.com/V72d7Rn8/img/rectangle-38.svg" />
+                <img className="img" alt="Rectangle" src={sojaImage} />
                 <img className="line-2" alt="Line" src="https://c.animaapp.com/V72d7Rn8/img/line-14.svg" />
               </div>
               <div className="macaxeira">
@@ -101,7 +106,7 @@ export const HistoricoGeral = () => {
                 <img
                   className="rectangle-3"
                   alt="Rectangle"
-                  src="https://c.animaapp.com/V72d7Rn8/img/rectangle-37.svg"
+                  src={milhoImage}
                 />
                 <img className="line-3" alt="Line" src="https://c.animaapp.com/V72d7Rn8/img/line-13.svg" />
               </div>
@@ -116,7 +121,7 @@ export const HistoricoGeral = () => {
                 <img
                   className="rectangle-4"
                   alt="Rectangle"
-                  src="https://c.animaapp.com/V72d7Rn8/img/rectangle-36.svg"
+                  src={cacauImage}
                 />
                 <div className="text-wrapper-18">10</div>
                 <img className="line-4" alt="Line" src="https://c.animaapp.com/V72d7Rn8/img/line-12.svg" />
@@ -132,7 +137,7 @@ export const HistoricoGeral = () => {
                 <img
                   className="rectangle-5"
                   alt="Rectangle"
-                  src="https://c.animaapp.com/V72d7Rn8/img/rectangle-35.svg"
+                  src={laranjaImage}
                 />
                 <div className="text-wrapper-21">15</div>
                 <img className="line-5" alt="Line" src="https://c.animaapp.com/V72d7Rn8/img/line-11.svg" />
@@ -148,7 +153,7 @@ export const HistoricoGeral = () => {
                 <img
                   className="rectangle-6"
                   alt="Rectangle"
-                  src="https://c.animaapp.com/V72d7Rn8/img/rectangle-40.svg"
+                  src={cafeImage}
                 />
                 <div className="text-wrapper-24">28</div>
                 <img className="line-6" alt="Line" src="https://c.animaapp.com/V72d7Rn8/img/line-10.svg" />
