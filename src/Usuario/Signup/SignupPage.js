@@ -15,6 +15,13 @@ export const SignupPage = () => {
   const [showEmailError, setShowEmailError] = useState(false);
   const [showSubmitError, setShowSubmitError] = useState(false); // Estado para controlar a exibição da mensagem de erro ao enviar o formulário
   const [passwordMatchError, setPasswordMatchError] = useState(false);
+  const [showLetraError, setShowLetraError] = useState(false);
+  const [showCpfError, setShowCpfError] = useState(false);
+  const [showTamanhoError, setShowTamanhoError] = useState(false);
+  const letrasMaiusculas = /[A-Z]/;
+  const letrasMinusculas = /[a-z]/;
+  const numeros = /[0-9]/;
+  const caracteresEspeciais = /[!@#$%^&*()_+{}[\]:;<>,.?-]/;
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -57,6 +64,32 @@ export const SignupPage = () => {
     if (!emailValid) {
       setShowEmailError(true);
       setTimeout(() => setShowEmailError(false), 4000); // Hide email error after 2 seconds
+    }
+
+    if (cpf.length < 14) {
+      setShowCpfError(true);
+      setTimeout(() => setShowCpfError(false), 4000);
+      event.preventDefault();
+      return;
+    }
+
+    if (password.length < 8) {
+      setShowTamanhoError(true);
+      setTimeout(() => setShowTamanhoError(false), 4000);
+      event.preventDefault();
+      return;
+    }
+
+    if (
+        !letrasMaiusculas.test(password) ||
+        !letrasMinusculas.test(password) ||
+        !numeros.test(password) ||
+        !caracteresEspeciais.test(password)
+    ) { 
+        setShowLetraError(true);
+        setTimeout(() => setShowLetraError(false), 4000);
+        event.preventDefault();
+        return;
     }
 
     if (!cpf || !password || !confirmPassword) {
@@ -143,6 +176,13 @@ export const SignupPage = () => {
           {showEmailError && <p className="error-message-1">Por favor, insira um e-mail válido.</p>}
           {showSubmitError && (!cpf || !password || !confirmPassword) && <p className="error-message-2">Por favor, preencha todos os campos corretamente.</p>}
           {passwordMatchError && <p className="error-message-3">As senhas não coincidem.</p>}
+          {showTamanhoError && (password.length < 8) && <p className="error-message-2">A senha deve ter pelo menos 8 caracteres.</p>}
+          {showLetraError && (!letrasMaiusculas.test(password) ||
+            !letrasMinusculas.test(password) ||
+            !numeros.test(password) ||
+            !caracteresEspeciais.test(password)
+          ) && <p className="error-message-2">sua senha deve conter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial.</p>}
+          {showCpfError && (cpf.length < 14) && <p className="error-message-2">O cpf deve ter 11 numeros.</p>}
 
           <div className="overlap-3">
             <a className="rectangle-2" href="#" onClick={handleSubmit} disabled={!emailValid}/>
