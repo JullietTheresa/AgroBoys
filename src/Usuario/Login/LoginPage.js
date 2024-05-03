@@ -11,6 +11,10 @@ export const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showSubmitError, setShowSubmitError] = useState(false);
+  const letrasMaiusculas = /[A-Z]/;
+  const letrasMinusculas = /[a-z]/;
+  const numeros = /[0-9]/;
+  const caracteresEspeciais = /[!@#$%^&*()_+{}[\]:;<>,.?-]/;
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -33,25 +37,21 @@ export const LoginPage = () => {
     }
     
     if (password.length < 8) {
-      alert("A senha deve ter pelo menos 8 caracteres.");
+      setShowSubmitError(true);
+      setTimeout(() => setShowSubmitError(false), 4000);
       event.preventDefault();
       return;
     }
 
-    const letrasMaiusculas = /[A-Z]/;
-    const letrasMinusculas = /[a-z]/;
-    const numeros = /[0-9]/;
-    const caracteresEspeciais = /[!@#$%^&*()_+{}[\]:;<>,.?-]/;
 
     if (
         !letrasMaiusculas.test(password) ||
         !letrasMinusculas.test(password) ||
         !numeros.test(password) ||
         !caracteresEspeciais.test(password)
-    ) {
-        alert(
-            "sua senha deve conter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial."
-        );
+    ) { 
+        setShowSubmitError(true);
+        setTimeout(() => setShowSubmitError(false), 4000);
         event.preventDefault();
         return;
     }
@@ -139,6 +139,12 @@ export const LoginPage = () => {
 
               {showEmailError && <p className="error-message-1">Por favor, insira um e-mail válido.</p>}
               {showSubmitError && (!password) && <p className="error-message-2">Por favor, preencha o campo "senha" corretamente.</p>}
+              {showSubmitError && (password.length < 8) && <p className="error-message-2">A senha deve ter pelo menos 8 caracteres.</p>}
+              {showSubmitError && (!letrasMaiusculas.test(password) ||
+                !letrasMinusculas.test(password) ||
+                !numeros.test(password) ||
+                !caracteresEspeciais.test(password)
+              ) && <p className="error-message-2">sua senha deve conter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial.</p>}
 
               <div className="overlap-4" href="#">
                 <a className="rectangle-4" href="#" onClick={handleSubmit} disabled={!emailValid}/>
