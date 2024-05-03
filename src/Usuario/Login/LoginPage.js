@@ -31,6 +31,30 @@ export const LoginPage = () => {
       setShowEmailError(true);
       setTimeout(() => setShowEmailError(false), 4000);
     }
+    
+    if (password.length < 8) {
+      alert("A senha deve ter pelo menos 8 caracteres.");
+      event.preventDefault();
+      return;
+    }
+
+    const letrasMaiusculas = /[A-Z]/;
+    const letrasMinusculas = /[a-z]/;
+    const numeros = /[0-9]/;
+    const caracteresEspeciais = /[!@#$%^&*()_+{}[\]:;<>,.?-]/;
+
+    if (
+        !letrasMaiusculas.test(password) ||
+        !letrasMinusculas.test(password) ||
+        !numeros.test(password) ||
+        !caracteresEspeciais.test(password)
+    ) {
+        alert(
+            "sua senha deve conter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial."
+        );
+        event.preventDefault();
+        return;
+    }
 
     if (!password) {
       setShowSubmitError(true);
@@ -116,8 +140,8 @@ export const LoginPage = () => {
               {showEmailError && <p className="error-message-1">Por favor, insira um e-mail válido.</p>}
               {showSubmitError && (!password) && <p className="error-message-2">Por favor, preencha o campo "senha" corretamente.</p>}
 
-              <div className="overlap-4">
-                <a className="rectangle-4" href="#"/>
+              <div className="overlap-4" href="#">
+                <a className="rectangle-4" href="#" onClick={handleSubmit} disabled={!emailValid}/>
                 <a className="text-wrapper-16" href="#" onClick={handleSubmit} disabled={!emailValid}>Login</a>
               </div>
 
