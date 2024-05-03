@@ -24,6 +24,7 @@ export const LoginPage = () => {
     const value = e.target.value;
     setEmail(value);
     setEmailValid(value.includes('@'));
+    setEmailValid(value.includes('.com'));
     setShowEmailError(false); // Reset email error when email is changed
   };
   const handlePasswordChange = (e) => {

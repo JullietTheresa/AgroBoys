@@ -49,6 +49,7 @@ export const SignupPage = () => {
     const value = e.target.value;
     setEmail(value);
     setEmailValid(value.includes('@'));
+    setEmailValid(value.includes('.com'));
     setShowEmailError(false); // Reset email error when email is changed
   };
 
@@ -69,8 +70,6 @@ export const SignupPage = () => {
     if (cpf.length < 14) {
       setShowCpfError(true);
       setTimeout(() => setShowCpfError(false), 4000);
-      event.preventDefault();
-      return;
     }
 
     if (password.length < 8) {
