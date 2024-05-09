@@ -114,7 +114,7 @@ export const Regio_Estaocao = () => {
               </div>
             </div>
             <header className="header">
-              <a className="text-wrapper-29" href="/" >AgroBoys</a>
+              <a className="text-wrapper-29" href="/" >TerraTech</a>
               <div className="overlap-5">
                 <p className="usuario-gmail-com">
                   <span className="text-wrapper-30">usuario</span>
@@ -138,8 +138,8 @@ export const Regio_Estaocao = () => {
             <div className="text-wrapper">Location, street, 1234</div>
             <div className="text-wrapper-2">Email@gmail.com</div>
             <div className="text-wrapper-3">+55 (61) 999123456</div>
-            <div className="text-wrapper-4">www.AgroBoys.com</div>
-            <div className="text-wrapper-5">Sobre AgroBoys</div>
+            <div className="text-wrapper-4">www.TerraTech.com</div>
+            <div className="text-wrapper-5">Sobre TerraTech</div>
             <div className="text-wrapper-6">Contacts</div>
             <p className="p">
               Empresa de sistema agricula ajudando pequenos agricultores desde 2024 a manejar suas plantações de maneira
@@ -155,7 +155,7 @@ export const Regio_Estaocao = () => {
             <img className="copyright" alt="Copyright" src="https://c.animaapp.com/bqR5CWSn/img/copyright@2x.png" />
             <p className="copyright-2">
               <span className="span">copyright 2024 </span>
-              <span className="text-wrapper-7">AgroBoys</span>
+              <span className="text-wrapper-7">TerraTech</span>
             </p>
             <img
               className="place-marker"

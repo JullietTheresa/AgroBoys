@@ -51,7 +51,7 @@ export const SelecaoDeCultura = () => {
             <a className="text-wrapper-7" href="/historico" >Histórico Plantio</a>
             <img className="house-2" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
             <a className="text-wrapper-8" href="/dadossolo" >Dados do Solo</a>
-            <a className="text-wrapper-9" exact href="/">AgroBoys</a>
+            <a className="text-wrapper-9" exact href="/">TerraTech</a>
             <div className="group">
               <a className="text-wrapper-10" href="/pesticidas" >Pragas e Agrotóxico</a>
               <img className="house-3" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
@@ -74,8 +74,8 @@ export const SelecaoDeCultura = () => {
                 <div className="text-wrapper-13">Location, street, 1234</div>
                 <div className="text-wrapper-14">Email@gmail.com</div>
                 <div className="text-wrapper-15">+55 (61) 999123456</div>
-                <div className="text-wrapper-16">www.AgroBoys.com</div>
-                <div className="text-wrapper-17">Sobre AgroBoys</div>
+                <div className="text-wrapper-16">www.TerraTech.com</div>
+                <div className="text-wrapper-17">Sobre TerraTech</div>
                 <div className="text-wrapper-18">Contacts</div>
                 <p className="p">
                   Empresa de sistema agricula ajudando pequenos agricultores desde 2024 a manejar suas plantações de
@@ -91,7 +91,7 @@ export const SelecaoDeCultura = () => {
                 <img className="copyright" alt="Copyright" src="https://c.animaapp.com/fkXnBuii/img/copyright@2x.png" />
                 <p className="copyright-2">
                   <span className="text-wrapper-19">copyright 2024 </span>
-                  <span className="text-wrapper-20">AgroBoys</span>
+                  <span className="text-wrapper-20">TerraTech</span>
                 </p>
                 <img
                   className="place-marker"

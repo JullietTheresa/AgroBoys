@@ -15,8 +15,8 @@ export const LandingPageDesign = () => {
             <div className="text-wrapper-2">Location, street, 1234</div>
             <div className="text-wrapper-3">Email@gmail.com</div>
             <div className="text-wrapper-4">+55 (61) 999123456</div>
-            <div className="text-wrapper-5">www.AgroBoys.com</div>
-            <div className="text-wrapper-6">Sobre AgroBoys</div>
+            <div className="text-wrapper-5">www.TerraTech.com</div>
+            <div className="text-wrapper-6">Sobre TerraTech</div>
             <div className="text-wrapper-7">Contacts</div>
             <p className="p">
               Empresa de sistema agricula ajudando pequenos agricultores desde 2024 a manejar suas plantações de maneira
@@ -32,7 +32,7 @@ export const LandingPageDesign = () => {
             <img className="copyright" alt="Copyright" src="https://c.animaapp.com/ZUyH8RTL/img/copyright@2x.png" />
             <p className="copyright-2">
               <span className="span">copyright 2024 </span>
-              <span className="text-wrapper-8">AgroBoys</span>
+              <span className="text-wrapper-8">TerraTech</span>
             </p>
             <img
               className="place-marker"
@@ -73,7 +73,7 @@ export const LandingPageDesign = () => {
             </div>
             <div className="bem-vindo-a-ao-wrapper">
               <p className="bem-vindo-a-ao">
-                Bem vindo(a) ao AgroBoys
+                Bem vindo(a) ao TerraTech
                 <br />
                 Seu sistema que ajuda você a ter a maior eficiencia possivel na sua <br />
                 plantação
@@ -83,7 +83,7 @@ export const LandingPageDesign = () => {
           </div>
           <div className="navbar-wrapper">
             <div className="navbar">
-              <div className="text-wrapper-27">AgroBoys</div>
+              <div className="text-wrapper-27">TerraTech</div>
               <div className="navbar-buttons">
                 <div className="text-wrapper-28">Home</div>
                 <a className="text-wrapper-28" exact href="/Login">Login</a>

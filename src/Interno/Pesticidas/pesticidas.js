@@ -18,9 +18,9 @@ export const Pesticidas = () => {
             <div className="rectangle-2" />
             <p className="copyright">
               <span className="text-wrapper">copyright 2024 </span>
-              <span className="span">AgroBoys</span>
+              <span className="span">TerraTech</span>
             </p>
-            <div className="text-wrapper-2">www.AgroBoys.com</div>
+            <div className="text-wrapper-2">www.TerraTech.com</div>
             <img className="internet" alt="Internet" src="https://c.animaapp.com/ROdEJw0v/img/internet@2x.png" />
             <div className="text-wrapper-3">+55 (61) 999123456</div>
             <img
@@ -37,7 +37,7 @@ export const Pesticidas = () => {
               src="https://c.animaapp.com/ROdEJw0v/img/place-marker@2x.png"
             />
             <div className="text-wrapper-6">Contacts</div>
-            <div className="text-wrapper-7">Sobre AgroBoys</div>
+            <div className="text-wrapper-7">Sobre TerraTech</div>
             <p className="p">
               Empresa de sistema agricula ajudando pequenos agricultores desde 2024 a manejar suas plantações de maneira
               eficiente.
@@ -309,7 +309,7 @@ export const Pesticidas = () => {
                 </a>
                 <div className="text-wrapper-27">admin</div>
               </div>
-              <a className="text-wrapper-28" href="/" >AgroBoys</a>
+              <a className="text-wrapper-28" href="/" >TerraTech</a>
             </header>
           </div>
         </div>

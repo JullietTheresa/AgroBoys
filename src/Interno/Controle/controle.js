@@ -412,7 +412,7 @@ const Tasks = () => {
             <a className="text-wrapper-9" href="/suporte">Suporte</a>
             <img className="house" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
             <a className="text-wrapper-10" href="/dadossolo">Dados do Solo</a>
-            <a className="text-wrapper-11" href="/">AgroBoys</a>
+            <a className="text-wrapper-11" href="/">TerraTech</a>
             <div className="group-2">
               <a className="text-wrapper-12" href="/pesticidas">Pragas e Agrotóxico</a>
               <img className="img" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
@@ -441,8 +441,8 @@ const Tasks = () => {
             <div className="text-wrapper-18">Location, street, 1234</div>
             <div className="text-wrapper-19">Email@gmail.com</div>
             <div className="text-wrapper-20">+55 (61) 999123456</div>
-            <div className="text-wrapper-21">www.AgroBoys.com</div>
-            <div className="text-wrapper-22">Sobre AgroBoys</div>
+            <div className="text-wrapper-21">www.TerraTech.com</div>
+            <div className="text-wrapper-22">Sobre TerraTech</div>
             <div className="text-wrapper-23">Contacts</div>
             <p className="text-wrapper-24">
               Empresa de sistema agricula ajudando pequenos agricultores desde 2024 a manejar suas plantações de maneira
@@ -458,7 +458,7 @@ const Tasks = () => {
             <img className="copyright" alt="Copyright" src="https://c.animaapp.com/YUkEWowS/img/copyright@2x.png" />
             <p className="copyright-2">
               <span className="text-wrapper-25">copyright 2024 </span>
-              <span className="span">AgroBoys</span>
+              <span className="span">TerraTech</span>
             </p>
             <img
               className="place-marker"

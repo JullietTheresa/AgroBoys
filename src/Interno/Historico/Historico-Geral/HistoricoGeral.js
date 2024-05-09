@@ -17,9 +17,9 @@ export const HistoricoGeral = () => {
               <div className="div" />
               <p className="copyright">
                 <span className="text-wrapper">copyright 2024 </span>
-                <span className="span">AgroBoys</span>
+                <span className="span">TerraTech</span>
               </p>
-              <div className="text-wrapper-2">www.AgroBoys.com</div>
+              <div className="text-wrapper-2">www.TerraTech.com</div>
               <img className="internet" alt="Internet" src="https://c.animaapp.com/V72d7Rn8/img/internet@2x.png" />
               <div className="text-wrapper-3">+55 (61) 999123456</div>
               <img
@@ -40,7 +40,7 @@ export const HistoricoGeral = () => {
                 Empresa de sistema agricula ajudando pequenos agricultores desde 2024 a manejar suas plantações de
                 maneira eficiente.
               </p>
-              <div className="text-wrapper-7">Sobre AgroBoys</div>
+              <div className="text-wrapper-7">Sobre TerraTech</div>
             </div>
           </div>
           <div className="tabela">
@@ -236,7 +236,7 @@ export const HistoricoGeral = () => {
               </a>
               <div className="text-wrapper-42">admin</div>
             </div>
-            <a className="text-wrapper-43" href="/">AgroBoys</a>
+            <a className="text-wrapper-43" href="/">TerraTech</a>
           </header>
         </div>
       </div>

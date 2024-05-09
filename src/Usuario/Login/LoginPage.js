@@ -76,7 +76,7 @@ export const LoginPage = () => {
           <div className="header">
             <div className="overlap-group">
               <div className=".navbar-buttons">
-                <div className="text-wrapper">AgroBoys</div>
+                <div className="text-wrapper">TerraTech</div>
                 <a className="text-wrapper-2" exact href="/">Home</a>
                 <div className="text-wrapper-5">Login</div>
                 <a className="text-wrapper-6" exact href="/SignUp">SignUp</a>
@@ -90,8 +90,8 @@ export const LoginPage = () => {
               <div className="text-wrapper-7">Location, street, 1234</div>
               <div className="text-wrapper-8">Email@gmail.com</div>
               <div className="text-wrapper-9">+55 (61) 999123456</div>
-              <div className="text-wrapper-10">www.AgroBoys.com</div>
-              <div className="text-wrapper-11">Sobre AgroBoys</div>
+              <div className="text-wrapper-10">www.TerraTech.com</div>
+              <div className="text-wrapper-11">Sobre TerraTech</div>
               <div className="text-wrapper-12">Contacts</div>
               <p className="p">
                 Empresa de sistema agricula ajudando pequenos agricultores desde 2024 a manejar suas plantações de maneira
@@ -103,7 +103,7 @@ export const LoginPage = () => {
               <img className="copyright" alt="Copyright" src="https://c.animaapp.com/ZUyH8RTL/img/copyright@2x.png" />
               <p className="copyright-2">
                 <span className="span">copyright 2024 </span>
-                <span className="text-wrapper-13">AgroBoys</span>
+                <span className="text-wrapper-13">TerraTech</span>
               </p>
               <img className="place-marker" alt="Place marker" src="https://c.animaapp.com/ZUyH8RTL/img/place-marker@2x.png" />
             </div>

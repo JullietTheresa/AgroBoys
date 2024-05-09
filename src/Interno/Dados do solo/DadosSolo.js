@@ -11,10 +11,10 @@ export const DadosDeSolo = () => {
             <div className="rectangle-2" />
             <p className="copyright">
               <span className="text-wrapper">copyright 2024 </span>
-              <span className="span">AgroBoys</span>
+              <span className="span">TerraTech</span>
             </p>
             <img className="internet" alt="Internet" src="https://c.animaapp.com/Jx8XCm2E/img/internet@2x.png" />
-            <div className="text-wrapper-2">www.AgroBoys.com</div>
+            <div className="text-wrapper-2">www.TerraTech.com</div>
             <img
               className="hand-with-smartphone"
               alt="Hand with smartphone"
@@ -34,7 +34,7 @@ export const DadosDeSolo = () => {
               Empresa de sistema agricula ajudando pequenos agricultores desde 2024 a manejar suas plantações de maneira
               eficiente.
             </p>
-            <div className="text-wrapper-7">Sobre AgroBoys</div>
+            <div className="text-wrapper-7">Sobre TerraTech</div>
           </div>
         </div>
         <div className="overlap">
@@ -136,7 +136,7 @@ export const DadosDeSolo = () => {
                 </p>
                 <div className="text-wrapper-31">admin</div>
               </div>
-              <a className="text-wrapper-32" href="/">AgroBoys</a>
+              <a className="text-wrapper-32" href="/">TerraTech</a>
             </div>
           </div>
         </div>

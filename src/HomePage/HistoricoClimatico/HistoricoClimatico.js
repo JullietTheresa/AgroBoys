@@ -25,8 +25,8 @@ export const HistoricoClimatico = () => {
             <div className="text-wrapper">Location, street, 1234</div>
             <div className="text-wrapper-2">Email@gmail.com</div>
             <div className="text-wrapper-3">+55 (61) 999123456</div>
-            <div className="text-wrapper-4">www.AgroBoys.com</div>
-            <div className="text-wrapper-5">Sobre AgroBoys</div>
+            <div className="text-wrapper-4">www.TerraTech.com</div>
+            <div className="text-wrapper-5">Sobre TerraTech</div>
             <div className="text-wrapper-6">Contacts</div>
             <p className="p">
               Empresa de sistema agricula ajudando pequenos agricultores desde 2024 a manejar suas plantações de maneira
@@ -42,7 +42,7 @@ export const HistoricoClimatico = () => {
             <img className="copyright" alt="Copyright" src="https://c.animaapp.com/YAxtneS4/img/copyright@2x.png" />
             <p className="copyright-2">
               <span className="span">copyright 2024 </span>
-              <span className="text-wrapper-7">AgroBoys</span>
+              <span className="text-wrapper-7">TerraTech</span>
             </p>
             <img
               className="place-marker"
@@ -70,7 +70,7 @@ export const HistoricoClimatico = () => {
         </div>
         <header className="header">
           <div className="overlap">
-            <a className="text-wrapper-10 "href="/"> AgroBoys</a>
+            <a className="text-wrapper-10 "href="/"> TerraTech</a>
             <a className="text-wrapper-11 "href="/">Home</a>
             <a className="text-wrapper-14" href="/Login">Login</a>
             <a className="text-wrapper-15" href="/SignUp">SignUp</a>

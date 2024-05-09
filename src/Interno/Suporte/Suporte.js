@@ -12,9 +12,9 @@ export const Suporte = () => {
               <div className="div" />
               <p className="copyright">
                 <span className="text-wrapper">copyright 2024 </span>
-                <span className="span">AgroBoys</span>
+                <span className="span">TerraTech</span>
               </p>
-              <div className="text-wrapper-2">www.AgroBoys.com</div>
+              <div className="text-wrapper-2">www.TerraTech.com</div>
               <img className="internet" alt="Internet" src="https://c.animaapp.com/gty5W9Sn/img/internet@2x.png" />
               <div className="text-wrapper-3">+55 (61) 999123456</div>
               <img
@@ -35,7 +35,7 @@ export const Suporte = () => {
                 Empresa de sistema agricula ajudando pequenos agricultores desde 2024 a manejar suas plantações de
                 maneira eficiente.
               </p>
-              <div className="text-wrapper-7">Sobre AgroBoys</div>
+              <div className="text-wrapper-7">Sobre TerraTech</div>
             </div>
           </div>
           <div className="menu">
@@ -154,7 +154,7 @@ export const Suporte = () => {
               </a>
               <div className="text-wrapper-33">admin</div>
             </div>
-            <a className="text-wrapper-34" href="/" >AgroBoys</a>
+            <a className="text-wrapper-34" href="/" >TerraTech</a>
           </div>
         </div>
       </div>

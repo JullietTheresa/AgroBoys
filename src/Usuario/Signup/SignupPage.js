@@ -197,7 +197,7 @@ export const SignupPage = () => {
         </div>
         <div className="overlap-6">
           <div className="navbar">
-            <div className="text-wrapper-6">AgroBoys</div>
+            <div className="text-wrapper-6">TerraTech</div>
             <div className="navbar-buttons">
               <a className="text-wrapper-7" exact href="/">Home</a>
               <a className="text-wrapper-10" exact href="/Login">Login</a>
@@ -212,8 +212,8 @@ export const SignupPage = () => {
             <div className="text-wrapper-12">Location, street, 1234</div>
             <div className="text-wrapper-13">Email@gmail.com</div>
             <div className="text-wrapper-14">+55 (61) 999123456</div>
-            <div className="text-wrapper-15">www.AgroBoys.com</div>
-            <div className="text-wrapper-16">Sobre AgroBoys</div>
+            <div className="text-wrapper-15">www.TerraTech.com</div>
+            <div className="text-wrapper-16">Sobre TerraTech</div>
             <div className="text-wrapper-17">Contacts</div>
             <p className="p">
               Empresa de sistema agricula ajudando pequenos agricultores desde 2024 a manejar suas plantações de maneira
@@ -229,7 +229,7 @@ export const SignupPage = () => {
             <img className="copyright" alt="Copyright" src="https://c.animaapp.com/SLqVIjJw/img/copyright@2x.png" />
             <p className="copyright-2">
               <span className="text-wrapper-18">copyright 2024 </span>
-              <span className="text-wrapper-4">AgroBoys</span>
+              <span className="text-wrapper-4">TerraTech</span>
             </p>
             <img
               className="place-marker"
