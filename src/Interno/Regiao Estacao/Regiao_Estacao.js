@@ -1,4 +1,5 @@
 import React from "react";
+import React, { useState, useEffect } from "react";
 import "./styleRegiao_Estacao.css";
 
 // Weather Imports
@@ -39,6 +40,32 @@ export const Regio_Estaocao = () => {
   var media = (max + min) / 2; // Calcula a média e arredonda
 
   const estacao = getEstacao(new Date()); // Obtém a estação atual com base na data atual
+
+    // Função para enviar a cidade para o backend
+  useEffect(() => {
+    // Função para enviar a cidade para o backend quando o componente for montado
+    const enviarCidadeParaBackend = async (cidade) => {
+      try {
+        const response = await fetch('http://localhost:3000/api/cidade', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ cidade })
+        });
+        if (!response.ok) {
+          throw new Error('Erro ao enviar a cidade para o backend');
+        }
+        console.log('Cidade enviada com sucesso para o backend');
+      } catch (error) {
+        console.error('Erro:', error);
+      }
+    };
+
+    enviarCidadeParaBackend(city); // Chama a função para enviar a cidade ao montar o componente
+  }, []); // O segundo argumento vazio [] garante que o useEffect seja executado apenas uma vez, após a montagem inicial do componente
+  
+
   return (
     <>
       <FindCity
