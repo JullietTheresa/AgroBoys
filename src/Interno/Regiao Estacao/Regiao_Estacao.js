@@ -15,7 +15,30 @@ export const Regio_Estaocao = () => {
   const [currentWeather, setCurrentWeather] = useState(weatherConst);
   const [background, setBackground] = useState("");
   const [data, setData] = useState(dataConst);
-  city = "Brasilia";
+  const [city, setCity] = useState(null); // Estado para armazenar a cidade temporária
+
+  useEffect(() => {
+    const fetchCidadeTemporaria = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/cidadearmazenada');
+        if (!response.ok) {
+          throw new Error('Erro ao buscar a cidade temporária do backend');
+        }
+        const data = await response.json();
+        setCity(data.cidade); // Definir o estado da cidade com o valor recebido do backend
+      } catch (error) {
+        console.error('Erro ao buscar a cidade temporária:', error);
+      }
+    };
+
+    fetchCidadeTemporaria();
+  }, []); // Executa apenas uma vez após a montagem inicial do componente
+
+  useEffect(() => {
+    city !== null && (console.log("A cidade que chegou no região foi", city))
+  }, [city]);
+  
+
   regiao = "Centro-Oeste";
   bioma = "Cerrado";
 
@@ -40,39 +63,18 @@ export const Regio_Estaocao = () => {
   var media = (max + min) / 2; // Calcula a média e arredonda
 
   const estacao = getEstacao(new Date()); // Obtém a estação atual com base na data atual
-
-    // Função para enviar a cidade para o backend
-  useEffect(() => {
-    // Função para enviar a cidade para o backend quando o componente for montado
-    const enviarCidadeParaBackend = async (cidade) => {
-      try {
-        const response = await fetch('http://localhost:3000/api/cidade', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ cidade })
-        });
-        if (!response.ok) {
-          throw new Error('Erro ao enviar a cidade para o backend');
-        }
-        console.log('Cidade enviada com sucesso para o backend');
-      } catch (error) {
-        console.error('Erro:', error);
-      }
-    };
-
-    enviarCidadeParaBackend(city); // Chama a função para enviar a cidade ao montar o componente
-  }, []); // O segundo argumento vazio [] garante que o useEffect seja executado apenas uma vez, após a montagem inicial do componente
   
-
   return (
     <>
+    {city !== null && (
       <FindCity
-      Cidade={city}
-      setData={setData}
-      setCurrentWeather={setCurrentWeather}
-    />
+        Cidade={city}
+        setData={setData}
+        setCurrentWeather={setCurrentWeather}
+      />
+    )}
+
+
     <div className="regio-e-estao">
       <div className="div">
         <div className="overlap">

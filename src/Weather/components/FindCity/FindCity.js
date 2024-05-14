@@ -4,7 +4,6 @@ import axios from "axios";
 import { formatStringDate, translateWeather } from "../../utils/findCityUtils";
 
 export default function FindCity({ Cidade, setData, setCurrentWeather }) {
-  console.log("Cheguei com cidade:", Cidade);
   const city = Cidade;
 
   useEffect(() => {
@@ -18,7 +17,9 @@ export default function FindCity({ Cidade, setData, setCurrentWeather }) {
 
     const lon = coordinatesRes.data[0].lon;
     const lat = coordinatesRes.data[0].lat;
-    console.log("Latencia", lat);
+    console.log("FindCity Latidude:", lat);
+    console.log("FindCity Longitude:", lon)
+    console.log("FindCity Cidade:", city)
     const currentWeather = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=8a52fbfd41280128056a0b25b392c7b8`
     );
@@ -36,7 +37,7 @@ export default function FindCity({ Cidade, setData, setCurrentWeather }) {
       humidity: currentWeather.data.main.humidity,
     });
 
-    enviarDadosParaBackend(city, currentWeather.data); // Envie os dados para o backend após receber a resposta da API
+    // enviarDadosParaBackend(city, currentWeather.data); // Envie os dados para o backend após receber a resposta da API
   }
 
   async function findForecast(lat, lon) {
@@ -56,21 +57,21 @@ export default function FindCity({ Cidade, setData, setCurrentWeather }) {
     }
   }
 
-  async function enviarDadosParaBackend(city, weatherData) {
-    try {
-      const response = await fetch("http://localhost:3000/api/cidade", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ cidade: city, dados: weatherData }), // Envie o nome da cidade e os dados para o backend
-      });
-      if (!response.ok) {
-        throw new Error("Erro ao enviar os dados para o backend");
-      }
-      console.log(`Dados enviados com sucesso para o backend: ${city} e ${weatherData}`);
-    } catch (error) {
-      console.error("Erro:", error);
-    }
-  }
+  // async function enviarDadosParaBackend(city, weatherData) {
+  //   try {
+  //     const response = await fetch("http://localhost:3000/api/cidade", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({ cidade: city, dados: weatherData }), // Envie o nome da cidade e os dados para o backend
+  //     });
+  //     if (!response.ok) {
+  //       throw new Error("Erro ao enviar os dados para o backend");
+  //     }
+  //     console.log(`Dados enviados com sucesso para o backend: ${city} e ${weatherData}`);
+  //   } catch (error) {
+  //     console.error("Erro:", error);
+  //   }
+  // }
 }

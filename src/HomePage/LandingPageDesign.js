@@ -1,10 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styleLandingPageDesign.css";
 import DropDown from "./DropDown/DropDown";
 import fazenda from '../components/Images/Login/nc-fazenda-itu-061220.jpg';
 
 
 export const LandingPageDesign = () => {
+  const [selectedCity, setSelectedCity] = useState("");
+
+  const handleIdSelected = (id) => {
+    console.log("ID selecionado em home.js:", id);
+
+    const cityMap = {
+        "1": "Manaus",
+        "2": "Pará",
+        "3": "Roraima",
+        "4": "Amapá, BR",
+        "5": "Rondônia",
+        "6": "Acre",
+        "7": "Tocantins",
+        "8": "Piauí",
+        "9": "Maranhão",
+        "10": "Pernambuco",
+        "11": "Currais Novos",
+        "12": "Paraíba",
+        "13": "Ceará",
+        "14": "Bahia",
+        "15": "Alagoas",
+        "16": "Sergipe",
+        "17": "Mato Grosso",
+        "18": "Campo Grande",
+        "19": "Goiás",
+        "20": "São Paulo",
+        "21": "Rio de Janeiro",
+        "22": "Espírito Santo",
+        "23": "Divinópolis",
+        "24": "Rio Grande do Sul",
+        "25": "Paraná",
+        "26": "Santa Catarina",
+        "27": "Brasília"
+    };
+
+    const city = cityMap[id] || ""; // Se não houver correspondência, atribui uma string vazia
+
+    console.log("TEST CIDADE", city);
+
+    setSelectedCity(city); // Armazena a cidade selecionada no estado
+};
+
+async function SendToBackEnd(selectedCity) {
+  console.log("Chegou aqui test test 121", selectedCity)
+  console.log(selectedCity)
+  try {
+    const response = await fetch("http://localhost:3000/confirmaestado", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ cidade: selectedCity }), // Envie o nome da cidade e os dados para o backend
+    });
+    if (!response.ok) {
+      throw new Error("Erro ao enviar os dados para o backend");
+    }
+    console.log(`Dados enviados com sucesso para o backend: ${selectedCity}`);
+  } catch (error) {
+    console.error("Erro:", error);
+  }
+}
+
   return (
     <div className="landing-page-design">
       <div className="div-2">
@@ -47,6 +109,7 @@ export const LandingPageDesign = () => {
           <DropDown
             chevronClassName="design-component-instance-node"
             className="listbox-component-instance"
+            onIdSelected={handleIdSelected}
           />
           <div className="frame">
             <div className="text-wrapper-10">Região</div>
@@ -56,7 +119,7 @@ export const LandingPageDesign = () => {
           </div>
           <div className="overlap-2">
             <div className="rectangle-3" />
-            <a className="text-wrapper-23" exact href="/controle">Proximo</a>
+            <a onClick={() => SendToBackEnd(selectedCity)} className="text-wrapper-23" exact href="/controle">Proximo</a>
           </div>
         </div>
 
