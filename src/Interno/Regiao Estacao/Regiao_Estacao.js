@@ -3,29 +3,28 @@ import React, { useState, useEffect } from "react";
 import "./styleRegiao_Estacao.css";
 
 // Weather Imports
-import { BackGround } from '../../Weather/style/HomeStyle';
 import { useState } from "react"
 import FindCity from '../../Weather/components/FindCity/FindCity';
-import Graphic from '../../Weather/components/Graphic/Graphic';
-import Weather from '../../Weather/components/Weather/Weather';
-import { Data } from "../../Weather/common/types";
 import { dataConst, weatherConst } from "../../Weather/common/constants"
 
 export const Regio_Estaocao = () => {
   const [currentWeather, setCurrentWeather] = useState(weatherConst);
-  const [background, setBackground] = useState("");
   const [data, setData] = useState(dataConst);
-  const [city, setCity] = useState(null); // Estado para armazenar a cidade temporária
+  const [city, setCity] = useState(null);
+  const [regiao, setRegiao] = useState(null)
+  const [bioma, setBioma] = useState(null)
 
   useEffect(() => {
     const fetchCidadeTemporaria = async () => {
       try {
-        const response = await fetch('http://localhost:3000/cidadearmazenada');
+        const response = await fetch('http://localhost:3000/dadosestado');
         if (!response.ok) {
           throw new Error('Erro ao buscar a cidade temporária do backend');
         }
         const data = await response.json();
-        setCity(data.cidade); // Definir o estado da cidade com o valor recebido do backend
+        setCity(data.cidade.cidade); // Definir o estado da cidade com o valor recebido do backend
+        setRegiao(data.cidade.regiao)
+        setBioma(data.cidade.bioma)
       } catch (error) {
         console.error('Erro ao buscar a cidade temporária:', error);
       }
@@ -35,13 +34,8 @@ export const Regio_Estaocao = () => {
   }, []); // Executa apenas uma vez após a montagem inicial do componente
 
   useEffect(() => {
-    city !== null && (console.log("A cidade que chegou no região foi", city))
-  }, [city]);
-  
-
-  regiao = "Centro-Oeste";
-  bioma = "Cerrado";
-
+    city !== null && (console.log("Os dados que chegaram no região foi", city, regiao, bioma))
+  }, [city, regiao, bioma]);
 
   function getEstacao(data) {
     const mes = data.getMonth() + 1; // Os meses são indexados a partir de zero (janeiro = 0)
