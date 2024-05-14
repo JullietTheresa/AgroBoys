@@ -952,7 +952,7 @@
   top: 3px;
   width: 129px;
 }
-.button {
+.plano-plantio .button {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -961,7 +961,7 @@
   outline: none;
 }
 
-.button-nao-colhido {
+.plano-plantio .button-nao-colhido {
   border: 1px solid #727272;
   border-radius: 5px;
   padding: 5px 10px;
@@ -974,7 +974,7 @@
   width: 112px;
 }
 
-.button-colhido {
+.plano-plantio .button-colhido {
   border-radius: 5px;
   padding: 5px 10px;
   border-radius: 3px;

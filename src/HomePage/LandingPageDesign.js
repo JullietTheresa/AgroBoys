@@ -4,48 +4,52 @@ import DropDown from "./DropDown/DropDown";
 import fazenda from '../components/Images/Login/nc-fazenda-itu-061220.jpg';
 
 
-export const LandingPageDesign = () => {
-  const [selectedCity, setSelectedCity] = useState("");
+  export const LandingPageDesign = () => {
+    const [selectedCity, setSelectedCity] = useState(null);
+    const [selectedRegiao, setSelectedRegiao] = useState(null);
+    const [selectedBioma, setSelectedBioma] = useState(null);
 
-  const handleIdSelected = (id) => {
-    console.log("ID selecionado em home.js:", id);
+    const handleIdSelected = (id) => {
+      console.log("ID selecionado em home.js:", id);
 
-    const cityMap = {
-        "1": "Manaus",
-        "2": "Pará",
-        "3": "Roraima",
-        "4": "Amapá, BR",
-        "5": "Rondônia",
-        "6": "Acre",
-        "7": "Tocantins",
-        "8": "Piauí",
-        "9": "Maranhão",
-        "10": "Pernambuco",
-        "11": "Currais Novos",
-        "12": "Paraíba",
-        "13": "Ceará",
-        "14": "Bahia",
-        "15": "Alagoas",
-        "16": "Sergipe",
-        "17": "Mato Grosso",
-        "18": "Campo Grande",
-        "19": "Goiás",
-        "20": "São Paulo",
-        "21": "Rio de Janeiro",
-        "22": "Espírito Santo",
-        "23": "Divinópolis",
-        "24": "Rio Grande do Sul",
-        "25": "Paraná",
-        "26": "Santa Catarina",
-        "27": "Brasília"
+      const cityMap = {
+        "1": { city: "Manaus", regiao: "Norte", bioma: "Amazônia" },
+        "2": { city: "Pará", regiao: "Norte", bioma: "Amazônia" },
+        "3": { city: "Roraima", regiao: "Norte", bioma: "Amazônia" },
+        "4": { city: "Amapá, BR", regiao: "Norte", bioma: "Amazônia" },
+        "5": { city: "Rondônia", regiao: "Norte", bioma: "Amazônia" },
+        "6": { city: "Acre", regiao: "Norte", bioma: "Amazônia" },
+        "7": { city: "Tocantins", regiao: "Norte", bioma: "Cerrado" },
+        "8": { city: "Piauí", regiao: "Nordeste", bioma: "Caatinga" },
+        "9": { city: "Maranhão", regiao: "Nordeste", bioma: "Cerrado" },
+        "10": { city: "Pernambuco", regiao: "Nordeste", bioma: "Mata Atlântica" },
+        "11": { city: "Currais Novos", regiao: "Nordeste", bioma: "Caatinga" },
+        "12": { city: "Paraíba", regiao: "Nordeste", bioma: "Caatinga" },
+        "13": { city: "Ceará", regiao: "Nordeste", bioma: "Caatinga" },
+        "14": { city: "Bahia", regiao: "Nordeste", bioma: "Mata Atlântica" },
+        "15": { city: "Alagoas", regiao: "Nordeste", bioma: "Caatinga" },
+        "16": { city: "Sergipe", regiao: "Nordeste", bioma: "Caatinga" },
+        "17": { city: "Mato Grosso", regiao: "Centro-Oeste", bioma: "Cerrado" },
+        "18": { city: "Campo Grande", regiao: "Centro-Oeste", bioma: "Cerrado" },
+        "19": { city: "Goiás", regiao: "Centro-Oeste", bioma: "Cerrado" },
+        "20": { city: "São Paulo", regiao: "Sudeste", bioma: "Mata Atlântica" },
+        "21": { city: "Rio de Janeiro", regiao: "Sudeste", bioma: "Mata Atlântica" },
+        "22": { city: "Espírito Santo", regiao: "Sudeste", bioma: "Mata Atlântica" },
+        "23": { city: "Divinópolis", regiao: "Sudeste", bioma: "Cerrado" },
+        "24": { city: "Rio Grande do Sul", regiao: "Sul", bioma: "Pampa" },
+        "25": { city: "Paraná", regiao: "Sul", bioma: "Mata Atlântica" },
+        "26": { city: "Santa Catarina", regiao: "Sul", bioma: "Mata Atlântica" },
+        "27": { city: "Brasília", regiao: "Centro-Oeste", bioma: "Cerrado" }
     };
 
-    const city = cityMap[id] || ""; // Se não houver correspondência, atribui uma string vazia
-
-    console.log("TEST CIDADE", city);
-
-    setSelectedCity(city); // Armazena a cidade selecionada no estado
-};
+    const selectedCity = cityMap[id]?.city || ""; // Acessando apenas a propriedade 'city' do objeto correspondente ao ID
+    const selectedRegiao = cityMap[id]?.regiao || ""; // Acessando apenas a propriedade 'regiao' do objeto correspondente ao ID
+    const selectedBioma = cityMap[id]?.bioma || ""; // Acessando apenas a propriedade 'bioma' do objeto correspondente ao ID
+  
+    setSelectedCity(selectedCity); // Armazena a cidade selecionada no estado
+    setSelectedRegiao(selectedRegiao);
+    setSelectedBioma(selectedBioma);
+  };
 
 async function SendToBackEnd(selectedCity) {
   console.log("Chegou aqui test test 121", selectedCity)

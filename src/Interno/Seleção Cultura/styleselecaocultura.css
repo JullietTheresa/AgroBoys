@@ -770,7 +770,7 @@
 .seleo-de-cultura .overlap-group-3.active {
   background-color: white; /* Define a cor de fundo para branco quando a cultura está ativa */
 }
-.modal-overlay {
+.seleo-de-cultura .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -782,7 +782,7 @@
   justify-content: center;
 }
 
-.modal {
+.seleo-de-cultura .modal {
   background-color: white;
   padding: 20px;
   max-width: 80%;
@@ -794,7 +794,7 @@
   margin-top: 10%;
 }
 
-.modal-img {
+.seleo-de-cultura .modal-img {
   max-width: 100%;
   max-height: 100%;
 }
