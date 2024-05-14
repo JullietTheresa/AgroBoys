@@ -36,30 +36,37 @@ const arrayOfData = [
   },
 ];
 
-// Mapeamento dos conteúdos para cada região
-const regionContents = {
-  '1 - Norte': <DropDownEstados idRegiao={1}/>,
-  '2 - Nordeste': <DropDownEstados idRegiao={2}/>,
-  '3 - Centro-Oeste': <DropDownEstados idRegiao={3}/>,
-  '4 - Sudeste': <DropDownEstados idRegiao={4}/>,
-  '5 - Sul': <DropDownEstados idRegiao={5}/>
-};
-
 class DropDown extends Component {
+
+  handleIdSelected = (selectedId) => {
+    console.log("ID selecionado:", selectedId);
+    // Enviar o selectedId para a função de callback
+    this.props.onIdSelected(selectedId);
+  };
   
   constructor(props){
-    super(props)
+    super(props);
     this.state={
-      selectedValue: 'Nothing selected',
+      selectedValue: 'Nada selecionado',
       selectedContent: null // Inicialmente não há conteúdo selecionado
-    }
+    };
+  
+    this.regionContents = {
+      // Mapeamento dos conteúdos para cada região
+      '1 - Norte': <DropDownEstados idRegiao={1} onIdSelected={this.handleIdSelected}/>,
+      '2 - Nordeste': <DropDownEstados idRegiao={2} onIdSelected={this.handleIdSelected}/>,
+      '3 - Centro-Oeste': <DropDownEstados idRegiao={3} onIdSelected={this.handleIdSelected}/>,
+      '4 - Sudeste': <DropDownEstados idRegiao={4} onIdSelected={this.handleIdSelected}/>,
+      '5 - Sul': <DropDownEstados idRegiao={5} onIdSelected={this.handleIdSelected}/>
+    };
   }
+  
 
   handleSelectChange = (selectedValue) => {
     // Atualiza o estado com o valor selecionado e o conteúdo correspondente
     this.setState({
       selectedValue: selectedValue,
-      selectedContent: regionContents[selectedValue] // Obtém o conteúdo correspondente
+      selectedContent: this.regionContents[selectedValue] // Obtém o conteúdo correspondente
     });
   }
 

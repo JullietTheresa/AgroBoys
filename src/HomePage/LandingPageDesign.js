@@ -1,10 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styleLandingPageDesign.css";
 import DropDown from "./DropDown/DropDown";
 import fazenda from '../components/Images/Login/nc-fazenda-itu-061220.jpg';
 
 
 export const LandingPageDesign = () => {
+  const [selectedCity, setSelectedCity] = useState("");
+
+  const handleIdSelected = (id) => {
+    console.log("ID selecionado em home.js:", id);
+
+    const cityMap = {
+        "1": "Manaus",
+        "2": "Pará",
+        "3": "Roraima",
+        "4": "Amapá, BR",
+        "5": "Rondônia",
+        "6": "Acre",
+        "7": "Tocantins",
+        "8": "Piauí",
+        "9": "Maranhão",
+        "10": "Pernambuco",
+        "11": "Currais Novos",
+        "12": "Paraíba",
+        "13": "Ceará",
+        "14": "Bahia",
+        "15": "Alagoas",
+        "16": "Sergipe",
+        "17": "Mato Grosso",
+        "18": "Campo Grande",
+        "19": "Goiás",
+        "20": "São Paulo",
+        "21": "Rio de Janeiro",
+        "22": "Espírito Santo",
+        "23": "Divinópolis",
+        "24": "Rio Grande do Sul",
+        "25": "Paraná",
+        "26": "Santa Catarina",
+        "27": "Brasília"
+    };
+
+    const city = cityMap[id] || ""; // Se não houver correspondência, atribui uma string vazia
+
+    console.log("TEST CIDADE", city);
+
+    setSelectedCity(city); // Armazena a cidade selecionada no estado
+};
+
+async function SendToBackEnd(selectedCity) {
+  console.log("Chegou aqui test test 121", selectedCity)
+  console.log(selectedCity)
+  try {
+    const response = await fetch("http://localhost:3000/confirmaestado", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ cidade: selectedCity }), // Envie o nome da cidade e os dados para o backend
+    });
+    if (!response.ok) {
+      throw new Error("Erro ao enviar os dados para o backend");
+    }
+    console.log(`Dados enviados com sucesso para o backend: ${selectedCity}`);
+  } catch (error) {
+    console.error("Erro:", error);
+  }
+}
+
   return (
     <div className="landing-page-design">
       <div className="div-2">
@@ -15,8 +77,8 @@ export const LandingPageDesign = () => {
             <div className="text-wrapper-2">Location, street, 1234</div>
             <div className="text-wrapper-3">Email@gmail.com</div>
             <div className="text-wrapper-4">+55 (61) 999123456</div>
-            <div className="text-wrapper-5">www.AgroBoys.com</div>
-            <div className="text-wrapper-6">Sobre AgroBoys</div>
+            <div className="text-wrapper-5">www.TerraTech.com</div>
+            <div className="text-wrapper-6">Sobre TerraTech</div>
             <div className="text-wrapper-7">Contacts</div>
             <p className="p">
               Empresa de sistema agricula ajudando pequenos agricultores desde 2024 a manejar suas plantações de maneira
@@ -32,7 +94,7 @@ export const LandingPageDesign = () => {
             <img className="copyright" alt="Copyright" src="https://c.animaapp.com/ZUyH8RTL/img/copyright@2x.png" />
             <p className="copyright-2">
               <span className="span">copyright 2024 </span>
-              <span className="text-wrapper-8">AgroBoys</span>
+              <span className="text-wrapper-8">TerraTech</span>
             </p>
             <img
               className="place-marker"
@@ -47,6 +109,7 @@ export const LandingPageDesign = () => {
           <DropDown
             chevronClassName="design-component-instance-node"
             className="listbox-component-instance"
+            onIdSelected={handleIdSelected}
           />
           <div className="frame">
             <div className="text-wrapper-10">Região</div>
@@ -56,7 +119,7 @@ export const LandingPageDesign = () => {
           </div>
           <div className="overlap-2">
             <div className="rectangle-3" />
-            <a className="text-wrapper-23" exact href="/controle">Proximo</a>
+            <a onClick={() => SendToBackEnd(selectedCity)} className="text-wrapper-23" exact href="/controle">Proximo</a>
           </div>
         </div>
 
@@ -73,7 +136,7 @@ export const LandingPageDesign = () => {
             </div>
             <div className="bem-vindo-a-ao-wrapper">
               <p className="bem-vindo-a-ao">
-                Bem vindo(a) ao AgroBoys
+                Bem vindo(a) ao TerraTech
                 <br />
                 Seu sistema que ajuda você a ter a maior eficiencia possivel na sua <br />
                 plantação
@@ -83,7 +146,7 @@ export const LandingPageDesign = () => {
           </div>
           <div className="navbar-wrapper">
             <div className="navbar">
-              <div className="text-wrapper-27">AgroBoys</div>
+              <div className="text-wrapper-27">TerraTech</div>
               <div className="navbar-buttons">
                 <div className="text-wrapper-28">Home</div>
                 <a className="text-wrapper-28" exact href="/Login">Login</a>
