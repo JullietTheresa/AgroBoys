@@ -47,25 +47,23 @@ import fazenda from '../components/Images/Login/nc-fazenda-itu-061220.jpg';
     const selectedBioma = cityMap[id]?.bioma || ""; // Acessando apenas a propriedade 'bioma' do objeto correspondente ao ID
   
     setSelectedCity(selectedCity); // Armazena a cidade selecionada no estado
-    setSelectedRegiao(selectedRegiao);
-    setSelectedBioma(selectedBioma);
+    setSelectedRegiao(selectedRegiao); // Armazena a região selecionada no estado
+    setSelectedBioma(selectedBioma); // Armazena o bioma selecionado no estado
   };
 
-async function SendToBackEnd(selectedCity) {
-  console.log("Chegou aqui test test 121", selectedCity)
-  console.log(selectedCity)
+async function SendToBackEnd(selectedCity, selectedRegiao, selectedBioma) {
   try {
     const response = await fetch("http://localhost:3000/confirmaestado", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ cidade: selectedCity }), // Envie o nome da cidade e os dados para o backend
+      body: JSON.stringify({ cidade: selectedCity, regiao: selectedRegiao, bioma: selectedBioma }), // Envie o nome da cidade e os dados para o backend
     });
     if (!response.ok) {
       throw new Error("Erro ao enviar os dados para o backend");
     }
-    console.log(`Dados enviados com sucesso para o backend: ${selectedCity}`);
+    console.log(`Dados enviados com sucesso para o backend: ${selectedCity}, ${selectedRegiao} e ${selectedBioma}`);
   } catch (error) {
     console.error("Erro:", error);
   }
@@ -122,8 +120,9 @@ async function SendToBackEnd(selectedCity) {
             <a className="text-wrapper-22" href="/historicoClimatico">Previsão do Tempo</a>
           </div>
           <div className="overlap-2">
-            <div className="rectangle-3" />
-            <a onClick={() => SendToBackEnd(selectedCity)} className="text-wrapper-23" exact href="/controle">Proximo</a>
+            <div className="rectangle-3">
+              <a onClick={() => SendToBackEnd(selectedCity, selectedRegiao, selectedBioma)} className="text-wrapper-23" exact href="/controle">Proximo</a>
+            </div>
           </div>
         </div>
 
