@@ -17,7 +17,7 @@ export const Regio_Estaocao = () => {
   useEffect(() => {
     const fetchCidadeTemporaria = async () => {
       try {
-        const response = await fetch('http://localhost:3000/dadosestado');
+        const response = await fetch('http://localhost:3000/api/dadosestado');
         if (!response.ok) {
           throw new Error('Erro ao buscar a cidade temporária do backend');
         }
