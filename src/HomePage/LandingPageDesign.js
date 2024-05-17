@@ -54,7 +54,7 @@ import fazenda from '../components/Images/Login/nc-fazenda-itu-061220.jpg';
 async function SendToBackEnd(selectedCity, selectedRegiao, selectedBioma) {
   console.log("Chegou aqui test test 121", selectedCity, selectedRegiao, selectedBioma)
   try {
-    const response = await fetch("http://localhost:3000/confirmaestado", {
+    const response = await fetch("http://localhost:3000/api/confirmaestado", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

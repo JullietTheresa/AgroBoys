@@ -53,7 +53,7 @@ export const SignupPage = () => {
     setConfirmPassword(e.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!emailValid) {
       setShowEmailError(true);
       setTimeout(() => setShowEmailError(false), 4000); // Hide email error after 2 seconds
@@ -71,10 +71,23 @@ export const SignupPage = () => {
     }
 
     if (emailValid && cpf && password && confirmPassword) {
-      // Coloque aqui a lógica para submeter o formulário
-      console.log("Formulário submetido!");
-      // Redirecionar para a tela de controle apenas se todos os campos estiverem preenchidos
-      window.location.href = "/controle";
+      console.log(cpf, email, password)
+      try {
+        const response = await fetch("http://localhost:3000/api/salvaSignup", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ cpf: cpf, email: email, password: password }), // Envie o nome da cidade e os dados para o backend
+        });
+        if (!response.ok) {
+          throw new Error("Erro ao enviar os dados para o backend");
+        }
+        console.log(`Dados enviados com sucesso para o backend: ${cpf}, ${email} e ${password}`);
+        window.location.href = "/Login";
+      } catch (error) {
+        console.error("Erro:", error);
+      }
     }
   };
 
