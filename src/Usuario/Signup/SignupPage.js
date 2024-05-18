@@ -110,7 +110,7 @@ export const SignupPage = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ cpf: cpf, email: email, password: password }), // Envie o nome da cidade e os dados para o backend
+          body: JSON.stringify({ cpf: cpf, email: email, password: password }), // Envie os dados de signup para o backend
         });
         if (!response.ok) {
           throw new Error("Erro ao enviar os dados para o backend");

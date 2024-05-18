@@ -11,6 +11,8 @@ export const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showSubmitError, setShowSubmitError] = useState(false);
+  const [backendError, setBackendError] = useState('');
+
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -27,7 +29,7 @@ export const LoginPage = () => {
     setPassword(e.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!emailValid) { // Verifica se o email não é válido e não está vazio
       setShowEmailError(true);
       setTimeout(() => setShowEmailError(false), 4000);
@@ -38,10 +40,27 @@ export const LoginPage = () => {
       setTimeout(() => setShowSubmitError(false), 4000); // Hide submit error after 2 seconds
     }
     if (emailValid && password) {
-      // Coloque aqui a lógica para submeter o formulário
-      console.log("Formulário submetido!");
-      // Redirecionar para a tela de controle apenas se todos os campos estiverem preenchidos
-      window.location.href = "/controle";
+      console.log( email, password)
+      try {
+        const response = await fetch("http://localhost:3000/api/verificaLogin", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email: email, password: password }), // Envie os dados de login para o backend
+        });
+        if (!response.ok) {
+          throw new Error("Erro ao enviar os dados para o backend");
+          // Alerta de senha ou email incorretos
+        }
+        else {
+          console.log(`Dados enviados com sucesso para o backend: ${email} e ${password}`);
+          window.location.href = "/controle";}
+      } catch (error) {
+        console.error("Erro:", error);
+        setBackendError("E-mail ou senha incorretos.");
+        setTimeout(() => setBackendError(''), 4000); // Clear error message after 4 seconds
+      }
     }
 
   };
@@ -116,10 +135,12 @@ export const LoginPage = () => {
 
               {showEmailError && <p className="error-message-1">Por favor, insira um e-mail válido.</p>}
               {showSubmitError && (!password) && <p className="error-message-2">Por favor, preencha o campo "senha" corretamente.</p>}
+              {backendError && <p className="error-message-3">{backendError}</p>}
 
-              <div className="overlap-4" href="#">
-                <a className="rectangle-4" href="#" onClick={handleSubmit} disabled={!emailValid}/>
-                <a className="text-wrapper-16" href="#" onClick={handleSubmit} disabled={!emailValid}>Login</a>
+              <div className="overlap-4">
+                <a className="rectangle-4" href="#">
+                  <a className="text-wrapper-16" href="#" onClick={handleSubmit} disabled={!emailValid}>Login</a>
+                </a>
               </div>
 
               <p className="n-o-tem-uma-conta">
@@ -135,6 +156,6 @@ export const LoginPage = () => {
         </div>
       </div>
   );
-};
+}
 
 export default LoginPage;
