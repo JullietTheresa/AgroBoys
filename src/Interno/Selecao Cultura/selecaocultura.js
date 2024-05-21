@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./styleselecaocultura.css";
 import cafeImage from "../../components/Images/Interno/cafe.jpg";
 import laranjaImage from "../../components/Images/Interno/laranja.jpg";
@@ -26,6 +27,19 @@ export const SelecaoDeCultura = () => {
 
   const handleCultureClick = (plant) => {
     setActiveCulture(plant); // Atualiza a cultura ativa quando clicada
+  };
+
+  const handleConfirmClick = () => {
+    if (activeCulture) {
+      axios.post("http://localhost:3000/api/selecao_cultura", activeCulture)
+        .then(response => {
+          console.log("Culture selected successfully:", response.data);
+          // Redirect or perform another action after successful submission
+        })
+        .catch(error => {
+          console.error("There was an error selecting the culture!", error);
+        });
+    }
   };
 
   return (
@@ -108,7 +122,7 @@ export const SelecaoDeCultura = () => {
           </div>
           <div className="overlap-4">
             <div className="rectangle-8" />
-            <a className="text-wrapper-24">Confirmar</a>
+            <a className="text-wrapper-24" onClick={handleConfirmClick}>Confirmar</a>
           </div>
           <div className="overlap-5">
             <div className="group-2">

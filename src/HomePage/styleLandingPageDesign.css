@@ -9,7 +9,7 @@
 
 .landing-page-design .div-2 {
   background-color: #eef2f7;
-  height: 3381px;
+  height: 2500px;
   overflow: hidden;
   position: relative;
   width: 1440px;
@@ -19,7 +19,7 @@
   height: 391px;
   left: -2px;
   position: absolute;
-  top: 3005px;
+  top: 85%;
   width: 1456px;
 }
 
@@ -212,7 +212,7 @@
   height: 1096px;
   left: 42px;
   position: absolute;
-  top: 1876px;
+  top: 40%;
   width: 1409px;
 }
 
