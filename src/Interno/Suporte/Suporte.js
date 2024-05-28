@@ -1,6 +1,25 @@
 import React from "react";
 import "./styleSuporte.css";
 
+async function checkAuthentication() {
+  try {
+    const response = await fetch('http://localhost:3000/api/VerificaFormulario', {
+      method: 'GET',
+    });
+    console.log(response)
+    if (!response.ok) {
+      console.log("Vazio");
+      window.location.href = '/solo/formulario';
+    } else {
+      console.log("Autenticado");
+      window.location.href = '/solo';
+    }
+  } catch (error) {
+    console.error("Erro:", error);
+    setTimeout(() => setBackendError(''), 4000); // Clear error message after 4 seconds
+  }
+}
+
 export const Suporte = () => {
   return (
     <div className="suporte">
@@ -60,7 +79,7 @@ export const Suporte = () => {
               <div className="overlap-4">
                 <a className="text-wrapper-9" href="/historico" >Histórico Plantio</a>
                 <a className="text-wrapper-10" href="/pesticidas" >Pragas e Agrotóxico</a>
-                <a className="text-wrapper-11" href="/dadossolo" >Dados do Solo</a>
+                <a className="text-wrapper-11" href="#" onClick={checkAuthentication} >Dados do Solo</a>
               </div>
               <img
                 className="dados-do-solo-house"

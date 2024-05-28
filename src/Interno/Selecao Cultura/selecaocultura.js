@@ -10,6 +10,25 @@ import milhoImage from "../../components/Images/Interno/milho.jpg";
 import tomateImage from "../../components/Images/Interno/tomate.jpg";
 import arrozImage from "../../components/Images/Interno/arroz.jpg";
 
+async function checkAuthentication() {
+  try {
+    const response = await fetch('http://localhost:3000/api/VerificaFormulario', {
+      method: 'GET',
+    });
+    console.log(response)
+    if (!response.ok) {
+      console.log("Vazio");
+      window.location.href = '/solo/formulario';
+    } else {
+      console.log("Autenticado");
+      window.location.href = '/solo';
+    }
+  } catch (error) {
+    console.error("Erro:", error);
+    setTimeout(() => setBackendError(''), 4000); // Clear error message after 4 seconds
+  }
+}
+
 export const SelecaoDeCultura = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPlant, setSelectedPlant] = useState(null);
@@ -64,7 +83,7 @@ export const SelecaoDeCultura = () => {
             <a className="text-wrapper-6" href="/suporte" >Suporte</a>
             <a className="text-wrapper-7" href="/historico" >Histórico Plantio</a>
             <img className="house-2" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
-            <a className="text-wrapper-8" href="/dadossolo" >Dados do Solo</a>
+            <a className="text-wrapper-8" href="#" onClick={checkAuthentication} >Dados do Solo</a>
             <a className="text-wrapper-9" exact href="/">TerraTech</a>
             <div className="group">
               <a className="text-wrapper-10" href="/pesticidas" >Pragas e Agrotóxico</a>

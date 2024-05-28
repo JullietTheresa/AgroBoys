@@ -1,6 +1,25 @@
 import React, { useState } from "react";
 import "./styleplano.css";
 
+async function checkAuthentication() {
+  try {
+    const response = await fetch('http://localhost:3000/api/VerificaFormulario', {
+      method: 'GET',
+    });
+    console.log(response)
+    if (!response.ok) {
+      console.log("Vazio");
+      window.location.href = '/solo/formulario';
+    } else {
+      console.log("Autenticado");
+      window.location.href = '/solo';
+    }
+  } catch (error) {
+    console.error("Erro:", error);
+    setTimeout(() => setBackendError(''), 4000); // Clear error message after 4 seconds
+  }
+}
+
 const PlanoPlantio = () => {
   const [isColhido, setIsColhido] = useState(false);
 
@@ -35,7 +54,7 @@ const PlanoPlantio = () => {
             <a className="text-wrapper-4" href="/suporte" >Suporte</a>
             <a className="text-wrapper-5" href="/historico" >Histórico Plantio</a>
             <img className="img" alt="House" src="https://c.animaapp.com/AneYV77i/img/house-4@2x.png" />
-            <a className="text-wrapper-6" href="/dadossolo" >Dados do Solo</a>
+            <a className="text-wrapper-6" href="#" onClick={checkAuthentication} >Dados do Solo</a>
             <a className="text-wrapper-7" href="/" >TerraTech</a>
             <div className="group">
               <a className="text-wrapper-8" href="/pesticidas" >Pragas e Agrotóxico</a>

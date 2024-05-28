@@ -7,6 +7,25 @@ import { useState } from "react"
 import FindCity from '../../Weather/components/FindCity/FindCity';
 import { dataConst, weatherConst } from "../../Weather/common/constants"
 
+async function checkAuthentication() {
+  try {
+    const response = await fetch('http://localhost:3000/api/VerificaFormulario', {
+      method: 'GET',
+    });
+    console.log(response)
+    if (!response.ok) {
+      console.log("Vazio");
+      window.location.href = '/solo/formulario';
+    } else {
+      console.log("Autenticado");
+      window.location.href = '/solo';
+    }
+  } catch (error) {
+    console.error("Erro:", error);
+    setTimeout(() => setBackendError(''), 4000); // Clear error message after 4 seconds
+  }
+}
+
 export const Regio_Estaocao = () => {
   const [currentWeather, setCurrentWeather] = useState(weatherConst);
   const [data, setData] = useState(dataConst);
@@ -114,7 +133,7 @@ export const Regio_Estaocao = () => {
                 <div className="rectangle-6" />
                 <a className="text-wrapper-21" href="/suporte" >Suporte</a>
                 <img className="house" alt="House" src="https://c.animaapp.com/bqR5CWSn/img/house-4@2x.png" />
-                <a className="text-wrapper-22" href="/dadossolo" >Dados do Solo</a>
+                <a className="text-wrapper-22" href="#" onClick={checkAuthentication} >Dados do Solo</a>
                 <div className="group-2">
                   <a className="text-wrapper-23" href="/pesticidas" >Pragas e Agrotóxico</a>
                   <img className="img-2" alt="House" src="https://c.animaapp.com/bqR5CWSn/img/house-4@2x.png" />

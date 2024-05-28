@@ -1,7 +1,51 @@
-import React from "react";
+import { useEffect } from "react";
+import React, {useState} from "react";
 import "./styleDadosSolo.css";
 
 export const DadosDeSolo = () => {
+  // Constantes
+  const [PH, setPH] = useState(null);
+  const [fertilidade, setFertilidade] = useState(null);
+  const [salinidade, setSalinidade] = useState(null);
+  const [materiaOrganica, setMateriaOrganica] = useState(null);
+  const [saturacao, setSaturacao] = useState(null);
+  const [texturaSolo, setTexturaSolo] = useState(null);
+  const [porcentagemAreia, setPorcentagemAreia] = useState(null);
+  const [porcentagemSilte, setPorcentagemSilte] = useState(null);
+  const [nutrientes, setNutrientes] = useState(null);
+  const [porcentagemArgila, setPorcentagemArgila] = useState(null);
+  
+  useEffect(() => {
+    const RecebeDados = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/api/EnviarDadosSolo');
+        if (!response.ok) {
+          throw new Error('Erro ao buscar dados do solo no BackEnd');
+        }
+        const data = await response.json();
+        setPH(data[0].PH);
+        setFertilidade(data[0].fertilidade);
+        setNutrientes(data[0].nutrientes);
+        setSaturacao(data[0].saturacao);
+        setMateriaOrganica(data[0].materiaOrganica);
+        setSalinidade(data[0].salinidade);
+        setPorcentagemArgila(data[0].porcentagemArgila);
+        setPorcentagemSilte(data[0].porcentagemSilte);
+        setPorcentagemAreia(data[0].porcentagemAreia);
+        setTexturaSolo(data[0].texturaSolo);
+
+      } catch (error) {
+        console.error('Erro ao buscar a cidade temporária:', error);
+      }
+    };
+
+    RecebeDados();
+  }, []); // Executa apenas uma vez após a montagem inicial do componente
+
+  useEffect(() => {
+    console.log("Os dados que chegaram foram", PH, fertilidade, nutrientes, saturacao, materiaOrganica, salinidade, porcentagemArgila, porcentagemSilte, porcentagemAreia, texturaSolo)
+  }, [PH, fertilidade, nutrientes, saturacao, materiaOrganica, salinidade, porcentagemArgila, porcentagemSilte, porcentagemAreia, texturaSolo]);
+
   return (
     <div className="dados-de-solo">
       <div className="div">
@@ -37,35 +81,36 @@ export const DadosDeSolo = () => {
             <div className="text-wrapper-7">Sobre TerraTech</div>
           </div>
         </div>
-        <div className="overlap">
+
           <div className="dados-do-solo">
             <div className="analise">
               <div className="overlap-group-2">
-                <div className="overlap-2">
-                  <div className="text-wrapper-8">Porcentagem Areia: Label</div>
-                  <div className="text-wrapper-9">Textura do solo: Label</div>
-                </div>
-                <div className="overlap-3">
-                  <div className="text-wrapper-10">Porcentagem Argila: Label</div>
-                  <div className="text-wrapper-11">Análise granulométrica</div>
-                </div>
-                <div className="text-wrapper-12">Porcentagem Silte: Label</div>
+              <div className="overlap-2">
+              <div className="text-wrapper-8">Porcentagem Areia: <span className="normal-text">{porcentagemAreia}</span></div>
+              <div className="text-wrapper-9">Textura do solo: <span className="normal-text">{texturaSolo}</span></div>
+            </div>
+            <div className="overlap-3">
+              <div className="text-wrapper-10">Porcentagem Argila: <span className="normal-text">{porcentagemArgila}</span></div>
+              <div className="text-wrapper-11">Análise granulométrica</div>
+            </div>
+            <div className="text-wrapper-12">Porcentagem Silte: <span className="normal-text">{porcentagemSilte}</span></div>
+
               </div>
             </div>
             <div className="analise-quimica">
               <div className="overlap-4">
-                <div className="text-wrapper-13">Nutrientes: Label</div>
-                <div className="text-wrapper-14">Saturação: Label</div>
-                <div className="text-wrapper-15">Matéria orgânica: Label</div>
-                <div className="text-wrapper-16">Salinidade: Label</div>
-                <div className="text-wrapper-17">PH: Label</div>
-                <div className="text-wrapper-18">Analise Quimica</div>
-                <div className="text-wrapper-19">Fertilidade: Label</div>
+              <div className="text-wrapper-13">Nutrientes: <span className="normal-text">{nutrientes}</span></div>
+              <div className="text-wrapper-14">Saturação: <span className="normal-text">{saturacao}</span></div>
+              <div className="text-wrapper-15">Matéria orgânica: <span className="normal-text">{materiaOrganica}</span></div>
+              <div className="text-wrapper-16">Salinidade: <span className="normal-text">{salinidade}</span></div>
+              <div className="text-wrapper-17">PH: <span className="normal-text">{PH}</span></div>
+              <div className="text-wrapper-18">Analise Quimica</div>
+              <div className="text-wrapper-19">Fertilidade: <span className="normal-text">{fertilidade}</span></div>
               </div>
             </div>
             <div className="text-wrapper-20">Dados do Solo</div>
           </div>
-          <div className="overlap">
+
             <div className="menu">
               <div className="overlap-5">
                 <img
@@ -140,8 +185,8 @@ export const DadosDeSolo = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+
+
   );
 };
 

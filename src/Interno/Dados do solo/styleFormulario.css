@@ -1,12 +1,10 @@
-.dados-de-solo {
-  background-color: #eef2f7;
-  display: flex;
+.formulario {
   flex-direction: row;
   justify-content: center;
   width: 100%;
 }
 
-.dados-de-solo .div {
+.formulario .div {
   background-color: #eef2f7;
   height: 1059px;
   overflow: hidden;
@@ -14,7 +12,7 @@
   width: 1440px;
 }
 
-.dados-de-solo .fotter {
+.formulario .fotter {
   height: 332px;
   left: 0;
   position: absolute;
@@ -22,13 +20,13 @@
   width: 1456px;
 }
 
-.dados-de-solo .overlap-group {
+.formulario .overlap-group {
   height: 332px;
   position: relative;
   width: 1440px;
 }
 
-.dados-de-solo .rectangle {
+.formulario .rectangle {
   background-color: #609b00;
   height: 304px;
   left: 0;
@@ -37,7 +35,7 @@
   width: 1440px;
 }
 
-.dados-de-solo .rectangle-2 {
+.formulario .rectangle-2 {
   background-color: #000000;
   height: 72px;
   left: 0;
@@ -46,7 +44,7 @@
   width: 1440px;
 }
 
-.dados-de-solo .copyright {
+.formulario .copyright {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
@@ -60,7 +58,7 @@
   width: 548px;
 }
 
-.dados-de-solo .text-wrapper {
+.formulario .text-wrapper {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
@@ -68,11 +66,11 @@
   letter-spacing: 0;
 }
 
-.dados-de-solo .span {
+.formulario .span {
   font-weight: 700;
 }
 
-.dados-de-solo .internet {
+.formulario .internet {
   height: 20px;
   left: 926px;
   position: absolute;
@@ -80,7 +78,7 @@
   width: 20px;
 }
 
-.dados-de-solo .text-wrapper-2 {
+.formulario .text-wrapper-2 {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 18px;
@@ -93,7 +91,7 @@
   width: 198px;
 }
 
-.dados-de-solo .hand-with-smartphone {
+.formulario .hand-with-smartphone {
   height: 20px;
   left: 926px;
   position: absolute;
@@ -101,7 +99,7 @@
   width: 20px;
 }
 
-.dados-de-solo .text-wrapper-3 {
+.formulario .text-wrapper-3 {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 18px;
@@ -114,7 +112,7 @@
   width: 188px;
 }
 
-.dados-de-solo .envelope {
+.formulario .envelope {
   height: 20px;
   left: 926px;
   position: absolute;
@@ -122,7 +120,7 @@
   width: 20px;
 }
 
-.dados-de-solo .text-wrapper-4 {
+.formulario .text-wrapper-4 {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 18px;
@@ -135,7 +133,7 @@
   width: 175px;
 }
 
-.dados-de-solo .place-marker {
+.formulario .place-marker {
   height: 20px;
   left: 925px;
   position: absolute;
@@ -143,7 +141,7 @@
   width: 20px;
 }
 
-.dados-de-solo .text-wrapper-5 {
+.formulario .text-wrapper-5 {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 18px;
@@ -156,7 +154,7 @@
   width: 188px;
 }
 
-.dados-de-solo .text-wrapper-6 {
+.formulario .text-wrapper-6 {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 25px;
@@ -171,7 +169,7 @@
   width: 232px;
 }
 
-.dados-de-solo .sobre {
+.formulario .sobre {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 15px;
@@ -184,7 +182,7 @@
   width: 627px;
 }
 
-.dados-de-solo .text-wrapper-7 {
+.formulario .text-wrapper-7 {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 25px;
@@ -199,7 +197,7 @@
   width: 232px;
 }
 
-.dados-de-solo .overlap {
+.formulario .overlap {
   height: 726px;
   left: 0;
   position: absolute;
@@ -207,223 +205,302 @@
   width: 1448px;
 }
 
-.dados-de-solo .dados-do-solo {
-  height: 417px;
+.formulario .dados-do-solo {
+  height: 490px;
   left: 315px;
   position: absolute;
   top: 85px;
-  width: 947px;
+  width: 975px;
 }
 
-.dados-de-solo .analise {
-  height: 282px;
-  left: 610px;
+.formulario .anlise-granulomtrica {
+  height: 287px;
+  left: 630px;
   position: absolute;
-  top: 135px;
+  top: 80px;
   width: 345px;
 }
 
-.dados-de-solo .overlap-group-2 {
-  background-image: url(https://c.animaapp.com/Jx8XCm2E/img/rectangle-26.svg);
-  background-size: 100% 100%;
-  height: 282px;
-  position: relative;
-  width: 335px;
-}
-
-.dados-de-solo .overlap-2 {
-  height: 83px;
-  left: 11px;
-  position: absolute;
-  top: 134px;
-  width: 284px;
-}
-
-.dados-de-solo .text-wrapper-8 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 0;
-  width: 279px;
-}
-
-.dados-de-solo .text-wrapper-9 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 33px;
-  width: 284px;
-}
-
-.dados-de-solo .overlap-3 {
-  height: 79px;
-  left: 11px;
-  position: absolute;
-  top: 19px;
-  width: 306px;
-}
-
-.dados-de-solo .text-wrapper-10 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 46px;
-  width: 306px;
-}
-
-.dados-de-solo .text-wrapper-11 {
-  color: #609b00;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 0;
-  width: 251px;
-}
-
-.dados-de-solo .text-wrapper-12 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 11px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 102px;
-  width: 272px;
-}
-
-.dados-de-solo .analise-quimica {
-  height: 282px;
-  left: 95px;
-  position: absolute;
-  top: 135px;
-  width: 349px;
-}
-
-.dados-de-solo .overlap-4 {
+.formulario .overlap-group-2 {
   background-color: #fafafa;
   border-radius: 12px;
-  height: 282px;
+  height: 287px;
   position: relative;
-  width: 335px;
+  width: 343px;
 }
 
-.dados-de-solo .text-wrapper-13 {
+.formulario .formulario {
+  height: 222px;
+  left: 9px;
+  position: absolute;
+  top: 40px;
+  width: 332px;
+}
+
+.formulario .div-2 {
+  background-color: #fcfcfc;
+  border: 1px solid;
+  border-color: #000000;
+  height: 29px;
+  left: 1px;
+  position: absolute;
+  top: 193px;
+  width: 323px;
+}
+
+.formulario .text-wrapper-8 {
   color: #000000;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
   font-weight: 700;
-  left: 11px;
+  left: 1px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 134px;
-  width: 220px;
+  top: 168px;
+  white-space: nowrap;
+  width: 165px;
 }
 
-.dados-de-solo .text-wrapper-14 {
+.formulario .div-3 {
+  background-color: #fcfcfc;
+  border: 1px solid;
+  border-color: #000000;
+  height: 29px;
+  left: 1px;
+  position: absolute;
+  top: 137px;
+  width: 323px;
+}
+
+.formulario .text-wrapper-9 {
   color: #000000;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
   font-weight: 700;
-  left: 11px;
+  left: 1px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 167px;
-  width: 220px;
+  top: 112px;
+  white-space: nowrap;
+  width: 201px;
 }
 
-.dados-de-solo .text-wrapper-15 {
+.formulario .div-4 {
+  background-color: #fcfcfc;
+  border: 1px solid;
+  border-color: #000000;
+  height: 29px;
+  left: 0;
+  position: absolute;
+  top: 81px;
+  width: 323px;
+}
+
+.formulario .text-wrapper-10 {
   color: #000000;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
   font-weight: 700;
-  left: 11px;
+  left: 0;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 199px;
-  width: 250px;
+  top: 56px;
+  white-space: nowrap;
+  width: 195px;
 }
 
-.dados-de-solo .text-wrapper-16 {
+.formulario .div-5 {
+  background-color: #fcfcfc;
+  border: 1px solid;
+  border-color: #000000;
+  height: 29px;
+  left: 0;
+  position: absolute;
+  top: 25px;
+  width: 323px;
+}
+
+.formulario .text-wrapper-11 {
   color: #000000;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
   font-weight: 700;
-  left: 11px;
+  left: 0;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 232px;
-  width: 250px;
+  top: 0;
+  white-space: nowrap;
+  width: 211px;
 }
 
-.dados-de-solo .normal-text {
-  font-weight: 400;
-}
-
-.dados-de-solo .text-wrapper-17 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 11px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 65px;
-  width: 220px;
-}
-
-.dados-de-solo .text-wrapper-18 {
+.formulario .text-wrapper-12 {
   color: #609b00;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
   font-weight: 700;
-  left: 11px;
+  left: 9px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 19px;
+  top: 10px;
+  width: 252px;
+}
+
+.formulario .analise-quimica {
+  height: 409px;
+  left: 102px;
+  position: absolute;
+  top: 81px;
+  width: 345px;
+}
+
+.formulario .overlap-2 {
+  height: 409px;
+  position: relative;
+}
+
+.formulario .fundo-analise {
+  background-color: #fafafa;
+  border-radius: 12px;
+  height: 409px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 343px;
+}
+
+.formulario .formulario-2 {
+  height: 334px;
+  left: 9px;
+  position: absolute;
+  top: 40px;
+  width: 336px;
+}
+
+.formulario .textiput-salinidade {
+  background-color: #fcfcfc;
+  border: 1px solid;
+  border-color: #000000;
+  height: 29px;
+  left: 0;
+  position: absolute;
+  top: 305px;
+  width: 323px;
+}
+
+.formulario .text-wrapper-13 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 280px;
+  white-space: nowrap;
+  width: 117px;
+}
+
+.formulario .textiput {
+  background-color: #fcfcfc;
+  border: 1px solid;
+  border-color: #000000;
+  height: 29px;
+  left: 0;
+  position: absolute;
+  top: 249px;
+  width: 323px;
+}
+
+.formulario .text-wrapper-14 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 224px;
+  white-space: nowrap;
+  width: 185px;
+}
+
+.formulario .text-wrapper-15 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 1px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 168px;
+  white-space: nowrap;
+  width: 116px;
+}
+
+.formulario .text-wrapper-16 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 1px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 112px;
+  white-space: nowrap;
+  width: 116px;
+}
+
+.formulario .text-wrapper-17 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 56px;
+  white-space: nowrap;
+  width: 117px;
+}
+
+.formulario .text-wrapper-18 {
+  color: #000000;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 28px;
+}
+
+.formulario .text-wrapper-19 {
+  color: #609b00;
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  left: 9px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 10px;
   width: 173px;
 }
 
-.dados-de-solo .text-wrapper-19 {
-  color: #000000;
-  font-family: "Poppins", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
-  left: 11px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 102px;
-  width: 220px;
-}
-
-.dados-de-solo .text-wrapper-20 {
+.formulario .p {
   color: #609b00;
   font-family: "Poppins", Helvetica;
   font-size: 25px;
@@ -433,10 +510,10 @@
   line-height: normal;
   position: absolute;
   top: 0;
-  width: 241px;
+  width: 365px;
 }
 
-.dados-de-solo .menu {
+.formulario .menu {
   height: 726px;
   left: 0;
   position: absolute;
@@ -444,14 +521,14 @@
   width: 306px;
 }
 
-.dados-de-solo .overlap-5 {
+.formulario .overlap-3 {
   background-color: #ffffff;
   height: 726px;
   position: relative;
   width: 290px;
 }
 
-.dados-de-solo .suporte-house {
+.formulario .suporte-house {
   height: 41px;
   left: 13px;
   position: absolute;
@@ -459,7 +536,7 @@
   width: 24px;
 }
 
-.dados-de-solo .text-wrapper-21 {
+.formulario .text-wrapper-20 {
   color: #609b00;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
@@ -472,7 +549,7 @@
   width: 92px;
 }
 
-.dados-de-solo .histrico-plantio {
+.formulario .histrico-plantio {
   height: 41px;
   left: 13px;
   position: absolute;
@@ -480,7 +557,7 @@
   width: 24px;
 }
 
-.dados-de-solo .overlap-6 {
+.formulario .overlap-4 {
   height: 74px;
   left: 56px;
   position: absolute;
@@ -488,7 +565,7 @@
   width: 210px;
 }
 
-.dados-de-solo .text-wrapper-22 {
+.formulario .text-wrapper-21 {
   color: #609b00;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
@@ -501,7 +578,7 @@
   width: 179px;
 }
 
-.dados-de-solo .text-wrapper-23 {
+.formulario .text-wrapper-22 {
   color: #609b00;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
@@ -514,7 +591,7 @@
   width: 210px;
 }
 
-.dados-de-solo .pragas-e-agrotxico {
+.formulario .pragas-e-agrotxico {
   height: 41px;
   left: 13px;
   position: absolute;
@@ -522,7 +599,7 @@
   width: 24px;
 }
 
-.dados-de-solo .overlap-7 {
+.formulario .overlap-5 {
   height: 147px;
   left: 13px;
   position: absolute;
@@ -530,7 +607,7 @@
   width: 234px;
 }
 
-.dados-de-solo .overlap-8 {
+.formulario .overlap-6 {
   height: 101px;
   left: 0;
   position: absolute;
@@ -538,7 +615,7 @@
   width: 207px;
 }
 
-.dados-de-solo .overlap-group-3 {
+.formulario .overlap-group-3 {
   height: 95px;
   left: 20px;
   position: absolute;
@@ -546,7 +623,7 @@
   width: 187px;
 }
 
-.dados-de-solo .rectangle-3 {
+.formulario .rectangle-3 {
   background-color: #518200;
   border-radius: 10px;
   height: 50px;
@@ -556,7 +633,40 @@
   width: 170px;
 }
 
-.dados-de-solo .text-wrapper-24 {
+.formulario .button {
+    position: absolute;
+    top: 110%;
+    left: 95%;
+}
+
+.formulario .button-rectangle {
+    background-color: #518200;
+    border-radius: 10px;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    width: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario .button-text {
+  position: absolute;
+  color: #000;
+  letter-spacing: 0;
+  white-space: nowrap;
+  font-family: Poppins, Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 2.3;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.formulario .text-wrapper-23 {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 16px;
@@ -569,7 +679,7 @@
   width: 116px;
 }
 
-.dados-de-solo .text-wrapper-25 {
+.formulario .text-wrapper-24 {
   color: #609b00;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
@@ -582,7 +692,7 @@
   width: 164px;
 }
 
-.dados-de-solo .seleo-cultura-house {
+.formulario .seleo-cultura-house {
   height: 41px;
   left: 0;
   position: absolute;
@@ -590,7 +700,7 @@
   width: 24px;
 }
 
-.dados-de-solo .text-wrapper-26 {
+.formulario .text-wrapper-25 {
   color: #609b00;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
@@ -603,7 +713,7 @@
   width: 191px;
 }
 
-.dados-de-solo .regio-e-estao-house {
+.formulario .regio-e-estao-house {
   height: 41px;
   left: 13px;
   position: absolute;
@@ -611,7 +721,7 @@
   width: 24px;
 }
 
-.dados-de-solo .plano-plantio-house {
+.formulario .plano-plantio-house {
   height: 41px;
   left: 13px;
   position: absolute;
@@ -619,7 +729,7 @@
   width: 24px;
 }
 
-.dados-de-solo .text-wrapper-27 {
+.formulario .text-wrapper-26 {
   color: #609b00;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
@@ -632,7 +742,7 @@
   width: 144px;
 }
 
-.dados-de-solo .controle-house {
+.formulario .controle-house {
   height: 41px;
   left: 13px;
   position: absolute;
@@ -640,7 +750,7 @@
   width: 24px;
 }
 
-.dados-de-solo .text-wrapper-28 {
+.formulario .text-wrapper-27 {
   color: #609b00;
   font-family: "Poppins", Helvetica;
   font-size: 20px;
@@ -653,7 +763,7 @@
   width: 144px;
 }
 
-.dados-de-solo .headder {
+.formulario .headder {
   height: 70px;
   left: 13px;
   position: absolute;
@@ -661,7 +771,7 @@
   width: 1435px;
 }
 
-.dados-de-solo .overlap-9 {
+.formulario .overlap-7 {
   background-color: #518200;
   height: 70px;
   left: 277px;
@@ -670,7 +780,7 @@
   width: 1150px;
 }
 
-.dados-de-solo .overlap-group-4 {
+.formulario .overlap-group-4 {
   height: 50px;
   left: 884px;
   position: absolute;
@@ -678,7 +788,7 @@
   width: 46px;
 }
 
-.dados-de-solo .ellipse {
+.formulario .ellipse {
   background-color: #ffffff;
   border-radius: 23px;
   height: 46px;
@@ -688,7 +798,7 @@
   width: 46px;
 }
 
-.dados-de-solo .text-wrapper-29 {
+.formulario .text-wrapper-28 {
   color: #7da240;
   font-family: "Poppins", Helvetica;
   font-size: 35px;
@@ -702,7 +812,7 @@
   width: 28px;
 }
 
-.dados-de-solo .usuario-gmail-com {
+.formulario .usuario-gmail-com {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 15px;
@@ -714,7 +824,7 @@
   top: 16px;
 }
 
-.dados-de-solo .text-wrapper-30 {
+.formulario .text-wrapper-29 {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 15px;
@@ -722,7 +832,7 @@
   letter-spacing: 0;
 }
 
-.dados-de-solo .text-wrapper-31 {
+.formulario .text-wrapper-30 {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
   font-size: 10px;
@@ -734,7 +844,7 @@
   top: 39px;
 }
 
-.dados-de-solo .text-wrapper-32 {
+.formulario .text-wrapper-31 {
   color: #518200;
   font-family: "Poppins", Helvetica;
   font-size: 35px;

@@ -83,6 +83,25 @@ const initialData = {
   columnOrder: ["column-1", "column-2", "column-3"],
 };
 
+async function checkAuthentication() {
+  try {
+    const response = await fetch('http://localhost:3000/api/VerificaFormulario', {
+      method: 'GET',
+    });
+    console.log(response)
+    if (!response.ok) {
+      console.log("Vazio");
+      window.location.href = '/solo/formulario';
+    } else {
+      console.log("Autenticado");
+      window.location.href = '/solo';
+    }
+  } catch (error) {
+    console.error("Erro:", error);
+    setTimeout(() => setBackendError(''), 4000); // Clear error message after 4 seconds
+  }
+}
+
 const Tasks = () => {
   const [state, setState] = useState(initialData);
   const [showModal, setShowModal] = useState(false);
@@ -411,7 +430,7 @@ const Tasks = () => {
             <div className="rectangle-3" />
             <a className="text-wrapper-9" href="/suporte">Suporte</a>
             <img className="house" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
-            <a className="text-wrapper-10" href="/dadossolo">Dados do Solo</a>
+            <a class="text-wrapper-10" href="#" onClick={checkAuthentication}>Dados do Solo</a>
             <a className="text-wrapper-11" href="/">TerraTech</a>
             <div className="group-2">
               <a className="text-wrapper-12" href="/pesticidas">Pragas e Agrotóxico</a>

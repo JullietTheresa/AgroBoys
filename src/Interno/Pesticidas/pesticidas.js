@@ -8,6 +8,25 @@ import pulgao from "../../components/Images/Interno/Pulgao.png";
 import acaro from "../../components/Images/Interno/acaro.png";
 import piolho from "../../components/Images/Interno/piolho.png";
 
+async function checkAuthentication() {
+  try {
+    const response = await fetch('http://localhost:3000/api/VerificaFormulario', {
+      method: 'GET',
+    });
+    console.log(response)
+    if (!response.ok) {
+      console.log("Vazio");
+      window.location.href = '/solo/formulario';
+    } else {
+      console.log("Autenticado");
+      window.location.href = '/solo';
+    }
+  } catch (error) {
+    console.error("Erro:", error);
+    setTimeout(() => setBackendError(''), 4000); // Clear error message after 4 seconds
+  }
+}
+
 export const Pesticidas = () => {
   return (
     <div className="pesticides">
@@ -258,7 +277,7 @@ export const Pesticidas = () => {
                     <div className="overlap-group-2">
                       <div className="rectangle-4" />
                       <div className="text-wrapper-19">Pragas e Agrotóxicos</div>
-                      <a className="text-wrapper-20" href="/dadossolo" >Dados do Solo</a>
+                      <a className="text-wrapper-20" href="#" onClick={checkAuthentication} >Dados do Solo</a>
                       <a className="text-wrapper-21" href="/selcultura" >Seleção Cultura</a>
                     </div>
                     <img
