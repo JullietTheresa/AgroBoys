@@ -3,80 +3,22 @@ import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import "./stylecontrole.css";
 
 const initialData = {
-  tasks: {
-    "task-1": { id: "task-1", content: 
-    (
-      <>
-        <div className="text-wrapper-2">Label</div>
-        <div className="text-wrapper-3">Label Label</div>
-          <p className="label-label-label" style={{ top: `60%`}}>
-            <span className="span">Detalhes:</span>
-            <span className="text-wrapper-4">
-              Label Label
-              <br />
-            </span>
-          </p>
-      </>
-    ),
-   },
-    "task-2": { id: "task-2", content: (
-      <>
-        <div className="text-wrapper-2">Label</div>
-        <div className="text-wrapper-3">Label Label</div>
-          <p className="label-label-label" style={{ top: `60%`}}>
-            <span className="span">Detalhes:</span>
-            <span className="text-wrapper-4">
-              Label Label
-              <br />
-            </span>
-          </p>
-      </>
-    ),
-  },
-    "task-3": { id: "task-3", content: (
-      <>
-        <div className="text-wrapper-2">Label</div>
-        <div className="text-wrapper-3">Label Label</div>
-          <p className="label-label-label" style={{ top: `60%`}}>
-            <span className="span">Detalhes:</span>
-            <span className="text-wrapper-4">
-              Label Label
-              <br />
-            </span>
-          </p>
-      </>
-    ),
-  },
-    "task-4": { id: "task-4", content: (
-      <>
-        <div className="text-wrapper-2">Label</div>
-        <div className="text-wrapper-3">Label Label</div>
-          <p className="label-label-label" style={{ top: `60%`}}>
-            <span className="span">Detalhes:</span>
-            <span className="text-wrapper-4">
-              Label Label
-              <br />
-            </span>
-          </p>
-      </>
-    ),
-  },
-  },
+  tasks: {},
   columns: {
     "column-1": {
       id: "column-1",
       title: "A FAZER",
-      taskIds: ["task-1", "task-2"],
+      taskIds: [],
     },
     "column-2": {
       id: "column-2",
       title: "EM ANDAMENTO",
-      taskIds: ["task-3"],
+      taskIds: [],
     },
     "column-3": {
       id: "column-3",
       title: "FINALIZADO",
-      taskIds: ["task-4"],
+      taskIds: [],
     },
   },
   // Facilitate reordering of the columns
@@ -132,25 +74,45 @@ const Tasks = () => {
     }
   }, [description]);
 
-  const handleCreateTask = () => {
+  const handleCreateTask = async () => {
     const newTaskId = `task-${Object.keys(state.tasks).length + 1}`;
+    
     const newTaskContent = (
       <>
         <div className="text-wrapper-2">{title}</div>
         <div className="text-wrapper-3">{description}</div>
         <br />
         {details1 && (
-          <p className="label-label-label" style={{ top: `${descriptionHeight+60}%` }}>
+          <p className="label-label-label" style={{ top: `${descriptionHeight + 60}%` }}>
             <span className="span">Detalhes:</span> <span>{details1}</span>
           </p>
         )}
       </>
     );
   
+    const newTask = { id: newTaskId, content: newTaskContent };
+  
     const newTasks = {
       ...state.tasks,
       [newTaskId]: { id: newTaskId, content: newTaskContent },
     };
+  
+    console.log("New Tasks: ", newTasks);
+  
+    let titulo, descricao, detalhes;
+    // Verifique se a tarefa foi adicionada corretamente
+    if (newTasks[newTaskId]) {
+      // Acessar o título, descrição e detalhes da nova tarefa dinamicamente
+      titulo = newTasks[newTaskId].content.props.children[0].props.children;
+      descricao = newTasks[newTaskId].content.props.children[1].props.children;
+      detalhes = newTasks[newTaskId].content.props.children[3]?.props.children[2]?.props.children;
+  
+      console.log("Titulo: ", titulo);
+      console.log("Descrição: ", descricao);
+      console.log("Detalhes: ", detalhes);
+    } else {
+      console.error("Erro: newTaskId não encontrado em newTasks");
+    }
   
     const newColumn = {
       ...state.columns["column-1"],
@@ -163,12 +125,38 @@ const Tasks = () => {
       columns: { ...state.columns, ["column-1"]: newColumn },
     });
   
+    try {
+      const response = await fetch('http://localhost:3000/api/controle', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ newTaskId, titulo, descricao, detalhes }), // Enviar como objeto
+      });
+      console.log("Tentativa de envio para o back: ", titulo, descricao, detalhes)
+      if (!response.ok) {
+        // Se a resposta não for ok, desfazer a atualização do estado local
+        console.error('Erro ao salvar a nova tarefa no backend');
+        const { [newTaskId]: _, ...remainingTasks } = newTasks;
+        setState({ ...state, tasks: remainingTasks });
+      } else {
+        const result = await response.json();
+        console.log('Tarefa salva com sucesso', result);
+      }
+    } catch (error) {
+      console.error('Erro ao se comunicar com o backend:', error);
+      // Desfazer a atualização do estado local em caso de erro
+      const { [newTaskId]: _, ...remainingTasks } = newTasks;
+      setState({ ...state, tasks: remainingTasks });
+    }
+  
     // Limpa os estados de texto após a criação da tarefa
     setTitle("");
     setDescription("");
     setDetails("");
     setShowModal(false);
   };
+  
 
   const handleAddControlClick = () => {
     setShowModal(true);
