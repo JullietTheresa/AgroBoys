@@ -36,14 +36,15 @@ export const Regio_Estaocao = () => {
   useEffect(() => {
     const fetchCidadeTemporaria = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/dadosestado');
+        const response = await fetch('http://localhost:3000/api/dadosEstado');
         if (!response.ok) {
           throw new Error('Erro ao buscar a cidade temporária do backend');
         }
         const data = await response.json();
-        setCity(data.cidade.cidade); // Definir o estado da cidade com o valor recebido do backend
-        setRegiao(data.cidade.regiao)
-        setBioma(data.cidade.bioma)
+        console.log(data)
+        setCity(data.city); // Definir o estado da cidade com o valor recebido do backend
+        setRegiao(data.regiao)
+        setBioma(data.bioma)
       } catch (error) {
         console.error('Erro ao buscar a cidade temporária:', error);
       }

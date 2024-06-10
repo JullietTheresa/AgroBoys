@@ -47,7 +47,7 @@ export const LoginPage = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ email: email, password: password }), // Envie os dados de login para o backend
+          body: JSON.stringify({ email: email, senha: password }), // Envie os dados de login para o backend
         });
         if (!response.ok) {
           throw new Error("Erro ao enviar os dados para o backend");

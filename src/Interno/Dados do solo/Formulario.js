@@ -9,9 +9,9 @@ export const DadosDeSoloFormulario = () => {
     const [materiaOrganica, setMateriaOrganica] = useState('');
     const [saturacao, setSaturacao] = useState('');
     const [texturaSolo, setTexturaSolo] = useState('');
-    const [porcentagemAreia, setPorcentagemAreia] = useState('');
-    const [porcentagemSilte, setPorcentagemSilte] = useState('');
-    const [porcentagemArgila, setPorcentagemArgila] = useState('');
+    const [porcentAreia, setporcentAreia] = useState('');
+    const [porcentSilt, setporcentSilt] = useState('');
+    const [porcentArgila, setporcentArgila] = useState('');
     const [nutrientes, setNutrientes] = useState('');
 
     const handleInputChange = (event, setter) => {
@@ -26,9 +26,9 @@ export const DadosDeSoloFormulario = () => {
             saturacao,
             materiaOrganica,
             salinidade,
-            porcentagemArgila,
-            porcentagemSilte,
-            porcentagemAreia,
+            porcentArgila,
+            porcentSilt,
+            porcentAreia,
             texturaSolo,
         }
 
@@ -104,24 +104,24 @@ export const DadosDeSoloFormulario = () => {
                     type="text"
                     className="div-3"
                     placeholder="Porcentagem Areia"
-                    value={porcentagemAreia}
-                    onChange={(event) => handleInputChange(event, setPorcentagemAreia)}
+                    value={porcentAreia}
+                    onChange={(event) => handleInputChange(event, setporcentAreia)}
                 />
                 <div className="text-wrapper-9">Porcentagem Areia</div>
                 <input
                     type="text"
                     className="div-4"
                     placeholder="Porcentagem Silte"
-                    value={porcentagemSilte}
-                    onChange={(event) => handleInputChange(event, setPorcentagemSilte)}
+                    value={porcentSilt}
+                    onChange={(event) => handleInputChange(event, setporcentSilt)}
                 />
                 <div className="text-wrapper-10">Porcentagem Silte</div>
                 <input
                     type="text"
                     className="div-5"
                     placeholder="Porcentagem Argila"
-                    value={porcentagemArgila}
-                    onChange={(event) => handleInputChange(event, setPorcentagemArgila)}
+                    value={porcentArgila}
+                    onChange={(event) => handleInputChange(event, setporcentArgila)}
                 />
                 <div className="text-wrapper-11">Porcentagem Argila</div>
                 </div>

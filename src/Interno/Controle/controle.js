@@ -89,8 +89,7 @@ const Tasks = () => {
         )}
       </>
     );
-  
-    const newTask = { id: newTaskId, content: newTaskContent };
+
   
     const newTasks = {
       ...state.tasks,
