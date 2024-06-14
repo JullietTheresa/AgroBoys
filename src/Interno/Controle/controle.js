@@ -21,7 +21,6 @@ const initialData = {
       taskIds: [],
     },
   },
-  // Facilitate reordering of the columns
   columnOrder: ["column-1", "column-2", "column-3"],
 };
 
@@ -30,12 +29,9 @@ async function checkAuthentication() {
     const response = await fetch('http://localhost:3000/api/VerificaFormulario', {
       method: 'GET',
     });
-    console.log(response)
     if (!response.ok) {
-      console.log("Vazio");
       window.location.href = '/solo/formulario';
     } else {
-      console.log("Autenticado");
       window.location.href = '/solo';
     }
   } catch (error) {
@@ -50,19 +46,11 @@ const Tasks = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [details1, setDetails] = useState("");
-  const [details2, setDetails2] = useState("");
   const [selectedTaskId, setSelectedTaskId] = useState(null);
   const [showEditModal, setShowEditModal] = useState(false);
   const [editTitle, setEditTitle] = useState("");
   const [editDescription, setEditDescription] = useState("");
   const [editDetails1, setEditDetails] = useState("");
-  const [editDetails2, setEditDetails2] = useState("");
-  const [selectedBoxId, setSelectedBoxId] = useState(null); // Novo estado para armazenar o ID da box selecionada para edição
-  const [editTask, setEditTask] = useState({
-    taskId: null,
-    title: "",
-    content: "",
-  });
   const descriptionRef = useRef(null);
   const [descriptionHeight, setDescriptionHeight] = useState(0);
 
@@ -90,51 +78,40 @@ const Tasks = () => {
       </>
     );
 
-  
     const newTasks = {
       ...state.tasks,
       [newTaskId]: { id: newTaskId, content: newTaskContent },
     };
-  
-    console.log("New Tasks: ", newTasks);
-  
+
     let titulo, descricao, detalhes;
-    // Verifique se a tarefa foi adicionada corretamente
     if (newTasks[newTaskId]) {
-      // Acessar o título, descrição e detalhes da nova tarefa dinamicamente
       titulo = newTasks[newTaskId].content.props.children[0].props.children;
       descricao = newTasks[newTaskId].content.props.children[1].props.children;
       detalhes = newTasks[newTaskId].content.props.children[3]?.props.children[2]?.props.children;
-  
-      console.log("Titulo: ", titulo);
-      console.log("Descrição: ", descricao);
-      console.log("Detalhes: ", detalhes);
     } else {
       console.error("Erro: newTaskId não encontrado em newTasks");
     }
-  
+
     const newColumn = {
       ...state.columns["column-1"],
       taskIds: [...state.columns["column-1"].taskIds, newTaskId],
     };
-  
+
     setState({
       ...state,
       tasks: newTasks,
       columns: { ...state.columns, ["column-1"]: newColumn },
     });
-  
+
     try {
       const response = await fetch('http://localhost:3000/api/controle', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ newTaskId, titulo, descricao, detalhes }), // Enviar como objeto
+        body: JSON.stringify({ newTaskId, titulo, descricao, detalhes }),
       });
-      console.log("Tentativa de envio para o back: ", titulo, descricao, detalhes)
       if (!response.ok) {
-        // Se a resposta não for ok, desfazer a atualização do estado local
         console.error('Erro ao salvar a nova tarefa no backend');
         const { [newTaskId]: _, ...remainingTasks } = newTasks;
         setState({ ...state, tasks: remainingTasks });
@@ -144,136 +121,127 @@ const Tasks = () => {
       }
     } catch (error) {
       console.error('Erro ao se comunicar com o backend:', error);
-      // Desfazer a atualização do estado local em caso de erro
       const { [newTaskId]: _, ...remainingTasks } = newTasks;
       setState({ ...state, tasks: remainingTasks });
     }
-  
-    // Limpa os estados de texto após a criação da tarefa
+
     setTitle("");
     setDescription("");
     setDetails("");
     setShowModal(false);
   };
-  
 
   const handleAddControlClick = () => {
     setShowModal(true);
   };
 
-  const handleEditTask = (taskId, content) => {
-    setEditTask({
-      taskId,
-      title: content, // Inicializa o estado do título com o conteúdo da tarefa
-      content, // Inicializa o estado do conteúdo da tarefa com o conteúdo da tarefa
-    });
-    setSelectedTaskId(taskId);
+  const handleEditTask = (taskId) => {
     const taskContent = state.tasks[taskId].content;
-  
-    // Verifica se a tarefa possui conteúdo
     if (taskContent) {
       const children = taskContent.props.children;
-  
-      // Verifica se a tarefa possui filhos e se o primeiro filho é um array
-      if (children && Array.isArray(children)) {
-        // Define o título como o conteúdo do primeiro filho
-        setEditTitle(children[0]?.props?.children || '');
-        // Verifica se o segundo filho existe e se é um array
-        if (children[1] && Array.isArray(children[1]?.props?.children)) {
-          // Define a descrição como o conteúdo do segundo filho
-          setEditDescription(children[1].props.children);
-        } else {
-          setEditDescription('');
-        }
-        // Verifica se o terceiro filho existe e se é um array
-        if (children[2] && Array.isArray(children[2]?.props?.children)) {
-          const detailsChildren = children[2].props.children;
-  
-          // Verifica se o terceiro filho tem mais de um filho e se o segundo filho é um array
-          if (detailsChildren.length > 1 && Array.isArray(detailsChildren[1]?.props?.children)) {
-            // Define os detalhes 1 como o conteúdo do segundo filho do terceiro filho
-            setEditDetails(detailsChildren[1].props.children);
-          } else {
-            setEditDetails('');
-          }
-          // Verifica se o terceiro filho tem mais de dois filhos e se o terceiro filho é um array
-          if (detailsChildren.length > 2 && Array.isArray(detailsChildren[2]?.props?.children)) {
-            // Define os detalhes 2 como o conteúdo do terceiro filho do terceiro filho
-            setEditDetails2(detailsChildren[2].props.children);
-          } else {
-            setEditDetails2('');
-          }
-        } else {
-          setEditDetails('');
-          setEditDetails2('');
-        }
-      }
+      setEditTitle(children[0]?.props?.children || '');
+      setEditDescription(children[1]?.props?.children || '');
+      setEditDetails(children[3]?.props?.children[1]?.props?.children || ''); // Ajuste para pegar o detalhe correto
     }
   
+    setSelectedTaskId(taskId);
     setShowEditModal(true);
   };  
 
-  const handleUpdateTask = () => {
-    const updatedTasks = {
-      ...state.tasks,
-      [editTask.taskId]: {
-        ...state.tasks[editTask.taskId],
-        content: (
-          <>
-            <div className="text-wrapper-2">{editTask.title}</div>
-            <div className="text-wrapper-3">{editTask.content}</div>
-            {editTask.details && (
-              <p className="label-label-label" style={{ top: `${descriptionHeight+60}%` }}>
-                <span className="span">Detalhes:</span> <span>{editTask.details}</span>
-              </p>
-            )}
-          </>
-        ),
-      },
+  const handleUpdateTask = async () => {
+    const updatedTask = {
+      taskId: selectedTaskId,
+      titulo: editTitle,
+      descricao: editDescription,
+      detalhes: editDetails1,
     };
 
-    const updatedData = {
-      ...state,
-      tasks: updatedTasks,
-    };
+    console.log('Updating Task:', updatedTask);
 
-    setState(updatedData);
-    setEditTask({
-      taskId: null,
-      title: "",
-      content: "",
-      details: "",
-    });
-    setShowEditModal(false);
-  };
+    try {
+      const response = await fetch('http://localhost:3000/api/controle', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(updatedTask),
+      });
 
-  const handleDeleteTask = () => {
-    if (!selectedTaskId) return; // Verifica se há uma tarefa selecionada para exclusão
-  
-    // Criando uma cópia dos objetos de estado
-    const updatedTasks = { ...state.tasks };
-    const updatedColumns = { ...state.columns };
-  
-    // Removendo a tarefa da lista de tarefas
-    delete updatedTasks[selectedTaskId];
-  
-    // Iterando sobre as colunas para remover o ID da tarefa excluída
-    for (const columnId in updatedColumns) {
-      updatedColumns[columnId].taskIds = updatedColumns[columnId].taskIds.filter((id) => id !== selectedTaskId);
+      if (!response.ok) {
+        console.error('Erro ao atualizar a tarefa no backend');
+        return;
+      }
+
+      const data = await response.json();
+      console.log('Task updated:', data);
+
+      const updatedTasks = {
+        ...state.tasks,
+        [selectedTaskId]: {
+          ...state.tasks[selectedTaskId],
+          content: (
+            <>
+              <div className="text-wrapper-2">{editTitle}</div>
+              <div className="text-wrapper-3">{editDescription}</div>
+              {editDetails1 && (
+                <p className="label-label-label" style={{ top: `${descriptionHeight + 60}%` }}>
+                  <span className="span">Detalhes:</span> <span>{editDetails1}</span>
+                </p>
+              )}
+            </>
+          ),
+        },
+      };
+
+      setState({
+        ...state,
+        tasks: updatedTasks,
+      });
+
+      setSelectedTaskId(null);
+      setShowEditModal(false);
+    } catch (error) {
+      console.error('Erro ao se comunicar com o backend:', error);
     }
-  
-    // Atualizando o estado com os objetos atualizados
-    setState({
-      ...state,
-      tasks: updatedTasks,
-      columns: updatedColumns,
-    });
-  
-    // Resetando o estado de seleção da tarefa após a exclusão
-    setSelectedTaskId(null);
-    setShowEditModal(false);
   };
-  
+
+  const handleDeleteTask = async (taskId) => {
+    console.log('Deleting Task:', taskId);
+
+    try {
+      const response = await fetch(`http://localhost:3000/api/controle/${taskId}`, {
+        method: 'DELETE',
+      });
+
+      if (!response.ok) {
+        console.error('Erro ao deletar a tarefa no backend');
+        return;
+      }
+
+      const data = await response.json();
+      console.log('Task deleted:', data);
+
+      const updatedTasks = { ...state.tasks };
+      const updatedColumns = { ...state.columns };
+
+      delete updatedTasks[taskId];
+
+      for (const columnId in updatedColumns) {
+        updatedColumns[columnId].taskIds = updatedColumns[columnId].taskIds.filter(id => id !== taskId);
+      }
+
+      setState({
+        ...state,
+        tasks: updatedTasks,
+        columns: updatedColumns,
+      });
+
+      setSelectedTaskId(null);
+      setShowEditModal(false);
+    } catch (error) {
+      console.error('Erro ao se comunicar com o backend:', error);
+    }
+  };
 
   const onDragEnd = (result) => {
     const { destination, source } = result;
@@ -302,37 +270,42 @@ const Tasks = () => {
         taskIds: newTaskIds,
       };
 
-      setState({
+      const newState = {
         ...state,
         columns: {
           ...state.columns,
           [newColumn.id]: newColumn,
         },
-      });
-    } else {
-      const startTaskIds = Array.from(start.taskIds);
-      startTaskIds.splice(source.index, 1);
-      const newStart = {
-        ...start,
-        taskIds: startTaskIds,
       };
 
-      const finishTaskIds = Array.from(finish.taskIds);
-      finishTaskIds.splice(destination.index, 0, result.draggableId);
-      const newFinish = {
-        ...finish,
-        taskIds: finishTaskIds,
-      };
-
-      setState({
-        ...state,
-        columns: {
-          ...state.columns,
-          [newStart.id]: newStart,
-          [newFinish.id]: newFinish,
-        },
-      });
+      setState(newState);
+      return;
     }
+
+    const startTaskIds = Array.from(start.taskIds);
+    startTaskIds.splice(source.index, 1);
+    const newStart = {
+      ...start,
+      taskIds: startTaskIds,
+    };
+
+    const finishTaskIds = Array.from(finish.taskIds);
+    finishTaskIds.splice(destination.index, 0, result.draggableId);
+    const newFinish = {
+      ...finish,
+      taskIds: finishTaskIds,
+    };
+
+    const newState = {
+      ...state,
+      columns: {
+        ...state.columns,
+        [newStart.id]: newStart,
+        [newFinish.id]: newFinish,
+      },
+    };
+
+    setState(newState);
   };
 
   return (
@@ -541,21 +514,21 @@ const Tasks = () => {
           <div className="modal">
             <h2 className="text-wrapper-31">Editar Tarefa</h2>
             <div>
-              <input
-                type="text"
-                className="bigger-input" 
-                placeholder="Título"
-                value={editTask.title}
-                onChange={(e) => setEditTask({ ...editTask, title: e.target.value })}
-              />
+            <input
+              type="text"
+              className="bigger-input"
+              placeholder="Título"
+              value={editTitle}
+              onChange={(e) => setEditTitle(e.target.value)} // Corrigido para setEditTitle
+            />
             </div>
             <div>
               <input
                 type="text"
                 className="bigger-input" 
                 placeholder="Descrição"
-                value={editTask.content}
-                onChange={(e) => setEditTask({ ...editTask, content: e.target.value })}
+                value={editDescription}
+                onChange={(e) => setEditDescription(e.target.value)}
               />
             </div>
             <div>
@@ -563,8 +536,8 @@ const Tasks = () => {
                 type="text"
                 className="bigger-input" 
                 placeholder="Detalhes"
-                value={editTask.details}
-                onChange={(e) => setEditTask({ ...editTask, details: e.target.value })}
+                value={editDetails1}
+                onChange={(e) => setEditDetails(e.target.value)}
               />
             </div>
             <br />
