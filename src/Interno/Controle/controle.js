@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 import "./stylecontrole.css";
+import perfilImagem from "../../components/Images/Interno/TerraTechIcon.png"
+
 
 const initialData = {
   tasks: {},
@@ -45,6 +47,7 @@ async function checkAuthentication() {
 }
 
 const Tasks = () => {
+  const [usuario, setUsuario] = useState(null);
   const [state, setState] = useState(initialData);
   const [showModal, setShowModal] = useState(false);
   const [title, setTitle] = useState("");
@@ -65,6 +68,23 @@ const Tasks = () => {
   });
   const descriptionRef = useRef(null);
   const [descriptionHeight, setDescriptionHeight] = useState(0);
+
+  useEffect(() => {
+    const pegaUsuario = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/enviaUsuario");
+        if (!response.ok) {
+          throw new Error("Erro ao buscar usuário");
+        }
+        const data = await response.json(); // Extrai os dados da resposta
+        setUsuario(data[0].nomeUsuario); // Define o estado com os dados obtidos
+      } catch (error) {
+        console.error("Erro ao buscar usuário: ", error);
+      }
+    };
+  
+    pegaUsuario();
+  }, []);
 
   useEffect(() => {
     const descriptionElement = document.querySelector('.text-wrapper');
@@ -480,13 +500,10 @@ const Tasks = () => {
           <div className="overlap-10">
             <div className="overlap-11">
               <div className="ellipse" />
-              <div className="text-wrapper-28">S</div>
+              <img className="text-wrapper-28" alt="FotoPerfil" src={perfilImagem} />
             </div>
             <p className="usuario-gmail-com">
-              <span className="text-wrapper-29">usuario</span>
-              <a href="mailto:spandan@gmail.com" rel="noopener noreferrer" target="_blank">
-                <span className="text-wrapper-29">@gmail.com</span>
-              </a>
+              <span className="text-wrapper-29">{usuario}</span>
             </p>
             <div className="text-wrapper-30">admin</div>
           </div>

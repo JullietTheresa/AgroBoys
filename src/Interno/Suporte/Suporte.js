@@ -1,5 +1,8 @@
-import React from "react";
+import { useEffect } from "react";
+import React, {useState} from "react";
 import "./styleSuporte.css";
+import perfilImagem from "../../components/Images/Interno/TerraTechIcon.png"
+
 
 async function checkAuthentication() {
   try {
@@ -21,6 +24,25 @@ async function checkAuthentication() {
 }
 
 export const Suporte = () => {
+  const [usuario, setUsuario] = useState(null);
+
+  useEffect(() => {
+    const pegaUsuario = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/enviaUsuario");
+        if (!response.ok) {
+          throw new Error("Erro ao buscar usuário");
+        }
+        const data = await response.json(); // Extrai os dados da resposta
+        setUsuario(data[0].nomeUsuario); // Define o estado com os dados obtidos
+      } catch (error) {
+        console.error("Erro ao buscar usuário: ", error);
+      }
+    };
+  
+    pegaUsuario();
+  }, []);
+
   return (
     <div className="suporte">
       <div className="overlap-wrapper">
@@ -166,11 +188,9 @@ export const Suporte = () => {
             <div className="overlap-7">
               <div className="overlap-group-2">
                 <div className="ellipse" />
-                <div className="text-wrapper-31">S</div>
+                <img className="text-wrapper-31" alt="FotoPerfil" src={perfilImagem} />
               </div>
-              <a className="text-wrapper-32" href="mailto:spandan@gmail.com" rel="noopener noreferrer" target="_blank">
-                spandan@gmail.com
-              </a>
+              <p className="text-wrapper-32">{usuario}</p>
               <div className="text-wrapper-33">admin</div>
             </div>
             <a className="text-wrapper-34" href="/" >TerraTech</a>

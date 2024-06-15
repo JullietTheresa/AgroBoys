@@ -1,6 +1,8 @@
 import React from "react";
 import React, { useState, useEffect } from "react";
 import "./styleRegiao_Estacao.css";
+import perfilImagem from "../../components/Images/Interno/TerraTechIcon.png"
+
 
 // Weather Imports
 import { useState } from "react"
@@ -32,6 +34,24 @@ export const Regio_Estaocao = () => {
   const [city, setCity] = useState(null);
   const [regiao, setRegiao] = useState(null)
   const [bioma, setBioma] = useState(null)
+  const [usuario, setUsuario] = useState(null);
+
+  useEffect(() => {
+    const pegaUsuario = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/enviaUsuario");
+        if (!response.ok) {
+          throw new Error("Erro ao buscar usuário");
+        }
+        const data = await response.json(); // Extrai os dados da resposta
+        setUsuario(data[0].nomeUsuario); // Define o estado com os dados obtidos
+      } catch (error) {
+        console.error("Erro ao buscar usuário: ", error);
+      }
+    };
+  
+    pegaUsuario();
+  }, []);
 
   useEffect(() => {
     const fetchCidadeTemporaria = async () => {
@@ -160,15 +180,12 @@ export const Regio_Estaocao = () => {
               <a className="text-wrapper-29" href="/" >TerraTech</a>
               <div className="overlap-5">
                 <p className="usuario-gmail-com">
-                  <span className="text-wrapper-30">usuario</span>
-                  <a href="mailto:spandan@gmail.com" rel="noopener noreferrer" target="_blank">
-                    <span className="text-wrapper-30">@gmail.com</span>
-                  </a>
+                  <span className="text-wrapper-30">{usuario}</span>
                 </p>
                 <div className="text-wrapper-31">admin</div>
                 <div className="overlap-group-4">
                   <div className="ellipse" />
-                  <div className="text-wrapper-32">S</div>
+                  <img className="text-wrapper-32" alt="FotoPerfil" src={perfilImagem} />
                 </div>
               </div>
             </header>

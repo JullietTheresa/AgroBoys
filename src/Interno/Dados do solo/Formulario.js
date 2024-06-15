@@ -1,5 +1,8 @@
+import {useEffect} from "react";
 import React, {useState} from "react";
 import "./styleFormulario.css";
+import perfilImagem from "../../components/Images/Interno/TerraTechIcon.png"
+
 
 export const DadosDeSoloFormulario = () => {
     // Constantes
@@ -13,6 +16,24 @@ export const DadosDeSoloFormulario = () => {
     const [porcentSilt, setporcentSilt] = useState('');
     const [porcentArgila, setporcentArgila] = useState('');
     const [nutrientes, setNutrientes] = useState('');
+    const [usuario, setUsuario] = useState(null);
+
+    useEffect(() => {
+      const pegaUsuario = async () => {
+        try {
+          const response = await fetch("http://localhost:3000/api/enviaUsuario");
+          if (!response.ok) {
+            throw new Error("Erro ao buscar usuário");
+          }
+          const data = await response.json(); // Extrai os dados da resposta
+          setUsuario(data[0].nomeUsuario); // Define o estado com os dados obtidos
+        } catch (error) {
+          console.error("Erro ao buscar usuário: ", error);
+        }
+      };
+    
+      pegaUsuario();
+    }, []);
 
     const handleInputChange = (event, setter) => {
         setter(event.target.value);
@@ -251,13 +272,10 @@ export const DadosDeSoloFormulario = () => {
               <div className="overlap-7">
                 <div className="overlap-group-4">
                   <div className="ellipse" />
-                  <div className="text-wrapper-28">S</div>
+                  <img className="text-wrapper-28" alt="FotoPerfil" src={perfilImagem} />
                 </div>
                 <p className="usuario-gmail-com">
-                  <span className="text-wrapper-29">usuario</span>
-                  <a href="mailto:spandan@gmail.com" rel="noopener noreferrer" target="_blank">
-                    <span className="text-wrapper-29">@gmail.com</span>
-                  </a>
+                  <span className="text-wrapper-29">{usuario}</span>
                 </p>
                 <div className="text-wrapper-30">admin</div>
               </div>
