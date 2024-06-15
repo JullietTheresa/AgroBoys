@@ -454,8 +454,6 @@ const Tasks = () => {
             <a class="text-wrapper-10" href="#" onClick={checkAuthentication}>Dados do Solo</a>
             <a className="text-wrapper-11" href="/">TerraTech</a>
             <div className="group-2">
-              <a className="text-wrapper-12" href="/pesticidas">Pragas e Agrotóxico</a>
-              <img className="img" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
             </div>
             <img className="house-2" alt="House" src="https://c.animaapp.com/YUkEWowS/img/house-5@2x.png" />
             <div className="rectangle-4" />

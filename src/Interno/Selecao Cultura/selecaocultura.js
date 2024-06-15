@@ -104,10 +104,7 @@ export const SelecaoDeCultura = () => {
             <img className="house-2" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
             <a className="text-wrapper-8" href="#" onClick={checkAuthentication} >Dados do Solo</a>
             <a className="text-wrapper-9" exact href="/">TerraTech</a>
-            <div className="group">
-              <a className="text-wrapper-10" href="/pesticidas" >Pragas e Agrotóxico</a>
-              <img className="house-3" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
-            </div>
+          
             <div className="overlap-group-wrapper">
               <div className="overlap-group-2">
                 <div className="rectangle-5" />
