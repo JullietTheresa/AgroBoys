@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import "./styleplano.css";
+import perfilImagem from "../../components/Images/Interno/TerraTechIcon.png"
 
 async function checkAuthentication() {
   try {
@@ -25,9 +26,27 @@ const PlanoPlantio = () => {
   const [isColhido, setIsColhido] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [planoAI, setplanoAI] = useState(null)
+  const [usuario, setUsuario] = useState(null);
 
   useEffect(() => {
-    const fetchCidadeTemporaria = async () => {
+    const pegaUsuario = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/enviaUsuario");
+        if (!response.ok) {
+          throw new Error("Erro ao buscar usuário");
+        }
+        const data = await response.json(); // Extrai os dados da resposta
+        setUsuario(data[0].nomeUsuario); // Define o estado com os dados obtidos
+      } catch (error) {
+        console.error("Erro ao buscar usuário: ", error);
+      }
+    };
+  
+    pegaUsuario();
+  }, []);
+
+  useEffect(() => {
+    const chamatextoAI = async () => {
       try {
         const response = await fetch("http://localhost:3000/api/mostraTexto");
         if (!response.ok) {
@@ -40,7 +59,7 @@ const PlanoPlantio = () => {
         console.error("Erro ao gerar plano de plantio: ", error);
       }
     };
-  fetchCidadeTemporaria();
+  chamatextoAI();
 }, []); // Executa apenas uma vez após a montagem inicial do componente
 
   const handleClick = () => {
@@ -64,10 +83,8 @@ const PlanoPlantio = () => {
             {/* Elementos compartilhados */}
             <div className="rectangle" />
             <div className="ellipse" />
-            <div className="text-wrapper">S</div>
-            <a className="div" href="mailto:spandan@gmail.com" rel="noopener noreferrer" target="_blank">
-              spandan@gmail.com
-            </a>
+            <img className="text-wrapper" alt="FotoPerfil" src={perfilImagem} />
+            <p className="div">{usuario}</p>
             <div className="text-wrapper-2">admin</div>
             <div className="flexcontainer">
               {[1, 2, 3, 4, 5, 6, 7].map((num) => (
