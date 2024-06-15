@@ -53,21 +53,38 @@ import fazenda from '../components/Images/Login/nc-fazenda-itu-061220.jpg';
 
 async function SendToBackEnd(selectedCity, selectedRegiao, selectedBioma) {
   try {
-    const response = await fetch("http://localhost:3000/api/confirmaestado", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ cidade: selectedCity, regiao: selectedRegiao, bioma: selectedBioma }), // Envie o nome da cidade e os dados para o backend
+    const confereUsuario = await fetch("http://localhost:3000/api/confereLogin", {
+      method: "GET",
     });
-    if (!response.ok) {
-      throw new Error("Erro ao enviar os dados para o backend");
+    if (!confereUsuario.ok) {
+      console.log("Usuario não logado");
+      window.location.href = '/Login';
+    } else {
+      console.log("Usuário logado, prosseguindo para enviar dados...");
+      try {
+        const response = await fetch("http://localhost:3000/api/confirmaestado", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ cidade: selectedCity, regiao: selectedRegiao, bioma: selectedBioma }),
+        });
+        if (!response.ok) {
+          console.error(`Erro ao enviar os dados para o backend: ${response.statusText}`);
+          throw new Error("Erro ao enviar os dados para o backend");
+        } else {
+          console.log(`Dados enviados com sucesso para o backend: ${selectedCity}, ${selectedRegiao} e ${selectedBioma}`);
+          window.location.href = '/controle';
+        }
+      } catch (error) {
+        console.error("Erro no envio dos dados:", error);
+      }
     }
-    console.log(`Dados enviados com sucesso para o backend: ${selectedCity}, ${selectedRegiao} e ${selectedBioma}`);
   } catch (error) {
-    console.error("Erro:", error);
+    console.error("Erro na verificação de login:", error);
   }
 }
+  
 
   return (
     <div className="landing-page-design">
@@ -121,7 +138,7 @@ async function SendToBackEnd(selectedCity, selectedRegiao, selectedBioma) {
           </div>
           <div className="overlap-2">
             <div className="rectangle-3">
-              <a onClick={() => SendToBackEnd(selectedCity, selectedRegiao, selectedBioma)} className="text-wrapper-23" exact href="/controle">Proximo</a>
+              <a onClick={() => SendToBackEnd(selectedCity, selectedRegiao, selectedBioma)} className="text-wrapper-23" exact href="#">Proximo</a>
             </div>
           </div>
         </div>

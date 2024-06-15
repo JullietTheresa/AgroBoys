@@ -41,6 +41,7 @@ export const LoginPage = () => {
     }
     if (emailValid && password) {
       console.log( email, password)
+
       try {
         const response = await fetch("http://localhost:3000/api/verificaLogin", {
           method: "POST",
@@ -54,13 +55,43 @@ export const LoginPage = () => {
           // Alerta de senha ou email incorretos
         }
         else {
-          console.log(`Dados enviados com sucesso para o backend: ${email} e ${password}`);
-          window.location.href = "/controle";}
+          try {
+            const confereRegiao = await fetch("http://localhost:3000/api/confereRegiao", {
+              method: "GET",
+            });
+            if (!confereRegiao.ok) {
+              console.log("Região vazia");
+              window.location.href = '/'
+            } else {
+              console.log("Região preenchida.")
+              console.log(`Dados enviados com sucesso para o backend: ${email} e ${password}`);
+              window.location.href = "/controle";
+            }
+          } catch (error) {
+            console.error("Erro:", error);
+          }
+        }
       } catch (error) {
         console.error("Erro:", error);
         setBackendError("E-mail ou senha incorretos.");
         setTimeout(() => setBackendError(''), 4000); // Clear error message after 4 seconds
       }
+
+      try {
+        const confereRegiao = await fetch("http://localhost:3000/api/confereRegiao", {
+          method: "GET",
+        });
+        if (!confereRegiao.ok) {
+          console.log("Região vazia");
+          window.location.href = '/'
+        } else {
+          console.log("Região preenchida.")
+        }
+      } catch (error) {
+
+      }
+
+
     }
 
   };
