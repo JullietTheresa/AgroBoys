@@ -146,13 +146,9 @@ export const DadosDeSolo = () => {
                 />
                 <div className="overlap-6">
                   <a className="text-wrapper-22" href="/historico">Histórico Plantio</a>
-                  <a className="text-wrapper-23" href="/pesticidas">Pragas e Agrotóxico</a>
+                  
                 </div>
-                <img
-                  className="pragas-e-agrotxico"
-                  alt="Pragas e agrotxico"
-                  src="https://c.animaapp.com/Jx8XCm2E/img/controle-house@2x.png"
-                />
+                
                 <div className="overlap-7">
                   <div className="overlap-8">
                     <div className="overlap-group-3">

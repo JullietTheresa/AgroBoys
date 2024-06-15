@@ -66,10 +66,6 @@ const PlanoPlantio = () => {
             <img className="img" alt="House" src="https://c.animaapp.com/AneYV77i/img/house-4@2x.png" />
             <a className="text-wrapper-6" href="#" onClick={checkAuthentication} >Dados do Solo</a>
             <a className="text-wrapper-7" href="/" >TerraTech</a>
-            <div className="group">
-              <a className="text-wrapper-8" href="/pesticidas" >Pragas e Agrotóxico</a>
-              <img className="house-2" alt="House" src="https://c.animaapp.com/AneYV77i/img/house-4@2x.png" />
-            </div>
             <img className="rectangle-4" alt="Rectangle" src="https://c.animaapp.com/AneYV77i/img/house-4@2x.png" />
             <div className="group-2">
               <a className="text-wrapper-9" href="/regiao" >Região e Estação</a>

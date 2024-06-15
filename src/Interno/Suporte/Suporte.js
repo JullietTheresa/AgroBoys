@@ -92,15 +92,10 @@ export const Suporte = () => {
                   alt="Histrico plantio"
                   src="https://c.animaapp.com/gty5W9Sn/img/hist-rico-plantio-house@2x.png"
                 />
-                <img
-                  className="pragas-e-agrotxico"
-                  alt="Pragas e agrotxico"
-                  src="https://c.animaapp.com/gty5W9Sn/img/pragas-e-agrot-xico-house@2x.png"
-                />
+              
               </div>
               <div className="overlap-4">
                 <a className="text-wrapper-9" href="/historico" >Histórico Plantio</a>
-                <a className="text-wrapper-10" href="/pesticidas" >Pragas e Agrotóxico</a>
                 <a className="text-wrapper-11" href="#" onClick={checkAuthentication} >Dados do Solo</a>
               </div>
               <img

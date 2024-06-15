@@ -752,7 +752,7 @@
     height: 41px;
     left: 13px;
     position: absolute;
-    top: 506px;
+    top: 461px;
     width: 24px;
   }
   
@@ -761,11 +761,11 @@
     font-family: "Poppins", Helvetica;
     font-size: 20px;
     font-weight: 500;
-    left: 50px;
+    left: 60px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 511px;
+    top: 465px;
     width: 235px;
   }
   
@@ -787,9 +787,9 @@
     background-color: #518200;
     border-radius: 10px;
     height: 50px;
-    left: 0;
+    left: 40;
     position: absolute;
-    top: 0;
+    top: 400;
     width: 205px;
   }
   
@@ -798,11 +798,11 @@
     font-family: "Poppins", Helvetica;
     font-size: 20px;
     font-weight: 500;
-    left: 20px;
+    left: 60px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 7px;
+    top: 410px;
     width: 209px;
   }
   

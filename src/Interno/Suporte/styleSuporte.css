@@ -245,6 +245,7 @@
   height: 50px;
   position: relative;
   width: 170px;
+  top: -35px;
 }
 
 .suporte .text-wrapper-8 {
@@ -256,7 +257,7 @@
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 10px;
+  top: 7px;
   width: 81px;
 }
 
@@ -272,7 +273,7 @@
   height: 41px;
   left: 0;
   position: absolute;
-  top: 41px;
+  top: 15px;
   width: 24px;
 }
 
@@ -297,11 +298,11 @@
   font-family: "Poppins", Helvetica;
   font-size: 20px;
   font-weight: 500;
-  left: 0;
+  left: 7;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 85px;
+  top: 55px;
   width: 235px;
 }
 
