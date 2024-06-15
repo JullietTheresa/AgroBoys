@@ -227,13 +227,9 @@ export const DadosDeSoloFormulario = () => {
                 />
                 <div className="overlap-4">
                   <a className="text-wrapper-21" href="/historico">Histórico Plantio</a>
-                  <a className="text-wrapper-22" href="/pesticidas">Pragas e Agrotóxico</a>
+                  
                 </div>
-                <img
-                  className="pragas-e-agrotxico"
-                  alt="Pragas e agrotxico"
-                  src="https://c.animaapp.com/WNXjhbWn/img/controle-house@2x.png"
-                />
+                
                 <div className="overlap-5">
                   <div className="overlap-6">
                     <div className="overlap-group-3">

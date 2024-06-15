@@ -196,19 +196,15 @@ export const HistoricoGeral = () => {
                 src="https://c.animaapp.com/V72d7Rn8/img/suporte-house@2x.png"
               />
               <a className="text-wrapper-32"href="/suporte">Suporte</a>
-              <div className="group">
-                <div className="overlap-group-2">
+              
+                
                   <div className="rectangle-7" />
                   <div className="text-wrapper-33">Histórico Plantio</div>
-                </div>
-              </div>
-              <img
-                className="pragas-e-agrotxico"
-                alt="Pragas e agrotxico"
-                src="https://c.animaapp.com/V72d7Rn8/img/pragas-e-agrot-xico-house@2x.png"
-              />
+                
+              
+              
               <div className="overlap-4">
-                <a className="text-wrapper-34" href="/pesticidas">Pragas e Agrotóxico</a>
+                
                 <a className="text-wrapper-35" href="#" onClick={checkAuthentication}>Dados do Solo</a>
               </div>
               <img

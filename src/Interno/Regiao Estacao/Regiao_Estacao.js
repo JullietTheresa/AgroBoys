@@ -155,10 +155,7 @@ export const Regio_Estaocao = () => {
                 <a className="text-wrapper-21" href="/suporte" >Suporte</a>
                 <img className="house" alt="House" src="https://c.animaapp.com/bqR5CWSn/img/house-4@2x.png" />
                 <a className="text-wrapper-22" href="#" onClick={checkAuthentication} >Dados do Solo</a>
-                <div className="group-2">
-                  <a className="text-wrapper-23" href="/pesticidas" >Pragas e Agrotóxico</a>
-                  <img className="img-2" alt="House" src="https://c.animaapp.com/bqR5CWSn/img/house-4@2x.png" />
-                </div>
+                
                 <img className="house-2" alt="House" src="https://c.animaapp.com/bqR5CWSn/img/house-4@2x.png" />
 
                   <a className="text-wrapper-24" href="/historico" >Histórico Plantio</a>
