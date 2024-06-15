@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 import "./styleselecaocultura.css";
 import cafeImage from "../../components/Images/Interno/cafe.jpg";
@@ -9,6 +10,8 @@ import cacauImage from "../../components/Images/Interno/cacau.jpg";
 import milhoImage from "../../components/Images/Interno/milho.jpg";
 import tomateImage from "../../components/Images/Interno/tomate.jpg";
 import arrozImage from "../../components/Images/Interno/arroz.jpg";
+import perfilImagem from "../../components/Images/Interno/TerraTechIcon.png"
+
 
 async function checkAuthentication() {
   try {
@@ -33,6 +36,7 @@ export const SelecaoDeCultura = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedPlant, setSelectedPlant] = useState(null);
   const [activeCulture, setActiveCulture] = useState(null);
+  const [usuario, setUsuario] = useState(null);
 
   const openModal = (plant) => {
     setSelectedPlant(plant);
@@ -61,6 +65,23 @@ export const SelecaoDeCultura = () => {
     }
   };
 
+  useEffect(() => {
+    const pegaUsuario = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/enviaUsuario");
+        if (!response.ok) {
+          throw new Error("Erro ao buscar usuário");
+        }
+        const data = await response.json(); // Extrai os dados da resposta
+        setUsuario(data[0].nomeUsuario); // Define o estado com os dados obtidos
+      } catch (error) {
+        console.error("Erro ao buscar usuário: ", error);
+      }
+    };
+  
+    pegaUsuario();
+  }, []);
+
   return (
     <div className="seleo-de-cultura">
       <div className="overlap-wrapper">
@@ -68,10 +89,8 @@ export const SelecaoDeCultura = () => {
           <div className="overlap-group">
             <div className="rectangle" />
             <div className="ellipse" />
-            <div className="text-wrapper">S</div>
-            <a className="div" href="mailto:spandan@gmail.com" rel="noopener noreferrer" target="_blank">
-              spandan@gmail.com
-            </a>
+            <img className="imagemPerfil" alt="FotoPerfil" src={perfilImagem} />
+            <p className="div">{usuario}</p>
             <div className="text-wrapper-2">admin</div>
             <div className="rectangle-2" />
             <div className="rectangle-3" />

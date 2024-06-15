@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import React, {useState} from "react";
 import "./styleDadosSolo.css";
+import perfilImagem from "../../components/Images/Interno/TerraTechIcon.png"
 
 export const DadosDeSolo = () => {
   // Constantes
@@ -14,6 +15,7 @@ export const DadosDeSolo = () => {
   const [porcentSilt, setporcentSilt] = useState(null);
   const [nutrientes, setNutrientes] = useState(null);
   const [porcentArgila, setporcentArgila] = useState(null);
+  const [usuario, setUsuario] = useState(null);
   
   useEffect(() => {
     const RecebeDados = async () => {
@@ -45,6 +47,24 @@ export const DadosDeSolo = () => {
   useEffect(() => {
     console.log("Os dados que chegaram foram", ph, fertilidade, nutrientes, saturacao, materiaOrganica, salinidade, porcentArgila, porcentSilt, porcentAreia, texturaSolo)
   }, [ph, fertilidade, nutrientes, saturacao, materiaOrganica, salinidade, porcentArgila, porcentSilt, porcentAreia, texturaSolo]);
+
+  useEffect(() => {
+    const pegaUsuario = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/enviaUsuario");
+        if (!response.ok) {
+          throw new Error("Erro ao buscar usuário");
+        }
+        const data = await response.json(); // Extrai os dados da resposta
+        setUsuario(data[0].nomeUsuario); // Define o estado com os dados obtidos
+      } catch (error) {
+        console.error("Erro ao buscar usuário: ", error);
+      }
+    };
+  
+    pegaUsuario();
+  }, []);
+  
 
   return (
     <div className="dados-de-solo">
@@ -171,13 +191,10 @@ export const DadosDeSolo = () => {
               <div className="overlap-9">
                 <div className="overlap-group-4">
                   <div className="ellipse" />
-                  <div className="text-wrapper-29">S</div>
+                  <img className="text-wrapper-29" alt="FotoPerfil" src={perfilImagem} />
                 </div>
                 <p className="usuario-gmail-com">
-                  <span className="text-wrapper-30">usuario</span>
-                  <a href="mailto:spandan@gmail.com" rel="noopener noreferrer" target="_blank">
-                    <span className="text-wrapper-30">@gmail.com</span>
-                  </a>
+                  <p className="text-wrapper-30">{usuario}</p>
                 </p>
                 <div className="text-wrapper-31">admin</div>
               </div>

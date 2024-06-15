@@ -62,6 +62,16 @@
   width: 28px;
 }
 
+.seleo-de-cultura .imagemPerfil {
+  left: 1175px;
+  line-height: normal;
+  position: absolute;
+  top: 13;
+  white-space: nowrap;
+  width: 46px;
+  border-radius: 50%;
+}
+
 .seleo-de-cultura .div {
   color: #ffffff;
   font-family: "Poppins", Helvetica;
