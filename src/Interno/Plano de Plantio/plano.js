@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import "./styleplano.css";
 
 async function checkAuthentication() {
@@ -23,6 +24,24 @@ async function checkAuthentication() {
 const PlanoPlantio = () => {
   const [isColhido, setIsColhido] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [planoAI, setplanoAI] = useState(null)
+
+  useEffect(() => {
+    const fetchCidadeTemporaria = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/mostraTexto");
+        if (!response.ok) {
+          throw new Error("Erro gera plano de plantio");
+        }
+        const data = await response.json(); // Extrai os dados da resposta
+        console.log(data)
+        setplanoAI(data); // Define o estado com os dados obtidos
+      } catch (error) {
+        console.error("Erro ao gerar plano de plantio: ", error);
+      }
+    };
+  fetchCidadeTemporaria();
+}, []); // Executa apenas uma vez após a montagem inicial do componente
 
   const handleClick = () => {
     setShowModal(true);
@@ -124,7 +143,7 @@ const PlanoPlantio = () => {
           <div className="text-wrapper-21">Plano Plantio</div>
           <div className="overlap-3">
             <div className="overlap-4">
-               <p className="caixa-texto"></p>  {/*Adição de plano de plantio feito pela IA*/}
+               <pre className="caixa-texto">{planoAI}</pre>  {/*Adição de plano de plantio feito pela IA*/}
               <div className="overlap-5">
                 <button className="button" onClick={handleClick}>
                   <div className="text-wrapper-38">FINALIZAR PLANTAÇÃO</div>
