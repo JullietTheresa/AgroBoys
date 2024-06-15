@@ -588,13 +588,25 @@
   width: 1123px;
 }
 
-.plano-plantio .group-4 {
-  height: 397px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 1123px;
+
+
+/* .plano-plantio .overlap-4 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+} */
+
+.plano-plantio .caixa-texto {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+  resize: none;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
 }
+
 
 .plano-plantio .overlap-4 {
   background-color: #ffffff;
@@ -604,7 +616,74 @@
   width: 1113px;
 }
 
-.plano-plantio .text-wrapper-22 {
+.plano-plantio .overlap-5 {
+  background-color: #ff0000;
+  border-radius: 3px;
+  height: 30px;
+  width: 200px;
+  position: absolute;
+  bottom: 15px; /* Ajuste a distância do fundo conforme necessário */
+  right: 20px; /* Ajuste a distância do lado direito conforme necessário */
+}
+
+.plano-plantio .button {
+  background-color: #518200;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo para a modal */
+.modal {
+  background-color: #00000080;
+  justify-content: center;
+  align-items: center;
+  width: 2000px;
+  height: 4000px;
+  display: flex;
+  position: fixed;
+  top: 400;
+  left: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-button.confirm {
+  background-color: #ff0000;
+  color: white;
+}
+
+.modal-button.cancel {
+  background-color: #ccc;
+  color: black;
+}
+
+/* .plano-plantio .text-wrapper-22 {
   color: #727272;
   font-family: "Poppins", Helvetica;
   font-size: 15px;
@@ -615,9 +694,9 @@
   position: absolute;
   top: 50px;
   width: 96px;
-}
+} */
 
-.plano-plantio .text-wrapper-23 {
+/* .plano-plantio .text-wrapper-23 {
   color: #727272;
   font-family: "Poppins", Helvetica;
   font-size: 15px;
@@ -628,9 +707,9 @@
   position: absolute;
   top: 49px;
   width: 137px;
-}
+} */
 
-.plano-plantio .text-wrapper-24 {
+/* .plano-plantio .text-wrapper-24 {
   color: #727272;
   font-family: "Poppins", Helvetica;
   font-size: 15px;
@@ -641,9 +720,9 @@
   position: absolute;
   top: 49px;
   width: 137px;
-}
+} */
 
-.plano-plantio .text-wrapper-25 {
+/* .plano-plantio .text-wrapper-25 {
   color: #727272;
   font-family: "Poppins", Helvetica;
   font-size: 15px;
@@ -654,8 +733,8 @@
   position: absolute;
   top: 48px;
   width: 137px;
-}
-.plano-plantio .text-wrapper-220 {
+} */
+/* .plano-plantio .text-wrapper-220 {
   color: #727272;
   font-family: "Poppins", Helvetica;
   font-size: 15px;
@@ -666,10 +745,10 @@
   position: absolute;
   top: 48px;
   width: 137px;
-}
+} */
 
 
-.plano-plantio .line {
+/* .plano-plantio .line {
   height: 1px;
   left: 24px;
   object-fit: cover;
@@ -730,7 +809,7 @@
   position: absolute;
   top: 320px;
   width: 1076px;
-}
+} */
 
 .plano-plantio .group-5 {
   height: 29px;
@@ -859,7 +938,7 @@
   width: 80px;
 }
 
-.plano-plantio .text-wrapper-35 {
+/* .plano-plantio .text-wrapper-35 {
   color: #727272;
   font-family: "Poppins", Helvetica;
   font-size: 15px;
@@ -870,7 +949,7 @@
   position: absolute;
   top: 50px;
   width: 137px;
-}
+} */
 
 .plano-plantio .text-wrapper-36 {
   color: #727272;
@@ -906,15 +985,7 @@
   width: 109px;
 }
 
-.plano-plantio .overlap-5 {
-  background-color: #518200;
-  border-radius: 3px;
-  height: 29px;
-  left: 3px;
-  position: absolute;
-  top: 0;
-  width: 112px;
-}
+
 .plano-plantio .rectangle-8 {
   border-radius: 3px;
   height: 29px;
@@ -938,6 +1009,8 @@
   top: 3px;
   width: 129px;
 }
+
+
 
 .plano-plantio .text-wrapper-26 {
   color: #ffffff;
