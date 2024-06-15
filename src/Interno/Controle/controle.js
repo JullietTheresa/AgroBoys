@@ -55,12 +55,54 @@ const Tasks = () => {
   const [descriptionHeight, setDescriptionHeight] = useState(0);
 
   useEffect(() => {
-    const descriptionElement = document.querySelector('.text-wrapper');
-    if (descriptionElement) {
-      const height = descriptionElement.getBoundingClientRect().height;
-      setDescriptionHeight(height);
-    }
-  }, [description]);
+    // Função para carregar tarefas do backend ao iniciar a aplicação
+    const fetchTasks = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/api/controleGet');
+        if (!response.ok) {
+          throw new Error('Erro ao carregar tarefas do backend');
+        }
+        const data = await response.json();
+        const loadedTasks = {};
+        const loadedColumns = {
+          'column-1': { ...state.columns['column-1'], taskIds: [] },
+          'column-2': { ...state.columns['column-2'], taskIds: [] },
+          'column-3': { ...state.columns['column-3'], taskIds: [] },
+        };
+
+        data.forEach((task) => {
+          const taskId = `task-${Object.keys(loadedTasks).length + 1}`;
+          loadedTasks[taskId] = { id: taskId, content: renderTaskContent(task) };
+          loadedColumns['column-1'].taskIds.push(taskId);
+        });
+
+        setState({
+          ...state,
+          tasks: loadedTasks,
+          columns: loadedColumns,
+        });
+      } catch (error) {
+        console.error('Erro ao carregar tarefas:', error);
+      }
+    };
+
+    fetchTasks();
+  }, []);
+
+  const renderTaskContent = (task) => {
+    return (
+      <>
+        <div className="text-wrapper-2">{task.titulo}</div>
+        <div className="text-wrapper-3">{task.descricao}</div>
+        <br />
+        {task.detalhes && (
+          <p className="label-label-label" style={{ top: `${descriptionHeight + 60}%` }}>
+            <span className="span">Detalhes:</span> <span>{task.detalhes}</span>
+          </p>
+        )}
+      </>
+    );
+  };
 
   const handleCreateTask = async () => {
     const newTaskId = `task-${Object.keys(state.tasks).length + 1}`;
