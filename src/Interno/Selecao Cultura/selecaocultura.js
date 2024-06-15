@@ -52,15 +52,30 @@ export const SelecaoDeCultura = () => {
     setActiveCulture(plant); // Atualiza a cultura ativa quando clicada
   };
 
-  const handleConfirmClick = () => {
+  const handleConfirmClick = async () => { // Mark the function as async
     if (activeCulture) {
       axios.post("http://localhost:3000/api/selecao_cultura", activeCulture)
         .then(response => {
           console.log("Culture selected successfully:", response.data);
-          // Redirect or perform another action after successful submission
+  
+          // Async function to handle the fetch call
+          const fetchPlanoAI = async () => {
+            try {
+              const response = await fetch("http://localhost:3000/api/geracaoAI");
+              if (!response.ok) {
+                throw new Error("Erro gera plano de plantio");
+              }
+              window.location.href = "/plano"
+            } catch (error) {
+              console.error("Erro ao gerar plano de plantio: ", error);
+            }
+          };
+  
+          // Call the async function
+          fetchPlanoAI();
         })
         .catch(error => {
-          console.error("There was an error selecting the culture!", error);
+          console.error("Error selecting culture: ", error);
         });
     }
   };
