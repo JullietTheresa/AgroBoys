@@ -57,23 +57,6 @@ const Tasks = () => {
   const [descriptionHeight, setDescriptionHeight] = useState(0);
 
   useEffect(() => {
-    const pegaUsuario = async () => {
-      try {
-        const response = await fetch("http://localhost:3000/api/enviaUsuario");
-        if (!response.ok) {
-          throw new Error("Erro ao buscar usuário");
-        }
-        const data = await response.json(); // Extrai os dados da resposta
-        setUsuario(data[0].nomeUsuario); // Define o estado com os dados obtidos
-      } catch (error) {
-        console.error("Erro ao buscar usuário: ", error);
-      }
-    };
-  
-    pegaUsuario();
-  }, []);
-
-  useEffect(() => {
     // Função para carregar tarefas do backend ao iniciar a aplicação
     const fetchTasks = async () => {
       try {
@@ -88,13 +71,13 @@ const Tasks = () => {
           'column-2': { ...state.columns['column-2'], taskIds: [] },
           'column-3': { ...state.columns['column-3'], taskIds: [] },
         };
-
+  
         data.forEach((task) => {
           const taskId = `task-${Object.keys(loadedTasks).length + 1}`;
           loadedTasks[taskId] = { id: taskId, content: renderTaskContent(task) };
-          loadedColumns['column-1'].taskIds.push(taskId);
+          loadedColumns[task.columnId].taskIds.push(taskId);
         });
-
+  
         setState({
           ...state,
           tasks: loadedTasks,
@@ -104,9 +87,9 @@ const Tasks = () => {
         console.error('Erro ao carregar tarefas:', error);
       }
     };
-
+  
     fetchTasks();
-  }, []);
+  }, []);  
 
   const renderTaskContent = (task) => {
     return (
@@ -120,8 +103,9 @@ const Tasks = () => {
           </p>
         )}
       </>
+      
     );
-  };
+  };  
 
   const handleCreateTask = async () => {
     const newTaskId = `task-${Object.keys(state.tasks).length + 1}`;
@@ -138,39 +122,30 @@ const Tasks = () => {
         )}
       </>
     );
-
+  
     const newTasks = {
       ...state.tasks,
       [newTaskId]: { id: newTaskId, content: newTaskContent },
     };
-
-    let titulo, descricao, detalhes;
-    if (newTasks[newTaskId]) {
-      titulo = newTasks[newTaskId].content.props.children[0].props.children;
-      descricao = newTasks[newTaskId].content.props.children[1].props.children;
-      detalhes = newTasks[newTaskId].content.props.children[3]?.props.children[2]?.props.children;
-    } else {
-      console.error("Erro: newTaskId não encontrado em newTasks");
-    }
-
+  
     const newColumn = {
       ...state.columns["column-1"],
       taskIds: [...state.columns["column-1"].taskIds, newTaskId],
     };
-
+  
     setState({
       ...state,
       tasks: newTasks,
       columns: { ...state.columns, ["column-1"]: newColumn },
     });
-
+  
     try {
       const response = await fetch('http://localhost:3000/api/controle', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ newTaskId, titulo, descricao, detalhes }),
+        body: JSON.stringify({ newTaskId, titulo: title, descricao: description, detalhes: details1, columnId: "column-1" }),
       });
       if (!response.ok) {
         console.error('Erro ao salvar a nova tarefa no backend');
@@ -185,12 +160,12 @@ const Tasks = () => {
       const { [newTaskId]: _, ...remainingTasks } = newTasks;
       setState({ ...state, tasks: remainingTasks });
     }
-
+  
     setTitle("");
     setDescription("");
     setDetails("");
     setShowModal(false);
-  };
+  };  
 
   const handleAddControlClick = () => {
     setShowModal(true);
@@ -208,6 +183,28 @@ const Tasks = () => {
     setSelectedTaskId(taskId);
     setShowEditModal(true);
   };  
+
+  const updateTaskColumn = async (taskId, newColumnId) => {
+    try {
+      const response = await fetch('http://localhost:3000/api/updateTaskColumn', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ taskId, newColumnId }),
+      });
+  
+      if (!response.ok) {
+        console.error('Erro ao atualizar a coluna da tarefa no backend');
+      } else {
+        const result = await response.json();
+        console.log('Coluna da tarefa atualizada com sucesso', result);
+      }
+    } catch (error) {
+      console.error('Erro ao se comunicar com o backend:', error);
+    }
+  };
+  
 
   const handleUpdateTask = async () => {
     const updatedTask = {
@@ -244,6 +241,7 @@ const Tasks = () => {
             <>
               <div className="text-wrapper-2">{editTitle}</div>
               <div className="text-wrapper-3">{editDescription}</div>
+              <br />
               {editDetails1 && (
                 <p className="label-label-label" style={{ top: `${descriptionHeight + 60}%` }}>
                   <span className="span">Detalhes:</span> <span>{editDetails1}</span>
@@ -305,32 +303,32 @@ const Tasks = () => {
   };
 
   const onDragEnd = (result) => {
-    const { destination, source } = result;
-
+    const { destination, source, draggableId } = result;
+  
     if (!destination) {
       return;
     }
-
+  
     if (
       destination.droppableId === source.droppableId &&
       destination.index === source.index
     ) {
       return;
     }
-
+  
     const start = state.columns[source.droppableId];
     const finish = state.columns[destination.droppableId];
-
+  
     if (start === finish) {
       const newTaskIds = Array.from(start.taskIds);
       newTaskIds.splice(source.index, 1);
-      newTaskIds.splice(destination.index, 0, result.draggableId);
-
+      newTaskIds.splice(destination.index, 0, draggableId);
+  
       const newColumn = {
         ...start,
         taskIds: newTaskIds,
       };
-
+  
       const newState = {
         ...state,
         columns: {
@@ -338,25 +336,25 @@ const Tasks = () => {
           [newColumn.id]: newColumn,
         },
       };
-
+  
       setState(newState);
       return;
     }
-
+  
     const startTaskIds = Array.from(start.taskIds);
     startTaskIds.splice(source.index, 1);
     const newStart = {
       ...start,
       taskIds: startTaskIds,
     };
-
+  
     const finishTaskIds = Array.from(finish.taskIds);
-    finishTaskIds.splice(destination.index, 0, result.draggableId);
+    finishTaskIds.splice(destination.index, 0, draggableId);
     const newFinish = {
       ...finish,
       taskIds: finishTaskIds,
     };
-
+  
     const newState = {
       ...state,
       columns: {
@@ -365,9 +363,10 @@ const Tasks = () => {
         [newFinish.id]: newFinish,
       },
     };
-
+  
     setState(newState);
-  };
+    updateTaskColumn(draggableId, finish.id); // Atualiza a coluna da tarefa no backend
+  };  
 
   return (
     <div className="modal-container">
