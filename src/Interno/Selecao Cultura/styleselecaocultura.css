@@ -742,7 +742,7 @@
   position: relative;
   width: 221px;
 }
-.modal-overlay {
+.seleo-de-cultura .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -754,20 +754,20 @@
   align-items: center;
 }
 
-.modal {
+.seleo-de-cultura .modal {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
 }
 
-.modal-img {
+.seleo-de-cultura .modal-img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   margin-bottom: 16px; /* Espaço entre a imagem e o texto */
 }
 
-.modal-description {
+.seleo-de-cultura .modal-description {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
@@ -809,11 +809,11 @@
   max-height: 100%;
 }
 
-.modal-description {
+.seleo-de-cultura .modal-description {
   overflow-wrap: break-word; /* Quebra de palavras em caso de overflow */
 }
 
-.button-container {
+.seleo-de-cultura .button-container {
   display: flex;
   justify-content: space-between;
   gap: 10px;

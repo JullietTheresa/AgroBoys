@@ -57,6 +57,23 @@ const Tasks = () => {
   const [descriptionHeight, setDescriptionHeight] = useState(0);
 
   useEffect(() => {
+    const pegaUsuario = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/enviaUsuario");
+        if (!response.ok) {
+          throw new Error("Erro ao buscar usuário");
+        }
+        const data = await response.json(); // Extrai os dados da resposta
+        setUsuario(data[0].nomeUsuario); // Define o estado com os dados obtidos
+      } catch (error) {
+        console.error("Erro ao buscar usuário: ", error);
+      }
+    };
+  
+    pegaUsuario();
+  }, []);
+
+  useEffect(() => {
     // Função para carregar tarefas do backend ao iniciar a aplicação
     const fetchTasks = async () => {
       try {

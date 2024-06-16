@@ -637,7 +637,7 @@
 }
 
 /* Estilo para a modal */
-.modal {
+.plano-plantio .modal {
   background-color: #00000080;
   justify-content: center;
   align-items: center;
@@ -649,7 +649,7 @@
   left: 1000;
 }
 
-.modal-content {
+.plano-plantio .modal-content {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
@@ -659,25 +659,25 @@
 
 }
 
-.modal-buttons {
+.plano-plantio .modal-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
 
-.modal-button {
+.plano-plantio .modal-button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.modal-button.confirm {
+.plano-plantio .modal-button.confirm {
   background-color: #ff0000;
   color: white;
 }
 
-.modal-button.cancel {
+.plano-plantio .modal-button.cancel {
   background-color: #ccc;
   color: black;
 }

@@ -773,12 +773,12 @@
     top: 39px;
   }
 
-  .modal-container {
+  .tasks .modal-container {
     position: relative;
     
   }
 
-  .modal {
+  .tasks .modal {
     position: absolute;
     top: 30%;
     left: 50%;
@@ -843,12 +843,12 @@
     gap: 10px;
   }
 
-  .button-container2 {
+  .tasks .button-container2 {
     display: flex;
     justify-content: space-between;
   }
 
-  .rectangle-9 {
+  .tasks .rectangle-9 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -860,7 +860,7 @@
     cursor: pointer;
   }
 
-  .rectangle-10 {
+  .tasks .rectangle-10 {
     background-color: #fcfcfc;
     border: 1px solid;
     border-color: #000000;
@@ -874,21 +874,21 @@
 
   
 
-  .button-text {
+  .tasks .button-text {
     color: white;
     font-size: 14px;
     font-weight: bold;
     font-family: "Poppins", Helvetica;
   }
 
-  .bigger-input {
+  .tasks .bigger-input {
     width: 100%; /* Ajusta a largura para ocupar todo o espaço disponível */
     padding: 10px; /* Adiciona um espaçamento interno para melhor legibilidade */
     margin-bottom: 3px; /* Adiciona um espaçamento inferior para separar os inputs */
     box-sizing: border-box; /* Inclui a largura e o padding na largura total */
   }
 
-  .button-text2 {
+  .tasks .button-text2 {
     color: white;
     font-size: 14px;
     font-weight: bold;
