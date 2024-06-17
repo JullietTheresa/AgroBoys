@@ -1,3 +1,5 @@
+
+
 .seleo-de-cultura {
   background-color: #eef2f7;
   display: flex;
@@ -846,4 +848,20 @@
   text-align: center;
   white-space: nowrap;
   width: 144px;
+}
+
+.seleo-de-cultura .snackbar {
+  background-color: #2196f3; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border-radius: 4px; /* Borda arredondada */
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 16px; /* Tamanho da fonte */
+}
+
+.seleo-de-cultura .snackbar-container {
+  position: fixed; /* Posição fixa */
+  bottom: 225px; /* Distância da parte inferior */
+  left: 50%; /* Centralizado horizontalmente */
+  transform: translateX(-50%); /* Centralizado horizontalmente */
+  z-index: 9999; /* Z-index alto para garantir que esteja acima de outros elementos */
 }

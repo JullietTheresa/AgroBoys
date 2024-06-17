@@ -12,6 +12,10 @@ import tomateImage from "../../components/Images/Interno/tomate.jpg";
 import arrozImage from "../../components/Images/Interno/arroz.jpg";
 import perfilImagem from "../../components/Images/Interno/TerraTechIcon.png"
 
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+
+
 
 async function checkAuthentication() {
   try {
@@ -37,6 +41,21 @@ export const SelecaoDeCultura = () => {
   const [selectedPlant, setSelectedPlant] = useState(null);
   const [activeCulture, setActiveCulture] = useState(null);
   const [usuario, setUsuario] = useState(null);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+
+  const handleSnackbarOpen = () => {
+    setSnackbarOpen(true);
+  };
+
+  const handleSnackbarClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setSnackbarOpen(false);
+  };
+
+
 
   const openModal = (plant) => {
     setSelectedPlant(plant);
@@ -57,7 +76,7 @@ export const SelecaoDeCultura = () => {
       axios.post("http://localhost:3000/api/selecao_cultura", activeCulture)
         .then(response => {
           console.log("Culture selected successfully:", response.data);
-  
+
           // Async function to handle the fetch call
           const fetchPlanoAI = async () => {
             try {
@@ -70,9 +89,11 @@ export const SelecaoDeCultura = () => {
               console.error("Erro ao gerar plano de plantio: ", error);
             }
           };
-  
+
           // Call the async function
           fetchPlanoAI();
+
+          handleSnackbarOpen();
         })
         .catch(error => {
           console.error("Error selecting culture: ", error);
@@ -93,7 +114,7 @@ export const SelecaoDeCultura = () => {
         console.error("Erro ao buscar usuário: ", error);
       }
     };
-  
+
     pegaUsuario();
   }, []);
 
@@ -119,7 +140,7 @@ export const SelecaoDeCultura = () => {
             <img className="house-2" alt="House" src="https://c.animaapp.com/fkXnBuii/img/house-4@2x.png" />
             <a className="text-wrapper-8" href="#" onClick={checkAuthentication} >Dados do Solo</a>
             <a className="text-wrapper-9" exact href="/">TerraTech</a>
-          
+
             <div className="overlap-group-wrapper">
               <div className="overlap-group-2">
                 <div className="rectangle-5" />
@@ -172,11 +193,30 @@ export const SelecaoDeCultura = () => {
           <div className="overlap-4">
             <div className="rectangle-8" />
             <a className="text-wrapper-24" onClick={handleConfirmClick}>Confirmar</a>
+            <Snackbar
+              open={snackbarOpen}
+              autoHideDuration={10000}
+              onClose={handleSnackbarClose}
+              anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+              className="snackbar-container" // Adicione a classe snackbar-container
+            >
+              <MuiAlert
+                elevation={6}
+                variant="filled"
+                onClose={handleSnackbarClose}
+                severity="info"
+                className="snackbar" // Adicione a classe snackbar
+              >
+                Aguarde enquanto seu plano de plantio está sendo gerado!
+              </MuiAlert>
+            </Snackbar>
+
+
           </div>
           <div className="overlap-5">
             <div className="group-2">
               <img
-                className="rectangle-9" 
+                className="rectangle-9"
                 alt="Rectangle"
                 src={cacauImage}
                 onClick={() => openModal({ image: cacauImage, name: 'Cacau', description: "Descrição:O cacau é uma planta perene cultivada em regiões tropicais e subtropicais para a produção de chocolate. Prefere climas quentes e úmidos, solos bem drenados e ricos em matéria orgânica, com pH entre 5,0 e 6,5. No Brasil, é mais comum na região da Bahia, especialmente na Costa do Cacau. Requer cuidados específicos, como controle de pragas, e sua colheita é manual. A produção de cacau é economicamente importante, proporcionando empregos e contribuindo para a balança comercial em muitas regiões." })} />
