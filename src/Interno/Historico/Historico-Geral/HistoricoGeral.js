@@ -94,10 +94,12 @@ export const HistoricoGeral = () => {
               <div className="rectangle-2" />
               <div className="flexcontainer">
                   <div className="cultura">
-                    <img src={culturas.ImagemCultura} alt={culturas.NomeCultura} className="cultura-imagem" />
-                    <div className="cultura-nome">{culturas.NomeCultura}</div>
-                    <div className="cultura-situacao">Colhido</div>
-                    <a href="#" className="cultura-historico">Histórico Detalhado</a>
+                    <img src={culturas.ImagemCultura} alt={culturas.NomeCultura} className="rectangle-3" />
+                    <div className="text-wrapper-13">{culturas.NomeCultura}</div>
+                    <div className="text-wrapper-23">Colhido</div>
+                    <div className="div-wrapper">
+                      <a href="/historico/detalhado" className="text-wrapper-9">View</a>
+                    </div>
                   </div>
               </div>
               <div className="navbar">

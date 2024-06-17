@@ -266,8 +266,8 @@
     height: 2px;
     left: 6px;
     position: absolute;
-    top: 543px;
-    width: 1066px;
+    top: 0px;
+    width: 106px;
   }
   
   .histrico-bsico .cebola {
@@ -280,7 +280,7 @@
   
   .histrico-bsico .view-cebola {
     height: 34px;
-    left: 947px;
+    left: 450px;
     position: absolute;
     top: 24px;
     width: 68px;
@@ -294,6 +294,8 @@
     height: 34px;
     position: relative;
     width: 66px;
+    left: 480px;
+    top: 19px;
   }
   
   .histrico-bsico .text-wrapper-9 {
@@ -381,13 +383,13 @@
   .histrico-bsico .text-wrapper-13 {
     color: #000000;
     font-family: "Poppins", Helvetica;
-    font-size: 15px;
+    font-size: 30px;
     font-weight: 400;
-    left: 820px;
+    left: -430px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 43px;
+    top: 15px;
   }
   
   .histrico-bsico .text-wrapper-14 {
@@ -415,11 +417,12 @@
   }
   
   .histrico-bsico .rectangle-3 {
-    height: 76px;
-    left: 170px;
+    height: 100px;
+    left: -180px;
     position: absolute;
-    top: 21px;
-    width: 120px;
+    top: -10px;
+    width: 135px;
+    border-radius: 20%;
   }
   
   .histrico-bsico .line-3 {
@@ -597,13 +600,13 @@
   .histrico-bsico .text-wrapper-23 {
     color: #000000;
     font-family: "Poppins", Helvetica;
-    font-size: 15px;
+    font-size: 30px;
     font-weight: 400;
-    left: 649px;
+    left: 120px;
     letter-spacing: 0;
     line-height: normal;
     position: absolute;
-    top: 29px;
+    top: 15px;
   }
   
   .histrico-bsico .rectangle-6 {

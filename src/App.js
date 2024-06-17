@@ -32,7 +32,7 @@ const App = () => {
             <Route exact path="/solo/formulario" element={<DadosDeSoloFormulario/>}/>
             {/* <Route exact path="/pesticidas" element={<Pesticidas/>}/> */}
             <Route exact path="/historico" element={<HistoricoGeral/>}/>
-            <Route exact path="/historico/batata" element={<HistoricoDetalhado/>}/>
+            <Route exact path="/historico/detalhado" element={<HistoricoDetalhado/>}/>
             <Route exact path="/suporte" element={<Suporte/>}/>
             <Route exact path="/historicoClimatico" element={<HistoricoClimatico/>}/>
           </Routes>
