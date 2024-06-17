@@ -176,7 +176,7 @@ export const SelecaoDeCultura = () => {
           <div className="overlap-5">
             <div className="group-2">
               <img
-                className="rectangle-9"
+                className="rectangle-9" 
                 alt="Rectangle"
                 src={cacauImage}
                 onClick={() => openModal({ image: cacauImage, name: 'Cacau', description: "Descrição:O cacau é uma planta perene cultivada em regiões tropicais e subtropicais para a produção de chocolate. Prefere climas quentes e úmidos, solos bem drenados e ricos em matéria orgânica, com pH entre 5,0 e 6,5. No Brasil, é mais comum na região da Bahia, especialmente na Costa do Cacau. Requer cuidados específicos, como controle de pragas, e sua colheita é manual. A produção de cacau é economicamente importante, proporcionando empregos e contribuindo para a balança comercial em muitas regiões." })} />
