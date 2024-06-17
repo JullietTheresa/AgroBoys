@@ -40,75 +40,21 @@ export const HistoricoDetalhado = () => {
           </div>
         </div>
         <div className="dados">
-          <div className="lucro">
-            <div className="overlap-group-3">
-              <div className="overlap">
-                <div className="rectangle-3" />
-                <div className="text-wrapper-8">9 mil</div>
-                <div className="text-wrapper-9">Quanto você ganhou?</div>
-              </div>
-              <div className="overlap-2">
-                <div className="rectangle-4" />
-                <div className="text-wrapper-10">10 mil</div>
-                <p className="text-wrapper-9">Quanto você gastou durante esse plantio?</p>
-              </div>
-              <div className="text-wrapper-11">$$</div>
+        <div className="pLano">
+              <pre className="caixa-texto"></pre> {/*Adição de plano de plantio feito pela IA*/}
             </div>
+          <div className="lucro">
+
           </div>
           <div className="hectare">
-            <div className="overlap-3">
-              <div className="overlap-4">
-                <div className="rectangle-5" />
-                <div className="text-wrapper-12">9</div>
-                <div className="text-wrapper-9">Quantidade de Hectares Aproveitados</div>
-              </div>
-              <div className="overlap-group-4">
-                <div className="rectangle-6" />
-                <div className="text-wrapper-12">10</div>
-                <div className="text-wrapper-9">Quantidade de Hectares Plantados</div>
-              </div>
-              <div className="text-wrapper-13">Hectare</div>
-            </div>
+
           </div>
           <div className="pragas">
-            <div className="overlap-5">
-              <p className="para-a-praga-x-voc">
-                Para o Fungo, você utilizou o fungicida
-                <br />
-                Para o Monalonium, você utilizou o inseticida
-              </p>
-              <div className="text-wrapper-14">Pragas e pesticidas</div>
-            </div>
           </div>
           <div className="data-de-plantio">
-            <div className="overlap-3">
-              <div className="overlap-group-5">
-                <div className="rectangle-7" />
-                <div className="text-wrapper-15">29/03/24</div>
-                <div className="text-wrapper-16">Data de Colheita *</div>
-              </div>
-              <div className="overlap-6">
-                <div className="rectangle-8" />
-                <div className="text-wrapper-17">22/11/23</div>
-                <div className="text-wrapper-16">Data de Plantio*</div>
-              </div>
-              <div className="text-wrapper-18">Data de Plantio</div>
-            </div>
-          </div>
-          <div className="detalhes">
-            <div className="overlap-7">
-              <div className="overlap-group-6">
-                <div className="text-wrapper-19">Cacau Forasteiro</div>
-                <div className="text-wrapper-20">Cacau</div>
-              </div>
-              <div className="overlap-8">
-                <img className="imagem" alt="Imagem" src={cacauImage} />
-                <div className="text-wrapper-20">Detalhes</div>
-              </div>
-            </div>
           </div>
           <div className="overlap-9">
-            <div className="text-wrapper-21">Histórico Plantio</div>
+            <div className="text-wrapper-21">Histórico Detalhado</div>
             <a href="/historico"> <Arrow className="circle-arrow-left-instance" /></a>
           </div>
         </div>
