@@ -19,11 +19,19 @@ async function checkAuthentication() {
 export const HistoricoGeral = () => {
   const [culturas, setCulturas] = useState([]);
 
-  useEffect(() => {
-    fetch('http://localhost:3000/api/culturas')
-      .then(response => response.json())
-      .then(data => setCulturas(data))
-      .catch(error => console.error('Erro ao buscar culturas:', error));
+  useEffect(async () => {
+
+    try {
+      const response = await fetch('http://localhost:3000/api/enviaHistorico');
+      if (!response.ok) {
+        throw new Error('Erro ao buscar historico')
+      }
+      const data = await response.json()
+      console.log(data[0])
+      setCulturas(data[0])
+    } catch (error) {
+      console.error('Erro ao buscar dados:', error);
+    }
   }, []);
 
   return (
@@ -66,14 +74,12 @@ export const HistoricoGeral = () => {
             <div className="overlap-2">
               <div className="rectangle-2" />
               <div className="flexcontainer">
-                {culturas.map((cultura, index) => (
-                  <div key={index} className="cultura">
-                    <img src={cultura.imagem} alt={cultura.nome} className="cultura-imagem" />
-                    <div className="cultura-nome">{cultura.nome}</div>
-                    <div className="cultura-situacao">{cultura.situacao}</div>
-                    <a href={cultura.historico} className="cultura-historico">Histórico Detalhado</a>
+                  <div className="cultura">
+                    <img src={culturas.ImagemCultura} alt={culturas.NomeCultura} className="cultura-imagem" />
+                    <div className="cultura-nome">{culturas.NomeCultura}</div>
+                    <div className="cultura-situacao">Colhido</div>
+                    <a href="#" className="cultura-historico">Histórico Detalhado</a>
                   </div>
-                ))}
               </div>
               <div className="navbar">
                 <div className="text-wrapper-26">Imagem</div>
