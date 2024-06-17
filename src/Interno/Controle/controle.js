@@ -77,7 +77,8 @@ const Tasks = () => {
     // Função para carregar tarefas do backend ao iniciar a aplicação
     const fetchTasks = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/controleGet');
+        const response = await fetch('http://localhost:3000/api/controleGetBD');
+        console.log("RESPONSE: ",response)
         if (!response.ok) {
           throw new Error('Erro ao carregar tarefas do backend');
         }
@@ -87,14 +88,15 @@ const Tasks = () => {
           'column-1': { ...state.columns['column-1'], taskIds: [] },
           'column-2': { ...state.columns['column-2'], taskIds: [] },
           'column-3': { ...state.columns['column-3'], taskIds: [] },
-        };
+        };        
   
         data.forEach((task) => {
-          const taskId = `${Object.keys(loadedTasks).length + 1}`;
+          const taskId = `${data[Object.keys(loadedTasks).length].newTaskId}`;
           loadedTasks[taskId] = { id: taskId, content: renderTaskContent(task) };
           loadedColumns[task.columnId].taskIds.push(taskId);
         });
-  
+        
+
         setState({
           ...state,
           tasks: loadedTasks,
@@ -157,7 +159,7 @@ const Tasks = () => {
     });
   
     try {
-      const response = await fetch('http://localhost:3000/api/controle', {
+      const response = await fetch('http://localhost:3000/api/controleDB', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -203,7 +205,7 @@ const Tasks = () => {
 
   const updateTaskColumn = async (taskId, newColumnId) => {
     try {
-      const response = await fetch('http://localhost:3000/api/updateTaskColumn', {
+      const response = await fetch('http://localhost:3000/api/updateTaskColumnBD', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -252,7 +254,7 @@ const Tasks = () => {
     console.log('Updating Task:', updatedTask);
   
     try {
-      const response = await fetch('http://localhost:3000/api/controle', {
+      const response = await fetch('http://localhost:3000/api/updateTaskDB', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -303,7 +305,7 @@ const Tasks = () => {
     console.log('Deleting Task:', taskId);
 
     try {
-      const response = await fetch(`http://localhost:3000/api/controle/${taskId}`, {
+      const response = await fetch(`http://localhost:3000/api/deleteTask/${taskId}`, {
         method: 'DELETE',
       });
 
