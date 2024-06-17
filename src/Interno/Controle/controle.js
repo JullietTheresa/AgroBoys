@@ -90,7 +90,7 @@ const Tasks = () => {
         };
   
         data.forEach((task) => {
-          const taskId = `task-${Object.keys(loadedTasks).length + 1}`;
+          const taskId = `${Object.keys(loadedTasks).length + 1}`;
           loadedTasks[taskId] = { id: taskId, content: renderTaskContent(task) };
           loadedColumns[task.columnId].taskIds.push(taskId);
         });
@@ -125,7 +125,7 @@ const Tasks = () => {
   };  
 
   const handleCreateTask = async () => {
-    const newTaskId = `task-${Object.keys(state.tasks).length + 1}`;
+    const newTaskId = `${Object.keys(state.tasks).length + 1}`;
     
     const newTaskContent = (
       <>
@@ -224,15 +224,33 @@ const Tasks = () => {
   
 
   const handleUpdateTask = async () => {
+    // Função auxiliar para obter o columnId da tarefa selecionada
+    const getTaskColumnId = (taskId) => {
+      for (const columnId in state.columns) {
+        if (state.columns[columnId].taskIds.includes(taskId)) {
+          return columnId;
+        }
+      }
+      return null;
+    };
+  
+    const columnId = getTaskColumnId(selectedTaskId);
+  
+    if (!columnId) {
+      console.error('Erro: Column ID não encontrado para a tarefa');
+      return;
+    }
+  
     const updatedTask = {
       taskId: selectedTaskId,
       titulo: editTitle,
       descricao: editDescription,
       detalhes: editDetails1,
+      columnId: columnId, // Adicionando o columnId ao corpo da requisição
     };
-
+  
     console.log('Updating Task:', updatedTask);
-
+  
     try {
       const response = await fetch('http://localhost:3000/api/controle', {
         method: 'PUT',
@@ -241,15 +259,15 @@ const Tasks = () => {
         },
         body: JSON.stringify(updatedTask),
       });
-
+  
       if (!response.ok) {
         console.error('Erro ao atualizar a tarefa no backend');
         return;
       }
-
+  
       const data = await response.json();
       console.log('Task updated:', data);
-
+  
       const updatedTasks = {
         ...state.tasks,
         [selectedTaskId]: {
@@ -268,12 +286,12 @@ const Tasks = () => {
           ),
         },
       };
-
+  
       setState({
         ...state,
         tasks: updatedTasks,
       });
-
+  
       setSelectedTaskId(null);
       setShowEditModal(false);
     } catch (error) {
