@@ -1,9 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Arrow from "../../../components/Arrow/arrow";
 import "./styleDetalhado.css";
-import cacauImage from "../../../components/Images/Interno/cacau.jpg";
+import perfilImagem from "../../../components/Images/Interno/TerraTechIcon.png"
 
 export const HistoricoDetalhado = () => {
+  const [planoAI, setplanoAI] = useState(null);
+  const [usuario, setUsuario] = useState(null);
+
+  useEffect(() => {
+    const pegaUsuario = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/enviaUsuario");
+        if (!response.ok) {
+          throw new Error("Erro ao buscar usuário");
+        }
+        const data = await response.json(); // Extrai os dados da resposta
+        setUsuario(data[0].nomeUsuario); // Define o estado com os dados obtidos
+      } catch (error) {
+        console.error("Erro ao buscar usuário: ", error);
+      }
+    };
+
+    pegaUsuario();
+  }, []);
+
+  useEffect(() => {
+    const chamatextoAI = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/mostraTexto");
+        if (!response.ok) {
+          throw new Error("Erro gera plano de plantio");
+        }
+        const data = await response.json(); // Extrai os dados da resposta
+        console.log(data.AI_Text)
+        setplanoAI(data.AI_Text); // Define o estado com os dados obtidos
+      } catch (error) {
+        console.error("Erro ao gerar plano de plantio: ", error);
+      }
+    };
+    chamatextoAI();
+  }, []); // Executa apenas uma vez após a montagem inicial do componente
+
   return (
     <div className="histrico-detalhado">
       <div className="div">
@@ -41,8 +78,8 @@ export const HistoricoDetalhado = () => {
         </div>
         <div className="dados">
         <div className="pLano">
-              <pre className="caixa-texto"></pre> {/*Adição de plano de plantio feito pela IA*/}
-            </div>
+              <pre className="caixa-texto">{planoAI}</pre> {/*Adição de plano de plantio feito pela IA*/}
+        </div>
           <div className="lucro">
 
           </div>
@@ -62,9 +99,9 @@ export const HistoricoDetalhado = () => {
           <div className="overlap-10">
             <div className="overlap-group-7">
               <div className="ellipse" />
-              <div className="text-wrapper-22">S</div>
+              <img className="text-wrapper-22" alt="FotoPerfil" src={perfilImagem} />
             </div>
-            <div className="text-wrapper-23">spandan@gmail.com</div>
+            <div className="text-wrapper-23">{usuario}</div>
             <div className="text-wrapper-24">admin</div>
             <a className="text-wrapper-25" href="/" >TerraTech</a>
           </div>

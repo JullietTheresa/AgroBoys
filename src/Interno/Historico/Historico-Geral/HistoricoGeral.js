@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./styleHistoricoGeral.css";
+import perfilImagem from "../../../components/Images/Interno/TerraTechIcon.png"
 
 async function checkAuthentication() {
   try {
@@ -18,6 +19,24 @@ async function checkAuthentication() {
 
 export const HistoricoGeral = () => {
   const [culturas, setCulturas] = useState([]);
+  const [usuario, setUsuario] = useState(null);
+
+  useEffect(() => {
+    const pegaUsuario = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/enviaUsuario");
+        if (!response.ok) {
+          throw new Error("Erro ao buscar usuário");
+        }
+        const data = await response.json(); // Extrai os dados da resposta
+        setUsuario(data[0].nomeUsuario); // Define o estado com os dados obtidos
+      } catch (error) {
+        console.error("Erro ao buscar usuário: ", error);
+      }
+    };
+
+    pegaUsuario();
+  }, []);
 
   useEffect(async () => {
 
@@ -140,11 +159,9 @@ export const HistoricoGeral = () => {
             <div className="overlap-6">
               <div className="overlap-group-3">
                 <div className="ellipse" />
-                <div className="text-wrapper-40">S</div>
+                <img className="text-wrapper-40" alt="FotoPerfil" src={perfilImagem} />
               </div>
-              <a className="text-wrapper-41" href="mailto:spandan@gmail.com" rel="noopener noreferrer" target="_blank">
-                spandan@gmail.com
-              </a>
+              <a className="text-wrapper-41">{usuario}</a>
               <div className="text-wrapper-42">admin</div>
             </div>
             <a className="text-wrapper-43" href="/">TerraTech</a>
