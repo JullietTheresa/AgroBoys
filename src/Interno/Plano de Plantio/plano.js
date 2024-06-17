@@ -1,14 +1,13 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./styleplano.css";
-import perfilImagem from "../../components/Images/Interno/TerraTechIcon.png"
+import perfilImagem from "../../components/Images/Interno/TerraTechIcon.png";
 
 async function checkAuthentication() {
   try {
     const response = await fetch('http://localhost:3000/api/VerificaFormulario', {
       method: 'GET',
     });
-    console.log(response)
+    console.log(response);
     if (!response.ok) {
       console.log("Vazio");
       window.location.href = '/solo/formulario';
@@ -25,7 +24,7 @@ async function checkAuthentication() {
 const PlanoPlantio = () => {
   const [isColhido, setIsColhido] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [planoAI, setplanoAI] = useState(null)
+  const [planoAI, setplanoAI] = useState(null);
   const [usuario, setUsuario] = useState(null);
 
   useEffect(() => {
@@ -41,7 +40,7 @@ const PlanoPlantio = () => {
         console.error("Erro ao buscar usuário: ", error);
       }
     };
-  
+
     pegaUsuario();
   }, []);
 
@@ -59,8 +58,8 @@ const PlanoPlantio = () => {
         console.error("Erro ao gerar plano de plantio: ", error);
       }
     };
-  chamatextoAI();
-}, []); // Executa apenas uma vez após a montagem inicial do componente
+    chamatextoAI();
+  }, []); // Executa apenas uma vez após a montagem inicial do componente
 
   const handleClick = () => {
     setShowModal(true);
@@ -103,19 +102,19 @@ const PlanoPlantio = () => {
             <div className="rectangle-2" />
             <div className="rectangle-3" />
             <img className="house" alt="House" src="https://c.animaapp.com/AneYV77i/img/house-4@2x.png" />
-            <a className="text-wrapper-4" href="/suporte" >Suporte</a>
-            <a className="text-wrapper-5" href="/historico" >Histórico Plantio</a>
+            <a className="text-wrapper-4" href="/suporte">Suporte</a>
+            <a className="text-wrapper-5" href="/historico">Histórico Plantio</a>
             <img className="img" alt="House" src="https://c.animaapp.com/AneYV77i/img/house-4@2x.png" />
-            <a className="text-wrapper-6" href="#" onClick={checkAuthentication} >Dados do Solo</a>
-            <a className="text-wrapper-7" href="/" >TerraTech</a>
+            <a className="text-wrapper-6" href="#" onClick={checkAuthentication}>Dados do Solo</a>
+            <a className="text-wrapper-7" href="/">TerraTech</a>
             <img className="rectangle-4" alt="Rectangle" src="https://c.animaapp.com/AneYV77i/img/house-4@2x.png" />
             <div className="group-2">
-              <a className="text-wrapper-9" href="/regiao" >Região e Estação</a>
+              <a className="text-wrapper-9" href="/regiao">Região e Estação</a>
               <img className="house-2" alt="House" src="https://c.animaapp.com/AneYV77i/img/house-4@2x.png" />
             </div>
             <div className="overlap-group-wrapper">
               <div className="div-wrapper">
-                <a className="text-wrapper-10" href="/plano" >Plano Plantio</a>
+                <a className="text-wrapper-10" href="/plano">Plano Plantio</a>
               </div>
             </div>
             <div className="group-3">
@@ -161,14 +160,13 @@ const PlanoPlantio = () => {
           {/* Elementos específicos de Plano Plantio */}
           <div className="text-wrapper-21">Plano Plantio</div>
           <div className="overlap-5">
-                <button className="button" onClick={handleClick}>
-                  <div className="text-wrapper-38">FINALIZAR PLANTAÇÃO</div>
-                </button>
-              </div>
+            <button className="button" onClick={handleClick}>
+              <div className="text-wrapper-38">FINALIZAR PLANTAÇÃO</div>
+            </button>
+          </div>
           <div className="overlap-3">
             <div className="overlap-4">
-               <pre className="caixa-texto">{planoAI}</pre>  {/*Adição de plano de plantio feito pela IA*/}
-              
+              <pre className="caixa-texto">{planoAI}</pre> {/*Adição de plano de plantio feito pela IA*/}
             </div>
           </div>
         </div>
@@ -179,8 +177,9 @@ const PlanoPlantio = () => {
             <h2>Confirmar Ação</h2>
             <p>Tem certeza que deseja finalizar a plantação?</p>
             <div className="modal-buttons">
-              <button className="modal-button confirm" onClick={handleConfirm}>Confirmar</button>
               <button className="modal-button cancel" onClick={handleCancel}>Cancelar</button>
+              <button className="modal-button confirm" onClick={handleConfirm}>Confirmar</button>
+
             </div>
           </div>
         </div>
