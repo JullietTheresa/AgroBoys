@@ -71,6 +71,7 @@ const PlanoPlantio = () => {
       if (!response.ok) {
         throw new Error("Erro ao salvar plano de plantio")
       }
+      window.location.href = '/historico'
     } catch (error) {
       console.error("Erro ao salvar plano de platio: ", error)
     }
@@ -177,7 +178,7 @@ const PlanoPlantio = () => {
             <h2>Confirmar Ação</h2>
             <p>Tem certeza que deseja finalizar a plantação?</p>
             <div className="modal-buttons">
-              <button className="modal-button cancel" onClick={handleCancel}>Cancelar</button>
+              <button className="modal-button cancel" href='#' onClick={handleCancel}>Cancelar</button>
               <button className="modal-button confirm" onClick={handleConfirm}>Confirmar</button>
 
             </div>
