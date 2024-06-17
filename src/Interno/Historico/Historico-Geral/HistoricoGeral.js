@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./styleHistoricoGeral.css";
-import perfilImagem from "../../../components/Images/Interno/TerraTechIcon.png"
+import perfilImagem from "../../../components/Images/Interno/TerraTechIcon.png";
 
 async function checkAuthentication() {
   try {
@@ -28,8 +28,8 @@ export const HistoricoGeral = () => {
         if (!response.ok) {
           throw new Error("Erro ao buscar usuário");
         }
-        const data = await response.json(); // Extrai os dados da resposta
-        setUsuario(data[0].nomeUsuario); // Define o estado com os dados obtidos
+        const data = await response.json();
+        setUsuario(data[0].nomeUsuario);
       } catch (error) {
         console.error("Erro ao buscar usuário: ", error);
       }
@@ -38,19 +38,23 @@ export const HistoricoGeral = () => {
     pegaUsuario();
   }, []);
 
-  useEffect(async () => {
-
-    try {
-      const response = await fetch('http://localhost:3000/api/enviaHistorico');
-      if (!response.ok) {
-        throw new Error('Erro ao buscar historico')
+  useEffect(() => {
+    const fetchHistorico = async () => {
+      try {
+        const response = await fetch('http://localhost:3000/api/enviaHistorico');
+        if (!response.ok) {
+          throw new Error('Erro ao buscar historico');
+        }
+        const data = await response.json();
+        console.log(data[0]);
+        // Atualiza o estado adicionando os novos dados ao array existente
+        setCulturas(prevCulturas => [...prevCulturas, ...data]);
+      } catch (error) {
+        console.error('Erro ao buscar dados:', error);
       }
-      const data = await response.json()
-      console.log(data[0])
-      setCulturas(data[0])
-    } catch (error) {
-      console.error('Erro ao buscar dados:', error);
-    }
+    };
+
+    fetchHistorico();
   }, []);
 
   return (
@@ -93,14 +97,18 @@ export const HistoricoGeral = () => {
             <div className="overlap-2">
               <div className="rectangle-2" />
               <div className="flexcontainer">
-                  <div className="cultura">
-                    <img src={culturas.ImagemCultura} alt={culturas.NomeCultura} className="rectangle-3" />
-                    <div className="text-wrapper-13">{culturas.NomeCultura}</div>
-                    <div className="text-wrapper-23">Colhido</div>
-                    <div className="div-wrapper">
-                      <a href="/historico/detalhado" className="text-wrapper-9">View</a>
+                {culturas.map((cultura, index) => (
+                  cultura && cultura.ImagemCultura && cultura.NomeCultura && (
+                    <div className="cultura" key={index}>
+                      <img src={cultura.ImagemCultura} alt={cultura.NomeCultura} className="rectangle-3" />
+                      <div className="text-wrapper-13">{cultura.NomeCultura}</div>
+                      <div className="text-wrapper-23">Colhido</div>
+                      <div className="div-wrapper">
+                        <a href={`/historico/detalhado?index=${index}`} className="text-wrapper-9">View</a>
+                      </div>
                     </div>
-                  </div>
+                  )
+                ))}
               </div>
               <div className="navbar">
                 <div className="text-wrapper-26">Imagem</div>

@@ -4,6 +4,7 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    position: relative;
   }
   
   .histrico-bsico .overlap-wrapper {
@@ -295,7 +296,7 @@
     position: relative;
     width: 66px;
     left: 480px;
-    top: 19px;
+    top: -39px;
   }
   
   .histrico-bsico .text-wrapper-9 {
@@ -348,6 +349,57 @@
     top: 47px;
   }
   
+  .historico-basico .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .historico-basico .item .nome-cultura {
+    flex: 1;
+    color: #000;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .historico-basico .item .imagem {
+    flex: 0 0 120px;
+    height: 76px;
+  }
+
+  .historico-basico .item .situacao {
+    flex: 1;
+    color: #000;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .historico-basico .item .view-button {
+    flex: 0 0 80px;
+    background-color: #518200;
+    color: #ffffff;
+    font-family: "Poppins", Helvetica;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .historico-basico .item .view-button:hover {
+    background-color: #407000;
+  }
+
   .histrico-bsico .img {
     height: 76px;
     left: 159px;
@@ -385,11 +437,11 @@
     font-family: "Poppins", Helvetica;
     font-size: 30px;
     font-weight: 400;
-    left: -430px;
     letter-spacing: 0;
     line-height: normal;
-    position: absolute;
-    top: 15px;
+    flex: 1;
+    margin-left: -430px; /* Alterei aqui de left para margin-left */
+    margin-top: -75px;
   }
   
   .histrico-bsico .text-wrapper-14 {
@@ -418,8 +470,7 @@
   
   .histrico-bsico .rectangle-3 {
     height: 100px;
-    left: -180px;
-    position: absolute;
+    margin-left: -180px;
     top: -10px;
     width: 135px;
     border-radius: 20%;
@@ -602,10 +653,11 @@
     font-family: "Poppins", Helvetica;
     font-size: 30px;
     font-weight: 400;
-    left: 120px;
+    margin-left: 120px;
+    margin-top: -75px;
     letter-spacing: 0;
     line-height: normal;
-    position: absolute;
+    flex: 1;
     top: 15px;
   }
   

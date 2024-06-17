@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Arrow from "../../../components/Arrow/arrow";
 import "./styleDetalhado.css";
-import perfilImagem from "../../../components/Images/Interno/TerraTechIcon.png"
+import perfilImagem from "../../../components/Images/Interno/TerraTechIcon.png";
+import { useLocation } from "react-router-dom";
+import queryString from 'query-string';
 
 export const HistoricoDetalhado = () => {
-  const [planoAI, setplanoAI] = useState(null);
+  const location = useLocation();
+  const [planoAI, setPlanoAI] = useState(null);
   const [usuario, setUsuario] = useState(null);
 
   useEffect(() => {
@@ -14,8 +17,8 @@ export const HistoricoDetalhado = () => {
         if (!response.ok) {
           throw new Error("Erro ao buscar usuário");
         }
-        const data = await response.json(); // Extrai os dados da resposta
-        setUsuario(data[0].nomeUsuario); // Define o estado com os dados obtidos
+        const data = await response.json();
+        setUsuario(data[0].nomeUsuario);
       } catch (error) {
         console.error("Erro ao buscar usuário: ", error);
       }
@@ -25,21 +28,26 @@ export const HistoricoDetalhado = () => {
   }, []);
 
   useEffect(() => {
-    const chamatextoAI = async () => {
+    const chamatextoAI = async (index) => {
       try {
-        const response = await fetch("http://localhost:3000/api/mostraTexto");
+        const response = await fetch(`http://localhost:3000/api/historicoAI/${index}`);
         if (!response.ok) {
-          throw new Error("Erro gera plano de plantio");
+          throw new Error("Erro ao gerar plano de plantio");
         }
-        const data = await response.json(); // Extrai os dados da resposta
-        console.log(data.AI_Text)
-        setplanoAI(data.AI_Text); // Define o estado com os dados obtidos
+        const data = await response.json();
+        console.log(data.TextoAI);
+        setPlanoAI(data.TextoAI);
       } catch (error) {
         console.error("Erro ao gerar plano de plantio: ", error);
       }
     };
-    chamatextoAI();
-  }, []); // Executa apenas uma vez após a montagem inicial do componente
+
+    const { index } = queryString.parse(location.search);
+    console.log(index)
+    if (index !== undefined) {
+      chamatextoAI(index);
+    }
+  }, [location]);
 
   return (
     <div className="histrico-detalhado">
@@ -77,14 +85,12 @@ export const HistoricoDetalhado = () => {
           </div>
         </div>
         <div className="dados">
-        <div className="pLano">
-              <pre className="caixa-texto">{planoAI}</pre> {/*Adição de plano de plantio feito pela IA*/}
-        </div>
+          <div className="pLano">
+            <pre className="caixa-texto">{planoAI}</pre> {/* Adição de plano de plantio feito pela IA */}
+          </div>
           <div className="lucro">
-
           </div>
           <div className="hectare">
-
           </div>
           <div className="pragas">
           </div>
@@ -103,7 +109,7 @@ export const HistoricoDetalhado = () => {
             </div>
             <div className="text-wrapper-23">{usuario}</div>
             <div className="text-wrapper-24">admin</div>
-            <a className="text-wrapper-25" href="/" >TerraTech</a>
+            <a className="text-wrapper-25" href="/">TerraTech</a>
           </div>
         </header>
       </div>
@@ -111,4 +117,4 @@ export const HistoricoDetalhado = () => {
   );
 };
 
-export default HistoricoDetalhado
+export default HistoricoDetalhado;
