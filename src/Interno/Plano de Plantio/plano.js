@@ -53,8 +53,8 @@ const PlanoPlantio = () => {
           throw new Error("Erro gera plano de plantio");
         }
         const data = await response.json(); // Extrai os dados da resposta
-        console.log(data)
-        setplanoAI(data); // Define o estado com os dados obtidos
+        console.log(data.AI_Text)
+        setplanoAI(data.AI_Text); // Define o estado com os dados obtidos
       } catch (error) {
         console.error("Erro ao gerar plano de plantio: ", error);
       }
@@ -66,9 +66,15 @@ const PlanoPlantio = () => {
     setShowModal(true);
   };
 
-  const handleConfirm = () => {
-    setIsColhido(true);
-    setShowModal(false);
+  const handleConfirm = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/api/salvaHistorico");
+      if (!response.ok) {
+        throw new Error("Erro ao salvar plano de plantio")
+      }
+    } catch (error) {
+      console.error("Erro ao salvar plano de platio: ", error)
+    }
   };
 
   const handleCancel = () => {
