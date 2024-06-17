@@ -621,8 +621,8 @@
   height: 30px;
   width: 200px;
   position: absolute;
-  bottom: 15px; /* Ajuste a distância do fundo conforme necessário */
-  right: 20px; /* Ajuste a distância do lado direito conforme necessário */
+  bottom: 940px; /* Ajuste a distância do fundo conforme necessário */
+  right: 40px; /* Ajuste a distância do lado direito conforme necessário */
 }
 
 .plano-plantio .button {

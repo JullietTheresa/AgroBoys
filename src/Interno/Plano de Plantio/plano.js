@@ -154,14 +154,15 @@ const PlanoPlantio = () => {
           </div>
           {/* Elementos específicos de Plano Plantio */}
           <div className="text-wrapper-21">Plano Plantio</div>
-          <div className="overlap-3">
-            <div className="overlap-4">
-               <pre className="caixa-texto">{planoAI}</pre>  {/*Adição de plano de plantio feito pela IA*/}
-              <div className="overlap-5">
+          <div className="overlap-5">
                 <button className="button" onClick={handleClick}>
                   <div className="text-wrapper-38">FINALIZAR PLANTAÇÃO</div>
                 </button>
               </div>
+          <div className="overlap-3">
+            <div className="overlap-4">
+               <pre className="caixa-texto">{planoAI}</pre>  {/*Adição de plano de plantio feito pela IA*/}
+              
             </div>
           </div>
         </div>

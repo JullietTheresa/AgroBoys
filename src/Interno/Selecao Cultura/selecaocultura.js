@@ -167,7 +167,6 @@ export const SelecaoDeCultura = () => {
           </div>
           <div className="overlap-3">
             <div className="text-wrapper-21">Seleção de Cultura</div>
-            <p className="text-wrapper-22">Gostaria de mudar a plantação pré-selecionada na página Home?</p>
             <p className="text-wrapper-23">Cultura Selecionada: {activeCulture && activeCulture.name}</p>
           </div>
           <div className="overlap-4">
