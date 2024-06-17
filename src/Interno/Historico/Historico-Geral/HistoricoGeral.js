@@ -1,31 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./styleHistoricoGeral.css";
-import cafeImage from "../../../components/Images/Interno/cafe.jpg";
-import laranjaImage from "../../../components/Images/Interno/laranja.jpg";
-import sojaImage from "../../../components/Images/Interno/soja.jpg";
-import cacauImage from "../../../components/Images/Interno/cacau.jpg";
-import milhoImage from "../../../components/Images/Interno/milho.jpg";
 
 async function checkAuthentication() {
   try {
     const response = await fetch('http://localhost:3000/api/VerificaFormulario', {
       method: 'GET',
     });
-    console.log(response)
     if (!response.ok) {
-      console.log("Vazio");
       window.location.href = '/solo/formulario';
     } else {
-      console.log("Autenticado");
       window.location.href = '/solo';
     }
   } catch (error) {
     console.error("Erro:", error);
-    setTimeout(() => setBackendError(''), 4000); // Clear error message after 4 seconds
   }
 }
 
 export const HistoricoGeral = () => {
+  const [culturas, setCulturas] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/api/culturas')
+      .then(response => response.json())
+      .then(data => setCulturas(data))
+      .catch(error => console.error('Erro ao buscar culturas:', error));
+  }, []);
+
   return (
     <div className="histrico-bsico">
       <div className="overlap-wrapper">
@@ -66,124 +66,20 @@ export const HistoricoGeral = () => {
             <div className="overlap-2">
               <div className="rectangle-2" />
               <div className="flexcontainer">
-                <p className="text">
-                  <span className="text-wrapper-8">
-                    Café
-                    <br />
-                  </span>
-                </p>
-                <p className="text">
-                  <span className="text-wrapper-8">
-                    Laranja
-                    <br />
-                  </span>
-                </p>
-                <p className="text">
-                  <span className="text-wrapper-8">
-                    Cacau
-                    <br />
-                  </span>
-                </p>
-                <p className="text">
-                  <span className="text-wrapper-8">
-                    Milho
-                    <br />
-                  </span>
-                </p>
-                <p className="text">
-                  <span className="text-wrapper-8">
-                    Soja
-                    <br />
-                  </span>
-                </p>
-                <p className="text">
-                  <span className="text-wrapper-8">{""}</span>
-                </p>
-              </div>
-              <img className="line" alt="Line" src="https://c.animaapp.com/V72d7Rn8/img/line-15.svg" />
-              <div className="cebola">
-                <div className="view-cebola">
-                  <div className="div-wrapper">
-                    <div className="text-wrapper-9">View</div>
+                {culturas.map((cultura, index) => (
+                  <div key={index} className="cultura">
+                    <img src={cultura.imagem} alt={cultura.nome} className="cultura-imagem" />
+                    <div className="cultura-nome">{cultura.nome}</div>
+                    <div className="cultura-situacao">{cultura.situacao}</div>
+                    <a href={cultura.historico} className="cultura-historico">Histórico Detalhado</a>
                   </div>
-                </div>
-                <div className="text-wrapper-10">2 Hectares</div>
-                <div className="text-wrapper-11">8</div>
-                <div className="text-wrapper-12">10</div>
-                <img className="img" alt="Rectangle" src={sojaImage} />
-                <img className="line-2" alt="Line" src="https://c.animaapp.com/V72d7Rn8/img/line-14.svg" />
-              </div>
-              <div className="macaxeira">
-                <div className="view-macaxeira">
-                  <div className="div-wrapper">
-                    <div className="text-wrapper-9">View</div>
-                  </div>
-                </div>
-                <div className="text-wrapper-13">1 Hectar</div>
-                <div className="text-wrapper-14">19</div>
-                <div className="text-wrapper-15">20</div>
-                <img
-                  className="rectangle-3"
-                  alt="Rectangle"
-                  src={milhoImage}
-                />
-                <img className="line-3" alt="Line" src="https://c.animaapp.com/V72d7Rn8/img/line-13.svg" />
-              </div>
-              <div className="batata">
-                <div className="view-batata">
-                  <div className="div-wrapper">
-                    <a className="text-wrapper-9" href="/historico/batata">View</a>
-                  </div>
-                </div>
-                <div className="text-wrapper-16">1 Hectar</div>
-                <div className="text-wrapper-17">9</div>
-                <img
-                  className="rectangle-4"
-                  alt="Rectangle"
-                  src={cacauImage}
-                />
-                <div className="text-wrapper-18">10</div>
-                <img className="line-4" alt="Line" src="https://c.animaapp.com/V72d7Rn8/img/line-12.svg" />
-              </div>
-              <div className="cenoura">
-                <div className="view-cenoura">
-                  <div className="div-wrapper">
-                    <div className="text-wrapper-9">View</div>
-                  </div>
-                </div>
-                <div className="text-wrapper-19">1 Hectar</div>
-                <div className="text-wrapper-20">14</div>
-                <img
-                  className="rectangle-5"
-                  alt="Rectangle"
-                  src={laranjaImage}
-                />
-                <div className="text-wrapper-21">15</div>
-                <img className="line-5" alt="Line" src="https://c.animaapp.com/V72d7Rn8/img/line-11.svg" />
-              </div>
-              <div className="milho">
-                <div className="view-milho">
-                  <div className="div-wrapper">
-                    <div className="text-wrapper-9">View</div>
-                  </div>
-                </div>
-                <div className="text-wrapper-22">2 Hectares</div>
-                <div className="text-wrapper-23">26</div>
-                <img
-                  className="rectangle-6"
-                  alt="Rectangle"
-                  src={cafeImage}
-                />
-                <div className="text-wrapper-24">28</div>
-                <img className="line-6" alt="Line" src="https://c.animaapp.com/V72d7Rn8/img/line-10.svg" />
+                ))}
               </div>
               <div className="navbar">
-                <div className="text-wrapper-25">Name</div>
-                <div className="text-wrapper-26">Images</div>
-                <div className="text-wrapper-27">Hectares Plantados</div>
-                <div className="text-wrapper-28">Hectares Colhidos</div>
-                <div className="text-wrapper-29">Desperdício</div>
-                <div className="text-wrapper-30">Action</div>
+                <div className="text-wrapper-26">Imagem</div>
+                <div className="text-wrapper-27">Nome da Cultura</div>
+                <div className="text-wrapper-28">Situação</div>
+                <div className="text-wrapper-30">Histórico Detalhado</div>
               </div>
             </div>
             <div className="text-wrapper-31">Histórico Plantio</div>
@@ -195,16 +91,10 @@ export const HistoricoGeral = () => {
                 alt="Suporte house"
                 src="https://c.animaapp.com/V72d7Rn8/img/suporte-house@2x.png"
               />
-              <a className="text-wrapper-32"href="/suporte">Suporte</a>
-              
-                
-                  <div className="rectangle-7" />
-                  <div className="text-wrapper-33">Histórico Plantio</div>
-                
-              
-              
+              <a className="text-wrapper-32" href="/suporte">Suporte</a>
+              <div className="rectangle-7" />
+              <div className="text-wrapper-33">Histórico Plantio</div>
               <div className="overlap-4">
-                
                 <a className="text-wrapper-35" href="#" onClick={checkAuthentication}>Dados do Solo</a>
               </div>
               <img
@@ -259,4 +149,4 @@ export const HistoricoGeral = () => {
   );
 };
 
-export default HistoricoGeral
+export default HistoricoGeral;
