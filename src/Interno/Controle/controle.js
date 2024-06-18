@@ -55,6 +55,7 @@ const Tasks = () => {
   const [editDetails1, setEditDetails] = useState("");
   const descriptionRef = useRef(null);
   const [descriptionHeight, setDescriptionHeight] = useState(0);
+  const [culturaSel, setculturaSel] = useState(null)
 
   useEffect(() => {
     const pegaUsuario = async () => {
@@ -69,8 +70,23 @@ const Tasks = () => {
         console.error("Erro ao buscar usuário: ", error);
       }
     };
-  
+
+    const mostraCultura = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/envia_cultura");
+        if (!response.ok) {
+          throw new Error("Erro ao bucas plantio")
+        }
+        const data = await response.json();
+        console.log(data[0].nomeCultura)
+        setculturaSel(data[0].nomeCultura)
+      } catch (error) {
+        console.error("Erro ao buscar cultura.")
+      }
+    };
+
     pegaUsuario();
+    mostraCultura();
   }, []);
 
   useEffect(() => {
@@ -91,7 +107,7 @@ const Tasks = () => {
         };        
   
         data.forEach((task) => {
-          const taskId = `${data[Object.keys(loadedTasks).length].newTaskId}`;
+          const taskId = `${data[Object.keys(loadedTasks).length].newTaskId + 1}`;
           loadedTasks[taskId] = { id: taskId, content: renderTaskContent(task) };
           loadedColumns[task.columnId].taskIds.push(taskId);
         });
@@ -210,7 +226,7 @@ const Tasks = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ taskId, newColumnId }),
+        body: JSON.stringify({ taskId, newColumnId: newColumnId }),
       });
   
       if (!response.ok) {
@@ -545,6 +561,9 @@ const Tasks = () => {
             <div className="text-wrapper-26">Add Controle</div>
           </a>
           <div className="text-wrapper-27">Controle</div>
+          {culturaSel && (
+            <div className="Cultura-Selecionada">Cultura selecionada: {culturaSel}</div>
+          )}
           <div className="overlap-10">
             <div className="overlap-11">
               <div className="ellipse" />

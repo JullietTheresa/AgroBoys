@@ -704,6 +704,19 @@
     top: 85px;
     width: 173px;
   }
+
+  .tasks .Cultura-Selecionada {
+    color: #609b00;
+    font-family: "Poppins", Helvetica;
+    font-size: 25px;
+    font-weight: 700;
+    left: 315px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 650px;
+    width: 3000px;
+  }
   
   .tasks .overlap-10 {
     background-color: #518200;

@@ -66,14 +66,37 @@ const PlanoPlantio = () => {
   };
 
   const handleConfirm = async () => {
+
+    try {
+      const response = await fetch("http://localhost:3000/api/limpaDados")
+      if (!response.ok) {
+        throw new Error("Erro ao limpar dados do formulario.")
+      } else {
+        console.log("Formulario limpo.")
+      }
+    } catch (error) {
+      console.error("Erro ao limpar dados do formulario: ", error)
+    }
+
     try {
       const response = await fetch("http://localhost:3000/api/salvaHistorico");
       if (!response.ok) {
         throw new Error("Erro ao salvar plano de plantio")
       }
-      window.location.href = '/historico'
     } catch (error) {
       console.error("Erro ao salvar plano de platio: ", error)
+    }
+
+    try {
+      const response = await fetch("http://localhost:3000/api/lipaCultura")
+      if (!response.ok) {
+        throw new Error("Erro ao limpar Cultura.")
+      } else {
+        console.log("Cultura limpa.")
+      }
+      window.location.href = '/historico'
+    } catch (error) {
+      console.error("Erro ao limpar Cultura: ", error)
     }
   };
 

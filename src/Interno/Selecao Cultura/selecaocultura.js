@@ -42,6 +42,7 @@ export const SelecaoDeCultura = () => {
   const [activeCulture, setActiveCulture] = useState(null);
   const [usuario, setUsuario] = useState(null);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [culturaSel, setculturaSel] = useState(null)
 
   const handleSnackbarOpen = () => {
     setSnackbarOpen(true);
@@ -115,7 +116,22 @@ export const SelecaoDeCultura = () => {
       }
     };
 
+    const mostraCultura = async () => {
+      try {
+        const response = await fetch("http://localhost:3000/api/envia_cultura");
+        if (!response.ok) {
+          throw new Error("Erro ao bucas plantio")
+        }
+        const data = await response.json();
+        console.log(data[0].nomeCultura)
+        setculturaSel(data[0].nomeCultura)
+      } catch (error) {
+        console.error("Erro ao buscar cultura.")
+      }
+    };
+
     pegaUsuario();
+    mostraCultura();
   }, []);
 
   return (
@@ -187,9 +203,14 @@ export const SelecaoDeCultura = () => {
             </div>
           </div>
           <div className="overlap-3">
-            <div className="text-wrapper-21">Seleção de Cultura</div>
-            <p className="text-wrapper-23">Cultura Selecionada: {activeCulture && activeCulture.name}</p>
-          </div>
+          <div className="text-wrapper-21">Seleção de Cultura</div>
+          {activeCulture ? (
+            <p className="text-wrapper-23">Cultura Selecionada: {activeCulture.name}</p>
+          ) : (
+            <p className="text-wrapper-23">Cultura Selecionada: {culturaSel}</p>
+          )}
+        </div>
+
           <div className="overlap-4">
             <div className="rectangle-8" />
             <a className="text-wrapper-24" onClick={handleConfirmClick}>Confirmar</a>
